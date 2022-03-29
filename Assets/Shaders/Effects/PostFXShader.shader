@@ -8,6 +8,7 @@ Properties{
     _Color2("Dither Color 2", Color) = (1, 1, 1, 1)
         _DitherScale("Dither Scale", Float) = 1
         _ColorFactor("Color Factor", Float) = 4
+        _Contrast("Contrast", Float) = 1
 }
 
 SubShader{
@@ -37,6 +38,7 @@ SubShader{
             float4 _Color2;
             float _DitherScale;
             float _ColorFactor;
+            float _Contrast;
 
             //the object data that's put into the vertex shader
             struct appdata {
@@ -66,11 +68,15 @@ SubShader{
                 //texture value the dithering is based on
                 float4 ogTexColor = tex2D(_MainTex, i.uv);
 
+            
             //posterize texColor
             ogTexColor = floor(ogTexColor * _ColorFactor) / _ColorFactor;
 
             //grayscale filter
             float texColor = (ogTexColor.r + ogTexColor.g + ogTexColor.b) / 3.0;
+
+            //contrast
+            texColor = pow(texColor, _Contrast);
 
             //value from the dither pattern
             float2 screenPos = i.screenPosition.xy / i.screenPosition.w;
