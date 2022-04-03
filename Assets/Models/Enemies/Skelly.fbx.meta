@@ -1,17 +1,41 @@
 fileFormatVersion: 2
-guid: e55c4fa348af0ab469b4c9543d64efcb
+guid: 376c1f83d1d1c3f4a8a29bf2091258e7
 ModelImporter:
-  serializedVersion: 20200
+  serializedVersion: 21202
   internalIDToNameTable:
   - first:
-      74: 1478966988209522094
-    second: metarig.001|TPose
+      74: -6519760567115542380
+    second: TPose
+  - first:
+      74: -3100369314251171874
+    second: Idle
+  - first:
+      74: 6720303635017113406
+    second: Attack
+  - first:
+      74: -8923936306905060923
+    second: metarig|_TPose
+  - first:
+      74: 3499728582831962634
+    second: _TPose
+  - first:
+      74: 5522812681064789136
+    second: Run
+  - first:
+      74: 8114531597553069840
+    second: Attack2
+  - first:
+      74: 2195505889533257030
+    second: Big_Hit
+  - first:
+      74: -3554469013500874231
+    second: Flinch
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Black
-    second: {fileID: 2100000, guid: 8633096e7e3ef3045b325a724047294f, type: 2}
+    second: {fileID: 2100000, guid: d98bf3d91bc01e9488d3420b1c722970, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -27,6 +51,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -56,6 +81,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -67,6 +93,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8

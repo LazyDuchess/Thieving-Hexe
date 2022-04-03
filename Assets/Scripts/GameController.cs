@@ -5,9 +5,18 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public bool aiEnabled = true;
+
+    public bool debugSpawnMonsters = false;
+    public GameObject monsterPrefab;
+
     public static GameController instance;
+    public GameObject hitBoxDebugPrefab;
+    public bool hitBoxDebug = false;
     public GameObject player;
+    [HideInInspector]
     public PlayerController playerController;
+
     private void Awake()
     {
         if (instance)
