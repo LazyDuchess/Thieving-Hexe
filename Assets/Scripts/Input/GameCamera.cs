@@ -68,5 +68,10 @@ public class GameCamera : MonoBehaviour
         {
             GameController.instance.playerController.SetAim(hit.point);
         }
+        else
+        {
+            var floorDistance = ray.origin.y - GameController.instance.player.transform.position.y;
+            GameController.instance.playerController.SetAim(ray.origin + (ray.direction * floorDistance));
+        }
     }
 }
