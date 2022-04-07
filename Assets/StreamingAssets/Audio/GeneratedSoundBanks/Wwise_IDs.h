@@ -1,0 +1,151 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Audiokinetic Wwise generated include file. Do not edit.
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#ifndef __WWISE_IDS_H__
+#define __WWISE_IDS_H__
+
+#include <AK/SoundEngine/Common/AkTypes.h>
+
+namespace AK
+{
+    namespace EVENTS
+    {
+        static const AkUniqueID PLAY_CAMPFIRE = 4000411161U;
+        static const AkUniqueID PLAY_CAULDRONBUBBLES = 210028557U;
+        static const AkUniqueID PLAY_CRYSTAL__PICKUP = 1152667966U;
+        static const AkUniqueID PLAY_CRYSTAL_EMPTY = 288321370U;
+        static const AkUniqueID PLAY_CRYSTAL_LARGE_USE = 1263063560U;
+        static const AkUniqueID PLAY_CRYSTAL_SMALL_USE = 429735360U;
+        static const AkUniqueID PLAY_MUSIC = 2932040671U;
+        static const AkUniqueID PLAY_PLAYERFSMATERIAL = 3383738331U;
+        static const AkUniqueID PLAY_PLR_JUMP = 1889507999U;
+        static const AkUniqueID PLAY_PLR_LAND = 3821737268U;
+    } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace ENVIRO
+        {
+            static const AkUniqueID GROUP = 1995189622U;
+
+            namespace STATE
+            {
+                static const AkUniqueID CASTLE = 129146593U;
+                static const AkUniqueID FOREST = 491961918U;
+                static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace ENVIRO
+
+        namespace GAMEPLAY
+        {
+            static const AkUniqueID GROUP = 89505537U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BOSS = 1560169506U;
+                static const AkUniqueID COMBAT = 2764240573U;
+                static const AkUniqueID EXPLORE = 579523862U;
+                static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace GAMEPLAY
+
+        namespace PLAYERSTATUS
+        {
+            static const AkUniqueID GROUP = 3800848640U;
+
+            namespace STATE
+            {
+                static const AkUniqueID ALIVE = 655265632U;
+                static const AkUniqueID DEFEATED = 2791675679U;
+                static const AkUniqueID HALFWOUNDED = 1709837876U;
+                static const AkUniqueID HEAVYWOUNDED = 1794529588U;
+                static const AkUniqueID LIGHTLYWOUNDED = 4245466516U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace PLAYERSTATUS
+
+    } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace CRYSTALTYPE
+        {
+            static const AkUniqueID GROUP = 2418394769U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID ELECTRICITY = 2917121896U;
+                static const AkUniqueID FIRE = 2678880713U;
+                static const AkUniqueID GENERIC = 4294388576U;
+                static const AkUniqueID WATER = 2654748154U;
+            } // namespace SWITCH
+        } // namespace CRYSTALTYPE
+
+        namespace PLAYERRUNWALK
+        {
+            static const AkUniqueID GROUP = 3176616166U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID RUN = 712161704U;
+                static const AkUniqueID WALK = 2108779966U;
+            } // namespace SWITCH
+        } // namespace PLAYERRUNWALK
+
+        namespace SURFACE
+        {
+            static const AkUniqueID GROUP = 1834394558U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID COBBLE = 3135525842U;
+                static const AkUniqueID DIRT = 2195636714U;
+                static const AkUniqueID GRASS = 4248645337U;
+            } // namespace SWITCH
+        } // namespace SURFACE
+
+    } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID PLAYERHEALTH = 151362964U;
+    } // namespace GAME_PARAMETERS
+
+    namespace BANKS
+    {
+        static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID MAIN = 3161908922U;
+    } // namespace BANKS
+
+    namespace BUSSES
+    {
+        static const AkUniqueID CAMPFIRE = 1931646578U;
+        static const AkUniqueID ENEMIES = 2242381963U;
+        static const AkUniqueID ITEMS = 2151963051U;
+        static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID OBJECTS = 1695690031U;
+        static const AkUniqueID PLATFORMS = 1764819763U;
+        static const AkUniqueID PLAYER = 1069431850U;
+    } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID CASTLE = 129146593U;
+        static const AkUniqueID OUTDOORS = 2730119150U;
+        static const AkUniqueID REVERBS = 3545700988U;
+    } // namespace AUX_BUSSES
+
+    namespace AUDIO_DEVICES
+    {
+        static const AkUniqueID NO_OUTPUT = 2317455096U;
+        static const AkUniqueID SYSTEM = 3859886410U;
+    } // namespace AUDIO_DEVICES
+
+}// namespace AK
+
+#endif // __WWISE_IDS_H__

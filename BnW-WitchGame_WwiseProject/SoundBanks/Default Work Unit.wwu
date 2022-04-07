@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{18F0F76D-0E6F-40CD-B82C-278CC849EF05}" SchemaVersion="103">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{18F0F76D-0E6F-40CD-B82C-278CC849EF05}" PersistMode="Standalone"/>
+	</SoundBanks>
+</WwiseDocument>
