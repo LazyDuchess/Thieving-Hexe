@@ -77,7 +77,7 @@ public class DungeonPiece
                 absolutePosition -= Vector3.right * 0.5f;*/
                 break;
         }
-        if (!level.PlaceEmpty(absolutePosition, absolutePosition + new Vector3(pieceComponent.xSize * DungeonPiece.size, 0f, pieceComponent.ySize * DungeonPiece.size)))
+        if (!level.PlaceEmpty(absolutePosition, absolutePosition + new Vector3(pieceComponent.xSize * DungeonPiece.size, 4f, pieceComponent.ySize * DungeonPiece.size)))
             return null;
         var result = new AttachCheckResult();
         result.attachPosition = absolutePosition;
@@ -133,7 +133,7 @@ public class DungeonLevel
     {
         foreach (var element in pieces)
         {
-            var offset = 0.5f;
+            var offset = 1.0f;
             var posStart = element.positionStart + new Vector3(offset,0f,offset);
             var posEnd = element.positionEnd - new Vector3(offset,0f,offset);
             var size = posEnd - posStart;
@@ -145,8 +145,45 @@ public class DungeonLevel
         return null;
     }
 
+    public void DrawBox(Vector3 pos, Quaternion rot, Vector3 scale, Color c)
+    {
+        // create matrix
+        Matrix4x4 m = new Matrix4x4();
+        m.SetTRS(pos, rot, scale);
+
+        var point1 = m.MultiplyPoint(new Vector3(-0.5f, -0.5f, 0.5f));
+        var point2 = m.MultiplyPoint(new Vector3(0.5f, -0.5f, 0.5f));
+        var point3 = m.MultiplyPoint(new Vector3(0.5f, -0.5f, -0.5f));
+        var point4 = m.MultiplyPoint(new Vector3(-0.5f, -0.5f, -0.5f));
+
+        var point5 = m.MultiplyPoint(new Vector3(-0.5f, 0.5f, 0.5f));
+        var point6 = m.MultiplyPoint(new Vector3(0.5f, 0.5f, 0.5f));
+        var point7 = m.MultiplyPoint(new Vector3(0.5f, 0.5f, -0.5f));
+        var point8 = m.MultiplyPoint(new Vector3(-0.5f, 0.5f, -0.5f));
+
+        Debug.DrawLine(point1, point2, c, 10f);
+        Debug.DrawLine(point2, point3, c, 10f);
+        Debug.DrawLine(point3, point4, c, 10f);
+        Debug.DrawLine(point4, point1, c, 10f);
+
+        Debug.DrawLine(point5, point6, c, 10f);
+        Debug.DrawLine(point6, point7, c, 10f);
+        Debug.DrawLine(point7, point8, c, 10f);
+        Debug.DrawLine(point8, point5, c, 10f);
+
+        Debug.DrawLine(point1, point5, c, 10f);
+        Debug.DrawLine(point2, point6, c, 10f);
+        Debug.DrawLine(point3, point7, c, 10f);
+        Debug.DrawLine(point4, point8, c, 10f);
+
+    }
+
     public bool PlaceEmpty(Vector3 positionStart, Vector3 positionEnd)
     {
+        //kind of a hack, but i ain't too worried.
+        var offset = 0.5f;
+        positionStart = positionStart + new Vector3(offset, 0f, offset);
+        positionEnd = positionEnd - new Vector3(offset, 0f, offset);
         var size = positionEnd - positionStart;
         var center = positionStart + (size / 2f);
 
@@ -157,29 +194,12 @@ public class DungeonLevel
             center = element.positionStart + (size / 2f);
             var elementBounds = new Bounds(center, size);
             if (bounds1.Intersects(elementBounds))
+            {
+                DrawBox(bounds1.center, Quaternion.identity, bounds1.size, Color.red);
                 return false;
-            /*
-            if (positionStart.x >= element.positionStart.x && positionStart.y >= element.positionStart.y && positionStart.z >= element.positionStart.z)
-            {
-                if (positionStart.x <= element.positionEnd.x && positionStart.y <= element.positionEnd.y && positionStart.z <= element.positionEnd.z)
-                    return false;
             }
-            if (positionEnd.x >= element.positionStart.x && positionEnd.y >= element.positionStart.y && positionEnd.z >= element.positionStart.z)
-            {
-                if (positionEnd.x <= element.positionEnd.x && positionEnd.y <= element.positionEnd.y && positionEnd.z <= element.positionEnd.z)
-                    return false;
-            }
-            if (element.positionStart.x >= positionStart.x && element.positionStart.y >= positionStart.y && element.positionStart.z >= positionStart.z)
-            {
-                if (element.positionStart.x <= positionEnd.x && element.positionStart.y <= positionEnd.y && element.positionStart.z <= positionEnd.z)
-                    return false;
-            }
-            if (element.positionEnd.x >= positionStart.x && element.positionEnd.y >= positionStart.y && element.positionEnd.z >= positionStart.z)
-            {
-                if (element.positionEnd.x <= positionEnd.x && element.positionEnd.y <= positionEnd.y && element.positionEnd.z <= positionEnd.z)
-                    return false;
-            }*/
         }
+        DrawBox(bounds1.center, Quaternion.identity, bounds1.size, Color.green);
         return true;
     }
 
@@ -208,6 +228,8 @@ public class DungeonDatabase
 {
     public List<GameObject> spawnRooms;
     public List<GameObject> enemyRooms;
+    public List<GameObject> connectorRooms;
+    public List<GameObject> lootRooms;
 }
 
 public class PotentialDoor
@@ -220,6 +242,13 @@ public class DungeonState
 {
     public Dictionary<DungeonPiece, bool> alreadyVisited = new Dictionary<DungeonPiece, bool>();
     public RoomComponent[] allRooms;
+}
+
+public class PotentialPiece
+{
+    public DoorComponent myDoorID;
+    public DoorComponent otherDoorID;
+    public GameObject prefab;
 }
 
 public class DungeonController : MonoBehaviour
@@ -282,9 +311,86 @@ public class DungeonController : MonoBehaviour
         }
     }
 
+    //Dead ends, loot rooms.
+    public bool Recurse(DungeonPiece piece)
+    {
+        var recursionSize = Random.Range(1, 5);
+        var endInLootRoom = false;
+        var endInLotRoomChance = Random.Range(0, 4);
+        if (endInLotRoomChance == 0)
+            endInLootRoom = true;
+        var currentPiece = piece;
+        for(var i=0;i<recursionSize;i++)
+        {
+            var pieceDB = database.connectorRooms;
+            /*
+            if (i == recursionSize - 1 && endInLootRoom)
+                pieceDB = database.lootRooms;*/
+            var myDoors = currentPiece.getDoors();
+            var potentials = new List<PotentialPiece>();
+            foreach(var myDoor in myDoors)
+            {
+                foreach (var newPiece in pieceDB)
+                {
+                    var otherDoors = newPiece.GetComponentsInChildren<DoorComponent>();
+                    foreach(var otherDoor in otherDoors)
+                    {
+                        var attachCheck = currentPiece.CheckCanAttach(newPiece, myDoor, otherDoor);
+                        if (attachCheck != null)
+                        {
+                            var result = new PotentialPiece();
+                            result.myDoorID = myDoor;
+                            result.otherDoorID = otherDoor;
+                            result.prefab = newPiece;
+                            potentials.Add(result);
+                        }
+                    }
+                }
+            }
+            if (potentials.Count == 0)
+            {
+                if (i == 0)
+                    return false;
+                else
+                    return true;
+            }
+            else
+            {
+                var potentialIndex = Random.Range(0, potentials.Count);
+                var newPiecePotential = potentials[potentialIndex];
+                var newPieceFinal = currentPiece.AttachPiece(newPiecePotential.prefab, newPiecePotential.myDoorID, newPiecePotential.otherDoorID);
+                if (i != 0)
+                {
+                    var recurseChance = Random.Range(0, 12);
+                    if (recurseChance == 0)
+                        Recurse(currentPiece);
+                }
+                currentPiece = newPieceFinal;
+            }
+        }
+        return true;
+    }
+
     public DungeonLevel GenerateLevel()
     {
-        int linearLevelSize = 8;
+        int linearLevelSize = Random.Range(6,9);
+        var connectorRooms = Random.Range(3, (int)(linearLevelSize * 0.7));
+
+        var availableConnectorRooms = new List<int>();
+        for(var n=0;n<linearLevelSize;n++)
+        {
+            availableConnectorRooms.Add(n);
+        }
+
+        var toPlaceConnectors = new List<int>();
+
+        for(var n=0;n<connectorRooms;n++)
+        {
+            var rand = Random.Range(0, availableConnectorRooms.Count);
+            toPlaceConnectors.Add(availableConnectorRooms[rand]);
+            availableConnectorRooms.RemoveAt(rand);
+        }
+
         var level = new DungeonLevel();
         var spawnPrefabIndex = Random.Range(0, database.spawnRooms.Count);
         var spawnPrefab = database.spawnRooms[spawnPrefabIndex];
@@ -305,8 +411,13 @@ public class DungeonController : MonoBehaviour
 
         var currentPiece = spawnPiece;
 
-        for (var i=0;i<linearLevelSize;i++)
+        var recursivable = new List<DungeonPiece>();
+
+        var i = 0;
+        Debug.Log("Generating level of size " + linearLevelSize.ToString());
+        while(i < linearLevelSize)
         {
+            Debug.Log("Working on piece " + i.ToString());
             var currentDoors = currentPiece.getDoors();
             var potentialDoors = new List<DoorComponent>();
             foreach(var element in currentDoors)
@@ -316,29 +427,42 @@ public class DungeonController : MonoBehaviour
                     potentialDoors.Add(element);
                 }
             }
-            var randomDoorIndex = Random.Range(0, potentialDoors.Count);
-            var randomDoorComponent = potentialDoors[randomDoorIndex];
-            var potentialNextPieces = new List<GameObject>();
-            foreach(var element in database.enemyRooms)
+            //var randomDoorIndex = Random.Range(0, potentialDoors.Count);
+            //var randomDoorComponent = potentialDoors[randomDoorIndex];
+            var potentialNextPieces = new List<PotentialPiece>();
+            var databaseNextPieces = database.enemyRooms;
+            //Place a connector instead of enemy room?
+            if (toPlaceConnectors.IndexOf(i) >= 0)
+            {
+                toPlaceConnectors.Remove(i);
+                i = i - 1;
+                databaseNextPieces = database.connectorRooms;
+                Debug.Log("Placing a connector.");
+            }
+            foreach(var element in databaseNextPieces)
             {
                 var potentialNextDoors = element.GetComponentsInChildren<DoorComponent>();
                 foreach(var pDoor in potentialNextDoors)
                 {
-                    var res = currentPiece.CheckCanAttach(element, randomDoorComponent, pDoor);
-                    if (res != null)
+                    foreach (var myDoor in potentialDoors)
                     {
-                        potentialNextPieces.Add(element);
-                        /*
-                        var potentDoor = new PotentialDoor();
-                        potentDoor.checkResult = res;
-                        potentDoor.doorComponent = pDoor;
-                        finalPotentialNextDoors.Add(potentDoor);*/
+                        var res = currentPiece.CheckCanAttach(element, myDoor, pDoor);
+                        if (res != null)
+                        {
+                            var potentialPiece = new PotentialPiece();
+                            potentialPiece.myDoorID = myDoor;
+                            potentialPiece.otherDoorID = pDoor;
+                            potentialPiece.prefab = element;
+                            potentialNextPieces.Add(potentialPiece);
+                        }
                     }
                 }
             }
             if (potentialNextPieces.Count > 0)
             {
-                var nextPiece = potentialNextPieces[Random.Range(0, potentialNextPieces.Count)];
+                var nextPotentialPiece = potentialNextPieces[Random.Range(0, potentialNextPieces.Count)];
+                var nextPiece = nextPotentialPiece.prefab;
+                var randomDoorComponent = nextPotentialPiece.myDoorID;
                 var potentialNextDoors = nextPiece.GetComponentsInChildren<DoorComponent>();
                 var finalPotentialNextDoors = new List<PotentialDoor>();
                 foreach (var pDoor in potentialNextDoors)
@@ -352,9 +476,53 @@ public class DungeonController : MonoBehaviour
                         finalPotentialNextDoors.Add(potentDoor);
                     }
                 }
-                var finalPotentDoor = finalPotentialNextDoors[Random.Range(0, finalPotentialNextDoors.Count)];
-                currentPiece = currentPiece.AttachPiece(nextPiece, randomDoorComponent, finalPotentDoor.doorComponent);
+                if (finalPotentialNextDoors.Count > 0)
+                {
+                    var finalPotentDoor = finalPotentialNextDoors[Random.Range(0, finalPotentialNextDoors.Count)];
+                    var newCurrentPiece = currentPiece.AttachPiece(nextPiece, randomDoorComponent, finalPotentDoor.doorComponent);
+                    /*
+                    if (i != 0)
+                    {
+                        var doorz = currentPiece.getDoors().Length;
+                        for (var n = 0; n < doorz; n++)
+                        {
+                            var recurseChance = Random.Range(0, 9);
+                            if (recurseChance == 0)
+                                Recurse(currentPiece);
+                        }
+
+                    }*/
+                    recursivable.Add(newCurrentPiece);
+                    currentPiece = newCurrentPiece;
+                    Debug.Log("Placed piece " + i.ToString());
+                }
+                else
+                {
+                    Debug.Log("Couldn't place piece " + i.ToString());
+                    i = i - 1;
+                }
             }
+            else
+            {
+                Debug.Log("Couldn't place piece " + i.ToString());
+            }
+            i = i + 1;
+        }
+
+        foreach(var element in recursivable)
+        {
+            var doorz = element.getDoors().Length;
+            var recurseChance = Random.Range(0, 9);
+            if (recurseChance == 0)
+            {
+                for (var n = 0; n < doorz; n++)
+                {
+                    recurseChance = Random.Range(0, 6);
+                    if (recurseChance == 0)
+                        Recurse(element);
+                }
+            }
+
         }
         dungeonLevel = level;
         this.level = level.Instantiate();
