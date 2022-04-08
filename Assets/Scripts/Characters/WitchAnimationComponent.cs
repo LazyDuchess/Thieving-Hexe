@@ -9,10 +9,14 @@ public class WitchAnimationComponent : MonoBehaviour
     public GameObject aimSpine;
     public GameObject lookAtHead;
 
+    public A_Player playerAudio;
+
+
     private void Start()
     {
         player.damageEvent += Flinch;
         player.deathEvent += Death;
+  
     }
 
     public void Death(Damage damage)
@@ -28,11 +32,14 @@ public class WitchAnimationComponent : MonoBehaviour
         {
             case 0:
                 animator.SetTrigger("Flinch 1");
+                playerAudio.PlayTakeDamage();
                 break;
             case 1:
                 animator.SetTrigger("Flinch 2");
+                playerAudio.PlayTakeDamage();
                 break;
         }
+       
     }
 
     void LateUpdate()

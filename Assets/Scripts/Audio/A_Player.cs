@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /*
@@ -25,9 +23,9 @@ States:
 public class A_Player : MonoBehaviour
 {
 
-//Things to be accessed by anyone
-#region Public Variables
-public PlayerController pController;//get player public class
+    //Things to be accessed by anyone
+    #region Public Variables
+    public PlayerController pController;//get player public class
     #endregion
 
     //Things to be acecessed by only this script
@@ -37,25 +35,25 @@ public PlayerController pController;//get player public class
     //[SerializeField] private AK.Wwise.Event pJump;
     //[SerializeField] private AK.Wwise.Event pLand;
     [Header("Attacks")]
-    [SerializeField] private AK.Wwise.Event pBasicAttack;
-    [SerializeField] private AK.Wwise.Event pFireAtkkLte;
-    [SerializeField] private AK.Wwise.Event pFireAtkChrg;
-    [SerializeField] private AK.Wwise.Event pWaterAtkLte;
-    [SerializeField] private AK.Wwise.Event pWaterAtkChrg;
-    [SerializeField] private AK.Wwise.Event pElecAtkLte;
-    [SerializeField] private AK.Wwise.Event pElecAtkChrg;
+    [SerializeField] private AK.Wwise.Event pLteAttack;
+    [SerializeField] private AK.Wwise.Event pChrgAttack;
+    /*    [SerializeField] private AK.Wwise.Event pFireAtkkLte;
+        [SerializeField] private AK.Wwise.Event pFireAtkChrg;
+        [SerializeField] private AK.Wwise.Event pWaterAtkLte;
+        [SerializeField] private AK.Wwise.Event pWaterAtkChrg;
+        [SerializeField] private AK.Wwise.Event pElecAtkLte;
+        [SerializeField] private AK.Wwise.Event pElecAtkChrg;*/
     [Header("Receive Damage")]
     [SerializeField] private AK.Wwise.Event pTakeDmgGeneric;
     [SerializeField] private AK.Wwise.Event pTakeDmgFire;
-    [SerializeField] private AK.Wwise.Event pTakeDmgElec;
-    [SerializeField] private AK.Wwise.Event pDefeated;
+   // [SerializeField] private AK.Wwise.Event pTakeDmgElec;
+   // [SerializeField] private AK.Wwise.Event pDefeated;
     #endregion
 
     public void Update()
     {
         //get and set player health RTPC
-        AkSoundEngine.SetRTPCValue("PlayerHealth", pController.hp); 
-        
+        AkSoundEngine.SetRTPCValue("PlayerHealth", pController.hp);
     }
 
     ///////////////Begin Animation Functions////////////////
@@ -65,11 +63,15 @@ public PlayerController pController;//get player public class
         pFootStep.Post(gameObject);
     }
 
-    public void PlayPlayerDeath()
+/*    public void PlayPlayerDeath()
     {
         pDefeated.Post(gameObject);
-    }
+    }*/
 
+    public void PlayTakeDamage()
+    {
+        pTakeDmgGeneric.Post(gameObject);
+    }
 
     //////////END animation Functions////////////
 

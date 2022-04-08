@@ -437,7 +437,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 7eba4d089b921a46bb11fb91fae60011
     GuidInternal: 
-    m_lastTime: -8585523268382137946
+    m_lastTime: -8585521529223856934
     List:
     - name: Main
       guid: 5f870b2649904142a5a3c565028fd8cb
@@ -465,7 +465,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 411de6e562825d44b1e38d90e3d2c241
     GuidInternal: 
-    m_lastTime: -8585524089612522565
+    m_lastTime: -8585521529223800788
     List: []
   - PhysicalPath: Events\Items.wwu
     PathAndIcons:
@@ -636,7 +636,7 @@ MonoBehaviour:
     ParentPath: Events\Player
     guid: a1c883d787be134cb580a86c2d3b3ae6
     GuidInternal: 
-    m_lastTime: -8585523268382038756
+    m_lastTime: -8585521529223694923
     List:
     - name: Play_PlayerFSMaterial
       guid: 32a955972ea0b1488ecd56738c3fee41
@@ -655,6 +655,108 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.764399
       minDuration: 0.295383
+    - name: Play_Plyr_Atk_Bsc_Charged
+      guid: 7ebd29bd84077d45ae69d94f4c0077b4
+      id: 1020029592
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: a1c883d787be134cb580a86c2d3b3ae6
+      - ElementName: Play_Plyr_Atk_Bsc_Charged
+        ObjectType: 3
+        guid: 7ebd29bd84077d45ae69d94f4c0077b4
+      Path: Events\Player\Play_Plyr_Atk_Bsc_Charged
+      maxAttenuation: 0
+      maxDuration: 3.769821
+      minDuration: 3.401892
+    - name: Play_Plyr_Atk_Bsc_Lte
+      guid: 8bd056a4dddf1a408695659310b36c6b
+      id: 2754623237
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: a1c883d787be134cb580a86c2d3b3ae6
+      - ElementName: Play_Plyr_Atk_Bsc_Lte
+        ObjectType: 3
+        guid: 8bd056a4dddf1a408695659310b36c6b
+      Path: Events\Player\Play_Plyr_Atk_Bsc_Lte
+      maxAttenuation: 0
+      maxDuration: 0.240623
+      minDuration: 0.131762
+    - name: Play_Plyr_Float
+      guid: 1ab355b0d47ec44f94aa878efe5acf6b
+      id: 984956936
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: a1c883d787be134cb580a86c2d3b3ae6
+      - ElementName: Play_Plyr_Float
+        ObjectType: 3
+        guid: 1ab355b0d47ec44f94aa878efe5acf6b
+      Path: Events\Player\Play_Plyr_Float
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Plyr_Rec_Gen_Dmg
+      guid: f559324fc4600f43b58521f662fd9525
+      id: 3674195162
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: a1c883d787be134cb580a86c2d3b3ae6
+      - ElementName: Play_Plyr_Rec_Gen_Dmg
+        ObjectType: 3
+        guid: f559324fc4600f43b58521f662fd9525
+      Path: Events\Player\Play_Plyr_Rec_Gen_Dmg
+      maxAttenuation: 0
+      maxDuration: 0.637642
+      minDuration: 0.319069
+    - name: Play_Plyr_Recv_Fire_Dmg
+      guid: 9ec0aaf8a288b947ad061aa94bb532c4
+      id: 149588724
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: a1c883d787be134cb580a86c2d3b3ae6
+      - ElementName: Play_Plyr_Recv_Fire_Dmg
+        ObjectType: 3
+        guid: 9ec0aaf8a288b947ad061aa94bb532c4
+      Path: Events\Player\Play_Plyr_Recv_Fire_Dmg
+      maxAttenuation: 0
+      maxDuration: 0.718759
+      minDuration: 0.638117
+    - name: Stop_Plyr_Float
+      guid: 5d7bfcb6c4a46e439440beb244c9b28d
+      id: 2450666310
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: a1c883d787be134cb580a86c2d3b3ae6
+      - ElementName: Stop_Plyr_Float
+        ObjectType: 3
+        guid: 5d7bfcb6c4a46e439440beb244c9b28d
+      Path: Events\Player\Stop_Plyr_Float
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1258,7 +1360,7 @@ MonoBehaviour:
     m_lastTime: -8585533485103830915
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000070000001e0000001f00000020000000
+  ExpandedWaapiItemIds: 0500000006000000070000000b0000001200000017000000190000001d0000001e0000001f0000002000000021000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

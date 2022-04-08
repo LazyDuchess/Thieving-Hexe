@@ -21,8 +21,12 @@ namespace AK
         static const AkUniqueID PLAY_CRYSTAL_SMALL_USE = 429735360U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_PLAYERFSMATERIAL = 3383738331U;
-        static const AkUniqueID PLAY_PLR_JUMP = 1889507999U;
-        static const AkUniqueID PLAY_PLR_LAND = 3821737268U;
+        static const AkUniqueID PLAY_PLYR_ATK_BSC_CHARGED = 1020029592U;
+        static const AkUniqueID PLAY_PLYR_ATK_BSC_LTE = 2754623237U;
+        static const AkUniqueID PLAY_PLYR_FLOAT = 984956936U;
+        static const AkUniqueID PLAY_PLYR_REC_GEN_DMG = 3674195162U;
+        static const AkUniqueID PLAY_PLYR_RECV_FIRE_DMG = 149588724U;
+        static const AkUniqueID STOP_PLYR_FLOAT = 2450666310U;
     } // namespace EVENTS
 
     namespace STATES
@@ -113,6 +117,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID PLAYERHEALTH = 151362964U;
     } // namespace GAME_PARAMETERS
 
@@ -124,13 +129,23 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID BOSS = 1560169506U;
+        static const AkUniqueID C_COMBAT = 2588151145U;
+        static const AkUniqueID C_EXPLORE = 1348890866U;
         static const AkUniqueID CAMPFIRE = 1931646578U;
+        static const AkUniqueID CASTLEBUS = 1239215153U;
         static const AkUniqueID ENEMIES = 2242381963U;
+        static const AkUniqueID F_COMBAT = 1367030554U;
+        static const AkUniqueID F_EXPLORE = 1325345903U;
+        static const AkUniqueID FORESTBUS = 199201492U;
         static const AkUniqueID ITEMS = 2151963051U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MENU = 2607556080U;
+        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID OBJECTS = 1695690031U;
         static const AkUniqueID PLATFORMS = 1764819763U;
         static const AkUniqueID PLAYER = 1069431850U;
+        static const AkUniqueID UI = 1551306167U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES
