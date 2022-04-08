@@ -28,4 +28,12 @@ public class PrefabSpawner : RoomTrigger
             spawn();
         }
     }
+
+    public override void OnPlayerComeBack()
+    {
+        if (spawnOnWayOut)
+        {
+            spawn();
+        }
+    }
 }
