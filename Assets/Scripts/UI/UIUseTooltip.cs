@@ -23,6 +23,9 @@ public class UIUseTooltip : MonoBehaviour
                 case InteractionType.Collect:
                     useText.text = "E: Collect";
                     break;
+                case InteractionType.Open:
+                    useText.text = "E: Open";
+                    break;
             }
         }
         else

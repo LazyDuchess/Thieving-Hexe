@@ -439,17 +439,20 @@ public class DungeonController : MonoBehaviour
         var lenMin = (int)Mathf.Ceil(level * 0.5f) + 3;
         var lenMax = (int)Mathf.Ceil(level * 0.3f);
         sets.dungeonLength = Random.Range(lenMin, lenMin + lenMax);
-        sets.recurseChance = 9;
-        if (level >= 4)
-            sets.recurseChance = 6;
+        sets.recurseChance = 6;
         if (level >= 6)
             sets.recurseChance = 4;
         if (level >= 10)
             sets.recurseChance = 3;
         sets.doorRecurseChance = 6;
+
         if (level >= 6)
             sets.doorRecurseChance = 3;
-        var outTime = 150f + (level * 10f);
+
+        if (level >= 12)
+            sets.doorRecurseChance = 2;
+
+        var outTime = 130f + (level * 10f);
         return sets;
     }
 
@@ -629,7 +632,10 @@ public class DungeonController : MonoBehaviour
                     //recurseChance = Random.Range(0, 6);
                     recurseChance = Random.Range(0, settings.doorRecurseChance);
                     if (recurseChance == 0)
+                    {
                         Recurse(element);
+                        Debug.Log("Recursing!");
+                    }
                 }
             }
 

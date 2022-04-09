@@ -30,7 +30,7 @@ public class WandItem : ItemComponent
         CoolDownPrimary(coolDown);
         CoolDownSecondary(coolDown);
     }
-
+    /*
     public override void Secondary()
     {
         base.Secondary();
@@ -51,5 +51,5 @@ public class WandItem : ItemComponent
         pro.owner = this.owner;
         pro.vector = aimHeading * velocity;
         GameEventsController.PlayerChargedAttackEnd();
-    }
+    }*/
 }

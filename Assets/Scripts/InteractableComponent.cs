@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum InteractionType { Generic, PickUp, Collect };
+public enum InteractionType { Generic, PickUp, Collect, Open };
 public abstract class InteractableComponent : MonoBehaviour
 {
     public InteractionType interactionType = InteractionType.PickUp;

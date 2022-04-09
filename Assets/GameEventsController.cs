@@ -90,6 +90,12 @@ public class GameEventsController
             playerChargedAttackEndEvent.Invoke();
     }
 
+    public static void OpenChest()
+    {
+        if (openChestEvent != null)
+            openChestEvent.Invoke();
+    }
+
     public static float getPlayerSpeed()
     {
         return GameController.instance.playerController.FlatVelocity().magnitude;

@@ -53,6 +53,27 @@ public class CharacterComponent : HealthController
 
     //Event Listeners
     List<MonoBehaviour> subscribedEntities = new List<MonoBehaviour>();
+    List<CharacterEffect> effects = new List<CharacterEffect>();
+
+    public bool hasEffectWithID(string id)
+    {
+        foreach(var element in effects)
+        {
+            if (element.id == id)
+                return true;
+        }
+        return false;
+    }
+
+    public void AddEffect(CharacterEffect effect)
+    {
+        effects.Add(effect);
+    }
+
+    public void StripAllEffects()
+    {
+        effects.Clear();
+    }
 
     protected virtual void Awake()
     {
@@ -84,6 +105,9 @@ public class CharacterComponent : HealthController
 
     void DashLoop()
     {
+        var degradeMultiply = 1f;
+        foreach (var element in effects)
+            degradeMultiply *= element.sprintDegradeMultiplier;
         if (currentDashTime <= 0f && !dashRecovering)
         {
             currentDashTime = 0f;
@@ -109,7 +133,7 @@ public class CharacterComponent : HealthController
         }
         if (!dashRecovering && dashing)
         {
-            currentDashTime -= Time.deltaTime;
+            currentDashTime -= Time.deltaTime * degradeMultiply;
         }
     }
 
@@ -132,6 +156,21 @@ public class CharacterComponent : HealthController
         if (movementVector == Vector3.zero)
             return false;
         return true;
+    }
+
+    void EffectLoop()
+    {
+        var effectsToRemove = new List<CharacterEffect>();
+        foreach(var element in effects)
+        {
+            element.duration -= Time.deltaTime;
+            if (element.duration <= 0f)
+                effectsToRemove.Add(element);
+        }
+        foreach(var element in effectsToRemove)
+        {
+            effects.Remove(element);
+        }
     }
 
     void lookAtLoop()
@@ -418,11 +457,19 @@ public class CharacterComponent : HealthController
 
     protected virtual void Update()
     {
+        EffectLoop();
         DashLoop();
         if (lookAt)
             lookAtLoop();
         RotateCharacter();
         ProcessActions();
+    }
+
+
+    public void ResetDash()
+    {
+        dashRecovering = false;
+        currentDashTime = dashTime;
     }
 
     // Update is called once per frame
@@ -433,10 +480,14 @@ public class CharacterComponent : HealthController
         //test input
         rigidBody.velocity -= movementVector.x * Vector3.right * acceleration * Time.deltaTime;
         rigidBody.velocity -= movementVector.z * Vector3.forward * acceleration * Time.deltaTime;
-
+        var dashiSpeed = dashSpeed;
+        foreach(var element in effects)
+        {
+            dashiSpeed *= element.sprintSpeedMultiplier;
+        }
         var currentTopSpeed = maxSpeed;
         if (dashing && CanDash())
-            currentTopSpeed *= dashSpeed;
+            currentTopSpeed *= dashiSpeed;
         if (currentAction != null)
             currentTopSpeed *= currentAction.speedBuff;
 

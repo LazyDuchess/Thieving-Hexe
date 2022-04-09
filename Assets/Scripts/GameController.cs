@@ -65,6 +65,7 @@ public class GameController : MonoBehaviour
         controlEnabled = true;
         gameGlobals.currentDungeon += 1;
         DungeonController.instance.RegenerateLevel();
+        playerController.StripAllEffects();
     }
 
     public void Quit()
