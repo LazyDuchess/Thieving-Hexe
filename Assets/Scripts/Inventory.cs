@@ -173,6 +173,7 @@ public class Inventory
                             result.success = true;
                             result.remainingAmount = 0;
                                 item.amount = 0;
+                                GameObject.Destroy(item.gameObject);
                             return result;
                         }
                         else
