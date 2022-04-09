@@ -15,7 +15,11 @@ PluginImporter:
       Any: 
     second:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       enabled: 0
+=======
+      enabled: 1
+>>>>>>> Stashed changes
 =======
       enabled: 1
 >>>>>>> Stashed changes
@@ -24,11 +28,17 @@ PluginImporter:
       Editor: Editor
     second:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       enabled: 1
       settings:
         CPU: x86_64
         DefaultValueInitialized: true
         OS: Windows
+=======
+      enabled: 0
+      settings:
+        DefaultValueInitialized: true
+>>>>>>> Stashed changes
 =======
       enabled: 0
       settings:
