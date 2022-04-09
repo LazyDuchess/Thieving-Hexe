@@ -173,6 +173,8 @@ public class Inventory
                             result.success = true;
                             result.remainingAmount = 0;
                                 item.amount = 0;
+                                if (onAddItem != null)
+                                    onAddItem.Invoke();
                                 GameObject.Destroy(item.gameObject);
                             return result;
                         }
@@ -183,7 +185,9 @@ public class Inventory
                             result.success = true;
                             result.remainingAmount = amountRemaining;
                                 item.amount = amountRemaining;
-                        }
+                                if (onAddItem != null)
+                                    onAddItem.Invoke();
+                            }
                     }
                 }
                 }
