@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3bb7634968e10a4caca79cc10a6dbea, type: 3}
+  m_Name: 3707B048-EDF0-4E4D-8C5D-55A4C56D80F8
+  m_EditorClassIdentifier: 
+  objectName: Play_Torch
+  id: 2025845440
+  guid: 3707B048-EDF0-4E4D-8C5D-55A4C56D80F8

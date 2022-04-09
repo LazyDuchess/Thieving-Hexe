@@ -10,6 +10,7 @@ public class DoorComponent : MonoBehaviour
     public bool open = false;
     public bool empty = true;
     public int id = 0;
+
     public void CloseDoor()
     {
         if (open)
@@ -36,3 +37,5 @@ public class DoorComponent : MonoBehaviour
             OpenDoor();
     }
 }
+
+

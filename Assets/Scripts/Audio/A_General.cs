@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class A_General : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    #region Public
+    [SerializeField] public DoorComponent doorComponent;
+    
+    #endregion
+
+    #region Private
+        [SerializeField] private AK.Wwise.Event doorOpen;
+    [SerializeField] private AK.Wwise.Event doorClose;
+    #endregion
+
+    //open door sound
+    public void PlayDoorOpen()
     {
-        
+        doorOpen.Post(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

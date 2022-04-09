@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20547d232a8eae44fb879081b7e78091, type: 3}
+  m_Name: 92ABD452-AA5F-47BD-B749-CB3E37C386EC
+  m_EditorClassIdentifier: 
+  objectName: ReverbForest
+  id: 2493188974
+  guid: 92ABD452-AA5F-47BD-B749-CB3E37C386EC

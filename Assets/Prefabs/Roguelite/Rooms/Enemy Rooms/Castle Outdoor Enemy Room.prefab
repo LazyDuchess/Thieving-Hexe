@@ -147,6 +147,7 @@ Transform:
   - {fileID: 5733687364656818139}
   - {fileID: 1770109297489949805}
   - {fileID: 2295791201741645661}
+  - {fileID: 2465805145546903153}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7419,6 +7420,84 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1945171700959607082, guid: 747e975391b14074ab30bb1757241690, type: 3}
   m_PrefabInstance: {fileID: 6155441149123567345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6420876866291073885
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4674910517321748692}
+    m_Modifications:
+    - target: {fileID: 4939910705523870736, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: a72a5bf27b6a82249a6ccacf5ebe4097, type: 2}
+    - target: {fileID: 5865611630201199396, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_Name
+      value: ReverbCastleOutdoors
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_RootOrder
+      value: 118
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 67.72331
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 18.242474
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 73.417206
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 37.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+--- !u!4 &2465805145546903153 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8873153165183864108, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
+  m_PrefabInstance: {fileID: 6420876866291073885}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6510020621797224135
 PrefabInstance:

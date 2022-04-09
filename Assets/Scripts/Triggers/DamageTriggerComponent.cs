@@ -7,6 +7,7 @@ public class DamageTriggerComponent : MonoBehaviour
     public float damage = 1f;
     public float interval = 2f;
     public bool constant = true;
+  
 
     private Dictionary<HealthController, float> secondaryDictionary = new Dictionary<HealthController, float>();
     private Dictionary<HealthController,float> affectedEntities = new Dictionary<HealthController,float>();
@@ -21,6 +22,7 @@ public class DamageTriggerComponent : MonoBehaviour
                 var dmg = new Damage();
                 dmg.hp = damage;
                 otherController.TakeDamage(dmg);
+                
                 if (interval > 0f)
                 {
                     affectedEntities[otherController] = interval;

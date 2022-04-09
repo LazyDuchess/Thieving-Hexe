@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4138383271781656378}
   - component: {fileID: 4138383271781656379}
   - component: {fileID: 8520219546177411929}
+  - component: {fileID: 8257449363521437964}
   m_Layer: 0
   m_Name: Dungeon_Door
   m_TagString: Untagged
@@ -118,6 +119,19 @@ MonoBehaviour:
   open: 0
   empty: 1
   id: 0
+--- !u!114 &8257449363521437964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2764095328545090664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e119593b947854b9e94728226a991f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorComponent: {fileID: 8520219546177411929}
 --- !u!1001 &4575750744720145072
 PrefabInstance:
   m_ObjectHideFlags: 0
