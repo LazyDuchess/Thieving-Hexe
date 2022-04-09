@@ -19,6 +19,7 @@ public class PrefabSpawner : RoomTrigger
     void spawn()
     {
         var pref = Instantiate(prefab, transform.position, transform.rotation);
+        pref.transform.SetParent(transform.parent);
     }
 
     public override void OnPlayerEnter()

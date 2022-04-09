@@ -17,6 +17,7 @@ public class MeleeAttackAction : Action
         this.duration = duration;
         this.damage = damage;
         this.movable = movable;
+        this.useInventory = false;
     }
 
     public override void Enter()
@@ -35,6 +36,7 @@ public class MeleeAttackAction : Action
 
     public override bool Tick()
     {
+        base.Tick();
         timeRemaining -= Time.deltaTime;
         if (timeRemaining <= 0f)
             return true;

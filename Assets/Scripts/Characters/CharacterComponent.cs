@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class CharacterComponent : HealthController
 {
+    public float dashTime = 3f;
+    public float dashSpeed = 1.3f;
+    public float dashReplenish = 0.3f;
+
+    public bool canDash = false;
+    bool dashing = false;
+    float currentDashTime;
+    bool dashRecovering = false;
+
+
+    public ItemComponent holding;
+
     //Looking
     public bool lookAt = true;
     public float lookAtDistance = 50f;
@@ -41,100 +53,221 @@ public class CharacterComponent : HealthController
 
     //Event Listeners
     List<MonoBehaviour> subscribedEntities = new List<MonoBehaviour>();
+    List<CharacterEffect> effects = new List<CharacterEffect>();
+
+    public bool hasEffectWithID(string id)
+    {
+        foreach(var element in effects)
+        {
+            if (element.id == id)
+                return true;
+        }
+        return false;
+    }
+
+    public void AddEffect(CharacterEffect effect)
+    {
+        effects.Add(effect);
+    }
+
+    public void StripAllEffects()
+    {
+        effects.Clear();
+    }
 
     protected virtual void Awake()
     {
+        currentDashTime = dashTime;
         var rot = transform.rotation;
         transform.rotation = Quaternion.identity;
         mesh.transform.rotation = rot;
+    }
+
+    public void SetDashing(bool dashing)
+    {
+        var oldDash = this.dashing;
+        if (!CanDash() && dashing == true)
+            dashing = false;
+        this.dashing = dashing;
+        if (this.dashing != oldDash)
+        {
+            if (this.dashing == true)
+                SendEvent("DashStart");
+            else
+                SendEvent("DashEnd");
+        }
+    }
+
+    public float GetDashStamina()
+    {
+        return currentDashTime;
+    }
+
+    void DashLoop()
+    {
+        var degradeMultiply = 1f;
+        foreach (var element in effects)
+            degradeMultiply *= element.sprintDegradeMultiplier;
+        if (currentDashTime <= 0f && !dashRecovering)
+        {
+            currentDashTime = 0f;
+            dashRecovering = true;
+            if (dashing)
+                SendEvent("DashEnd");
+            dashing = false;
+        }
+        if (currentDashTime >= dashTime && dashRecovering)
+        {
+            currentDashTime = dashTime;
+            dashRecovering = false;
+        }
+        if (dashRecovering)
+        {
+            if (dashing)
+                SendEvent("DashEnd");
+            dashing = false;
+        }
+        if (currentDashTime < dashTime && !dashing)
+        {
+            currentDashTime += Time.deltaTime * dashReplenish;
+        }
+        if (!dashRecovering && dashing)
+        {
+            currentDashTime -= Time.deltaTime * degradeMultiply;
+        }
+    }
+
+    public bool CanDash()
+    {
+        if (!canDash)
+            return false;
+        if (!IsAlive())
+            return false;
+        if (ActionBusy())
+        {
+            if (currentAction != null)
+            {
+                if (!currentAction.canDash)
+                    return false;
+            }
+        }
+        if (dashRecovering)
+            return false;
+        if (movementVector == Vector3.zero)
+            return false;
+        return true;
+    }
+
+    void EffectLoop()
+    {
+        var effectsToRemove = new List<CharacterEffect>();
+        foreach(var element in effects)
+        {
+            element.duration -= Time.deltaTime;
+            if (element.duration <= 0f)
+                effectsToRemove.Add(element);
+        }
+        foreach(var element in effectsToRemove)
+        {
+            effects.Remove(element);
+        }
     }
 
     void lookAtLoop()
     {
         if (!IsAlive())
             return;
+        var actionAllows = true;
+        if (currentAction != null)
+        {
+            if (!currentAction.lookAt)
+                actionAllows = false;
+        }
         var ents = FindObjectsOfType<CharacterComponent>();
         CharacterComponent lastEnt = null;
         var lastDistance = 0f;
-        foreach(var element in ents)
+        if (actionAllows)
         {
-            var heading = (element.transform.position - transform.position).normalized;
-            var headDot = Vector3.Dot(mesh.transform.forward, heading);
-            if (headDot >= 0.2f)
+            foreach (var element in ents)
             {
-                var distance = Vector3.Distance(transform.position, element.transform.position);
-                if (!lastEnt)
+                var heading = (element.transform.position - transform.position).normalized;
+                var headDot = Vector3.Dot(mesh.transform.forward, heading);
+                if (headDot >= 0.2f)
                 {
-                    lastEnt = element;
-                    lastDistance = distance;
-                }
-                else
-                {
-                    if (lastEnt.GetTeam() == GetTeam())
+                    var distance = Vector3.Distance(transform.position, element.transform.position);
+                    if (!lastEnt)
                     {
-                        if (element.GetTeam() != GetTeam())
+                        lastEnt = element;
+                        lastDistance = distance;
+                    }
+                    else
+                    {
+                        if (lastEnt.GetTeam() == GetTeam())
                         {
-                            lastEnt = element;
-                            lastDistance = distance;
-                        }
-                        else
-                        {
-                            if (distance < lastDistance)
+                            if (element.GetTeam() != GetTeam())
                             {
                                 lastEnt = element;
                                 lastDistance = distance;
                             }
-                        }
-                    }
-                    else
-                    {
-                        if (element.GetTeam() != GetTeam())
-                        {
-                            if (distance < lastDistance)
+                            else
                             {
-                                lastEnt = element;
-                                lastDistance = distance;
+                                if (distance < lastDistance)
+                                {
+                                    lastEnt = element;
+                                    lastDistance = distance;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (element.GetTeam() != GetTeam())
+                            {
+                                if (distance < lastDistance)
+                                {
+                                    lastEnt = element;
+                                    lastDistance = distance;
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-        lookAtCD -= Time.deltaTime;
-        if (lastEnt)
-        {
-            if (lastEnt.GetTeam() == GetTeam())
+            lookAtCD -= Time.deltaTime;
+            if (lastEnt)
             {
-                if (lookAtCD <= 0f)
+                if (lastEnt.GetTeam() == GetTeam())
                 {
-                    if (!lookingAtFriendly)
+                    if (lookAtCD <= 0f)
                     {
-                        lookAtDuration = Random.Range(2f, 4f);
-                        lookingAtFriendly = true;
-                    }
-                    else
-                    {
-                        lookAtDuration -= Time.deltaTime;
-                        if (lookAtDuration <= 0f)
+                        if (!lookingAtFriendly)
                         {
-                            lookAtCD = Random.Range(10f, 30f);
-                            lookingAtFriendly = false;
-                            lastEnt = null;
-                        }
-                        else
-                        {
+                            lookAtDuration = Random.Range(2f, 4f);
                             lookingAtFriendly = true;
                         }
+                        else
+                        {
+                            lookAtDuration -= Time.deltaTime;
+                            if (lookAtDuration <= 0f)
+                            {
+                                lookAtCD = Random.Range(10f, 30f);
+                                lookingAtFriendly = false;
+                                lastEnt = null;
+                            }
+                            else
+                            {
+                                lookingAtFriendly = true;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        lookingAtFriendly = false;
+                        lastEnt = null;
                     }
                 }
                 else
-                {
                     lookingAtFriendly = false;
-                    lastEnt = null;
-                }
             }
-            else
-                lookingAtFriendly = false;
         }
         if (lastEnt)
         {
@@ -152,6 +285,13 @@ public class CharacterComponent : HealthController
         }
     }
 
+    public override void OnDeath(Damage killingDamage)
+    {
+        base.OnDeath(killingDamage);
+        if (GetTeam() != GameController.instance.playerTeam)
+            DungeonController.instance.dungeonState.killedEnemies += 1;
+    }
+
     protected virtual void Flinch(Damage damage)
     {
         if (flinchDuration > 0f)
@@ -164,6 +304,8 @@ public class CharacterComponent : HealthController
     protected override void Start()
     {
         base.Start();
+        if (GetTeam() != GameController.instance.playerTeam)
+            DungeonController.instance.dungeonState.spawnedEnemies += 1;
         damageEvent += Flinch;
     }
     public void Subscribe(MonoBehaviour behavior)
@@ -315,10 +457,19 @@ public class CharacterComponent : HealthController
 
     protected virtual void Update()
     {
+        EffectLoop();
+        DashLoop();
         if (lookAt)
             lookAtLoop();
         RotateCharacter();
         ProcessActions();
+    }
+
+
+    public void ResetDash()
+    {
+        dashRecovering = false;
+        currentDashTime = dashTime;
     }
 
     // Update is called once per frame
@@ -329,8 +480,14 @@ public class CharacterComponent : HealthController
         //test input
         rigidBody.velocity -= movementVector.x * Vector3.right * acceleration * Time.deltaTime;
         rigidBody.velocity -= movementVector.z * Vector3.forward * acceleration * Time.deltaTime;
-
+        var dashiSpeed = dashSpeed;
+        foreach(var element in effects)
+        {
+            dashiSpeed *= element.sprintSpeedMultiplier;
+        }
         var currentTopSpeed = maxSpeed;
+        if (dashing && CanDash())
+            currentTopSpeed *= dashiSpeed;
         if (currentAction != null)
             currentTopSpeed *= currentAction.speedBuff;
 

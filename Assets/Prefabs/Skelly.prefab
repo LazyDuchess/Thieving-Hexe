@@ -79,7 +79,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   god: 0
   hp: 25
+  maxHP: 25
   team: 1
+  holding: {fileID: 0}
   lookAt: 1
   lookAtDistance: 50
   lookAtLerp: 5
@@ -89,8 +91,8 @@ MonoBehaviour:
   height: 1.9
   rotationLerp: 10
   mesh: {fileID: 7781824470956237736}
-  acceleration: 15
-  maxSpeed: 8
+  acceleration: 18
+  maxSpeed: 8.5
   deacceleration: 15
   flinchDuration: 0.25
   moveDuringFlinch: 1

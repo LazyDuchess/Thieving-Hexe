@@ -6,4 +6,5 @@ public class Damage
 {
     public float hp = 0f;
     public Vector3 vector = Vector3.zero;
+    public float pushForce = 0f;
 }
