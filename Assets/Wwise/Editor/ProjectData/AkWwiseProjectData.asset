@@ -1236,7 +1236,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 6be5395259384d48b2978b90bed73b62
     GuidInternal: 
-    m_lastTime: -8585521299357098542
+    m_lastTime: -8585520597888907482
     List:
     - name: Gameplay
       guid: 52f398ee9eb2ae40a8ca051f2244f6f5
@@ -1368,120 +1368,6 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
-    - name: PlayerStatus
-      guid: e7f6ee26f1f32d42a3d0e0da729a222d
-      id: 3800848640
-      PathAndIcons:
-      - ElementName: States
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 6be5395259384d48b2978b90bed73b62
-      - ElementName: PlayerStatus
-        ObjectType: 9
-        guid: e7f6ee26f1f32d42a3d0e0da729a222d
-      Path: States\Default Work Unit\PlayerStatus
-      values:
-      - name: Alive
-        guid: 8632b988f09d6a49a377540220c5d957
-        id: 655265632
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 6be5395259384d48b2978b90bed73b62
-        - ElementName: PlayerStatus
-          ObjectType: 9
-          guid: e7f6ee26f1f32d42a3d0e0da729a222d
-        - ElementName: Alive
-          ObjectType: 8
-          guid: 8632b988f09d6a49a377540220c5d957
-      - name: Defeated
-        guid: 6fa09e4e1a9d45448e2d95cd4ac551fa
-        id: 2791675679
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 6be5395259384d48b2978b90bed73b62
-        - ElementName: PlayerStatus
-          ObjectType: 9
-          guid: e7f6ee26f1f32d42a3d0e0da729a222d
-        - ElementName: Defeated
-          ObjectType: 8
-          guid: 6fa09e4e1a9d45448e2d95cd4ac551fa
-      - name: HalfWounded
-        guid: aaa009ff2ed04f4b96e84940ba2e0857
-        id: 1709837876
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 6be5395259384d48b2978b90bed73b62
-        - ElementName: PlayerStatus
-          ObjectType: 9
-          guid: e7f6ee26f1f32d42a3d0e0da729a222d
-        - ElementName: HalfWounded
-          ObjectType: 8
-          guid: aaa009ff2ed04f4b96e84940ba2e0857
-      - name: HeavyWounded
-        guid: bdea828224c45b4e807b17e0a7908103
-        id: 1794529588
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 6be5395259384d48b2978b90bed73b62
-        - ElementName: PlayerStatus
-          ObjectType: 9
-          guid: e7f6ee26f1f32d42a3d0e0da729a222d
-        - ElementName: HeavyWounded
-          ObjectType: 8
-          guid: bdea828224c45b4e807b17e0a7908103
-      - name: LightlyWounded
-        guid: 0076cd37e4e36d418a36b868a3b3dc4b
-        id: 4245466516
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 6be5395259384d48b2978b90bed73b62
-        - ElementName: PlayerStatus
-          ObjectType: 9
-          guid: e7f6ee26f1f32d42a3d0e0da729a222d
-        - ElementName: LightlyWounded
-          ObjectType: 8
-          guid: 0076cd37e4e36d418a36b868a3b3dc4b
-      - name: None
-        guid: ee10eac9b2a685499ef69212096280ef
-        id: 748895195
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 6be5395259384d48b2978b90bed73b62
-        - ElementName: PlayerStatus
-          ObjectType: 9
-          guid: e7f6ee26f1f32d42a3d0e0da729a222d
-        - ElementName: None
-          ObjectType: 8
-          guid: ee10eac9b2a685499ef69212096280ef
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
   - PhysicalPath: States\Music.wwu
     PathAndIcons:
     - ElementName: States
@@ -1589,7 +1475,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: bf7b029df89aad4e8304a384054b852f
     GuidInternal: 
-    m_lastTime: -8585524095271374175
+    m_lastTime: -8585520597889046572
     List:
     - name: CrystalType
       guid: c811b9c4c2af5c4582ec1306fda9bec9
@@ -1723,6 +1609,104 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: PlayerStatus
+      guid: a6f4ed3b393c0043b7a87ecf6c864c85
+      id: 3800848640
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bf7b029df89aad4e8304a384054b852f
+      - ElementName: PlayerStatus
+        ObjectType: 11
+        guid: a6f4ed3b393c0043b7a87ecf6c864c85
+      Path: Switches\Default Work Unit\PlayerStatus
+      values:
+      - name: Alive
+        guid: 7e17bebe529dbf4dbb2575ea281e3280
+        id: 655265632
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bf7b029df89aad4e8304a384054b852f
+        - ElementName: PlayerStatus
+          ObjectType: 11
+          guid: a6f4ed3b393c0043b7a87ecf6c864c85
+        - ElementName: Alive
+          ObjectType: 10
+          guid: 7e17bebe529dbf4dbb2575ea281e3280
+      - name: Defeated
+        guid: 315e2227890eaa46b8b96bb6611711b3
+        id: 2791675679
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bf7b029df89aad4e8304a384054b852f
+        - ElementName: PlayerStatus
+          ObjectType: 11
+          guid: a6f4ed3b393c0043b7a87ecf6c864c85
+        - ElementName: Defeated
+          ObjectType: 10
+          guid: 315e2227890eaa46b8b96bb6611711b3
+      - name: HlfHealth
+        guid: 25f923f760ea85419afc3ddd038e50b0
+        id: 2673177675
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bf7b029df89aad4e8304a384054b852f
+        - ElementName: PlayerStatus
+          ObjectType: 11
+          guid: a6f4ed3b393c0043b7a87ecf6c864c85
+        - ElementName: HlfHealth
+          ObjectType: 10
+          guid: 25f923f760ea85419afc3ddd038e50b0
+      - name: QrtHealth
+        guid: 8def27992c486841a32bbc77a22455e8
+        id: 1834963222
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bf7b029df89aad4e8304a384054b852f
+        - ElementName: PlayerStatus
+          ObjectType: 11
+          guid: a6f4ed3b393c0043b7a87ecf6c864c85
+        - ElementName: QrtHealth
+          ObjectType: 10
+          guid: 8def27992c486841a32bbc77a22455e8
+      - name: TQHealth
+        guid: 68ee9bd9d941cf489d8f04df2c7b7174
+        id: 3546734882
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bf7b029df89aad4e8304a384054b852f
+        - ElementName: PlayerStatus
+          ObjectType: 11
+          guid: a6f4ed3b393c0043b7a87ecf6c864c85
+        - ElementName: TQHealth
+          ObjectType: 10
+          guid: 68ee9bd9d941cf489d8f04df2c7b7174
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: Surface
       guid: 356c02e820cdfb46b2e9f0465e44754c
       id: 1834394558
@@ -1804,7 +1788,7 @@ MonoBehaviour:
     m_lastTime: -8585533485103830915
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 020000000300000004000000050000000600000007000000080000000b000000110000001200000014000000190000001e0000001f0000002000000021000000220000002300000026000000350000003e000000
+  ExpandedWaapiItemIds: 020000000300000004000000050000000600000007000000080000000b000000110000001200000014000000190000001e0000001f000000200000002100000022000000230000002600000028000000290000002a0000002b00000030000000310000003e000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

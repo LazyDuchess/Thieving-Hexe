@@ -59,7 +59,10 @@ public class A_Player : MonoBehaviour
     public void Update()
     {
         //get and set player health RTPC
-        AkSoundEngine.SetRTPCValue("PlayerHealth", pController.hp);
+        float lastHp = pController.hp;
+        if(pController.hp != lastHp)
+        AkSoundEngine.SetRTPCValue("PlayerHealth",lastHp);
+
         var vel = rb.velocity;      //to get a Vector3 representation of the velocity
         speed = vel.magnitude;
         PlayPlayerMovement(vel);

@@ -74,21 +74,6 @@ namespace AK
             } // namespace STATE
         } // namespace GAMEPLAY
 
-        namespace PLAYERSTATUS
-        {
-            static const AkUniqueID GROUP = 3800848640U;
-
-            namespace STATE
-            {
-                static const AkUniqueID ALIVE = 655265632U;
-                static const AkUniqueID DEFEATED = 2791675679U;
-                static const AkUniqueID HALFWOUNDED = 1709837876U;
-                static const AkUniqueID HEAVYWOUNDED = 1794529588U;
-                static const AkUniqueID LIGHTLYWOUNDED = 4245466516U;
-                static const AkUniqueID NONE = 748895195U;
-            } // namespace STATE
-        } // namespace PLAYERSTATUS
-
     } // namespace STATES
 
     namespace SWITCHES
@@ -116,6 +101,20 @@ namespace AK
                 static const AkUniqueID WALK = 2108779966U;
             } // namespace SWITCH
         } // namespace PLAYERRUNWALK
+
+        namespace PLAYERSTATUS
+        {
+            static const AkUniqueID GROUP = 3800848640U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID ALIVE = 655265632U;
+                static const AkUniqueID DEFEATED = 2791675679U;
+                static const AkUniqueID HLFHEALTH = 2673177675U;
+                static const AkUniqueID QRTHEALTH = 1834963222U;
+                static const AkUniqueID TQHEALTH = 3546734882U;
+            } // namespace SWITCH
+        } // namespace PLAYERSTATUS
 
         namespace SURFACE
         {
