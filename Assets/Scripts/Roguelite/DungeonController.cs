@@ -7,6 +7,14 @@ public class AttachCheckResult
     public Vector3 attachPosition;
 }
 
+public class GameGlobals
+{
+    public int survivedDungeons = 0;
+    public int currentDungeon = 0;
+    public int killedEnemies = 0;
+    public int spawnedEnemies = 0;
+    public float timeLeft = 0;
+}
 
 public class DungeonPiece
 {
@@ -127,6 +135,7 @@ public class DungeonPiece
 }
 public class DungeonLevel
 {
+    public float wayOutTime = 160f;
     public List<DungeonPiece> pieces = new List<DungeonPiece>();
 
     public DungeonPiece GetPieceAtPosition(Vector3 position)
@@ -230,6 +239,7 @@ public class DungeonDatabase
     public List<GameObject> enemyRooms;
     public List<GameObject> connectorRooms;
     public List<GameObject> lootRooms;
+    public List<GameObject> endRooms;
 }
 
 public class PotentialDoor
@@ -242,6 +252,11 @@ public class DungeonState
 {
     public Dictionary<DungeonPiece, bool> alreadyVisited = new Dictionary<DungeonPiece, bool>();
     public RoomComponent[] allRooms;
+    public bool wayOut = false;
+    public float timeLeft;
+    public int killedEnemies = 0;
+    public int spawnedEnemies = 0;
+    public bool done = false;
 }
 
 public class PotentialPiece
@@ -251,19 +266,46 @@ public class PotentialPiece
     public GameObject prefab;
 }
 
+public class DungeonGeneratorSettings
+{
+    public int dungeonLength = 6;
+    public int recurseChance = 9;
+    public int doorRecurseChance = 6;
+    public float wayOutTime = 160f;
+}
+
 public class DungeonController : MonoBehaviour
 {
     public DungeonDatabase database;
     public GameObject level;
     public DungeonLevel dungeonLevel;
     public DungeonState dungeonState;
+    public static DungeonController instance;
+    public bool lastOutdoor = true;
 
-    
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    public void SetWayOut()
+    {
+        dungeonState.wayOut = true;
+        dungeonState.alreadyVisited.Clear();
+        dungeonState.timeLeft = dungeonLevel.wayOutTime;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        GenerateLevel();
+        GenerateLevel(GenerateSettingsByLevel(0));
+    }
+
+    public void RegenerateLevel()
+    {
+        CleanUpAll();
+        GenerateLevel(GenerateSettingsByLevel(GameController.instance.gameGlobals.currentDungeon));
     }
 
     public bool AnyAliveEnemies()
@@ -277,21 +319,38 @@ public class DungeonController : MonoBehaviour
         return false;
     }
 
+    public float GetTimeLeft()
+    {
+        return dungeonState.timeLeft;
+    }
+
     private void Update()
     {
         if (dungeonLevel == null)
             return;
         if (!GameController.instance.player)
             return;
+        if (dungeonState.wayOut && !dungeonState.done)
+        {
+            dungeonState.timeLeft -= Time.deltaTime;
+        }
         var currentPiece = dungeonLevel.GetPieceAtPosition(GameController.instance.player.transform.position);
         if (currentPiece != null)
         {
-            
+            var outdoo = currentPiece.prefab.GetComponent<RoomComponent>().outdoor;
+            if (lastOutdoor != outdoo)
+            {
+                lastOutdoor = outdoo;
+                if (lastOutdoor)
+                    GameEventsController.EnterOutdoorArea();
+                else
+                    GameEventsController.EnterIndoorArea();
+            }
             foreach(var element in dungeonState.allRooms)
             {
                 if (element.parentPiece == currentPiece)
                 {
-                    if (AnyAliveEnemies())
+                    if (AnyAliveEnemies() && !dungeonState.wayOut)
                     {
                         element.CloseDoors();
                     }
@@ -301,7 +360,10 @@ public class DungeonController : MonoBehaviour
                     }
                     if (!dungeonState.alreadyVisited.ContainsKey(currentPiece))
                     {
-                        element.EnterRoom();
+                        if (!dungeonState.wayOut)
+                            element.EnterRoom();
+                        else
+                            element.EnterRoomWayOut();
                         dungeonState.alreadyVisited[currentPiece] = true;
                     }
                     break;
@@ -371,9 +433,49 @@ public class DungeonController : MonoBehaviour
         return true;
     }
 
-    public DungeonLevel GenerateLevel()
+    public DungeonGeneratorSettings GenerateSettingsByLevel(int level)
     {
-        int linearLevelSize = Random.Range(6,9);
+        var sets = new DungeonGeneratorSettings();
+        var lenMin = (int)Mathf.Ceil(level * 0.5f) + 3;
+        var lenMax = (int)Mathf.Ceil(level * 0.3f);
+        sets.dungeonLength = Random.Range(lenMin, lenMin + lenMax);
+        sets.recurseChance = 9;
+        if (level >= 4)
+            sets.recurseChance = 6;
+        if (level >= 6)
+            sets.recurseChance = 4;
+        if (level >= 10)
+            sets.recurseChance = 3;
+        sets.doorRecurseChance = 6;
+        if (level >= 6)
+            sets.doorRecurseChance = 3;
+        var outTime = 150f + (level * 10f);
+        return sets;
+    }
+
+    public void CleanUpAll()
+    {
+        Destroy(level);
+        var enemys = FindObjectsOfType<CharacterController>();
+        foreach(var element in enemys)
+        {
+            if (element != GameController.instance.playerController)
+                Destroy(element);
+        }
+        var pickups = FindObjectsOfType<ItemComponent>();
+        foreach(var element in pickups)
+        {
+            if (element.owner == null)
+                Destroy(element);
+        }
+    }
+
+    public DungeonLevel GenerateLevel(DungeonGeneratorSettings settings)
+    {
+        var linearLevelSize = settings.dungeonLength;
+
+        /*
+        int linearLevelSize = Random.Range(6,9);*/
         var connectorRooms = Random.Range(3, (int)(linearLevelSize * 0.7));
 
         var availableConnectorRooms = new List<int>();
@@ -431,6 +533,12 @@ public class DungeonController : MonoBehaviour
             //var randomDoorComponent = potentialDoors[randomDoorIndex];
             var potentialNextPieces = new List<PotentialPiece>();
             var databaseNextPieces = database.enemyRooms;
+
+            if (i == linearLevelSize-1)
+            {
+                databaseNextPieces = database.endRooms;
+            }
+
             //Place a connector instead of enemy room?
             if (toPlaceConnectors.IndexOf(i) >= 0)
             {
@@ -512,12 +620,14 @@ public class DungeonController : MonoBehaviour
         foreach(var element in recursivable)
         {
             var doorz = element.getDoors().Length;
-            var recurseChance = Random.Range(0, 9);
+            //var recurseChance = Random.Range(0, 9);
+            var recurseChance = Random.Range(0, settings.recurseChance);
             if (recurseChance == 0)
             {
                 for (var n = 0; n < doorz; n++)
                 {
-                    recurseChance = Random.Range(0, 6);
+                    //recurseChance = Random.Range(0, 6);
+                    recurseChance = Random.Range(0, settings.doorRecurseChance);
                     if (recurseChance == 0)
                         Recurse(element);
                 }
@@ -525,6 +635,7 @@ public class DungeonController : MonoBehaviour
 
         }
         dungeonLevel = level;
+        dungeonLevel.wayOutTime = settings.wayOutTime;
         this.level = level.Instantiate();
         var spawns = this.level.GetComponentsInChildren<PlayerSpawn>();
         GameController.instance.player.transform.position = spawns[0].transform.position;

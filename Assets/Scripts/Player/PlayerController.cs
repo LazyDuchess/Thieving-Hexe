@@ -4,21 +4,197 @@ using UnityEngine;
 
 public class PlayerController : CharacterComponent
 {
+    ItemComponent drewItem;
+    public Inventory inventory = new Inventory();
+
     //For animating
     public bool backwards = false;
 
     private Vector3 aimLocation = Vector3.zero;
 
+    public InteractableComponent currentInteractable;
+
+    public FireMode GetPrimaryFireMode()
+    {
+        var ite = inventory.GetItemInSlot(inventory.currentSlot);
+
+        if (ite != null)
+        {
+            return ite.primaryFireMode;
+        }
+        return FireMode.Single;
+    }
+
+    public FireMode GetSecondaryFireMode()
+    {
+        var ite = inventory.GetItemInSlot(inventory.currentSlot);
+
+        if (ite != null)
+        {
+            return ite.secondaryFireMode;
+        }
+        return FireMode.Single;
+    }
+
+    public void Primary()
+    {
+        if (!IsAlive())
+            return;
+        var ite = inventory.GetItemInSlot(inventory.currentSlot);
+        
+        if (ite != null)
+        {
+            if (ite.CanFirePrimary())
+                ite.Primary();
+        }
+    }
+
+    public void Secondary()
+    {
+        if (!IsAlive())
+            return;
+        var ite = inventory.GetItemInSlot(inventory.currentSlot);
+        if (ite != null)
+        {
+            if (ite.CanFireSecondary())
+                ite.Secondary();
+        }
+    }
+
+    public void PrimaryEnd()
+    {
+        if (!IsAlive())
+            return;
+        var ite = inventory.GetItemInSlot(inventory.currentSlot);
+        if (ite != null)
+        {
+            if (ite.holdTime > 0f)
+                ite.PrimaryEnd();
+        }
+    }
+
+    public void SecondaryEnd()
+    {
+        if (!IsAlive())
+            return;
+        var ite = inventory.GetItemInSlot(inventory.currentSlot);
+        if (ite != null)
+        {
+            if (ite.holdTime > 0f)
+                ite.SecondaryEnd();
+        }
+    }
+
+    public void Interact()
+    {
+        if (currentInteractable == null)
+            return;
+        if (!IsAlive())
+            return;
+        currentInteractable.Interact(this);
+    }
+
+    private void InteractLoop()
+    {
+        currentInteractable = null;
+        if (!IsAlive())
+            return;
+        var allInteractables = FindObjectsOfType<InteractableComponent>();
+        foreach(var element in allInteractables)
+        {
+            if (element.Interactable())
+            {
+                var overlaps = Physics.OverlapSphere(element.triggerPosition(), element.interactionRadius);
+                foreach(var element2 in overlaps)
+                {
+                    var me = element2.GetComponent<PlayerController>();
+                    if (me)
+                    {
+                        if (me == this)
+                        {
+                            currentInteractable = element;
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     // Start is called before the first frame update
     protected override void Start()
     {
+        
         base.Start();
         DummyAim();
+        inventory.onSwitchItem += Inventory_Draw;
+        inventory.onAddItemEx += Inventory_Add;
+    }
+
+    public void UseCurrentInventory()
+    {
+        inventory.UseItem(inventory.currentSlot);
+    }
+
+    public bool CanUseInventory()
+    {
+        if (!IsAlive())
+            return false;
+        if (currentAction != null)
+        {
+            if (!currentAction.useInventory)
+                return false;
+        }
+        return true;
+    }
+
+    public override void OnDeath(Damage killingDamage)
+    {
+        base.OnDeath(killingDamage);
+        for(var i=0;i<inventory.maxCapacity;i++)
+        {
+            inventory.DropItem(i);
+        }
+    }
+
+    void Inventory_Add(ItemComponent item)
+    {
+        item.owner = this;
+    }
+
+    void Inventory_Draw()
+    {
+        if (drewItem != null)
+        {
+            drewItem.Holster();
+        }
+        var itm = inventory.GetItemInSlot(inventory.currentSlot);
+        if (itm != null)
+        {
+            itm.owner = this;
+            itm.Draw();
+        }
+        else
+        {
+            SendEvent("Unarmed");
+        }
+        drewItem = itm;
     }
 
     void DummyAim()
     {
         aimLocation = transform.position + transform.forward * 5f;
+    }
+
+    public Vector3 GetAimHeading()
+    {
+        return (aimLocation - transform.position).normalized;
+    }
+
+    public Vector3 GetAimHeadingFlat()
+    {
+        var loc = aimLocation - transform.position;
+        return new Vector3(loc.x, 0f, loc.z).normalized;
     }
 
     public Vector3 GetAim()
@@ -41,6 +217,7 @@ public class PlayerController : CharacterComponent
         base.Update();
         if (IsAlive())
         {
+            InteractLoop();
             Quaternion targetRotation;
             backwards = false;
 

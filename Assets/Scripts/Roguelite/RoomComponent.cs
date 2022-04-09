@@ -47,6 +47,15 @@ public class RoomComponent : MonoBehaviour
         }
     }
 
+    public void EnterRoomWayOut()
+    {
+        var allTriggers = GetComponentsInChildren<RoomTrigger>();
+        foreach (var element in allTriggers)
+        {
+            element.OnPlayerComeBack();
+        }
+    }
+
     public DoorFaceResult isCompatibleWithDoorFace(DoorFace face)
     {
         var result = new DoorFaceResult();

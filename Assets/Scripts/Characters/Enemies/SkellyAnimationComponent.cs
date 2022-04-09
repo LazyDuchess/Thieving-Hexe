@@ -14,6 +14,11 @@ public class SkellyAnimationComponent : MonoBehaviour
         skelly.Subscribe(this);
     }
 
+    public void Cancel()
+    {
+        //ye
+    }
+
     public void Melee()
     {
         if (!skelly.IsAlive())

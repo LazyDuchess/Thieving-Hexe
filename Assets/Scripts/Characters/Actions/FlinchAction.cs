@@ -24,6 +24,7 @@ public class FlinchAction : Action
 
     public override bool Tick()
     {
+        base.Tick();
         currentDuration -= Time.deltaTime;
         if (currentDuration <= 0f)
             return true;

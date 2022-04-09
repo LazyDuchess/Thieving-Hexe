@@ -7,6 +7,7 @@ public class HealthController : MonoBehaviour
     //Debug
     public bool god = false;
     public float hp = 100f;
+    public float maxHP = 100f;
     public delegate void DamageDelegate(Damage damage);
     public DamageDelegate damageEvent;
     public DamageDelegate deathEvent;
@@ -39,6 +40,13 @@ public class HealthController : MonoBehaviour
         return rigidBody;
     }
 
+    public virtual void GiveHealth(float hp)
+    {
+        this.hp += hp;
+        if (this.hp >= maxHP)
+            this.hp = maxHP;
+    }
+
     public virtual void TakeDamage(Damage damage)
     {
         var wasAlive = IsAlive();
@@ -47,7 +55,11 @@ public class HealthController : MonoBehaviour
         if (damageEvent != null)
             damageEvent.Invoke(damage);
         if (rigidBody)
-            rigidBody.velocity += damage.vector;
+        {
+            var pushy = (transform.position - damage.vector).normalized * damage.pushForce;
+            rigidBody.AddForce(pushy, ForceMode.Impulse);
+            //rigidBody.velocity += damage.vector;
+        }
         if (hp <= 0f && wasAlive)
         {
             OnDeath(damage);

@@ -61,6 +61,8 @@ public class GameCamera : MonoBehaviour
         //Invalid target - no player controller. todo - lerp back to zero?
         if (!GameController.instance.playerController)
             return;
+        if (!GameController.instance.controlEnabled)
+            return;
         aimLocation = InputUtils.GetMouse();
         Ray ray = camera.ScreenPointToRay(InputUtils.GetMouseScreen());
         RaycastHit hit;

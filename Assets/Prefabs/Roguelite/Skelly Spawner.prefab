@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 7439931130591047456, guid: 808b59d372a43ab4683a2699a96e8d9d, type: 3}
   spawnOnArrival: 1
-  spawnOnWayOut: 0
+  spawnOnWayOut: 1
 --- !u!1 &2122350074969239320
 GameObject:
   m_ObjectHideFlags: 0

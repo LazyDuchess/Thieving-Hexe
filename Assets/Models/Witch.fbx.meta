@@ -69,6 +69,9 @@ ModelImporter:
   - first:
       74: 3459480066871371983
     second: metarig|TPose.001
+  - first:
+      74: -87083429046308561
+    second: metarig|drink_potion
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -165,7 +168,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: spine
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -173,7 +176,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 

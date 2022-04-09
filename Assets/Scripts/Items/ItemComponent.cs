@@ -2,17 +2,175 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemComponent : MonoBehaviour
+public enum FireMode { Single, Auto };
+public class ItemComponent : InteractableComponent
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public string animation = "onehanded";
+    public string itemUID = "wand";
+    public string itemName = "Wand";
+    public Sprite inventorySprite;
+    public bool stackable = false;
+    public bool droppable = false;
+    public bool pickupable = true;
+    public int amount = 1;
+    public int maxAmount = 5;
+    public GameObject holdObject;
+    public GameObject dropObject;
+    public CharacterComponent owner;
+    public Inventory inventory;
+
+    public float holdTime = 0f;
+    bool holding = false;
+
+    float coolDownP = 0f;
+    float coolDownS = 0f;
+
+    public FireMode primaryFireMode = FireMode.Single;
+    public FireMode secondaryFireMode = FireMode.Single;
+
+    public virtual void Primary() {
+        holding = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void PrimaryEnd() {
+        holding = false;
+    }
+
+    public virtual void Secondary() { 
+        holding = true;
+    }
+
+    public virtual void SecondaryEnd() {
+        holding = false;
+    }
+
+    public override Vector3 triggerPosition()
     {
-        
+        if (dropObject != null)
+            return dropObject.transform.position;
+        return transform.position;
+    }
+    public override bool Interactable()
+    {
+        if (owner != null)
+            return false;
+        return true;
+    }
+
+    public override void Interact(CharacterComponent actor)
+    {
+        var playerActor = actor.GetComponent<PlayerController>();
+        if (playerActor)
+        {
+            playerActor.inventory.AddItem(this);
+        }
+    }
+
+    public virtual void CoolDownPrimary(float duration)
+    {
+        coolDownP += duration;
+    }
+
+    public virtual void CoolDownSecondary(float duration)
+    {
+        coolDownS += duration;
+    }
+
+    public virtual bool CanFirePrimary()
+    {
+        if (coolDownP > 0f)
+            return false;
+        return true;
+    }
+
+    public virtual bool CanFireSecondary()
+    {
+        if (coolDownS > 0f)
+            return false;
+        return true;
+    }
+
+    public virtual void Update()
+    {
+        if (holding)
+            holdTime += Time.deltaTime;
+        else
+            holdTime = 0f;
+        if (coolDownP > 0f)
+        {
+            coolDownP -= Time.deltaTime;
+        }
+        if (coolDownS > 0f)
+        {
+            coolDownS -= Time.deltaTime;
+        }
+        if (coolDownP < 0f)
+            coolDownP = 0f;
+        if (coolDownS < 0f)
+            coolDownS = 0f;
+    }
+
+    public virtual void Start()
+    {
+        if (holdObject != null)
+            holdObject.SetActive(false);
+    }
+
+    public virtual void ToInventory(Inventory inventory)
+    {
+        this.inventory = inventory;
+        if (holdObject != null)
+            holdObject.SetActive(false);
+        if (dropObject != null)
+            dropObject.SetActive(false);
+    }
+
+    public virtual void Draw()
+    {
+        owner.holding = this;
+        if (holdObject != null)
+            holdObject.SetActive(true);
+        if (dropObject != null)
+            dropObject.SetActive(false);
+        owner.SendEvent("Hold");
+        owner.SendEvent(animation + "_Draw");
+        holding = false;
+        holdTime = 0f;
+    }
+
+    public virtual void Holster()
+    {
+        if (holdObject != null)
+            holdObject.SetActive(false);
+        holding = false;
+        holdTime = 0f;
+    }
+
+    public virtual void SpawnDropped()
+    {
+        if (holdObject != null)
+            holdObject.SetActive(false);
+        if (dropObject != null)
+        {
+            dropObject.SetActive(true);
+            dropObject.transform.position = owner.transform.position;
+            dropObject.transform.rotation = owner.mesh.transform.rotation;
+        }
+        owner = null;
+    }
+
+    public virtual void Drop()
+    {
+        if (holdObject != null)
+            holdObject.SetActive(false);
+        if (dropObject != null)
+        {
+            dropObject.SetActive(true);
+            dropObject.transform.position = owner.transform.position;
+            dropObject.transform.rotation = owner.mesh.transform.rotation;
+            dropObject.GetComponent<Rigidbody>().velocity = owner.mesh.transform.forward * 2f + owner.FlatVelocity();
+            dropObject.GetComponent<Rigidbody>().angularVelocity = VectorUtil.RandomNormal() * 5f;
+        }
+        owner = null;
     }
 }
