@@ -257,6 +257,7 @@ public class DungeonState
     public int killedEnemies = 0;
     public int spawnedEnemies = 0;
     public bool done = false;
+    public float totalTime = 0f;
 }
 
 public class PotentialPiece
@@ -325,12 +326,21 @@ public class DungeonController : MonoBehaviour
         return dungeonState.timeLeft;
     }
 
+    public float GetTimeElapsed()
+    {
+        return dungeonState.totalTime;
+    }
+
     private void Update()
     {
         if (dungeonLevel == null)
             return;
         if (!GameController.instance.player)
             return;
+        if (!dungeonState.done)
+        {
+            dungeonState.totalTime += Time.deltaTime;
+        }
         if (dungeonState.wayOut && !dungeonState.done)
         {
             dungeonState.timeLeft -= Time.deltaTime;

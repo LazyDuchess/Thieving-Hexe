@@ -29,8 +29,12 @@ public class DoorComponent : InteractableComponent
         var playa = actor.GetComponent<PlayerController>();
         if (playa)
         {
-            if (playa.inventory.GetCurrentItem().itemUID == "key")
-                return true;
+            var curItem = playa.inventory.GetCurrentItem();
+            if (curItem)
+            {
+                if (playa.inventory.GetCurrentItem().itemUID == "key")
+                    return true;
+            }
         }
         return false;
     }
