@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionType: 3
-  interactionRadius: 1.5
+  interactionRadius: 2
   doorClosedObject: {fileID: 2990889618764686041}
   facing: 2
   open: 0

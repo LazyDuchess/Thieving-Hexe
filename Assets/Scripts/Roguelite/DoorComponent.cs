@@ -59,7 +59,7 @@ public class DoorComponent : InteractableComponent
         }
         else
         {
-            UINotification.instance.Show("This door won't budge.", 2f);
+            UINotification.instance.Show("This door won't budge.", 3f);
         }
     }
 

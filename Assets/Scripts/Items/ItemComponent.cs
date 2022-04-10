@@ -62,7 +62,17 @@ public class ItemComponent : InteractableComponent
         var playerActor = actor.GetComponent<PlayerController>();
         if (playerActor)
         {
-            playerActor.inventory.AddItem(this);
+            var prevAmount = this.amount;
+            var result = playerActor.inventory.AddItem(this);
+            if (result.remainingAmount == prevAmount)
+            {
+                UINotification.instance.Show(itemName + ": I couldn't fit it in my inventory.", 3f);
+            }
+            else
+            {
+                if (result.remainingAmount > 0)
+                    UINotification.instance.Show(itemName + ": I couldn't fit all of it in my inventory.", 3f);
+            }
         }
     }
 
