@@ -3690,6 +3690,7 @@ MonoBehaviour:
     - {fileID: 3247027393958201592, guid: bad7281db92efc848b945b7070447e3b, type: 3}
     - {fileID: 6780716049081667171, guid: f88450eb4684e3c47bd5507862cdb6c6, type: 3}
     - {fileID: 1146388840281082487, guid: 909209d5503bbe146abed9056a95b185, type: 3}
+    - {fileID: 8034298164814953875, guid: c5ae07ae049e55444ba4742301afaddb, type: 3}
     lootRooms:
     - {fileID: 8535469674974946045, guid: 5353c3a429fe94f44903d736bb5b1165, type: 3}
     endRooms:
