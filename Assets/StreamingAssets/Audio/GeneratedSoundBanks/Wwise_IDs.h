@@ -22,10 +22,15 @@ namespace AK
         static const AkUniqueID PLAY_ENEM_ATK_BSC_CHARGED = 2157278666U;
         static const AkUniqueID PLAY_ENEM_ATK_BSC_LTE = 2634303667U;
         static const AkUniqueID PLAY_ENEM_DEFEATED = 279773806U;
-        static const AkUniqueID PLAY_ENEM_FS_MATERIAL = 853001943U;
+        static const AkUniqueID PLAY_ENEM_MIN_ON_FIRE = 3897903487U;
         static const AkUniqueID PLAY_ENEM_REC_GEN_DMG_HIT = 1064632258U;
         static const AkUniqueID PLAY_ENEM_RECV_FIRE_DMG = 924170866U;
+        static const AkUniqueID PLAY_ENEM_SKEL_FS_MATERIAL = 2027687623U;
+        static const AkUniqueID PLAY_ENEM_SKELLE_DEFEAT = 3332044750U;
+        static const AkUniqueID PLAY_ENEM_SKELLE_FS_MATERIAL = 432265666U;
         static const AkUniqueID PLAY_GUARDBLURB = 784653928U;
+        static const AkUniqueID PLAY_ITM_DRINK_POTION = 2003385513U;
+        static const AkUniqueID PLAY_ITM_PU_POTION = 873733766U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_OBJ_DOOR_CLOSE = 675557581U;
         static const AkUniqueID PLAY_OBJ_DOOR_OPEN = 1417455751U;
@@ -39,6 +44,8 @@ namespace AK
         static const AkUniqueID PLAY_PLYR_REC_GEN_DMG = 3674195162U;
         static const AkUniqueID PLAY_PLYR_RECV_FIRE_DMG = 149588724U;
         static const AkUniqueID PLAY_TORCH = 2025845440U;
+        static const AkUniqueID PLAY_UI_MENUSELECT = 1999625262U;
+        static const AkUniqueID PLAY_UI_ROLLOVER = 4038800916U;
         static const AkUniqueID STOP_PLAYERFSMATERIAL = 2251837801U;
         static const AkUniqueID STOP_PLYR_FLOAT = 2450666310U;
     } // namespace EVENTS
@@ -53,7 +60,6 @@ namespace AK
             {
                 static const AkUniqueID CASTLE = 129146593U;
                 static const AkUniqueID FOREST = 491961918U;
-                static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace ENVIRO
@@ -90,6 +96,17 @@ namespace AK
                 static const AkUniqueID WATER = 2654748154U;
             } // namespace SWITCH
         } // namespace CRYSTALTYPE
+
+        namespace ENEMRUNWALK
+        {
+            static const AkUniqueID GROUP = 2680486766U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID ENMSKRUN = 3672549870U;
+                static const AkUniqueID ENMSKWALK = 2293070800U;
+            } // namespace SWITCH
+        } // namespace ENEMRUNWALK
 
         namespace PLAYERRUNWALK
         {

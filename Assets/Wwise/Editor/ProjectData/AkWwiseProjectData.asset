@@ -584,7 +584,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 7eba4d089b921a46bb11fb91fae60011
     GuidInternal: 
-    m_lastTime: -8585521246345869370
+    m_lastTime: -8585519869297946882
     List:
     - name: Main
       guid: 5f870b2649904142a5a3c565028fd8cb
@@ -612,7 +612,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 411de6e562825d44b1e38d90e3d2c241
     GuidInternal: 
-    m_lastTime: -8585521246345804816
+    m_lastTime: -8585519869297813604
     List: []
   - PhysicalPath: Events\Enemies.wwu
     PathAndIcons:
@@ -625,7 +625,7 @@ MonoBehaviour:
     ParentPath: Events\Enemies
     guid: b57b8ebbdd978a4eb2fe751cc791da40
     GuidInternal: 
-    m_lastTime: -8585521246345656022
+    m_lastTime: -8585519869297734247
     List:
     - name: Play_Enem_Atk_Bsc_Charged
       guid: 2437c963447d854382f92df1b2735cbf
@@ -678,9 +678,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.576396
       minDuration: 2.576396
-    - name: Play_Enem_FS_Material
-      guid: ce7c3dec9eaa064d86478acc7be380a1
-      id: 853001943
+    - name: Play_Enem_Min_On_Fire
+      guid: 4dd13fd0f6e3414f8fe544dd343bb907
+      id: 3897903487
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -688,13 +688,13 @@ MonoBehaviour:
       - ElementName: Enemies
         ObjectType: 12
         guid: b57b8ebbdd978a4eb2fe751cc791da40
-      - ElementName: Play_Enem_FS_Material
+      - ElementName: Play_Enem_Min_On_Fire
         ObjectType: 3
-        guid: ce7c3dec9eaa064d86478acc7be380a1
-      Path: Events\Enemies\Play_Enem_FS_Material
+        guid: 4dd13fd0f6e3414f8fe544dd343bb907
+      Path: Events\Enemies\Play_Enem_Min_On_Fire
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4.132163
+      minDuration: 3.95075
     - name: Play_Enem_Rec_Gen_Dmg_Hit
       guid: 8a15098c2f3c874ba170f47982d50c02
       id: 1064632258
@@ -710,8 +710,8 @@ MonoBehaviour:
         guid: 8a15098c2f3c874ba170f47982d50c02
       Path: Events\Enemies\Play_Enem_Rec_Gen_Dmg_Hit
       maxAttenuation: 0
-      maxDuration: 0.288932
-      minDuration: 0.19834
+      maxDuration: 0.251412
+      minDuration: 0.183089
     - name: Play_Enem_Recv_Fire_Dmg
       guid: 86c05ae64985e84caf77d6999d2b3e59
       id: 924170866
@@ -729,6 +729,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.718759
       minDuration: 0.638117
+    - name: Play_Enem_Skel_FS_Material
+      guid: 3d82e30f16131c48a8cd1df15f2637a2
+      id: 2027687623
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Enemies
+        ObjectType: 12
+        guid: b57b8ebbdd978a4eb2fe751cc791da40
+      - ElementName: Play_Enem_Skel_FS_Material
+        ObjectType: 3
+        guid: 3d82e30f16131c48a8cd1df15f2637a2
+      Path: Events\Enemies\Play_Enem_Skel_FS_Material
+      maxAttenuation: 0
+      maxDuration: 7.096122
+      minDuration: 1.530479
+    - name: Play_Enem_Skelle_Defeat
+      guid: 2236dbd066a5be44b3a667da4ddf476a
+      id: 3332044750
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Enemies
+        ObjectType: 12
+        guid: b57b8ebbdd978a4eb2fe751cc791da40
+      - ElementName: Play_Enem_Skelle_Defeat
+        ObjectType: 3
+        guid: 2236dbd066a5be44b3a667da4ddf476a
+      Path: Events\Enemies\Play_Enem_Skelle_Defeat
+      maxAttenuation: 0
+      maxDuration: 2.122287
+      minDuration: 1.953649
+    - name: Play_Enem_Skelle_FS_Material
+      guid: ce7c3dec9eaa064d86478acc7be380a1
+      id: 432265666
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Enemies
+        ObjectType: 12
+        guid: b57b8ebbdd978a4eb2fe751cc791da40
+      - ElementName: Play_Enem_Skelle_FS_Material
+        ObjectType: 3
+        guid: ce7c3dec9eaa064d86478acc7be380a1
+      Path: Events\Enemies\Play_Enem_Skelle_FS_Material
+      maxAttenuation: 0
+      maxDuration: 7.096122
+      minDuration: 0.312948
     - name: Play_GuardBlurb
       guid: feb9777d15d796438c9b17e4e26e6177
       id: 784653928
@@ -983,8 +1034,8 @@ MonoBehaviour:
         guid: 32a955972ea0b1488ecd56738c3fee41
       Path: Events\Player\Play_PlayerFSMaterial
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Plyr_Atk_Bsc_Charged
       guid: 7ebd29bd84077d45ae69d94f4c0077b4
       id: 1020029592
@@ -1155,6 +1206,53 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+  - PhysicalPath: Events\UI.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: UI
+      ObjectType: 12
+      guid: 0da5eb641432ca4fb5197b40c502b667
+    ParentPath: Events\UI
+    guid: 0da5eb641432ca4fb5197b40c502b667
+    GuidInternal: 
+    m_lastTime: -8585519904292743171
+    List:
+    - name: Play_UI_MenuSelect
+      guid: d71dfca4e07ef441ae9a324e556a6338
+      id: 1999625262
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0da5eb641432ca4fb5197b40c502b667
+      - ElementName: Play_UI_MenuSelect
+        ObjectType: 3
+        guid: d71dfca4e07ef441ae9a324e556a6338
+      Path: Events\UI\Play_UI_MenuSelect
+      maxAttenuation: 0
+      maxDuration: 4.1
+      minDuration: 4.1
+    - name: Play_UI_RollOver
+      guid: 2dd9d200805f2a4e90237d47cec8b36c
+      id: 4038800916
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: 0da5eb641432ca4fb5197b40c502b667
+      - ElementName: Play_UI_RollOver
+        ObjectType: 3
+        guid: 2dd9d200805f2a4e90237d47cec8b36c
+      Path: Events\UI\Play_UI_RollOver
+      maxAttenuation: 0
+      maxDuration: 0.925583
+      minDuration: 0.925583
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1379,7 +1477,7 @@ MonoBehaviour:
     ParentPath: States\Music
     guid: 847e0e9418033341af26417b3ec89b1f
     GuidInternal: 
-    m_lastTime: -8585524109386762027
+    m_lastTime: -8585520532133828238
     List:
     - name: Enviro
       guid: fb3d8fcdb87c514b9de6271eb2881d24
@@ -1428,22 +1526,6 @@ MonoBehaviour:
         - ElementName: Forest
           ObjectType: 8
           guid: 211a7f0160251a469911daf7fc185a93
-      - name: Menu
-        guid: dccb985b190a214aaed21f83f99caa07
-        id: 2607556080
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Music
-          ObjectType: 12
-          guid: 847e0e9418033341af26417b3ec89b1f
-        - ElementName: Enviro
-          ObjectType: 9
-          guid: fb3d8fcdb87c514b9de6271eb2881d24
-        - ElementName: Menu
-          ObjectType: 8
-          guid: dccb985b190a214aaed21f83f99caa07
       - name: None
         guid: 8a097b44cfe00041aa58971d3f8a3579
         id: 748895195
@@ -1475,7 +1557,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: bf7b029df89aad4e8304a384054b852f
     GuidInternal: 
-    m_lastTime: -8585520597889046572
+    m_lastTime: -8585519928706313695
     List:
     - name: CrystalType
       guid: c811b9c4c2af5c4582ec1306fda9bec9
@@ -1556,6 +1638,56 @@ MonoBehaviour:
         - ElementName: Water
           ObjectType: 10
           guid: 5f7d67c3f84f18409184908d9c65313a
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: EnemRunWalk
+      guid: 7055166af2bf8948a466519f41694ef3
+      id: 2680486766
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bf7b029df89aad4e8304a384054b852f
+      - ElementName: EnemRunWalk
+        ObjectType: 11
+        guid: 7055166af2bf8948a466519f41694ef3
+      Path: Switches\Default Work Unit\EnemRunWalk
+      values:
+      - name: EnmSkRun
+        guid: b544eac1e1100846bdde5c63e9fccf80
+        id: 3672549870
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bf7b029df89aad4e8304a384054b852f
+        - ElementName: EnemRunWalk
+          ObjectType: 11
+          guid: 7055166af2bf8948a466519f41694ef3
+        - ElementName: EnmSkRun
+          ObjectType: 10
+          guid: b544eac1e1100846bdde5c63e9fccf80
+      - name: EnmSkWalk
+        guid: b7a6aab9ff5a654ea85d234973755f21
+        id: 2293070800
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: bf7b029df89aad4e8304a384054b852f
+        - ElementName: EnemRunWalk
+          ObjectType: 11
+          guid: 7055166af2bf8948a466519f41694ef3
+        - ElementName: EnmSkWalk
+          ObjectType: 10
+          guid: b7a6aab9ff5a654ea85d234973755f21
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -1788,7 +1920,7 @@ MonoBehaviour:
     m_lastTime: -8585533485103830915
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 020000000300000004000000050000000600000007000000080000000b000000110000001200000014000000190000001e0000001f000000200000002100000022000000230000002600000028000000290000002a0000002b00000030000000310000003e000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

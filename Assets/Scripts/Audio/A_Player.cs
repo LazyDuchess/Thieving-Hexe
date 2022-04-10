@@ -24,22 +24,22 @@ public class A_Player : MonoBehaviour
 {
 
     //Things to be accessed by anyone
-    #region Public Variables
+
     public PlayerController pController;//get player public class
     public Rigidbody rb;
 
-    #endregion
+   
 
     //Things to be acecessed by only this script
     #region Private Variables
     [Header("Locomotion")]
     [SerializeField] private AK.Wwise.Event pFootStep;
     [SerializeField] private AK.Wwise.Event pStopFootStep;
-    //[SerializeField] private AK.Wwise.Event pJump;
-    //[SerializeField] private AK.Wwise.Event pLand;
+
     [Header("Attacks")]
     [SerializeField] private AK.Wwise.Event pLteAttack;
-    [SerializeField] private AK.Wwise.Event pChrgAttack;
+    [SerializeField] private AK.Wwise.Event pChrgAttackStartLoop;
+    [SerializeField] private AK.Wwise.Event pChrgAttackRelease;
     /*    [SerializeField] private AK.Wwise.Event pFireAtkkLte;
         [SerializeField] private AK.Wwise.Event pFireAtkChrg;
         [SerializeField] private AK.Wwise.Event pWaterAtkLte;
@@ -56,6 +56,13 @@ public class A_Player : MonoBehaviour
 
     #endregion
 
+    public void Start()
+    {
+        GameEventsController.playerChargedAttackStartEvent += PlayChargeAttackStart;
+        GameEventsController.playerChargedAttackEndEvent += PlayChargeAttackCast;
+        GameEventsController.playerAttackEvent += PlayBasicAttack;
+    }
+
     public void Update()
     {
         //get and set player health RTPC
@@ -67,7 +74,7 @@ public class A_Player : MonoBehaviour
         speed = vel.magnitude;
         PlayPlayerMovement(vel);
 
-        AkSoundEngine.SetRTPCValue("PlayerSpeed", speed);
+        AkSoundEngine.SetRTPCValue("PlayerSpeed", speed);   
     }
 
     private void PlayPlayerMovement(Vector3 vel)
@@ -82,6 +89,22 @@ public class A_Player : MonoBehaviour
         else if (vel == Vector3.zero)
             pStopFootStep.Post(gameObject);
 
+    }
+
+    void PlayBasicAttack()
+    {
+        pLteAttack.Post(gameObject);
+    }
+
+
+    void PlayChargeAttackStart()
+    {
+        pChrgAttackStartLoop.Post(gameObject);
+    }
+
+    void PlayChargeAttackCast()
+    {
+        pChrgAttackRelease.Post(gameObject);
     }
 
 

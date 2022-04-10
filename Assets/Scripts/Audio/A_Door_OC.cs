@@ -2,34 +2,20 @@ using UnityEngine;
 
 public class A_Door_OC : MonoBehaviour
 {
-    public DoorComponent doorComponent;
-
-    private bool neverDone;
-    private bool allowClose;
-
+    public GameObject door;
 
     public void Start()
     {
-        neverDone = false;
-        if (doorComponent.open == false)
-            allowClose = true;
+        //GameEventsController.openDoorEvent += PlayOpenDoor;
+        //GameEventsController.openCloseEvent += PlayCloseDoor;
     }
 
-    public void Update()
+    public void PlayOpenDoor()
     {
-
-        if (doorComponent.open == true)
-            if (neverDone)
-            {
-                AkSoundEngine.PostEvent("Play_Obj_Door_Open", gameObject);
-                allowClose = true;
-            }
-        if (allowClose == true)
-        {
-            if (doorComponent.open == false)
-            {
-                AkSoundEngine.PostEvent("Play_Obj_door_Close", gameObject);
-            }
-        }
+            AkSoundEngine.PostEvent("Obj_Door_Open", door);
+    }
+    public void PlayCloseDoor()
+    {
+        AkSoundEngine.PostEvent("Obj_Door_Close", door);
     }
 }
