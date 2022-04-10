@@ -24,6 +24,24 @@ public class Inventory
         return items[slot];
     }
 
+    public ItemComponent GetCurrentItem()
+    {
+        return GetItemInSlot(currentSlot);
+    }
+
+    public bool HasItem(string uid)
+    {
+        foreach (var element in items)
+        {
+            if (element != null)
+            {
+                if (element.itemUID == uid)
+                    return true;
+            }
+        }
+        return false;
+    }
+
     public bool HasItem(ItemComponent item)
     {
         foreach(var element in items)

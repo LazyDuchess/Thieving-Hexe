@@ -282,6 +282,7 @@ public class DungeonController : MonoBehaviour
     public DungeonState dungeonState;
     public static DungeonController instance;
     public bool lastOutdoor = true;
+    public bool inDangerPrev = false;
 
 
     private void Awake()
@@ -333,6 +334,8 @@ public class DungeonController : MonoBehaviour
         if (dungeonState.wayOut && !dungeonState.done)
         {
             dungeonState.timeLeft -= Time.deltaTime;
+            if (dungeonState.timeLeft <= 0f)
+                GameController.instance.GameOver();
         }
         var currentPiece = dungeonLevel.GetPieceAtPosition(GameController.instance.player.transform.position);
         if (currentPiece != null)
@@ -352,10 +355,20 @@ public class DungeonController : MonoBehaviour
                 {
                     if (AnyAliveEnemies() && !dungeonState.wayOut)
                     {
+                        if (inDangerPrev == false)
+                        {
+                            inDangerPrev = true;
+                            GameEventsController.RoomsClose();
+                        }
                         element.CloseDoors();
                     }
                     else
                     {
+                        if (inDangerPrev == true)
+                        {
+                            inDangerPrev = false;
+                            GameEventsController.RoomsOpen();
+                        }
                         element.OpenDoors();
                     }
                     if (!dungeonState.alreadyVisited.ContainsKey(currentPiece))
@@ -374,21 +387,25 @@ public class DungeonController : MonoBehaviour
     }
 
     //Dead ends, loot rooms.
-    public bool Recurse(DungeonPiece piece)
+    public DungeonPiece Recurse(DungeonPiece piece, DoorComponent onDoor = null)
     {
         var recursionSize = Random.Range(1, 5);
         var endInLootRoom = false;
-        var endInLotRoomChance = Random.Range(0, 4);
+        var endInLotRoomChance = Random.Range(0, 3);
         if (endInLotRoomChance == 0)
             endInLootRoom = true;
         var currentPiece = piece;
+        DungeonPiece firstPiece = null;
         for(var i=0;i<recursionSize;i++)
         {
             var pieceDB = database.connectorRooms;
-            /*
             if (i == recursionSize - 1 && endInLootRoom)
-                pieceDB = database.lootRooms;*/
+                pieceDB = database.lootRooms;
             var myDoors = currentPiece.getDoors();
+            if (i == 0 && onDoor != null)
+            {
+                myDoors = new DoorComponent[] { onDoor };
+            }
             var potentials = new List<PotentialPiece>();
             foreach(var myDoor in myDoors)
             {
@@ -412,9 +429,9 @@ public class DungeonController : MonoBehaviour
             if (potentials.Count == 0)
             {
                 if (i == 0)
-                    return false;
+                    return null;
                 else
-                    return true;
+                    return firstPiece;
             }
             else
             {
@@ -428,9 +445,11 @@ public class DungeonController : MonoBehaviour
                         Recurse(currentPiece);
                 }
                 currentPiece = newPieceFinal;
+                if (i == 0)
+                    firstPiece = currentPiece;
             }
         }
-        return true;
+        return firstPiece;
     }
 
     public DungeonGeneratorSettings GenerateSettingsByLevel(int level)
@@ -452,7 +471,7 @@ public class DungeonController : MonoBehaviour
         if (level >= 12)
             sets.doorRecurseChance = 2;
 
-        var outTime = 130f + (level * 10f);
+        sets.wayOutTime = 75f + (level * 20f);
         return sets;
     }
 
@@ -647,6 +666,8 @@ public class DungeonController : MonoBehaviour
         GameController.instance.player.transform.position = spawns[0].transform.position;
         dungeonState = new DungeonState();
         dungeonState.allRooms = this.level.GetComponentsInChildren<RoomComponent>();
+        inDangerPrev = false;
+        GameEventsController.DungeonStart();
         return level;
     }
     /*
