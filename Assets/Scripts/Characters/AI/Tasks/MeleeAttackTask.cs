@@ -8,11 +8,15 @@ public class MeleeAttackTask : Task
     private float minDistance = 1f;
     private Action meleeAttackAction;
     private float targetDistance = 20f;
-    public MeleeAttackTask(AICharacterComponent owner, int priority, float attackDistance, float targetDistance, Action meleeAttackAction) : base(owner, priority)
+    public float reactionTime = 0.35f;
+    float currentReactionTime;
+    public MeleeAttackTask(AICharacterComponent owner, int priority, float attackDistance, float targetDistance, Action meleeAttackAction, float reactionTime) : base(owner, priority)
     {
         this.minDistance = attackDistance;
         this.meleeAttackAction = meleeAttackAction;
         this.targetDistance = targetDistance;
+        this.reactionTime = reactionTime;
+        this.currentReactionTime = reactionTime;
     }
 
     void getTarget()
@@ -54,25 +58,32 @@ public class MeleeAttackTask : Task
         getTarget();
         if (target != null)
         {
-            var dist = Vector3.Distance(owner.transform.position, target.transform.position);
-            var heading = (owner.transform.position - target.transform.position).normalized;
-            if (dist > minDistance)
+            currentReactionTime -= Time.deltaTime;
+            if (currentReactionTime <= 0f)
             {
-                owner.movementVector = heading;
+                var dist = Vector3.Distance(owner.transform.position, target.transform.position);
+                var heading = (owner.transform.position - target.transform.position).normalized;
+                if (dist > minDistance)
+                {
+                    owner.movementVector = heading;
+                }
+                else
+                {
+                    if (!owner.ActionBusy())
+                    {
+                        owner.QueueAction(meleeAttackAction);
+                    }
+                    owner.movementVector = Vector3.zero;
+                    owner.SetRotation(Quaternion.LookRotation(-heading).eulerAngles.y);
+                }
+                return true;
             }
             else
-            {
-                if (!owner.ActionBusy())
-                {
-                    owner.QueueAction(meleeAttackAction);
-                }
-                owner.movementVector = Vector3.zero;
-                owner.SetRotation(Quaternion.LookRotation(-heading).eulerAngles.y);
-            }
-            return true;
+                return false;
         }
         else
         {
+            currentReactionTime = reactionTime;
             return false;
         }
     }

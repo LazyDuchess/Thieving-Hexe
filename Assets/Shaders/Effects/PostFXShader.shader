@@ -9,6 +9,8 @@ Properties{
         _DitherScale("Dither Scale", Float) = 1
         _ColorFactor("Color Factor", Float) = 4
         _Contrast("Contrast", Float) = 1
+        _OverlayTransparency("Overlay Transparency", Float) = 1
+        _Overlay("Overlay Texture",2D) = "white" {}
 }
 
 SubShader{
@@ -28,6 +30,7 @@ SubShader{
             //texture and transforms of the texture
             sampler2D _MainTex;
             float4 _MainTex_ST;
+            sampler2D _Overlay;
 
             //The dithering pattern
             sampler2D _DitherPattern;
@@ -39,6 +42,7 @@ SubShader{
             float _DitherScale;
             float _ColorFactor;
             float _Contrast;
+            float _OverlayTransparency;
 
             //the object data that's put into the vertex shader
             struct appdata {
@@ -68,15 +72,24 @@ SubShader{
                 //texture value the dithering is based on
                 float4 ogTexColor = tex2D(_MainTex, i.uv);
 
+                float4 ogOverlay = tex2D(_Overlay, i.uv);
+
             
             //posterize texColor
             ogTexColor = floor(ogTexColor * _ColorFactor) / _ColorFactor;
 
+            //posterize overlay
+            ogOverlay = floor(ogOverlay * _ColorFactor) / _ColorFactor;
+
             //grayscale filter
             float texColor = (ogTexColor.r + ogTexColor.g + ogTexColor.b) / 3.0;
 
+            float overlayColor = (ogOverlay.r + ogOverlay.g + ogOverlay.b) / 3.0;
+
             //contrast
             texColor = pow(texColor, _Contrast);
+
+            overlayColor = pow(overlayColor, _Contrast);
 
             //value from the dither pattern
             float2 screenPos = i.screenPosition.xy / i.screenPosition.w;
@@ -86,6 +99,14 @@ SubShader{
             //combine dither pattern with texture value to get final result
             float ditheredValue = step(ditherValue, texColor);
             float4 col = lerp(_Color1, _Color2, ditheredValue);
+
+            float overlayDitheredValue = step(ditherValue, overlayColor);
+            float4 overlayCol = lerp(_Color1, _Color2, overlayDitheredValue);
+
+            float ditheredAlpha = step(ditherValue, ogOverlay.a * _OverlayTransparency);
+
+            col = lerp(col, overlayCol, ditheredAlpha);
+
             return col;
         }
 

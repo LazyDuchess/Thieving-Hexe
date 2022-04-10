@@ -16,7 +16,7 @@ public class SkellyComponent : AICharacterComponent
     {
         base.InitializeTasks();
         meleeAtkAction = new MeleeAttackAction(this, 0.7f, 1.0f, 0.6f, 8f, false);
-        AddTask(new MeleeAttackTask(this, 100, 1.75f, 50f, meleeAtkAction));
+        AddTask(new MeleeAttackTask(this, 100, 1.75f, 50f, meleeAtkAction, 0.35f));
     }
 
     void Gib(Damage damage)

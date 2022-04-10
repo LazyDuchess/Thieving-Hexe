@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
         controlEnabled = false;
         var dungeonController = DungeonController.instance;
         dungeonController.dungeonState.done = true;
-        
+        aiEnabled = false;
         gameGlobals.survivedDungeons += 1;
         gameGlobals.spawnedEnemies += dungeonController.dungeonState.spawnedEnemies;
         gameGlobals.killedEnemies += dungeonController.dungeonState.killedEnemies;
@@ -46,7 +46,6 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         controlEnabled = false;
-        
         var dungeonController = DungeonController.instance;
         dungeonController.dungeonState.done = true;
         gameGlobals.spawnedEnemies += dungeonController.dungeonState.spawnedEnemies;
@@ -59,6 +58,7 @@ public class GameController : MonoBehaviour
 
     public void NextDungeon()
     {
+        aiEnabled = true;
         gameplayScreen.SetActive(true);
         gameOverScreen.SetActive(false);
         levelCompleteScreen.SetActive(false);
@@ -66,6 +66,7 @@ public class GameController : MonoBehaviour
         gameGlobals.currentDungeon += 1;
         DungeonController.instance.RegenerateLevel();
         playerController.StripAllEffects();
+        playerController.ResetDash();
     }
 
     public void Quit()

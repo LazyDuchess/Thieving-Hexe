@@ -37,6 +37,18 @@ public class GameEventsController
     //Player opens a chest.
     public static GameEvent openChestEvent;
 
+    //Player opens a door with a castle key.
+    public static GameEvent openDoorEvent;
+
+    //Dungeon starts.
+    public static GameEvent dungeonStartEvent;
+
+    //Rooms open because enemies have been defeated.
+    public static GameEvent roomsOpenEvent;
+
+    //Rooms close because enemies have spawned.
+    public static GameEvent roomsCloseEvent;
+
     public static void GameOver()
     {
         if (gameOverEvent != null)
@@ -95,6 +107,30 @@ public class GameEventsController
     {
         if (openChestEvent != null)
             openChestEvent.Invoke();
+    }
+
+    public static void OpenDoor()
+    {
+        if (openDoorEvent != null)
+            openDoorEvent.Invoke();
+    }
+
+    public static void DungeonStart()
+    {
+        if (dungeonStartEvent != null)
+            dungeonStartEvent.Invoke();
+    }
+
+    public static void RoomsOpen()
+    {
+        if (roomsOpenEvent != null)
+            roomsOpenEvent.Invoke();
+    }
+
+    public static void RoomsClose()
+    {
+        if (roomsCloseEvent != null)
+            roomsCloseEvent.Invoke();
     }
 
     public static float getPlayerSpeed()

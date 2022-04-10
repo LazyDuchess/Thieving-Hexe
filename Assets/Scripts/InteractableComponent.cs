@@ -10,6 +10,11 @@ public abstract class InteractableComponent : MonoBehaviour
 
     public abstract void Interact(CharacterComponent actor);
 
+    public virtual bool Test(CharacterComponent actor)
+    {
+        return true;
+    }
+
     public virtual bool Interactable()
     {
         return true;

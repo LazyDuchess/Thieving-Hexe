@@ -24,6 +24,24 @@ public class Inventory
         return items[slot];
     }
 
+    public ItemComponent GetCurrentItem()
+    {
+        return GetItemInSlot(currentSlot);
+    }
+
+    public bool HasItem(string uid)
+    {
+        foreach (var element in items)
+        {
+            if (element != null)
+            {
+                if (element.itemUID == uid)
+                    return true;
+            }
+        }
+        return false;
+    }
+
     public bool HasItem(ItemComponent item)
     {
         foreach(var element in items)
@@ -173,6 +191,8 @@ public class Inventory
                             result.success = true;
                             result.remainingAmount = 0;
                                 item.amount = 0;
+                                if (onAddItem != null)
+                                    onAddItem.Invoke();
                                 GameObject.Destroy(item.gameObject);
                             return result;
                         }
@@ -183,7 +203,9 @@ public class Inventory
                             result.success = true;
                             result.remainingAmount = amountRemaining;
                                 item.amount = amountRemaining;
-                        }
+                                if (onAddItem != null)
+                                    onAddItem.Invoke();
+                            }
                     }
                 }
                 }
