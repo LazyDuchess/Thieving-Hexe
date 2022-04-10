@@ -128,7 +128,7 @@ MonoBehaviour:
   secondaryFireMode: 0
   speedMult: 1.5
   speedBuff: 0.5
-  duration: 2
+  duration: 1.5
   speedDuration: 5
   speedDegradeMultiply: 0.2
 --- !u!1 &8733563062045630010

@@ -65,7 +65,7 @@ MonoBehaviour:
   secondaryFireMode: 0
   hp: 20
   speedBuff: 0.5
-  duration: 2
+  duration: 1.5
 --- !u!1 &7631527900422315409
 GameObject:
   m_ObjectHideFlags: 0
