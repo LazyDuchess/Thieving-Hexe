@@ -17,7 +17,7 @@ public class PauseController : MonoBehaviour
         paused = true;
         GameEventsController.PauseGame();
         staticPauseUI.SetActive(true);
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         Cursor.visible = true;
     }
 
@@ -26,7 +26,7 @@ public class PauseController : MonoBehaviour
         paused = false;
         GameEventsController.UnpauseGame();
         staticPauseUI.SetActive(false);
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         Cursor.visible = false;
     }
 

@@ -10,8 +10,9 @@ public class A_Chests_OC : MonoBehaviour
 
     public void Start()
     {
-        chestObject = GetComponent<GameObject>();  
-        GameEventsController.openChestEvent += PlayOpenChest;
+        chestObject = gameObject;
+        var chestComponent = GetComponent<ChestComponent>();
+        chestComponent.openChestEvent += PlayOpenChest;
      
     }
 

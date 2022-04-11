@@ -67,6 +67,15 @@ public class GameEventsController
     //Drinking potion
     public static GameEvent potionDrinkEvent;
 
+    //Restart
+    public static GameEvent preRestartEvent;
+
+    public static void PreRestart()
+    {
+        if (preRestartEvent != null)
+            preRestartEvent.Invoke();
+    }
+
     public static void GameOver()
     {
         if (gameOverEvent != null)

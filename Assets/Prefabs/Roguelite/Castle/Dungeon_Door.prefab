@@ -141,6 +141,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 5b07eae8e9f4e324bb6004a975f05edb, type: 2}
+  doorScript: {fileID: 8520219546177411929}
 --- !u!1001 &4575750744720145072
 PrefabInstance:
   m_ObjectHideFlags: 0

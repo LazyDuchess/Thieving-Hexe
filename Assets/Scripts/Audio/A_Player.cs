@@ -67,10 +67,30 @@ public class A_Player : MonoBehaviour
         GameEventsController.gameOverEvent += PlayPlayerDeath;
         GameEventsController.playerMeleeAttackEvent += PlayTorchWave;
         GameEventsController.pickUpKeyEvent += PlayKeyPu;
-        GameEventsController.pickUpOtherEvent += PlayPotionPu;
+
+        //Mistake?
+        //GameEventsController.pickUpOtherEvent += PlayPotionPu;
+
+        GameEventsController.pickUpPotionEvent += PlayPotionPu;
         GameEventsController.potionDrinkEvent += PlayDrinkPotion;
 
         pFootStep.Post(gameObject); //start the float sound and use the RTPC to choose the volume of it
+
+        GameEventsController.preRestartEvent += Clean;
+    }
+
+    void Clean()
+    {
+        GameEventsController.playerChargedAttackStartEvent -= PlayChargeAttackStart;
+        GameEventsController.playerChargedAttackEndEvent -= PlayChargeAttackCast;
+        GameEventsController.playerAttackEvent -= PlayBasicAttack;
+        GameEventsController.playerDamageEvent -= PlayTakeDamage;
+        GameEventsController.gameOverEvent -= PlayPlayerDeath;
+        GameEventsController.playerMeleeAttackEvent -= PlayTorchWave;
+        GameEventsController.pickUpKeyEvent -= PlayKeyPu;
+        GameEventsController.pickUpPotionEvent -= PlayPotionPu;
+        GameEventsController.potionDrinkEvent -= PlayDrinkPotion;
+        GameEventsController.preRestartEvent -= Clean;
     }
 
     public void Update()
@@ -78,7 +98,7 @@ public class A_Player : MonoBehaviour
 
             AkSoundEngine.SetRTPCValue("PlayerHealth", GameController.instance.playerController.hp);
 
-        AkSoundEngine.SetRTPCValue("PlayerSpeed", GameEventsController.getPlayerSpeed());
+        AkSoundEngine.SetRTPCValue("PlayerSpeed", GameEventsController.getPlayerSpeed()/2f);
     }
 
 
@@ -111,10 +131,13 @@ public class A_Player : MonoBehaviour
 
     void PlayTakeDamage(Damage dmg)
     {
-        if (dmg.damageType == DamageType.Constant)//take fire damage
-            pTakeDmgFire.Post(gameObject);
-        else
-            pTakeDmgGeneric.Post(gameObject);
+        if (GameController.instance.playerController.IsAlive())
+        {
+            if (dmg.damageType == DamageType.Constant)//take fire damage
+                pTakeDmgFire.Post(gameObject);
+            else
+                pTakeDmgGeneric.Post(gameObject);
+        }
     }
 
     void PlayTorchWave()

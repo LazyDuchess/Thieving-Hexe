@@ -5,12 +5,14 @@ public class A_Door_OC : MonoBehaviour
 
     [SerializeField] AK.Wwise.Event playDoorOpen;
     [SerializeField] AK.Wwise.Event playDoorClose;
+    public DoorComponent doorScript;
 
     public void Start()
     {
-  
-        GameEventsController.roomsOpenEvent += PlayOpenDoor;
-        GameEventsController.roomsCloseEvent += PlayCloseDoor;
+        doorScript.openDoorEvent += PlayOpenDoor;
+        doorScript.closeDoorEvent += PlayCloseDoor;
+        //GameEventsController.roomsOpenEvent += PlayOpenDoor;
+        //GameEventsController.roomsCloseEvent += PlayCloseDoor;
     }
 
      void PlayOpenDoor()

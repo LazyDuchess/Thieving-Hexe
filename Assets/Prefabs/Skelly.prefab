@@ -622,6 +622,9 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: c4eb43edb5471854cbc1b774e9f4f466, type: 2}
+  footStepRepeat: 6
+  footStepSpeedThreshold: 1
+  me: {fileID: 7781824470615289743}
 --- !u!4 &7814907938613894636 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 376c1f83d1d1c3f4a8a29bf2091258e7, type: 3}

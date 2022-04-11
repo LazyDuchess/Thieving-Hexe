@@ -16,6 +16,8 @@ public class ChestComponent : InteractableComponent
     public float offset = 1f;
     public float rad = 2f;
     public float forwardVel = -8f;
+    public delegate void VoidEvent();
+    public VoidEvent openChestEvent;
 
     public override bool Interactable()
     {
@@ -49,6 +51,8 @@ public class ChestComponent : InteractableComponent
     public override void Interact(CharacterComponent actor)
     {
         GameEventsController.OpenChest();
+        if (openChestEvent != null)
+            openChestEvent.Invoke();
         topClosed.SetActive(false);
         topOpen.SetActive(true);
         MakeLoot();

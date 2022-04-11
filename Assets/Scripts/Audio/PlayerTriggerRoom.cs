@@ -7,7 +7,8 @@ public class PlayerTriggerRoom : MonoBehaviour
 	public AK.Wwise.State gameplay;
 	private void OnTriggerEnter(Collider in_other)
 	{
-		if (in_other.tag == "Player")
+		var isPlayer = in_other.GetComponent<PlayerController>();
+		if (isPlayer)
 			AkSoundEngine.SetState("Enviro", "Castle");
 			gameplay.SetValue();
 

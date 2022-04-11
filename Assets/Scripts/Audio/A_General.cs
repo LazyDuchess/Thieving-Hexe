@@ -19,8 +19,22 @@ public class A_General : MonoBehaviour
         GameEventsController.unpauseEvent += UnpauseGame;
         GameEventsController.levelPassEvent += Victory;
         GameEventsController.gameOverEvent += Defeated;
-        
+        GameEventsController.preRestartEvent += Clean;
     }
+
+    void Clean()
+    {
+        GameEventsController.enterIndoorAreaEvent -= EnterCastle;
+        GameEventsController.enterOutdoorAreaEvent -= EnterForest;
+        GameEventsController.gameOverEvent -= PlayerDefeated;
+        GameEventsController.collectFragmentEvent -= CollectFragment;
+        GameEventsController.pauseEvent -= PauseGame;
+        GameEventsController.unpauseEvent -= UnpauseGame;
+        GameEventsController.levelPassEvent -= Victory;
+        GameEventsController.gameOverEvent -= Defeated;
+        GameEventsController.preRestartEvent -= Clean;
+    }
+
     public void Update()
     {
         var speed = GameEventsController.getPlayerSpeed();
@@ -46,7 +60,7 @@ public class A_General : MonoBehaviour
 
     void CollectFragment()
     {
-        AkSoundEngine.PostEvent("Play_Crystal__Pickup", gameObject);
+        AkSoundEngine.PostEvent("Play_Crystal__Pickup", GameController.instance.player);
     }
 
     void PauseGame()

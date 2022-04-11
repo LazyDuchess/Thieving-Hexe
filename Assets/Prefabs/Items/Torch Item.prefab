@@ -10687,6 +10687,7 @@ MonoBehaviour:
   holdObject: {fileID: 2249850355473875509}
   dropObject: {fileID: 5873728693833309949}
   owner: {fileID: 0}
+  itemType: 2
   holdTime: 0
   primaryFireMode: 1
   secondaryFireMode: 0

@@ -11,12 +11,18 @@ public class DoorComponent : InteractableComponent
     public bool empty = true;
     public int id = 0;
 
+    public delegate void VoidEvent();
+    public VoidEvent openDoorEvent;
+    public VoidEvent closeDoorEvent;
+
     public void CloseDoor()
     {
         if (open)
         {
             doorClosedObject.SetActive(true);
             open = false;
+            if (closeDoorEvent != null)
+                closeDoorEvent.Invoke();
         }
     }
 
@@ -70,6 +76,8 @@ public class DoorComponent : InteractableComponent
         {
             doorClosedObject.SetActive(false);
             open = true;
+            if (openDoorEvent != null)
+                openDoorEvent.Invoke();
         }
     }
 
