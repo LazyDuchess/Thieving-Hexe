@@ -10634,7 +10634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5638911511046128012}
-  - component: {fileID: 7436814327380062164}
+  - component: {fileID: 7621775506842012602}
   m_Layer: 10
   m_Name: Torch Item
   m_TagString: Untagged
@@ -10649,7 +10649,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8673964815790409125}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.50005, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10659,7 +10659,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7436814327380062164
+--- !u!114 &7621775506842012602
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10668,7 +10668,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8673964815790409125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79542adb2c4953a488a92f40e8046ea0, type: 3}
+  m_Script: {fileID: 11500000, guid: 95bdea00335c4af46aebe10858c38b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactionType: 1
@@ -10686,5 +10686,12 @@ MonoBehaviour:
   dropObject: {fileID: 5873728693833309949}
   owner: {fileID: 0}
   holdTime: 0
-  primaryFireMode: 0
+  primaryFireMode: 1
   secondaryFireMode: 0
+  coolDown: 0.5
+  speedBuff: 0.5
+  damage: 20
+  duration: 0.5
+  radius: 1.5
+  distance: 0.7
+  pushForce: 10

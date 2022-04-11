@@ -48,6 +48,9 @@ public class GameEventsController
     //Rooms close because enemies have spawned.
     public static GameEvent roomsCloseEvent;
 
+    //Player melee attacks.
+    public static GameEvent playerMeleeAttackEvent;
+
     public static void GameOver()
     {
         if (gameOverEvent != null)
@@ -130,6 +133,12 @@ public class GameEventsController
     {
         if (roomsCloseEvent != null)
             roomsCloseEvent.Invoke();
+    }
+
+    public static void PlayerMeleeAttack()
+    {
+        if (playerMeleeAttackEvent != null)
+            playerMeleeAttackEvent.Invoke();
     }
 
     public static float getPlayerSpeed()
