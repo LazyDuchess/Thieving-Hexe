@@ -18,7 +18,7 @@ public class WandItem : ItemComponent
         base.Primary();
         var attackAction = new ActionWandPrimary(owner, this, velocity, offset, heightOffset, speedBuff, duration, delay, projectilePrefab);
         owner.QueueAction(attackAction);
-        GameEventsController.PlayerAttack();
+        
         /*
         owner.SendEvent("Attack");
         var aimHeading = (owner as PlayerController).GetAimHeadingFlat();

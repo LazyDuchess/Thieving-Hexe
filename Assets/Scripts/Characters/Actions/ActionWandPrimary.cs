@@ -49,6 +49,7 @@ public class ActionWandPrimary : Action
                 var pro = proj.GetComponent<Projectile>();
                 pro.owner = this.owner;
                 pro.vector = aimHeading * velocity;
+                GameEventsController.PlayerAttack();
                 break;
             case 1:
                 done = true;
