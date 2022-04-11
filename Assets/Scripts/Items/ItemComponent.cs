@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum FireMode { Single, Auto };
+public enum ItemType { Potion, Key, Other };
 public class ItemComponent : InteractableComponent
 {
     public string animation = "onehanded";
@@ -18,6 +19,7 @@ public class ItemComponent : InteractableComponent
     public GameObject dropObject;
     public CharacterComponent owner;
     public Inventory inventory;
+    public ItemType itemType = ItemType.Other;
 
     public float holdTime = 0f;
     bool holding = false;
@@ -70,6 +72,18 @@ public class ItemComponent : InteractableComponent
             }
             else
             {
+                switch(itemType)
+                {
+                    case ItemType.Key:
+                        GameEventsController.PickUpKey();
+                        break;
+                    case ItemType.Other:
+                        GameEventsController.PickUpOther();
+                        break;
+                    case ItemType.Potion:
+                        GameEventsController.PickUpPotion();
+                        break;
+                }
                 if (result.remainingAmount > 0)
                     UINotification.instance.Show(itemName + ": I couldn't fit all of it in my inventory.", 3f);
             }

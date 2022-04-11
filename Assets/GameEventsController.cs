@@ -55,6 +55,18 @@ public class GameEventsController
     //Game unpaused
     public static GameEvent unpauseEvent;
 
+    //Potion picking up
+    public static GameEvent pickUpPotionEvent;
+
+    //Key picking up
+    public static GameEvent pickUpKeyEvent;
+
+    //Other picking up
+    public static GameEvent pickUpOtherEvent;
+
+    //Drinking potion
+    public static GameEvent potionDrinkEvent;
+
     public static void GameOver()
     {
         if (gameOverEvent != null)
@@ -155,6 +167,30 @@ public class GameEventsController
     {
         if (unpauseEvent != null)
             unpauseEvent.Invoke();
+    }
+
+    public static void PickUpPotion()
+    {
+        if (pickUpPotionEvent != null)
+            pickUpPotionEvent.Invoke();
+    }
+
+    public static void PickUpKey()
+    {
+        if (pickUpKeyEvent != null)
+            pickUpKeyEvent.Invoke();
+    }
+
+    public static void PickUpOther()
+    {
+        if (pickUpOtherEvent != null)
+            pickUpOtherEvent.Invoke();
+    }
+
+    public static void DrinkPotion()
+    {
+        if (potionDrinkEvent != null)
+            potionDrinkEvent.Invoke();
     }
 
     public static float getPlayerSpeed()
