@@ -10688,10 +10688,11 @@ MonoBehaviour:
   holdTime: 0
   primaryFireMode: 1
   secondaryFireMode: 0
-  coolDown: 0.5
-  speedBuff: 0.5
+  coolDown: 0.6
+  speedBuff: 0.7
   damage: 20
-  duration: 0.5
+  duration: 0.6
   radius: 1.5
   distance: 0.7
   pushForce: 10
+  delay: 0.07

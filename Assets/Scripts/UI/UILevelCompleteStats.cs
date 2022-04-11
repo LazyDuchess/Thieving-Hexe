@@ -24,6 +24,6 @@ public class UILevelCompleteStats : MonoBehaviour
         var totalTime = DungeonController.instance.GetTimeElapsed();
         var totalTimerText = ((int)toMinutes(totalTime)).ToString("D2") + ":" + ((int)toSeconds(totalTime)).ToString("D2");
         var timerText = ((int)toMinutes(timeLeft)).ToString("D2") + ":" + ((int)toSeconds(timeLeft)).ToString("D2");
-        stats.text = "Dungeon "+GameController.instance.gameGlobals.currentDungeon+"\nKilled "+DungeonController.instance.dungeonState.killedEnemies+" Enemies out of "+DungeonController.instance.dungeonState.spawnedEnemies+"\nEscaped with "+timerText+" left\nTotal level completion time: "+totalTimerText;
+        stats.text = "Dungeon "+(GameController.instance.gameGlobals.currentDungeon+1)+"\nKilled "+DungeonController.instance.dungeonState.killedEnemies+" Enemies out of "+DungeonController.instance.dungeonState.spawnedEnemies+"\nEscaped with "+timerText+" left\nTotal level completion time: "+totalTimerText;
     }
 }
