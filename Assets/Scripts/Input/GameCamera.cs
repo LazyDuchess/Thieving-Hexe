@@ -62,6 +62,8 @@ public class GameCamera : MonoBehaviour
     //Translate mouse coords to player aim
     void ProcessAimInput()
     {
+        if (PauseController.paused)
+            return;
         //Invalid target - no player controller. todo - lerp back to zero? - No don't do.
         if (!GameController.instance.playerController || !GameController.instance.controlEnabled)
         {

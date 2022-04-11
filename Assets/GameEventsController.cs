@@ -51,6 +51,12 @@ public class GameEventsController
     //Player melee attacks.
     public static GameEvent playerMeleeAttackEvent;
 
+    //Game paused
+    public static GameEvent pauseEvent;
+
+    //Game unpaused
+    public static GameEvent unpauseEvent;
+
     public static void GameOver()
     {
         if (gameOverEvent != null)
@@ -139,6 +145,18 @@ public class GameEventsController
     {
         if (playerMeleeAttackEvent != null)
             playerMeleeAttackEvent.Invoke();
+    }
+
+    public static void PauseGame()
+    {
+        if (pauseEvent != null)
+            pauseEvent.Invoke();
+    }
+
+    public static void UnpauseGame()
+    {
+        if (unpauseEvent != null)
+            unpauseEvent.Invoke();
     }
 
     public static float getPlayerSpeed()
