@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: de69e0a8c0121f4897456ddb2dd8d19e
     GuidInternal: 
-    m_lastTime: -8585519586657767994
+    m_lastTime: -8585519544062038549
     List:
     - name: Ambience
       guid: 1f53f233bdaf274fb877b13d6c1016e3
@@ -198,6 +198,26 @@ MonoBehaviour:
         ObjectType: 2
         guid: f56b7bcd19f23142bc3694ac54d80820
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MusicRTPC\MusicGrp\Defeat
+    - name: Enem_FS
+      guid: 7443823c627d444f8122a6e62100bac9
+      id: 2294392292
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: de69e0a8c0121f4897456ddb2dd8d19e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Enemies
+        ObjectType: 2
+        guid: 5aaea8cfbedcbc44879c481bbfa961a6
+      - ElementName: Enem_FS
+        ObjectType: 2
+        guid: 7443823c627d444f8122a6e62100bac9
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Enemies\Enem_FS
     - name: Enemies
       guid: 5aaea8cfbedcbc44879c481bbfa961a6
       id: 2242381963
@@ -676,8 +696,8 @@ MonoBehaviour:
         guid: 4ffbede6daca4a4dbad32105535774e1
       Path: Events\Enemies\Play_Enem_Atk_Bsc_Lte
       maxAttenuation: 100
-      maxDuration: 0.240623
-      minDuration: 0.131762
+      maxDuration: 0.515374
+      minDuration: 0.212642
     - name: Play_Enem_Defeated
       guid: c87f74581ad5ae44a181d11c819a0349
       id: 279773806
@@ -2001,7 +2021,7 @@ MonoBehaviour:
     m_lastTime: -8585533485103830915
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0100000002000000030000000400000005000000060000001f0000003300000034000000350000003600000037000000390000003a0000003c0000003d0000006a00000088000000
+  ExpandedWaapiItemIds: 0100000002000000030000000400000005000000060000001f000000330000003400000035000000360000003700000038000000390000003a0000003c0000003d0000006a00000088000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

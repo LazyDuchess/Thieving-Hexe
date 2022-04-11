@@ -171,6 +171,7 @@ namespace AK
         static const AkUniqueID CAMPFIRE = 1931646578U;
         static const AkUniqueID CASTLEBUS = 1239215153U;
         static const AkUniqueID DEFEAT = 1593864692U;
+        static const AkUniqueID ENEM_FS = 2294392292U;
         static const AkUniqueID ENEMIES = 2242381963U;
         static const AkUniqueID F_COMBAT = 1367030554U;
         static const AkUniqueID F_EXPLORE = 1325345903U;

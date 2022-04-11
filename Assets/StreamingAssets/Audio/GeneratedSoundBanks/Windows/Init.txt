@@ -1,0 +1,70 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3800848640	PlayerStatus			\Default Work Unit\PlayerStatus	
+
+Switch	ID	Name	Switch Group			Notes
+	655265632	Alive	PlayerStatus			
+	1834963222	QrtHealth	PlayerStatus			
+	2673177675	HlfHealth	PlayerStatus			
+	2791675679	Defeated	PlayerStatus			
+	3546734882	TQHealth	PlayerStatus			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	89505537	Gameplay			\Default Work Unit\Gameplay	
+	1995189622	Enviro			\Music\Enviro	
+
+State	ID	Name	State Group			Notes
+	579523862	Explore	Gameplay			
+	748895195	None	Gameplay			
+	1560169506	Boss	Gameplay			
+	1593864692	Defeat	Gameplay			
+	2607556080	Menu	Gameplay			
+	2716678721	Victory	Gameplay			
+	2764240573	Combat	Gameplay			
+	129146593	Castle	Enviro			
+	491961918	Forest	Enviro			
+	748895195	None	Enviro			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2346531308	MusicVolume			\Music\MusicVolume	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Master Audio Bus\Ambience	
+	199201492	ForestBus			\Default Work Unit\Master Audio Bus\MusicRTPC\MusicGrp\ForestBus	
+	1069431850	Player			\Default Work Unit\Master Audio Bus\Player	
+	1239215153	CastleBus			\Default Work Unit\Master Audio Bus\MusicRTPC\MusicGrp\CastleBus	
+	1325345903	F-Explore			\Default Work Unit\Master Audio Bus\MusicRTPC\MusicGrp\ForestBus\F-Explore	
+	1348890866	C-Explore			\Default Work Unit\Master Audio Bus\MusicRTPC\MusicGrp\CastleBus\C-Explore	
+	1367030554	F-Combat			\Default Work Unit\Master Audio Bus\MusicRTPC\MusicGrp\ForestBus\F-Combat	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
+	1560169506	Boss			\Default Work Unit\Master Audio Bus\MusicRTPC\MusicGrp\Boss	
+	1593864692	Defeat			\Default Work Unit\Master Audio Bus\MusicRTPC\MusicGrp\Defeat	
+	1695690031	Objects			\Default Work Unit\Master Audio Bus\Objects	
+	1764819763	Platforms			\Default Work Unit\Master Audio Bus\Objects\Platforms	
+	1931646578	Campfire			\Default Work Unit\Master Audio Bus\Objects\Campfire	
+	2038898903	MusicRTPC			\Default Work Unit\Master Audio Bus\MusicRTPC	
+	2151963051	Items			\Default Work Unit\Master Audio Bus\Items	
+	2242381963	Enemies			\Default Work Unit\Master Audio Bus\Enemies	
+	2294392292	Enem_FS			\Default Work Unit\Master Audio Bus\Enemies\Enem_FS	
+	2588151145	C-Combat			\Default Work Unit\Master Audio Bus\MusicRTPC\MusicGrp\CastleBus\C-Combat	
+	2607556080	Menu			\Default Work Unit\Master Audio Bus\MusicRTPC\MusicGrp\Menu	
+	2716678721	Victory			\Default Work Unit\Master Audio Bus\MusicRTPC\MusicGrp\Victory	
+	3272928167	MusicGrp			\Default Work Unit\Master Audio Bus\MusicRTPC\MusicGrp	
+	3545700988	Reverbs			\Default Work Unit\Master Audio Bus\Reverbs	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	865895389	ReverbCastleHallway			\Default Work Unit\Master Audio Bus\Reverbs\ReverbCastleHallway	
+	2493188974	ReverbForest			\Default Work Unit\Master Audio Bus\Reverbs\ReverbForest	
+	2895998378	ReverbCastleOutdoors			\Default Work Unit\Master Audio Bus\Reverbs\ReverbCastleOutdoors	
+	3128068529	ReverbCastle			\Default Work Unit\Master Audio Bus\Reverbs\ReverbCastle	
+
+Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	702543456	Tunnel1	Wwise Matrix Reverb			
+	1990128658	Room_Medium	Wwise RoomVerb			
+	3673681183	Large_Bright_Chamber1	Wwise Matrix Reverb			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+
