@@ -5,6 +5,11 @@ using UnityEngine;
 public enum DoorFace { Left, Right, Forward, Backward };
 public class DoorComponent : InteractableComponent
 {
+    public GameObject doorAnimationObject;
+    public float doorLerp = 5f;
+
+    public float doorOffsetOpen = -5f;
+
     public GameObject doorClosedObject;
     public DoorFace facing;
     public bool open = false;
@@ -15,12 +20,43 @@ public class DoorComponent : InteractableComponent
     public VoidEvent openDoorEvent;
     public VoidEvent closeDoorEvent;
 
-    public void CloseDoor()
+    Vector3 closedPosition = Vector3.zero;
+    Vector3 openPosition = Vector3.zero;
+
+    private void Update()
     {
+        var fromPos = doorAnimationObject.transform.position;
+        var targetPos = openPosition;
+        if (open == false)
+            targetPos = closedPosition;
+        doorAnimationObject.transform.position = Vector3.Lerp(fromPos, targetPos, doorLerp * Time.deltaTime);
+    }
+
+    private void Awake()
+    {
+        VerifyDoor();
+    }
+
+    void VerifyDoor()
+    {
+        if (closedPosition == Vector3.zero)
+        {
+            closedPosition = doorAnimationObject.transform.position;
+            openPosition = doorAnimationObject.transform.position + (doorOffsetOpen * Vector3.up);
+        }
+    }
+
+    public void CloseDoor(bool instant = true)
+    {
+        VerifyDoor();
         if (open)
         {
             doorClosedObject.SetActive(true);
             open = false;
+            if (instant)
+            {
+                doorAnimationObject.transform.position = closedPosition;
+            }
             if (closeDoorEvent != null)
                 closeDoorEvent.Invoke();
         }
@@ -33,14 +69,17 @@ public class DoorComponent : InteractableComponent
 
     public override bool Test(CharacterComponent actor)
     {
-        var playa = actor.GetComponent<PlayerController>();
-        if (playa)
+        if (base.Test(actor))
         {
-            var curItem = playa.inventory.GetCurrentItem();
-            if (curItem)
+            var playa = actor.GetComponent<PlayerController>();
+            if (playa)
             {
-                if (playa.inventory.GetCurrentItem().itemUID == "key")
-                    return true;
+                var curItem = playa.inventory.GetCurrentItem();
+                if (curItem)
+                {
+                    if (playa.inventory.GetCurrentItem().itemUID == "key")
+                        return true;
+                }
             }
         }
         return false;
@@ -62,7 +101,7 @@ public class DoorComponent : InteractableComponent
         {
             playa.UseCurrentInventory();
             GameEventsController.OpenDoor();
-            var result = recursionPiece.instantiate(roomComp.gameObject, DungeonController.instance.level.transform);
+            var result = recursionPiece.instantiate(roomComp.gameObject, DungeonController.instance.level.transform, false);
         }
         else
         {
@@ -70,23 +109,31 @@ public class DoorComponent : InteractableComponent
         }
     }
 
-    public void OpenDoor()
+    public void OpenDoor(bool instant = true)
     {
+        VerifyDoor();
         if (!open && !empty)
         {
             doorClosedObject.SetActive(false);
             open = true;
+            if (instant)
+            {
+                doorAnimationObject.transform.position = openPosition;
+            }
             if (openDoorEvent != null)
                 openDoorEvent.Invoke();
         }
     }
 
-    public void ToggleDoor()
+
+
+    public void ToggleDoor(bool instant = true)
     {
+        VerifyDoor();
         if (open)
-            CloseDoor();
+            CloseDoor(instant);
         else
-            OpenDoor();
+            OpenDoor(instant);
     }
 }
 

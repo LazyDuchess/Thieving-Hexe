@@ -98,7 +98,7 @@ public class A_Player : MonoBehaviour
 
             AkSoundEngine.SetRTPCValue("PlayerHealth", GameController.instance.playerController.hp);
 
-        AkSoundEngine.SetRTPCValue("PlayerSpeed", GameEventsController.getPlayerSpeed()/2f);
+        AkSoundEngine.SetRTPCValue("PlayerSpeed", GameEventsController.getPlayerSpeed()*0.25f); //ToDo: Do this in wwise?
     }
 
 
@@ -158,6 +158,7 @@ public class A_Player : MonoBehaviour
 
     void PlayDrinkPotion()
     {
+        pDrinkPotion.Stop(gameObject);
         pDrinkPotion.Post(gameObject);
     }
 

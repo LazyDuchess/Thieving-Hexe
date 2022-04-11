@@ -92,7 +92,7 @@ public class DungeonPiece
         return result;
     }
 
-    public List<GameObject> instantiate(GameObject previous, Transform parent)
+    public List<GameObject> instantiate(GameObject previous, Transform parent, bool instant = true)
     {
         var placedList = new List<GameObject>();
         var placedPrefab = GameObject.Instantiate(prefab, positionStart, Quaternion.identity);
@@ -109,7 +109,7 @@ public class DungeonPiece
                 if (element.id == myParentDoor)
                 {
                     element.empty = false;
-                    element.OpenDoor();
+                    element.OpenDoor(instant);
                 }
             }
         }
@@ -121,7 +121,7 @@ public class DungeonPiece
                 if (element.id == parentDoor)
                 {
                     element.empty = false;
-                    element.OpenDoor();
+                    element.OpenDoor(instant);
                 }
             }
         }
@@ -399,9 +399,9 @@ public class DungeonController : MonoBehaviour
     //Dead ends, loot rooms.
     public DungeonPiece Recurse(DungeonPiece piece, DoorComponent onDoor = null)
     {
-        var recursionSize = Random.Range(1, 5);
+        var recursionSize = Random.Range(1, 4);
         var endInLootRoom = false;
-        var endInLotRoomChance = Random.Range(0, 3);
+        var endInLotRoomChance = Random.Range(0, 2);
         if (endInLotRoomChance == 0)
             endInLootRoom = true;
         var currentPiece = piece;

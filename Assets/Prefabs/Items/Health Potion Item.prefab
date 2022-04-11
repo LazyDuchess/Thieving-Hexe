@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 375922519440110479}
   m_Layer: 10
   m_Name: Health Potion Item
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a7102733d0373408833e64eae47031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionOrigin: {fileID: 5739314340462744856}
   interactionType: 1
   interactionRadius: 1.5
   animation: onehanded
@@ -84,13 +85,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 9fa2f1de079cf514da9b324f469ee9a9, type: 2}
-  itemPickupState:
-    idInternal: 0
-    valueGuidInternal: 
-    groupIdInternal: 0
-    groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: d1035cbe78452364a816d701d60cee0b, type: 2}
-  crystalPower: {fileID: 0}
 --- !u!1 &7631527900422315409
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,7 +96,7 @@ GameObject:
   - component: {fileID: 3210398713688106230}
   m_Layer: 10
   m_Name: Hold
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +130,7 @@ GameObject:
   - component: {fileID: 5219477275105754221}
   m_Layer: 10
   m_Name: Drop
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,6 +191,10 @@ PrefabInstance:
     - target: {fileID: 992994904772673843, guid: 9b636214a6005014da3fe4c17eec0c8e, type: 3}
       propertyPath: m_Name
       value: Drop Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 992994904772673843, guid: 9b636214a6005014da3fe4c17eec0c8e, type: 3}
+      propertyPath: m_TagString
+      value: NonBlocking
       objectReference: {fileID: 0}
     - target: {fileID: 4945922560323415486, guid: 9b636214a6005014da3fe4c17eec0c8e, type: 3}
       propertyPath: m_RootOrder
@@ -324,6 +322,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5558b089c3ebd4142b785c1c85e0d1a9, type: 3}
+      propertyPath: m_TagString
+      value: NonBlocking
+      objectReference: {fileID: 0}
     - target: {fileID: 1134669073843215214, guid: 5558b089c3ebd4142b785c1c85e0d1a9, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -409,6 +411,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5558b089c3ebd4142b785c1c85e0d1a9, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5558b089c3ebd4142b785c1c85e0d1a9, type: 3}
+      propertyPath: m_TagString
+      value: NonBlocking
       objectReference: {fileID: 0}
     - target: {fileID: 1134669073843215214, guid: 5558b089c3ebd4142b785c1c85e0d1a9, type: 3}
       propertyPath: m_Layer

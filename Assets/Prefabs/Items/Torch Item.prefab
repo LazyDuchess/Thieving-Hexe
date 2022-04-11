@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7679348250383711744}
   m_Layer: 10
   m_Name: Particle System (1)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 4181143009503994088}
   m_Layer: 10
   m_Name: Hold
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4857,7 +4857,7 @@ GameObject:
   - component: {fileID: 524416760598929485}
   m_Layer: 10
   m_Name: Point Light (5)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4968,7 +4968,7 @@ GameObject:
   - component: {fileID: 7529138520467288553}
   m_Layer: 10
   m_Name: Point Light (4)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5077,7 +5077,7 @@ GameObject:
   - component: {fileID: 5581448560005453786}
   m_Layer: 10
   m_Name: Actual_Torch
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5090,7 +5090,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3256754715876258102}
   m_LocalRotation: {x: -0.6495198, y: -0, z: -0, w: 0.76034474}
-  m_LocalPosition: {x: 0.008, y: -2.41, z: 0.334}
+  m_LocalPosition: {x: 0.008, y: -3.00006, z: 0.334}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5115,7 +5115,7 @@ GameObject:
   - component: {fileID: 3149188649543337311}
   m_Layer: 10
   m_Name: Dungeon_Torch_ActualTorch
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5199,7 +5199,7 @@ GameObject:
   - component: {fileID: 3912553433254973333}
   m_Layer: 10
   m_Name: Point Light (5)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5310,7 +5310,7 @@ GameObject:
   - component: {fileID: 3912553434123898884}
   m_Layer: 10
   m_Name: Particle System (1)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10122,7 +10122,7 @@ GameObject:
   - component: {fileID: 3912553434276100373}
   m_Layer: 10
   m_Name: Point Light (3)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10233,7 +10233,7 @@ GameObject:
   - component: {fileID: 3912553434357373901}
   m_Layer: 10
   m_Name: Point Light (4)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10344,7 +10344,7 @@ GameObject:
   - component: {fileID: 6681398569216535712}
   m_Layer: 10
   m_Name: Point Light (3)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10453,7 +10453,7 @@ GameObject:
   - component: {fileID: 6130088458558986259}
   m_Layer: 10
   m_Name: Actual_Torch (1)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10491,7 +10491,7 @@ GameObject:
   - component: {fileID: 7014084697488396133}
   m_Layer: 10
   m_Name: Drop
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10554,7 +10554,7 @@ GameObject:
   - component: {fileID: 4181658033974387781}
   m_Layer: 10
   m_Name: Dungeon_Torch_ActualTorch
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10639,7 +10639,7 @@ GameObject:
   - component: {fileID: 2166073548592161949}
   m_Layer: 10
   m_Name: Torch Item
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10673,6 +10673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95bdea00335c4af46aebe10858c38b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionOrigin: {fileID: 3420713811733455778}
   interactionType: 1
   interactionRadius: 1.5
   animation: long

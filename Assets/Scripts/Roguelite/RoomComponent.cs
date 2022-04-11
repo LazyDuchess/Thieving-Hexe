@@ -21,14 +21,14 @@ public class RoomComponent : MonoBehaviour
     {
         var allDoors = GetComponentsInChildren<DoorComponent>();
         foreach (var element in allDoors)
-            element.CloseDoor();
+            element.CloseDoor(false);
     }
 
     public void OpenDoors()
     {
         var allDoors = GetComponentsInChildren<DoorComponent>();
         foreach (var element in allDoors)
-            element.OpenDoor();
+            element.OpenDoor(false);
     }
 
     public PlayerSpawn getPlayerSpawn()

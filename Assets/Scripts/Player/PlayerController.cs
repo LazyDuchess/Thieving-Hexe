@@ -104,8 +104,7 @@ public class PlayerController : CharacterComponent
         {
             if (element.Interactable())
             {
-                if (element.Test(this))
-                {
+                
                     var overlaps = Physics.OverlapSphere(element.triggerPosition(), element.interactionRadius);
                     foreach (var element2 in overlaps)
                     {
@@ -114,12 +113,14 @@ public class PlayerController : CharacterComponent
                         {
                             if (me == this)
                             {
+                            if (element.Test(this))
+                            {
                                 currentInteractable = element;
                                 return;
                             }
+                            }
                         }
                     }
-                }
             }
         }
     }

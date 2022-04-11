@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -5981243360406509279}
   m_Layer: 10
   m_Name: Wand Item
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dd559676aa72441b446e5dfa59d747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionOrigin: {fileID: 1657227791580208921}
   interactionType: 1
   interactionRadius: 1.5
   animation: onehanded
@@ -61,6 +62,7 @@ MonoBehaviour:
   holdObject: {fileID: 7800473421101461076}
   dropObject: {fileID: 2140466882614609315}
   owner: {fileID: 0}
+  itemType: 2
   holdTime: 0
   primaryFireMode: 1
   secondaryFireMode: 0
@@ -100,7 +102,7 @@ GameObject:
   - component: {fileID: 5267169800488038207}
   m_Layer: 10
   m_Name: Hold
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,6 +133,10 @@ PrefabInstance:
     - target: {fileID: 992994904772673843, guid: 9b636214a6005014da3fe4c17eec0c8e, type: 3}
       propertyPath: m_Name
       value: Drop Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 992994904772673843, guid: 9b636214a6005014da3fe4c17eec0c8e, type: 3}
+      propertyPath: m_TagString
+      value: NonBlocking
       objectReference: {fileID: 0}
     - target: {fileID: 4945922560323415486, guid: 9b636214a6005014da3fe4c17eec0c8e, type: 3}
       propertyPath: m_RootOrder
@@ -257,6 +263,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -2622718438978520996, guid: 9db42b830f265384bbdd2c2dcc636698, type: 3}
+      propertyPath: m_TagString
+      value: NonBlocking
+      objectReference: {fileID: 0}
     - target: {fileID: -2021079191256468303, guid: 9db42b830f265384bbdd2c2dcc636698, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -273,6 +283,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 190056778320025224, guid: 9db42b830f265384bbdd2c2dcc636698, type: 3}
+      propertyPath: m_TagString
+      value: NonBlocking
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9db42b830f265384bbdd2c2dcc636698, type: 3}
       propertyPath: m_Name
       value: Drop
@@ -280,6 +294,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9db42b830f265384bbdd2c2dcc636698, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9db42b830f265384bbdd2c2dcc636698, type: 3}
+      propertyPath: m_TagString
+      value: NonBlocking
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9db42b830f265384bbdd2c2dcc636698, type: 3}
@@ -400,6 +418,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9db42b830f265384bbdd2c2dcc636698, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9db42b830f265384bbdd2c2dcc636698, type: 3}
+      propertyPath: m_TagString
+      value: NonBlocking
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9db42b830f265384bbdd2c2dcc636698, type: 3}

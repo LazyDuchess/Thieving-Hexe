@@ -522,6 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a2a9a2df1a15449b8892d54f05b1e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionOrigin: {fileID: 35588160942417249}
   interactionType: 2
   interactionRadius: 2.5
   fragment: {fileID: 5078216515210235672}

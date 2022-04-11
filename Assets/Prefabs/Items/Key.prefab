@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3425295180869928743}
   m_Layer: 10
   m_Name: Key
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79542adb2c4953a488a92f40e8046ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionOrigin: {fileID: 6107321364546818342}
   interactionType: 1
   interactionRadius: 1.5
   animation: onehanded
@@ -81,7 +82,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 43724917df25c0f42a1b77578c3853f3, type: 2}
-  crystalPower: {fileID: 0}
 --- !u!1 &2313138175201076424
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4092852521918690192}
   m_Layer: 10
   m_Name: Key
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 8947917363358466316}
   m_Layer: 10
   m_Name: Outline.003
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 5763692512871176590}
   m_Layer: 10
   m_Name: Key (1)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 3475278229683438691}
   m_Layer: 10
   m_Name: Pos
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 4259325553823429149}
   m_Layer: 10
   m_Name: Held
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 360545211085105561}
   m_Layer: 10
   m_Name: Outline.003 (1)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 1924800470308261637}
   m_Layer: 10
   m_Name: Drop
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -554,6 +554,10 @@ PrefabInstance:
     - target: {fileID: 992994904772673843, guid: 9b636214a6005014da3fe4c17eec0c8e, type: 3}
       propertyPath: m_Name
       value: Drop Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 992994904772673843, guid: 9b636214a6005014da3fe4c17eec0c8e, type: 3}
+      propertyPath: m_TagString
+      value: NonBlocking
       objectReference: {fileID: 0}
     - target: {fileID: 4945922560323415486, guid: 9b636214a6005014da3fe4c17eec0c8e, type: 3}
       propertyPath: m_RootOrder

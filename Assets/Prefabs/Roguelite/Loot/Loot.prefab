@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c2a3d833d6a0a4e85b0db94496f230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionOrigin: {fileID: 5730705771521691310}
   interactionType: 3
   interactionRadius: 1.5
   topClosed: {fileID: 5233219443239718264}

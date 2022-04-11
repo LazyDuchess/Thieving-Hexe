@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6391792634770407366}
   m_Layer: 10
   m_Name: Drop
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 7086604341804319049}
   m_Layer: 10
   m_Name: Sprint Potion Item
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afe87e35f3875f0489e34fba487211ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionOrigin: {fileID: 6880753216540251827}
   interactionType: 1
   interactionRadius: 1.5
   animation: onehanded
@@ -161,7 +162,7 @@ GameObject:
   - component: {fileID: 4347904360724064093}
   m_Layer: 10
   m_Name: Hold
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,6 +193,10 @@ PrefabInstance:
     - target: {fileID: 992994904772673843, guid: 9b636214a6005014da3fe4c17eec0c8e, type: 3}
       propertyPath: m_Name
       value: Drop Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 992994904772673843, guid: 9b636214a6005014da3fe4c17eec0c8e, type: 3}
+      propertyPath: m_TagString
+      value: NonBlocking
       objectReference: {fileID: 0}
     - target: {fileID: 4945922560323415486, guid: 9b636214a6005014da3fe4c17eec0c8e, type: 3}
       propertyPath: m_RootOrder
@@ -319,6 +324,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5558b089c3ebd4142b785c1c85e0d1a9, type: 3}
+      propertyPath: m_TagString
+      value: NonBlocking
+      objectReference: {fileID: 0}
     - target: {fileID: 1134669073843215214, guid: 5558b089c3ebd4142b785c1c85e0d1a9, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -404,6 +413,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5558b089c3ebd4142b785c1c85e0d1a9, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5558b089c3ebd4142b785c1c85e0d1a9, type: 3}
+      propertyPath: m_TagString
+      value: NonBlocking
       objectReference: {fileID: 0}
     - target: {fileID: 1134669073843215214, guid: 5558b089c3ebd4142b785c1c85e0d1a9, type: 3}
       propertyPath: m_Layer
