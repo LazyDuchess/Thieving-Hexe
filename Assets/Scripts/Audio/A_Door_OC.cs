@@ -2,12 +2,11 @@ using UnityEngine;
 
 public class A_Door_OC : MonoBehaviour
 {
-    public GameObject door;
+    GameObject door;
 
     public void Start()
     {
-        //GameEventsController.openDoorEvent += PlayOpenDoor;
-        //GameEventsController.openCloseEvent += PlayCloseDoor;
+        door = GetComponent<GameObject>();
     }
 
     public void PlayOpenDoor()

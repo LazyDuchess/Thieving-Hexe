@@ -25,8 +25,8 @@ public class A_Player : MonoBehaviour
 
     //Things to be accessed by anyone
 
-    public PlayerController pController;//get player public class
-    public Rigidbody rb;
+    PlayerController pController;//get player public class
+    Rigidbody rb;
 
    
 
@@ -52,15 +52,19 @@ public class A_Player : MonoBehaviour
     // [SerializeField] private AK.Wwise.Event pTakeDmgElec;
     [SerializeField] private AK.Wwise.Event pDefeated;
 
-    private float speed = 0f;
+   
 
     #endregion
 
     public void Start()
     {
+        rb = GetComponentInParent<Rigidbody>();
+        pController = GetComponentInParent<PlayerController>();
         GameEventsController.playerChargedAttackStartEvent += PlayChargeAttackStart;
         GameEventsController.playerChargedAttackEndEvent += PlayChargeAttackCast;
         GameEventsController.playerAttackEvent += PlayBasicAttack;
+        
+        pFootStep.Post(gameObject); //start the float sound and use the RTPC to choose the volume of it
     }
 
     public void Update()
@@ -70,26 +74,10 @@ public class A_Player : MonoBehaviour
         if(pController.hp != lastHp)
         AkSoundEngine.SetRTPCValue("PlayerHealth",lastHp);
 
-        var vel = rb.velocity;      //to get a Vector3 representation of the velocity
-        speed = vel.magnitude;
-        PlayPlayerMovement(vel);
-
-        AkSoundEngine.SetRTPCValue("PlayerSpeed", speed);   
+        AkSoundEngine.SetRTPCValue("PlayerSpeed", GameEventsController.getPlayerSpeed());   
     }
 
-    private void PlayPlayerMovement(Vector3 vel)
-    {
 
-
-
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.W))
-        {
-            pFootStep.Post(gameObject);
-        }
-        else if (vel == Vector3.zero)
-            pStopFootStep.Post(gameObject);
-
-    }
 
     void PlayBasicAttack()
     {

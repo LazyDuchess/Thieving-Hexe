@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: de69e0a8c0121f4897456ddb2dd8d19e
     GuidInternal: 
-    m_lastTime: -8585521282803729077
+    m_lastTime: -8585519660353412378
     List:
     - name: Ambience
       guid: 1f53f233bdaf274fb877b13d6c1016e3
@@ -584,7 +584,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 7eba4d089b921a46bb11fb91fae60011
     GuidInternal: 
-    m_lastTime: -8585519869297946882
+    m_lastTime: -8585519641007423911
     List:
     - name: Main
       guid: 5f870b2649904142a5a3c565028fd8cb
@@ -612,7 +612,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 411de6e562825d44b1e38d90e3d2c241
     GuidInternal: 
-    m_lastTime: -8585519869297813604
+    m_lastTime: -8585519660132588995
     List: []
   - PhysicalPath: Events\Enemies.wwu
     PathAndIcons:
@@ -625,7 +625,7 @@ MonoBehaviour:
     ParentPath: Events\Enemies
     guid: b57b8ebbdd978a4eb2fe751cc791da40
     GuidInternal: 
-    m_lastTime: -8585519869297734247
+    m_lastTime: -8585519703212895754
     List:
     - name: Play_Enem_Atk_Bsc_Charged
       guid: 2437c963447d854382f92df1b2735cbf
@@ -745,7 +745,7 @@ MonoBehaviour:
       Path: Events\Enemies\Play_Enem_Skel_FS_Material
       maxAttenuation: 0
       maxDuration: 7.096122
-      minDuration: 1.530479
+      minDuration: 0.312948
     - name: Play_Enem_Skelle_Defeat
       guid: 2236dbd066a5be44b3a667da4ddf476a
       id: 3332044750
@@ -780,23 +780,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 7.096122
       minDuration: 0.312948
-    - name: Play_GuardBlurb
-      guid: feb9777d15d796438c9b17e4e26e6177
-      id: 784653928
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Enemies
-        ObjectType: 12
-        guid: b57b8ebbdd978a4eb2fe751cc791da40
-      - ElementName: Play_GuardBlurb
-        ObjectType: 3
-        guid: feb9777d15d796438c9b17e4e26e6177
-      Path: Events\Enemies\Play_GuardBlurb
-      maxAttenuation: 35
-      maxDuration: 0.341962
-      minDuration: 0.103703
   - PhysicalPath: Events\Items.wwu
     PathAndIcons:
     - ElementName: Events
@@ -808,7 +791,7 @@ MonoBehaviour:
     ParentPath: Events\Items
     guid: 4d0336894da16e4190d724382e0ee0c8
     GuidInternal: 
-    m_lastTime: -8585524089612342879
+    m_lastTime: -8585519829817474897
     List:
     - name: Play_Crystal__Pickup
       guid: 5ed9f46dce3c2c4d935f4770786b0abd
@@ -878,6 +861,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.887682
       minDuration: 0.665966
+    - name: Play_Itm_Drink_Potion
+      guid: 57df26c1c1ba654ba3960269938f19d8
+      id: 2003385513
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Items
+        ObjectType: 12
+        guid: 4d0336894da16e4190d724382e0ee0c8
+      - ElementName: Play_Itm_Drink_Potion
+        ObjectType: 3
+        guid: 57df26c1c1ba654ba3960269938f19d8
+      Path: Events\Items\Play_Itm_Drink_Potion
+      maxAttenuation: 0
+      maxDuration: 8.13078
+      minDuration: 7.674434
+    - name: Play_Itm_Pu_Key
+      guid: a834c6f6242b2646beaea9dd63800092
+      id: 2258692236
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Items
+        ObjectType: 12
+        guid: 4d0336894da16e4190d724382e0ee0c8
+      - ElementName: Play_Itm_Pu_Key
+        ObjectType: 3
+        guid: a834c6f6242b2646beaea9dd63800092
+      Path: Events\Items\Play_Itm_Pu_Key
+      maxAttenuation: 0
+      maxDuration: 1.809131
+      minDuration: 1.70562
+    - name: Play_Itm_Pu_Potion
+      guid: cb542e7a6513a8439bc39b907e17427c
+      id: 873733766
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Items
+        ObjectType: 12
+        guid: 4d0336894da16e4190d724382e0ee0c8
+      - ElementName: Play_Itm_Pu_Potion
+        ObjectType: 3
+        guid: cb542e7a6513a8439bc39b907e17427c
+      Path: Events\Items\Play_Itm_Pu_Potion
+      maxAttenuation: 0
+      maxDuration: 1.242815
+      minDuration: 1.137043
   - PhysicalPath: Events\Music.wwu
     PathAndIcons:
     - ElementName: Events
@@ -908,6 +942,36 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+  - PhysicalPath: Events\NPC.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: NPC
+      ObjectType: 12
+      guid: e2dbe2e9ee95c644a73bdfdb3a782ea2
+    ParentPath: Events\NPC
+    guid: e2dbe2e9ee95c644a73bdfdb3a782ea2
+    GuidInternal: 
+    m_lastTime: -8585519815138147654
+    List:
+    - name: Play_GuardBlurb
+      guid: feb9777d15d796438c9b17e4e26e6177
+      id: 784653928
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: e2dbe2e9ee95c644a73bdfdb3a782ea2
+      - ElementName: Play_GuardBlurb
+        ObjectType: 3
+        guid: feb9777d15d796438c9b17e4e26e6177
+      Path: Events\NPC\Play_GuardBlurb
+      maxAttenuation: 35
+      maxDuration: 1.41325
+      minDuration: 0.338956
   - PhysicalPath: Events\Objects.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1017,7 +1081,7 @@ MonoBehaviour:
     ParentPath: Events\Player
     guid: a1c883d787be134cb580a86c2d3b3ae6
     GuidInternal: 
-    m_lastTime: -8585521298575950959
+    m_lastTime: -8585519654958103619
     List:
     - name: Play_PlayerFSMaterial
       guid: 32a955972ea0b1488ecd56738c3fee41
@@ -1036,23 +1100,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_Plyr_Atk_Bsc_Charged
-      guid: 7ebd29bd84077d45ae69d94f4c0077b4
-      id: 1020029592
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Player
-        ObjectType: 12
-        guid: a1c883d787be134cb580a86c2d3b3ae6
-      - ElementName: Play_Plyr_Atk_Bsc_Charged
-        ObjectType: 3
-        guid: 7ebd29bd84077d45ae69d94f4c0077b4
-      Path: Events\Player\Play_Plyr_Atk_Bsc_Charged
-      maxAttenuation: 100
-      maxDuration: 3.769821
-      minDuration: 3.401892
     - name: Play_Plyr_Atk_Bsc_Lte
       guid: 8bd056a4dddf1a408695659310b36c6b
       id: 2754623237
@@ -1070,6 +1117,57 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: 0.240623
       minDuration: 0.131762
+    - name: Play_Plyr_Atk_Chrg_Loop
+      guid: 41b97604069eab4a9462a7d203fe0b7d
+      id: 2613753308
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: a1c883d787be134cb580a86c2d3b3ae6
+      - ElementName: Play_Plyr_Atk_Chrg_Loop
+        ObjectType: 3
+        guid: 41b97604069eab4a9462a7d203fe0b7d
+      Path: Events\Player\Play_Plyr_Atk_Chrg_Loop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Plyr_Atk_Chrg_Release
+      guid: e32436d05fdb3d45a646b0f059049b60
+      id: 843314701
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: a1c883d787be134cb580a86c2d3b3ae6
+      - ElementName: Play_Plyr_Atk_Chrg_Release
+        ObjectType: 3
+        guid: e32436d05fdb3d45a646b0f059049b60
+      Path: Events\Player\Play_Plyr_Atk_Chrg_Release
+      maxAttenuation: 0
+      maxDuration: 1.248408
+      minDuration: 0.880478
+    - name: Play_Plyr_Atk_Chrg_Wu
+      guid: 8f283766202366489e69ae649d6f6c43
+      id: 2731356750
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: a1c883d787be134cb580a86c2d3b3ae6
+      - ElementName: Play_Plyr_Atk_Chrg_Wu
+        ObjectType: 3
+        guid: 8f283766202366489e69ae649d6f6c43
+      Path: Events\Player\Play_Plyr_Atk_Chrg_Wu
+      maxAttenuation: 0
+      maxDuration: 1.752209
+      minDuration: 1.752209
     - name: Play_Plyr_Defeated
       guid: 347c78d6fefd014c994f1a8f11950cc0
       id: 2464356432
@@ -1104,23 +1202,6 @@ MonoBehaviour:
       maxAttenuation: 35
       maxDuration: 3.09927
       minDuration: 2.761135
-    - name: Play_Plyr_Float
-      guid: 1ab355b0d47ec44f94aa878efe5acf6b
-      id: 984956936
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Player
-        ObjectType: 12
-        guid: a1c883d787be134cb580a86c2d3b3ae6
-      - ElementName: Play_Plyr_Float
-        ObjectType: 3
-        guid: 1ab355b0d47ec44f94aa878efe5acf6b
-      Path: Events\Player\Play_Plyr_Float
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Play_Plyr_Po_Fire_w_Wtr
       guid: de92122272aff449b337623ee5823c9f
       id: 2930802274
@@ -1189,23 +1270,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Stop_Plyr_Float
-      guid: 5d7bfcb6c4a46e439440beb244c9b28d
-      id: 2450666310
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Player
-        ObjectType: 12
-        guid: a1c883d787be134cb580a86c2d3b3ae6
-      - ElementName: Stop_Plyr_Float
-        ObjectType: 3
-        guid: 5d7bfcb6c4a46e439440beb244c9b28d
-      Path: Events\Player\Stop_Plyr_Float
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
   - PhysicalPath: Events\UI.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1265,7 +1329,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: db7049b446fb13449285c582d8c8a0bd
     GuidInternal: 
-    m_lastTime: -8585521284437642873
+    m_lastTime: -8585519654957865201
     List:
     - name: PlayerHealth
       guid: 72134eaa52a5ff4486194498d31808af
@@ -1920,7 +1984,7 @@ MonoBehaviour:
     m_lastTime: -8585533485103830915
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 05000000060000000700000012000000240000003b0000003c0000003d0000006a00000088000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1795446445182344192}
   - component: {fileID: 5470383191562096629}
+  - component: {fileID: 3425295180869928743}
   m_Layer: 10
   m_Name: Key
   m_TagString: Untagged
@@ -63,6 +64,23 @@ MonoBehaviour:
   holdTime: 0
   primaryFireMode: 0
   secondaryFireMode: 0
+--- !u!114 &3425295180869928743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414523546857932474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5026e8ef517af8c4fb4bab918f457243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPickup:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 43724917df25c0f42a1b77578c3853f3, type: 2}
+  crystalPower: {fileID: 0}
 --- !u!1 &2313138175201076424
 GameObject:
   m_ObjectHideFlags: 0

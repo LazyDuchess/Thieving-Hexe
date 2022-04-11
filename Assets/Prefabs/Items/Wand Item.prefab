@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6743809631112757747}
   - component: {fileID: 243038859438359331}
+  - component: {fileID: -5981243360406509279}
   m_Layer: 10
   m_Name: Wand Item
   m_TagString: Untagged
@@ -72,6 +73,22 @@ MonoBehaviour:
   speedBuff: 0.75
   delay: 0.1
   duration: 0.2
+--- !u!114 &-5981243360406509279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743809631112757745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5026e8ef517af8c4fb4bab918f457243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPickup:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8cf5a1e1309fbcf45b95bfd856cf1dbf, type: 2}
 --- !u!1 &7800473421101461076
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,18 +28,21 @@ namespace AK
         static const AkUniqueID PLAY_ENEM_SKEL_FS_MATERIAL = 2027687623U;
         static const AkUniqueID PLAY_ENEM_SKELLE_DEFEAT = 3332044750U;
         static const AkUniqueID PLAY_ENEM_SKELLE_FS_MATERIAL = 432265666U;
+        static const AkUniqueID PLAY_FIREGEM_FLIGHT = 4040184904U;
         static const AkUniqueID PLAY_GUARDBLURB = 784653928U;
         static const AkUniqueID PLAY_ITM_DRINK_POTION = 2003385513U;
+        static const AkUniqueID PLAY_ITM_PU_KEY = 2258692236U;
         static const AkUniqueID PLAY_ITM_PU_POTION = 873733766U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_OBJ_DOOR_CLOSE = 675557581U;
         static const AkUniqueID PLAY_OBJ_DOOR_OPEN = 1417455751U;
         static const AkUniqueID PLAY_PLAYERFSMATERIAL = 3383738331U;
-        static const AkUniqueID PLAY_PLYR_ATK_BSC_CHARGED = 1020029592U;
         static const AkUniqueID PLAY_PLYR_ATK_BSC_LTE = 2754623237U;
+        static const AkUniqueID PLAY_PLYR_ATK_CHRG_LOOP = 2613753308U;
+        static const AkUniqueID PLAY_PLYR_ATK_CHRG_RELEASE = 843314701U;
+        static const AkUniqueID PLAY_PLYR_ATK_CHRG_WU = 2731356750U;
         static const AkUniqueID PLAY_PLYR_DEFEATED = 2464356432U;
         static const AkUniqueID PLAY_PLYR_ELCTY_WTR = 856894529U;
-        static const AkUniqueID PLAY_PLYR_FLOAT = 984956936U;
         static const AkUniqueID PLAY_PLYR_PO_FIRE_W_WTR = 2930802274U;
         static const AkUniqueID PLAY_PLYR_REC_GEN_DMG = 3674195162U;
         static const AkUniqueID PLAY_PLYR_RECV_FIRE_DMG = 149588724U;
@@ -47,7 +50,6 @@ namespace AK
         static const AkUniqueID PLAY_UI_MENUSELECT = 1999625262U;
         static const AkUniqueID PLAY_UI_ROLLOVER = 4038800916U;
         static const AkUniqueID STOP_PLAYERFSMATERIAL = 2251837801U;
-        static const AkUniqueID STOP_PLYR_FLOAT = 2450666310U;
     } // namespace EVENTS
 
     namespace STATES

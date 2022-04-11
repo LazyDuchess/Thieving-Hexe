@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3bb7634968e10a4caca79cc10a6dbea, type: 3}
-  m_Name: BD29BD7E-0784-457D-AE69-D94F4C0077B4
+  m_Name: B708018A-3709-4E8B-B5BC-DBE58757DC52
   m_EditorClassIdentifier: 
-  objectName: Play_Plyr_Atk_Bsc_Charged
-  id: 1020029592
-  guid: BD29BD7E-0784-457D-AE69-D94F4C0077B4
+  objectName: Play_Crystal_Small_Use
+  id: 429735360
+  guid: B708018A-3709-4E8B-B5BC-DBE58757DC52

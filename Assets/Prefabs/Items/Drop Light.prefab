@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4945922560323415486}
   - component: {fileID: 2144470926871895136}
+  - component: {fileID: 399785515722338513}
   m_Layer: 0
   m_Name: Drop Light
   m_TagString: Untagged
@@ -94,3 +95,19 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &399785515722338513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992994904772673843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5026e8ef517af8c4fb4bab918f457243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPickup:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3e2cd62320376cb428fde58e9710f5be, type: 2}

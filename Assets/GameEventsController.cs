@@ -1,11 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class GameEventsController
 {
     public delegate void GameEvent();
-  
+
 
     //When you lose by dying or running out of time.
     public static GameEvent gameOverEvent;

@@ -4920,6 +4920,8 @@ GameObject:
   - component: {fileID: 8834279249987030111}
   - component: {fileID: 922262368310975310}
   - component: {fileID: 66946931299217223}
+  - component: {fileID: 7627532571191297108}
+  - component: {fileID: 6002176636690812760}
   m_Layer: 8
   m_Name: Wand Projectile
   m_TagString: Untagged
@@ -5019,9 +5021,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8b36cfb7d478045baf2954943cf346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLife: 10
   damage: 10
   owner: {fileID: 0}
   vector: {x: 0, y: 0, z: 0}
+  pushForce: 3
 --- !u!54 &66946931299217223
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5038,3 +5042,59 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &7627532571191297108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6119730668319842903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1511a1f81df8bf2418da59934f1d3555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &6002176636690812760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6119730668319842903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ba80c7f8012a84481d07480c64a358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: efc011623e89cd34fa8628585e5d7f28, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
