@@ -11,6 +11,8 @@ public class Projectile : MonoBehaviour
     bool dormant = false;
     Light lite;
     public float pushForce = 3f;
+    public delegate void OnHit();
+    public OnHit onHitEvent;
 
     private void Start()
     {
@@ -60,6 +62,8 @@ public class Projectile : MonoBehaviour
             Destroy(GetComponent<SphereCollider>());
             GetComponentInChildren<ParticleSystem>().Stop();
             Invoke("Delete", 10f);
+            if (onHitEvent != null)
+                onHitEvent.Invoke();
             //Destroy(gameObject);
         }
     }
