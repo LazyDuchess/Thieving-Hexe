@@ -21,6 +21,20 @@ public class InputController : MonoBehaviour
         GameController.instance.playerController.movementVector = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         if (GameController.instance.playerController.CanUseInventory())
         {
+            var scroll = Input.GetAxisRaw("Mouse ScrollWheel");
+            if (scroll != 0f)
+            {
+                var newSlot = GameController.instance.playerController.inventory.currentSlot;
+                if (scroll > 0f)
+                    newSlot += 1;
+                else
+                    newSlot -= 1;
+                if (newSlot < 0)
+                    newSlot = GameController.instance.playerController.inventory.maxCapacity - 1;
+                if (newSlot >= GameController.instance.playerController.inventory.maxCapacity)
+                    newSlot = 0;
+                GameController.instance.playerController.inventory.SwitchSlot(newSlot);
+            }
             var initialInventorySlotKey = KeyCode.Alpha1;
             for (var i = 0; i < GameController.instance.playerController.inventory.maxCapacity; i++)
             {
