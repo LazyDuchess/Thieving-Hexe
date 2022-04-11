@@ -9,9 +9,10 @@ public class ActiveChooser : MonoBehaviour
     void Start()
     {
         var opt = Random.Range(0, options.Count);
-        foreach(var element in options)
+        for(var i=0;i<options.Count;i++)
         {
-            element.SetActive(false);
+            if (i != opt)
+                Destroy(options[i].gameObject);
         }
         options[opt].SetActive(true);
     }

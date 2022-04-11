@@ -30,7 +30,9 @@ public class GameController : MonoBehaviour
     public GameObject gameplayScreen;
 
     private static bool cachedCharacters = false;
+    private static bool cachedItems = false;
     private static CharacterComponent[] charactersThisFrame;
+    private static ItemComponent[] allItems;
 
     private static LayerMask groundMask;
 
@@ -46,9 +48,27 @@ public class GameController : MonoBehaviour
         cachedCharacters = true;
     }
 
+    private static void cacheItems()
+    {
+        allItems = FindObjectsOfType<ItemComponent>();
+        cachedItems = true;
+    }
+
     public static void dirtyCharacters()
     {
         cachedCharacters = false;
+    }
+
+    public static void dirtyItems()
+    {
+        cachedItems = false;
+    }
+
+    public static ItemComponent[] GetItems()
+    {
+        if (!cachedItems)
+            cacheItems();
+        return allItems;
     }
 
     public static CharacterComponent[] GetCharacters()

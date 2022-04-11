@@ -136,8 +136,15 @@ public class ItemComponent : InteractableComponent
 
     public virtual void Awake()
     {
+        GameController.dirtyItems();
+        transform.parent = null;
         if (holdObject != null)
             holdObject.SetActive(false);
+    }
+
+    public virtual void OnDestroy()
+    {
+        GameController.dirtyItems();
     }
 
     public virtual void ToInventory(Inventory inventory)

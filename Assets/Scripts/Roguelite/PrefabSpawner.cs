@@ -7,6 +7,7 @@ public class PrefabSpawner : RoomTrigger
     public GameObject prefab;
     public bool spawnOnArrival = true;
     public bool spawnOnWayOut = false;
+    public bool bindToLevel = true;
 
     void Awake()
     {
@@ -19,7 +20,10 @@ public class PrefabSpawner : RoomTrigger
     void spawn()
     {
         var pref = Instantiate(prefab, transform.position, transform.rotation);
-        pref.transform.SetParent(transform.parent);
+        if (!bindToLevel)
+            pref.transform.SetParent(transform.parent);
+        else
+            pref.transform.SetParent(DungeonController.instance.level.transform);
     }
 
     public override void OnPlayerEnter()
