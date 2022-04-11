@@ -63,7 +63,7 @@ MonoBehaviour:
   holdTime: 0
   primaryFireMode: 0
   secondaryFireMode: 0
-  hp: 25
+  hp: 30
   speedBuff: 0.5
   duration: 1.5
 --- !u!1 &7631527900422315409

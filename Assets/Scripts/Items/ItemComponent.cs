@@ -120,7 +120,7 @@ public class ItemComponent : InteractableComponent
             coolDownS = 0f;
     }
 
-    public virtual void Start()
+    public virtual void Awake()
     {
         if (holdObject != null)
             holdObject.SetActive(false);
@@ -128,6 +128,7 @@ public class ItemComponent : InteractableComponent
 
     public virtual void ToInventory(Inventory inventory)
     {
+        this.transform.parent = null;
         this.inventory = inventory;
         if (holdObject != null)
             holdObject.SetActive(false);

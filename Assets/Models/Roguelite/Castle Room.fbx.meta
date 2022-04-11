@@ -2,7 +2,64 @@ fileFormatVersion: 2
 guid: 47a131f1cf9ea4b42948d7af637cec9d
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 7622187601845381174
+    second: metarig|charge_melee_attack
+  - first:
+      74: 5232785204863589005
+    second: metarig|charge_melee_loop
+  - first:
+      74: -3660871054041721945
+    second: metarig|charge_melee_start
+  - first:
+      74: 6495993076513800201
+    second: metarig|die
+  - first:
+      74: -1907895161954392799
+    second: metarig|die_slow
+  - first:
+      74: -83682700788513401
+    second: metarig|Fall
+  - first:
+      74: -7930458243451827962
+    second: metarig|Flinch1
+  - first:
+      74: 558273580652244636
+    second: metarig|Flinch2
+  - first:
+      74: 7550830284926740095
+    second: metarig|heavy_melee
+  - first:
+      74: 7730953928904119934
+    second: metarig|hold_item
+  - first:
+      74: 8660860598200024237
+    second: metarig|hold_melee
+  - first:
+      74: -5324238279805231817
+    second: metarig|Idle
+  - first:
+      74: 3654180907938819887
+    second: metarig|Idle_Hurt
+  - first:
+      74: 3457649064732747455
+    second: metarig|kneel_start
+  - first:
+      74: 5717760805790494982
+    second: metarig|put_item
+  - first:
+      74: 64401598330128405
+    second: metarig|put_melee
+  - first:
+      74: -2483591982332496685
+    second: metarig|Run
+  - first:
+      74: 5563597894024631252
+    second: metarig|swing_melee
+  - first:
+      74: 1311949501443899062
+    second: metarig|TPose
   externalObjects:
   - first:
       type: UnityEngine:Material
