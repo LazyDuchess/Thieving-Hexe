@@ -23,11 +23,6 @@ States:
 public class A_Player : MonoBehaviour
 {
 
-    //Things to be accessed by anyone
-
-    PlayerController pController;//get player public class
-  
-
 
     //Things to be acecessed by only this script
     #region Private Variables
@@ -52,6 +47,11 @@ public class A_Player : MonoBehaviour
     [SerializeField] private AK.Wwise.Event pDefeated;
     [SerializeField] private AK.Wwise.Event pTorchWave;
 
+    [Header("Items")]
+    [SerializeField] private AK.Wwise.Event pKeyPu;
+    [SerializeField] private AK.Wwise.Event pPotionPu;
+    [SerializeField] private AK.Wwise.Event pDrinkPotion;
+
 
 
     #endregion
@@ -59,23 +59,24 @@ public class A_Player : MonoBehaviour
     public void Start()
     {
  
-        pController = GetComponentInParent<PlayerController>();
+      
         GameEventsController.playerChargedAttackStartEvent += PlayChargeAttackStart;
         GameEventsController.playerChargedAttackEndEvent += PlayChargeAttackCast;
         GameEventsController.playerAttackEvent += PlayBasicAttack;
         GameEventsController.playerDamageEvent += PlayTakeDamage;
         GameEventsController.gameOverEvent += PlayPlayerDeath;
         GameEventsController.playerMeleeAttackEvent += PlayTorchWave;
+        GameEventsController.pickUpKeyEvent += PlayKeyPu;
+        GameEventsController.pickUpOtherEvent += PlayPotionPu;
+        GameEventsController.potionDrinkEvent += PlayDrinkPotion;
 
         pFootStep.Post(gameObject); //start the float sound and use the RTPC to choose the volume of it
     }
 
     public void Update()
     {
-        //get and set player health RTPC
-        float lastHp = pController.hp;
-        if (pController.hp != lastHp)
-            AkSoundEngine.SetRTPCValue("PlayerHealth", lastHp);
+
+            AkSoundEngine.SetRTPCValue("PlayerHealth", GameController.instance.playerController.hp);
 
         AkSoundEngine.SetRTPCValue("PlayerSpeed", GameEventsController.getPlayerSpeed());
     }
@@ -103,12 +104,12 @@ public class A_Player : MonoBehaviour
         pChrgAttackRelease.Post(gameObject);
     }
 
-    public void PlayPlayerDeath()
+    void PlayPlayerDeath()
     {
         pDefeated.Post(gameObject);
     }
 
-    public void PlayTakeDamage(Damage dmg)
+    void PlayTakeDamage(Damage dmg)
     {
         if (dmg.damageType == DamageType.Constant)//take fire damage
             pTakeDmgFire.Post(gameObject);
@@ -116,16 +117,26 @@ public class A_Player : MonoBehaviour
             pTakeDmgGeneric.Post(gameObject);
     }
 
-    public void PlayTorchWave()
+    void PlayTorchWave()
     {
         pTorchWave.Post(gameObject);
     }
   
 
+    void PlayKeyPu()
+    {
+        pKeyPu.Post(gameObject);
+    }
 
+    void PlayPotionPu()
+    {
+        pPotionPu.Post(gameObject);
+    }
 
-
-
+    void PlayDrinkPotion()
+    {
+        pDrinkPotion.Post(gameObject);
+    }
 
 
 }//END MAIN

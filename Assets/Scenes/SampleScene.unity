@@ -5645,6 +5645,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 946746788832304003, guid: 292c0da200d644c459d108f54c29a920, type: 3}
+      propertyPath: pKeyPu.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 43724917df25c0f42a1b77578c3853f3, type: 2}
+    - target: {fileID: 946746788832304003, guid: 292c0da200d644c459d108f54c29a920, type: 3}
+      propertyPath: pPotionPu.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 9fa2f1de079cf514da9b324f469ee9a9, type: 2}
+    - target: {fileID: 946746788832304003, guid: 292c0da200d644c459d108f54c29a920, type: 3}
+      propertyPath: pTorchWave.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e95a740b33cbf048bbed7c23932b66e, type: 2}
+    - target: {fileID: 946746788832304003, guid: 292c0da200d644c459d108f54c29a920, type: 3}
+      propertyPath: pDrinkPotion.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4569bc4fd12323443a0341de0b3a610e, type: 2}
     - target: {fileID: 1637178530321377554, guid: 292c0da200d644c459d108f54c29a920, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5694,13 +5710,25 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8439988302764466105, guid: 292c0da200d644c459d108f54c29a920, type: 3}
+      propertyPath: pKeyPu.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 43724917df25c0f42a1b77578c3853f3, type: 2}
+    - target: {fileID: 8439988302764466105, guid: 292c0da200d644c459d108f54c29a920, type: 3}
       propertyPath: pFootStep.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: fa0ffa204c3d79a4fb552087468abbbb, type: 2}
     - target: {fileID: 8439988302764466105, guid: 292c0da200d644c459d108f54c29a920, type: 3}
+      propertyPath: pPotionPu.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 9fa2f1de079cf514da9b324f469ee9a9, type: 2}
+    - target: {fileID: 8439988302764466105, guid: 292c0da200d644c459d108f54c29a920, type: 3}
       propertyPath: pTorchWave.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 0e95a740b33cbf048bbed7c23932b66e, type: 2}
+    - target: {fileID: 8439988302764466105, guid: 292c0da200d644c459d108f54c29a920, type: 3}
+      propertyPath: pDrinkPotion.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4569bc4fd12323443a0341de0b3a610e, type: 2}
     - target: {fileID: 8439988302764466105, guid: 292c0da200d644c459d108f54c29a920, type: 3}
       propertyPath: pStopFootStep.WwiseObjectReference
       value: 

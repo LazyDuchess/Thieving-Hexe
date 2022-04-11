@@ -3,7 +3,7 @@
 	<RootPaths>
 		<ProjectRoot>D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\</ProjectRoot>
 		<SourceFilesRoot>D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\BnW-WitchGame\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<SoundBanksRoot>D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="2870412981">
+		<SoundBank Id="1355168291" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="3443972562">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -25,7 +25,7 @@
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Music\MusicVolume" GUID="{3B5D930E-120D-4327-ACC5-06C6CC062D61}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" GUID="{260B875F-9049-4241-A5A3-C565028FD8CB}" Language="SFX" Hash="2295701036">
+		<SoundBank Id="3161908922" GUID="{260B875F-9049-4241-A5A3-C565028FD8CB}" Language="SFX" Hash="2085203745">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -1191,6 +1191,10 @@
 				</Event>
 				<Event Id="149588724" Name="Play_Plyr_Recv_Fire_Dmg" ObjectPath="\Events\Player\Play_Plyr_Recv_Fire_Dmg" GUID="{F8AAC09E-88A2-47B9-AD06-1AA94BB532C4}" DurationType="OneShot" DurationMin="0.638117" DurationMax="0.718759">
 					<IncludedMemoryFiles>
+						<File Id="5331889" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_B169316C.wem</Path>
+						</File>
 						<File Id="13663009" Language="SFX">
 							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
 							<Path>SFX\Plyr_Tk_Fire_Dmg_D14E8152.wem</Path>
@@ -1202,6 +1206,22 @@
 						<File Id="279433949" Language="SFX">
 							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
 							<Path>SFX\Plyr_Tk_Fire_Dmg_11B6ECF2.wem</Path>
+						</File>
+						<File Id="426562327" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_2D50FDD0.wem</Path>
+						</File>
+						<File Id="539548908" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_EA9E229C.wem</Path>
+						</File>
+						<File Id="740964786" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_98F54A31.wem</Path>
+						</File>
+						<File Id="764711581" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_2B389C0A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
