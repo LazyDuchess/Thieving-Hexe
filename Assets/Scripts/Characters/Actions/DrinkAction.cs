@@ -23,6 +23,7 @@ public class DrinkAction : Action
     public override void Enter()
     {
         base.Enter();
+        GameEventsController.DrinkPotion();
         owner.SendEvent("Drink");
         QueueEvent(duration, 0);
     }
