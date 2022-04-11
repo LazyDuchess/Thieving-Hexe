@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public bool audioHacks = true;
+
     public bool controlEnabled = true;
 
     public GameGlobals gameGlobals = new GameGlobals();
@@ -26,6 +28,35 @@ public class GameController : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject levelCompleteScreen;
     public GameObject gameplayScreen;
+
+    private static bool cachedCharacters = false;
+    private static CharacterComponent[] charactersThisFrame;
+
+    private static LayerMask groundMask;
+
+    public static bool GetAudioHacks()
+    {
+        return instance.audioHacks;
+    }
+
+
+    private static void cacheCharacters()
+    {
+        charactersThisFrame = FindObjectsOfType<CharacterComponent>();
+        cachedCharacters = true;
+    }
+
+    public static void dirtyCharacters()
+    {
+        cachedCharacters = false;
+    }
+
+    public static CharacterComponent[] GetCharacters()
+    {
+        if (!cachedCharacters)
+            cacheCharacters();
+        return charactersThisFrame;
+    }
 
     public void CompleteDungeon()
     {
@@ -93,15 +124,17 @@ public class GameController : MonoBehaviour
         playerController = player.GetComponent<PlayerController>();
         playerController.deathEvent += PlayerDeathEv;
         playerController.damageEvent += GameEventsController.PlayerDamage;
+        groundMask = LayerMask.GetMask("Ground");
     }
 
     public void PlayerDeathEv(Damage dmg)
     {
         GameOver();
+        GameEventsController.PlayerDeath(dmg);
     }
 
     public static LayerMask GetGroundMask()
     {
-        return LayerMask.GetMask("Ground");
+        return groundMask;
     }
 }

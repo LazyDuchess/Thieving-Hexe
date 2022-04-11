@@ -15,14 +15,16 @@ public abstract class InteractableComponent : MonoBehaviour
     {
         var fromPoint = actor.transform.position + (Vector3.up * actor.height);
         var toPoint = interactionOrigin.position;
-        var off = 0.25f;
+        var off = 0.4f;
         var rayOrigin = fromPoint;
         var rayHeading = (toPoint - fromPoint).normalized;
         var rayDistance = Vector3.Distance(fromPoint, toPoint);
         rayOrigin += rayHeading * off;
         rayDistance -= off * 2f;
         Ray ray = new Ray(rayOrigin, rayHeading);
+#if UNITY_EDITOR
         Debug.DrawLine(rayOrigin, rayOrigin + (rayDistance * rayHeading), Color.red, 10f);
+#endif
         var cast = Physics.RaycastAll(ray, rayDistance);
         var notValid = true;
         foreach (var element in cast)

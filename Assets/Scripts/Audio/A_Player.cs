@@ -64,7 +64,7 @@ public class A_Player : MonoBehaviour
         GameEventsController.playerChargedAttackEndEvent += PlayChargeAttackCast;
         GameEventsController.playerAttackEvent += PlayBasicAttack;
         GameEventsController.playerDamageEvent += PlayTakeDamage;
-        GameEventsController.gameOverEvent += PlayPlayerDeath;
+        GameEventsController.playerDeathEvent += PlayPlayerDeath;
         GameEventsController.playerMeleeAttackEvent += PlayTorchWave;
         GameEventsController.pickUpKeyEvent += PlayKeyPu;
 
@@ -85,7 +85,8 @@ public class A_Player : MonoBehaviour
         GameEventsController.playerChargedAttackEndEvent -= PlayChargeAttackCast;
         GameEventsController.playerAttackEvent -= PlayBasicAttack;
         GameEventsController.playerDamageEvent -= PlayTakeDamage;
-        GameEventsController.gameOverEvent -= PlayPlayerDeath;
+        //GameEventsController.gameOverEvent -= PlayPlayerDeath;
+        GameEventsController.playerDeathEvent -= PlayPlayerDeath;
         GameEventsController.playerMeleeAttackEvent -= PlayTorchWave;
         GameEventsController.pickUpKeyEvent -= PlayKeyPu;
         GameEventsController.pickUpPotionEvent -= PlayPotionPu;
@@ -98,7 +99,7 @@ public class A_Player : MonoBehaviour
 
             AkSoundEngine.SetRTPCValue("PlayerHealth", GameController.instance.playerController.hp);
 
-        AkSoundEngine.SetRTPCValue("PlayerSpeed", GameEventsController.getPlayerSpeed()*0.25f); //ToDo: Do this in wwise?
+        AkSoundEngine.SetRTPCValue("PlayerSpeed", GameEventsController.getPlayerSpeed()*0.3f); //ToDo: Do this in wwise?
     }
 
 
@@ -110,7 +111,10 @@ public class A_Player : MonoBehaviour
 
     void PlayBasicAttack()
     {
-        pLteAttack.Post(gameObject);
+        if (GameController.GetAudioHacks())
+            pLteAttack.Post(GameCamera.instance.gameObject);
+        else
+            pLteAttack.Post(gameObject);
     }
 
 
@@ -124,7 +128,7 @@ public class A_Player : MonoBehaviour
         pChrgAttackRelease.Post(gameObject);
     }
 
-    void PlayPlayerDeath()
+    void PlayPlayerDeath(Damage dmg)
     {
         pDefeated.Post(gameObject);
     }
@@ -133,16 +137,22 @@ public class A_Player : MonoBehaviour
     {
         if (GameController.instance.playerController.IsAlive())
         {
+            var gObject = gameObject;
+            if (GameController.GetAudioHacks())
+                gObject = GameCamera.instance.gameObject;
             if (dmg.damageType == DamageType.Constant)//take fire damage
-                pTakeDmgFire.Post(gameObject);
+                pTakeDmgFire.Post(gObject);
             else
-                pTakeDmgGeneric.Post(gameObject);
+                pTakeDmgGeneric.Post(gObject);
         }
     }
 
     void PlayTorchWave()
     {
-        pTorchWave.Post(gameObject);
+        if (GameController.GetAudioHacks())
+            pTorchWave.Post(GameCamera.instance.gameObject);
+        else
+            pTorchWave.Post(gameObject);
     }
   
 

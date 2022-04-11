@@ -70,6 +70,9 @@ public class GameEventsController
     //Restart
     public static GameEvent preRestartEvent;
 
+    //Player Death
+    public static DamageEvent playerDeathEvent;
+
     public static void PreRestart()
     {
         if (preRestartEvent != null)
@@ -200,6 +203,12 @@ public class GameEventsController
     {
         if (potionDrinkEvent != null)
             potionDrinkEvent.Invoke();
+    }
+
+    public static void PlayerDeath(Damage dmg)
+    {
+        if (playerDeathEvent != null)
+            playerDeathEvent.Invoke(dmg);
     }
 
     public static float getPlayerSpeed()

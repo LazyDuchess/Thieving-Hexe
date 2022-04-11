@@ -10696,8 +10696,8 @@ MonoBehaviour:
   speedBuff: 0.7
   damage: 20
   duration: 0.6
-  radius: 1.5
-  distance: 0.7
+  radius: 1.7
+  distance: 0.9
   pushForce: 10
   delay: 0.07
 --- !u!114 &-1326124170691232159

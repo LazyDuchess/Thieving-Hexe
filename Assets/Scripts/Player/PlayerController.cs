@@ -99,6 +99,8 @@ public class PlayerController : CharacterComponent
         currentInteractable = null;
         if (!IsAlive())
             return;
+        InteractableComponent lastInteractable = null;
+        var lastDistance = 0f;
         var allInteractables = FindObjectsOfType<InteractableComponent>();
         foreach(var element in allInteractables)
         {
@@ -115,14 +117,27 @@ public class PlayerController : CharacterComponent
                             {
                             if (element.Test(this))
                             {
-                                currentInteractable = element;
-                                return;
+                                var dist = Vector3.Distance(transform.position, element.triggerPosition());
+                                if(lastInteractable == null)
+                                {
+                                    lastInteractable = element;
+                                    lastDistance = dist;
+                                }
+                                else
+                                {
+                                    if (dist < lastDistance)
+                                    {
+                                        lastInteractable = element;
+                                        lastDistance = dist;
+                                    }
+                                }
                             }
                             }
                         }
                     }
             }
         }
+        currentInteractable = lastInteractable;
     }
 
     // Start is called before the first frame update

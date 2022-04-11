@@ -18,7 +18,13 @@ public class A_Chests_OC : MonoBehaviour
 
     public void PlayOpenChest()
     {
-        playChestOpen.Post(gameObject);
+        if (GameController.GetAudioHacks())
+        {
+            playChestOpen.Post(GameCamera.instance.gameObject);
+            playChestOpen.Post(GameCamera.instance.gameObject);
+        }
+        else
+            playChestOpen.Post(gameObject);
     }
 }
 

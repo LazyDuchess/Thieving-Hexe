@@ -21,7 +21,7 @@ public class MeleeAttackTask : Task
 
     void getTarget()
     {
-        var chars = GameObject.FindObjectsOfType<CharacterComponent>();
+        var chars = GameController.GetCharacters();
         CharacterComponent lastChar = null;
         float lastDistance = 0f;
         foreach(var element in chars)
