@@ -7,13 +7,15 @@ public class A_Door_OC : MonoBehaviour
     public void Start()
     {
         door = GetComponent<GameObject>();
+        GameEventsController.roomsOpenEvent += PlayOpenDoor;
+        GameEventsController.roomsCloseEvent += PlayCloseDoor;
     }
 
-    public void PlayOpenDoor()
+     void PlayOpenDoor()
     {
             AkSoundEngine.PostEvent("Obj_Door_Open", door);
     }
-    public void PlayCloseDoor()
+     void PlayCloseDoor()
     {
         AkSoundEngine.PostEvent("Obj_Door_Close", door);
     }

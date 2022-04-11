@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerTriggerRoom : MonoBehaviour
 {
-	PlayerController playerController;
-
-
-	private void OnTriggerEnter(UnityEngine.Collider in_other)
+	public AK.Wwise.State gameplay;
+	private void OnTriggerEnter(Collider in_other)
 	{
 		if (in_other.tag == "Player")
-			AkSoundEngine.SetState("", "");
+			AkSoundEngine.SetState("Enviro", "Castle");
+			gameplay.SetValue();
+
+	
 	}
 }
