@@ -25,7 +25,7 @@
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Music\MusicVolume" GUID="{3B5D930E-120D-4327-ACC5-06C6CC062D61}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" GUID="{260B875F-9049-4241-A5A3-C565028FD8CB}" Language="SFX" Hash="1963949196">
+		<SoundBank Id="3161908922" GUID="{260B875F-9049-4241-A5A3-C565028FD8CB}" Language="SFX" Hash="2295701036">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -34,7 +34,7 @@
 					<IncludedMemoryFiles>
 						<File Id="244450833" Language="SFX">
 							<ShortName>15-12 Fire,Campfire Small Campfire Crackling,Hissing,Popping.wav</ShortName>
-							<Path>SFX\15-12 Fire,Campfire Small Campfire Crackling,Hissing,Popping_6EBC5331.wem</Path>
+							<Path>SFX\15-12 Fire,Campfire Small Campfire Crackling,Hissing,Popping_3E34AA15.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -42,7 +42,7 @@
 					<IncludedMemoryFiles>
 						<File Id="754377464" Language="SFX">
 							<ShortName>10-40 Bubbles In Water.wav</ShortName>
-							<Path>SFX\10-40 Bubbles In Water_D79FB2B7.wem</Path>
+							<Path>SFX\10-40 Bubbles In Water_3D85C53B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -50,51 +50,51 @@
 					<IncludedMemoryFiles>
 						<File Id="86142725" Language="SFX">
 							<ShortName>Itm_Pu_Crys_Fire.wav</ShortName>
-							<Path>SFX\Itm_Pu_Crys_Fire_2B0F0A4A.wem</Path>
+							<Path>SFX\Itm_Pu_Crys_Fire_8969CD5E.wem</Path>
 						</File>
 						<File Id="162196080" Language="SFX">
 							<ShortName>Itum_Pu_Crys_Elec.wav</ShortName>
-							<Path>SFX\Itum_Pu_Crys_Elec_B7200A8E.wem</Path>
+							<Path>SFX\Itum_Pu_Crys_Elec_6F291ABA.wem</Path>
 						</File>
 						<File Id="166957269" Language="SFX">
 							<ShortName>Itm_Pu_Crys_Fire.wav</ShortName>
-							<Path>SFX\Itm_Pu_Crys_Fire_6700A14B.wem</Path>
+							<Path>SFX\Itm_Pu_Crys_Fire_DF32C1DF.wem</Path>
 						</File>
 						<File Id="304636653" Language="SFX">
 							<ShortName>Itm_Pu_Crys_Fire.wav</ShortName>
-							<Path>SFX\Itm_Pu_Crys_Fire_41AFFC4A.wem</Path>
+							<Path>SFX\Itm_Pu_Crys_Fire_8046086E.wem</Path>
 						</File>
 						<File Id="388109844" Language="SFX">
 							<ShortName>Itm_Pu_Crys_Fire.wav</ShortName>
-							<Path>SFX\Itm_Pu_Crys_Fire_F91F0A84.wem</Path>
+							<Path>SFX\Itm_Pu_Crys_Fire_37C0D078.wem</Path>
 						</File>
 						<File Id="448803947" Language="SFX">
 							<ShortName>Itm_Pu_Crys_Gen.wav</ShortName>
-							<Path>SFX\Itm_Pu_Crys_Gen_E3661695.wem</Path>
+							<Path>SFX\Itm_Pu_Crys_Gen_CAF44901.wem</Path>
 						</File>
 						<File Id="500492691" Language="SFX">
 							<ShortName>Itm_Pu_Crys_Gen.wav</ShortName>
-							<Path>SFX\Itm_Pu_Crys_Gen_5D61E728.wem</Path>
+							<Path>SFX\Itm_Pu_Crys_Gen_86466814.wem</Path>
 						</File>
 						<File Id="544043385" Language="SFX">
 							<ShortName>Itm_Pu_Crys_Gen.wav</ShortName>
-							<Path>SFX\Itm_Pu_Crys_Gen_6777DDCC.wem</Path>
+							<Path>SFX\Itm_Pu_Crys_Gen_E0C3FDE0.wem</Path>
 						</File>
 						<File Id="621582871" Language="SFX">
 							<ShortName>Itm_Pu_Crys_Fire.wav</ShortName>
-							<Path>SFX\Itm_Pu_Crys_Fire_0A984858.wem</Path>
+							<Path>SFX\Itm_Pu_Crys_Fire_B8904C04.wem</Path>
 						</File>
 						<File Id="711835135" Language="SFX">
 							<ShortName>Itum_Pu_Crys_Elec.wav</ShortName>
-							<Path>SFX\Itum_Pu_Crys_Elec_122CA581.wem</Path>
+							<Path>SFX\Itum_Pu_Crys_Elec_59C693E5.wem</Path>
 						</File>
 						<File Id="813758161" Language="SFX">
 							<ShortName>Itm_Pu_Crys_Water.wav</ShortName>
-							<Path>SFX\Itm_Pu_Crys_Water_136A1B94.wem</Path>
+							<Path>SFX\Itm_Pu_Crys_Water_01587548.wem</Path>
 						</File>
 						<File Id="930689824" Language="SFX">
 							<ShortName>Itum_Pu_Crys_Elec.wav</ShortName>
-							<Path>SFX\Itum_Pu_Crys_Elec_5FA7D0CA.wem</Path>
+							<Path>SFX\Itum_Pu_Crys_Elec_044A5776.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<DefaultSwitchValue>{8D582048-E57F-438E-A959-9B4EA2C862B8}</DefaultSwitchValue>
@@ -142,7 +142,7 @@
 					<IncludedMemoryFiles>
 						<File Id="64890644" Language="SFX">
 							<ShortName>Itm_Crys_Empty.wav</ShortName>
-							<Path>SFX\Itm_Crys_Empty_D1B8BB5B.wem</Path>
+							<Path>SFX\Itm_Crys_Empty_8D4B959F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -150,15 +150,15 @@
 					<IncludedMemoryFiles>
 						<File Id="428034819" Language="SFX">
 							<ShortName>Itm_Crys_Large_Use.wav</ShortName>
-							<Path>SFX\Itm_Crys_Large_Use_A2F771B2.wem</Path>
+							<Path>SFX\Itm_Crys_Large_Use_D28F02B6.wem</Path>
 						</File>
 						<File Id="850542848" Language="SFX">
 							<ShortName>Itm_Crys_Large_Use.wav</ShortName>
-							<Path>SFX\Itm_Crys_Large_Use_2E96E038.wem</Path>
+							<Path>SFX\Itm_Crys_Large_Use_CC7FAEDC.wem</Path>
 						</File>
 						<File Id="1066099078" Language="SFX">
 							<ShortName>Itm_Crys_Large_Use.wav</ShortName>
-							<Path>SFX\Itm_Crys_Large_Use_18A7DFA9.wem</Path>
+							<Path>SFX\Itm_Crys_Large_Use_2DAAFAFD.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -166,31 +166,31 @@
 					<IncludedMemoryFiles>
 						<File Id="343030236" Language="SFX">
 							<ShortName>Itm_Crys_Sml_Use.wav</ShortName>
-							<Path>SFX\Itm_Crys_Sml_Use_A4CDDF3F.wem</Path>
+							<Path>SFX\Itm_Crys_Sml_Use_004A4E4B.wem</Path>
 						</File>
 						<File Id="529069888" Language="SFX">
 							<ShortName>Itm_Crys_Sml_Use.wav</ShortName>
-							<Path>SFX\Itm_Crys_Sml_Use_A74C2117.wem</Path>
+							<Path>SFX\Itm_Crys_Sml_Use_5B012403.wem</Path>
 						</File>
 						<File Id="692839569" Language="SFX">
 							<ShortName>Itm_Crys_Sml_Use.wav</ShortName>
-							<Path>SFX\Itm_Crys_Sml_Use_70C67D92.wem</Path>
+							<Path>SFX\Itm_Crys_Sml_Use_752BB256.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2157278666" Name="Play_Enem_Atk_Bsc_Charged" ObjectPath="\Events\Enemies\Play_Enem_Atk_Bsc_Charged" GUID="{63C93724-7D44-4385-82F9-2DF1B2735CBF}" MaxAttenuation="1." DurationType="OneShot" DurationMin="3.401892" DurationMax="3.769821">
 					<IncludedMemoryFiles>
-						<File Id="181428061" Language="SFX">
+						<File Id="235153420" Language="SFX">
+							<ShortName>Plyr_Atk_Bsc_Chrg_Rls.wav</ShortName>
+							<Path>SFX\Plyr_Atk_Bsc_Chrg_Rls_0011541F.wem</Path>
+						</File>
+						<File Id="618117112" Language="SFX">
+							<ShortName>Plyr_Atk_Bsc_Chrg_Rls.wav</ShortName>
+							<Path>SFX\Plyr_Atk_Bsc_Chrg_Rls_8250E6DD.wem</Path>
+						</File>
+						<File Id="893351943" Language="SFX">
 							<ShortName>Plyr_Atk_Bsc_Chrg_Wu.wav</ShortName>
-							<Path>SFX\Plyr_Atk_Bsc_Chrg_Wu_E3D2A571.wem</Path>
-						</File>
-						<File Id="778632297" Language="SFX">
-							<ShortName>Plyr_Atk_Bsc_Chrg_Rls.wav</ShortName>
-							<Path>SFX\Plyr_Atk_Bsc_Chrg_Rls_9FB83B63.wem</Path>
-						</File>
-						<File Id="864348206" Language="SFX">
-							<ShortName>Plyr_Atk_Bsc_Chrg_Rls.wav</ShortName>
-							<Path>SFX\Plyr_Atk_Bsc_Chrg_Rls_32380459.wem</Path>
+							<Path>SFX\Plyr_Atk_Bsc_Chrg_Wu_14F28CCD.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -198,27 +198,27 @@
 					<IncludedMemoryFiles>
 						<File Id="256394371" Language="SFX">
 							<ShortName>melee attack 3.wav</ShortName>
-							<Path>SFX\melee attack 3_B4C616E1.wem</Path>
+							<Path>SFX\melee attack 3_A24BC898.wem</Path>
 						</File>
 						<File Id="515758984" Language="SFX">
 							<ShortName>melee attack 4.wav</ShortName>
-							<Path>SFX\melee attack 4_BDD050EF.wem</Path>
+							<Path>SFX\melee attack 4_23FBF5D6.wem</Path>
 						</File>
 						<File Id="551388752" Language="SFX">
 							<ShortName>melee attack 2.wav</ShortName>
-							<Path>SFX\melee attack 2_8C0154BD.wem</Path>
+							<Path>SFX\melee attack 2_035A198D.wem</Path>
 						</File>
 						<File Id="977679246" Language="SFX">
 							<ShortName>melee attack 1.wav</ShortName>
-							<Path>SFX\melee attack 1_E117BF9B.wem</Path>
+							<Path>SFX\melee attack 1_D1AE0FBC.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="279773806" Name="Play_Enem_Defeated" ObjectPath="\Events\Enemies\Play_Enem_Defeated" GUID="{58747FC8-D51A-44AE-A181-D11C819A0349}" DurationType="OneShot" DurationMin="2.576396" DurationMax="2.576396">
 					<IncludedMemoryFiles>
-						<File Id="1060646666" Language="SFX">
+						<File Id="640887539" Language="SFX">
 							<ShortName>Plyr_Defeated.wav</ShortName>
-							<Path>SFX\Plyr_Defeated_10C4C929.wem</Path>
+							<Path>SFX\Plyr_Defeated_43EADB1D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -226,11 +226,11 @@
 					<IncludedMemoryFiles>
 						<File Id="573754509" Language="SFX">
 							<ShortName>Enem_Min_On_Fire.wav</ShortName>
-							<Path>SFX\Enem_Min_On_Fire_541090AF.wem</Path>
+							<Path>SFX\Enem_Min_On_Fire_2A29E8FB.wem</Path>
 						</File>
 						<File Id="946146255" Language="SFX">
 							<ShortName>Enem_Min_On_Fire.wav</ShortName>
-							<Path>SFX\Enem_Min_On_Fire_1E960CC8.wem</Path>
+							<Path>SFX\Enem_Min_On_Fire_920DAD9C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -238,51 +238,51 @@
 					<IncludedMemoryFiles>
 						<File Id="644832395" Language="SFX">
 							<ShortName>Enem_Skelle_Pain.wav</ShortName>
-							<Path>SFX\Enem_Skelle_Pain_B72FBF0C.wem</Path>
+							<Path>SFX\Enem_Skelle_Pain_B295B620.wem</Path>
 						</File>
 						<File Id="683474123" Language="SFX">
 							<ShortName>Enem_Skelle_Pain.wav</ShortName>
-							<Path>SFX\Enem_Skelle_Pain_71673651.wem</Path>
+							<Path>SFX\Enem_Skelle_Pain_4ED9F9A5.wem</Path>
 						</File>
 						<File Id="891458326" Language="SFX">
 							<ShortName>Enem_Skelle_Pain.wav</ShortName>
-							<Path>SFX\Enem_Skelle_Pain_CE96C0B7.wem</Path>
+							<Path>SFX\Enem_Skelle_Pain_781407DB.wem</Path>
 						</File>
 						<File Id="924503617" Language="SFX">
 							<ShortName>Enem_Skelle_Pain.wav</ShortName>
-							<Path>SFX\Enem_Skelle_Pain_07D2E8CF.wem</Path>
+							<Path>SFX\Enem_Skelle_Pain_E7081683.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="924170866" Name="Play_Enem_Recv_Fire_Dmg" ObjectPath="\Events\Enemies\Play_Enem_Recv_Fire_Dmg" GUID="{E65AC086-8549-4CE8-AF77-D6999D2B3E59}" DurationType="OneShot" DurationMin="0.638117" DurationMax="0.718759">
 					<IncludedMemoryFiles>
-						<File Id="22582029" Language="SFX">
+						<File Id="13663009" Language="SFX">
 							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
-							<Path>SFX\Plyr_Tk_Fire_Dmg_EEDC246E.wem</Path>
+							<Path>SFX\Plyr_Tk_Fire_Dmg_D14E8152.wem</Path>
 						</File>
-						<File Id="369104491" Language="SFX">
+						<File Id="218049251" Language="SFX">
 							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
-							<Path>SFX\Plyr_Tk_Fire_Dmg_B21521BE.wem</Path>
+							<Path>SFX\Plyr_Tk_Fire_Dmg_0DEF7053.wem</Path>
+						</File>
+						<File Id="279433949" Language="SFX">
+							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
+							<Path>SFX\Plyr_Tk_Fire_Dmg_11B6ECF2.wem</Path>
 						</File>
 						<File Id="644832395" Language="SFX">
 							<ShortName>Enem_Skelle_Pain.wav</ShortName>
-							<Path>SFX\Enem_Skelle_Pain_B72FBF0C.wem</Path>
+							<Path>SFX\Enem_Skelle_Pain_B295B620.wem</Path>
 						</File>
 						<File Id="683474123" Language="SFX">
 							<ShortName>Enem_Skelle_Pain.wav</ShortName>
-							<Path>SFX\Enem_Skelle_Pain_71673651.wem</Path>
+							<Path>SFX\Enem_Skelle_Pain_4ED9F9A5.wem</Path>
 						</File>
 						<File Id="891458326" Language="SFX">
 							<ShortName>Enem_Skelle_Pain.wav</ShortName>
-							<Path>SFX\Enem_Skelle_Pain_CE96C0B7.wem</Path>
+							<Path>SFX\Enem_Skelle_Pain_781407DB.wem</Path>
 						</File>
 						<File Id="924503617" Language="SFX">
 							<ShortName>Enem_Skelle_Pain.wav</ShortName>
-							<Path>SFX\Enem_Skelle_Pain_07D2E8CF.wem</Path>
-						</File>
-						<File Id="928839707" Language="SFX">
-							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
-							<Path>SFX\Plyr_Tk_Fire_Dmg_77B97DE7.wem</Path>
+							<Path>SFX\Enem_Skelle_Pain_E7081683.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -290,111 +290,111 @@
 					<IncludedMemoryFiles>
 						<File Id="39288903" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_03.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_03_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_03_43EADB1D.wem</Path>
 						</File>
 						<File Id="101270542" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_05.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_05_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_05_43EADB1D.wem</Path>
 						</File>
 						<File Id="107189339" Language="SFX">
 							<ShortName>LittelWitch_Enemies.wav</ShortName>
-							<Path>SFX\LittelWitch_Enemies_F591C4FE.wem</Path>
+							<Path>SFX\LittelWitch_Enemies_25556E52.wem</Path>
 						</File>
 						<File Id="120264666" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_03.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_03_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_03_43EADB1D.wem</Path>
 						</File>
 						<File Id="121166745" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_04.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_04_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_04_43EADB1D.wem</Path>
 						</File>
 						<File Id="179448580" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_01.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_01_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_01_43EADB1D.wem</Path>
 						</File>
 						<File Id="282168526" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_05.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_05_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_05_43EADB1D.wem</Path>
 						</File>
 						<File Id="288223943" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_06.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_06_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_06_43EADB1D.wem</Path>
 						</File>
 						<File Id="353426455" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_06.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_06_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_06_43EADB1D.wem</Path>
 						</File>
 						<File Id="404218679" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_02.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_02_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_02_43EADB1D.wem</Path>
 						</File>
 						<File Id="456019608" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_04.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_04_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_04_43EADB1D.wem</Path>
 						</File>
 						<File Id="458361069" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_02.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_02_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_02_43EADB1D.wem</Path>
 						</File>
 						<File Id="501265382" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_01.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_01_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_01_43EADB1D.wem</Path>
 						</File>
 						<File Id="514191403" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_06.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_06_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_06_43EADB1D.wem</Path>
 						</File>
 						<File Id="520401883" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_04.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_04_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_04_43EADB1D.wem</Path>
 						</File>
 						<File Id="550253140" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_03.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_03_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_03_43EADB1D.wem</Path>
 						</File>
 						<File Id="561474046" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_01.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_01_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_01_43EADB1D.wem</Path>
 						</File>
 						<File Id="607506639" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Rock\FS_Rock_Walk.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Rock\FS_Rock_Walk_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Rock\FS_Rock_Walk_43EADB1D.wem</Path>
 						</File>
 						<File Id="617394203" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_03.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_03_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_03_43EADB1D.wem</Path>
 						</File>
 						<File Id="713164584" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Rock\FS_Rock_Run.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Rock\FS_Rock_Run_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Rock\FS_Rock_Run_43EADB1D.wem</Path>
 						</File>
 						<File Id="746897624" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_06.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_06_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_06_43EADB1D.wem</Path>
 						</File>
 						<File Id="758117669" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_02.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_02_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_02_43EADB1D.wem</Path>
 						</File>
 						<File Id="828532229" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_02.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_02_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_02_43EADB1D.wem</Path>
 						</File>
 						<File Id="917759569" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_04.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_04_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_04_43EADB1D.wem</Path>
 						</File>
 						<File Id="923691520" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_05.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_05_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_05_43EADB1D.wem</Path>
 						</File>
 						<File Id="947289431" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_05.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_05_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_05_43EADB1D.wem</Path>
 						</File>
 						<File Id="998794094" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_01.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_01_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_01_43EADB1D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<DefaultSwitchValue>{5F3DD7CE-DC74-41C8-AC32-2BCCF21F5C3A}</DefaultSwitchValue>
@@ -470,15 +470,15 @@
 					<IncludedMemoryFiles>
 						<File Id="72064895" Language="SFX">
 							<ShortName>Enem_Skelle_Defeated.wav</ShortName>
-							<Path>SFX\Enem_Skelle_Defeated_25C2B3EF.wem</Path>
+							<Path>SFX\Enem_Skelle_Defeated_7A28C7BB.wem</Path>
 						</File>
 						<File Id="122015717" Language="SFX">
 							<ShortName>Enem_Skelle_Defeated.wav</ShortName>
-							<Path>SFX\Enem_Skelle_Defeated_0A9E722D.wem</Path>
+							<Path>SFX\Enem_Skelle_Defeated_C220FA81.wem</Path>
 						</File>
 						<File Id="204275985" Language="SFX">
 							<ShortName>Enem_Skelle_Defeated.wav</ShortName>
-							<Path>SFX\Enem_Skelle_Defeated_6ACC40E1.wem</Path>
+							<Path>SFX\Enem_Skelle_Defeated_0CC89F0D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -486,107 +486,107 @@
 					<IncludedMemoryFiles>
 						<File Id="39288903" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_03.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_03_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_03_43EADB1D.wem</Path>
 						</File>
 						<File Id="101270542" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_05.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_05_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_05_43EADB1D.wem</Path>
 						</File>
 						<File Id="120264666" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_03.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_03_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_03_43EADB1D.wem</Path>
 						</File>
 						<File Id="121166745" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_04.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_04_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_04_43EADB1D.wem</Path>
 						</File>
 						<File Id="179448580" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_01.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_01_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_01_43EADB1D.wem</Path>
 						</File>
 						<File Id="282168526" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_05.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_05_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_05_43EADB1D.wem</Path>
 						</File>
 						<File Id="288223943" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_06.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_06_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_06_43EADB1D.wem</Path>
 						</File>
 						<File Id="353426455" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_06.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_06_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_06_43EADB1D.wem</Path>
 						</File>
 						<File Id="404218679" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_02.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_02_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_02_43EADB1D.wem</Path>
 						</File>
 						<File Id="456019608" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_04.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_04_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_04_43EADB1D.wem</Path>
 						</File>
 						<File Id="458361069" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_02.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_02_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_02_43EADB1D.wem</Path>
 						</File>
 						<File Id="501265382" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_01.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_01_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_01_43EADB1D.wem</Path>
 						</File>
 						<File Id="514191403" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_06.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_06_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_06_43EADB1D.wem</Path>
 						</File>
 						<File Id="520401883" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_04.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_04_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_04_43EADB1D.wem</Path>
 						</File>
 						<File Id="550253140" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_03.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_03_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_03_43EADB1D.wem</Path>
 						</File>
 						<File Id="561474046" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_01.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_01_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_01_43EADB1D.wem</Path>
 						</File>
 						<File Id="607506639" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Rock\FS_Rock_Walk.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Rock\FS_Rock_Walk_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Rock\FS_Rock_Walk_43EADB1D.wem</Path>
 						</File>
 						<File Id="617394203" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_03.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_03_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_03_43EADB1D.wem</Path>
 						</File>
 						<File Id="713164584" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Rock\FS_Rock_Run.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Rock\FS_Rock_Run_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Rock\FS_Rock_Run_43EADB1D.wem</Path>
 						</File>
 						<File Id="746897624" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_06.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_06_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_06_43EADB1D.wem</Path>
 						</File>
 						<File Id="758117669" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_02.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_02_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_02_43EADB1D.wem</Path>
 						</File>
 						<File Id="828532229" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_02.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_02_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_02_43EADB1D.wem</Path>
 						</File>
 						<File Id="917759569" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_04.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_04_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_04_43EADB1D.wem</Path>
 						</File>
 						<File Id="923691520" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_05.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_05_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_05_43EADB1D.wem</Path>
 						</File>
 						<File Id="947289431" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_05.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_05_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_05_43EADB1D.wem</Path>
 						</File>
 						<File Id="998794094" Language="SFX">
 							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_01.wav</ShortName>
-							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_01_10C4C929.wem</Path>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_01_43EADB1D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -594,7 +594,7 @@
 					<IncludedMemoryFiles>
 						<File Id="354642032" Language="SFX">
 							<ShortName>Fire\Firegem_flight.wav</ShortName>
-							<Path>SFX\Fire\Firegem_flight_D79FB2B7.wem</Path>
+							<Path>SFX\Fire\Firegem_flight_3D85C53B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -638,7 +638,7 @@
 					<IncludedMemoryFiles>
 						<File Id="408779655" Language="SFX">
 							<ShortName>Itm_Drink_Potion.wav</ShortName>
-							<Path>SFX\Itm_Drink_Potion_10C4C929.wem</Path>
+							<Path>SFX\Itm_Drink_Potion_8529A94A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -646,7 +646,7 @@
 					<IncludedMemoryFiles>
 						<File Id="692896475" Language="SFX">
 							<ShortName>Itm_Pu_Key.wav</ShortName>
-							<Path>SFX\Itm_Pu_Key_10C4C929.wem</Path>
+							<Path>SFX\Itm_Pu_Key_43EADB1D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -654,15 +654,15 @@
 					<IncludedMemoryFiles>
 						<File Id="243050784" Language="SFX">
 							<ShortName>Itm_Pu_Potion.wav</ShortName>
-							<Path>SFX\Itm_Pu_Potion_858A92E3.wem</Path>
+							<Path>SFX\Itm_Pu_Potion_81ECA1F7.wem</Path>
 						</File>
 						<File Id="674862323" Language="SFX">
 							<ShortName>Itm_Pu_Potion.wav</ShortName>
-							<Path>SFX\Itm_Pu_Potion_3D6845D6.wem</Path>
+							<Path>SFX\Itm_Pu_Potion_AC182A6A.wem</Path>
 						</File>
 						<File Id="884774889" Language="SFX">
 							<ShortName>Itm_Pu_Potion.wav</ShortName>
-							<Path>SFX\Itm_Pu_Potion_B552CB1A.wem</Path>
+							<Path>SFX\Itm_Pu_Potion_819448B6.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -670,203 +670,203 @@
 					<IncludedMemoryFiles>
 						<File Id="11340700" Language="SFX">
 							<ShortName>NoCombat\65bpm_4-4_Ps4_ AudioTrack-1.wav</ShortName>
-							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ AudioTrack-1_D79FB2B7.wem</Path>
+							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ AudioTrack-1_0BA09294.wem</Path>
 						</File>
 						<File Id="15309980" Language="SFX">
 							<ShortName>BGs\130bpm_4-4_Ps4_Sticks Wind.wav</ShortName>
-							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks Wind_D79FB2B7.wem</Path>
+							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks Wind_0BA09294.wem</Path>
 						</File>
 						<File Id="17036018" Language="SFX">
 							<ShortName>Victory\130bpm_4-4_Ps4_Bgs_ AudioTrack-1.wav</ShortName>
-							<Path>SFX\Victory\130bpm_4-4_Ps4_Bgs_ AudioTrack-1_D79FB2B7.wem</Path>
+							<Path>SFX\Victory\130bpm_4-4_Ps4_Bgs_ AudioTrack-1_0BA09294.wem</Path>
 						</File>
 						<File Id="52669161" Language="SFX">
 							<ShortName>Victory\65bpm_4-4_Ps4_ Vio.wav</ShortName>
-							<Path>SFX\Victory\65bpm_4-4_Ps4_ Vio_D79FB2B7.wem</Path>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ Vio_0BA09294.wem</Path>
 						</File>
 						<File Id="53224605" Language="SFX">
 							<ShortName>Combat\65bpm_4-4_Ps4_ AudioTrack.wav</ShortName>
-							<Path>SFX\Combat\65bpm_4-4_Ps4_ AudioTrack_D79FB2B7.wem</Path>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ AudioTrack_0BA09294.wem</Path>
 						</File>
 						<File Id="69203506" Language="SFX">
 							<ShortName>F-Combat\65bpm_4-4_Ps4_ Bell.wav</ShortName>
-							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Bell_D79FB2B7.wem</Path>
+							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Bell_0BA09294.wem</Path>
 						</File>
 						<File Id="90553840" Language="SFX">
 							<ShortName>F-Combat\65bpm_4-4_Ps4_ Sub.wav</ShortName>
-							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Sub_D79FB2B7.wem</Path>
+							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Sub_0BA09294.wem</Path>
 						</File>
 						<File Id="93197845" Language="SFX">
 							<ShortName>Combat\65bpm_4-4_Ps4_ Pad1.wav</ShortName>
-							<Path>SFX\Combat\65bpm_4-4_Ps4_ Pad1_D79FB2B7.wem</Path>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ Pad1_0BA09294.wem</Path>
 						</File>
 						<File Id="99629851" Language="SFX">
 							<ShortName>F-Combat\65bpm_4-4_Ps4_ Gp-Sticks.wav</ShortName>
-							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Gp-Sticks_D79FB2B7.wem</Path>
+							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Gp-Sticks_0BA09294.wem</Path>
 						</File>
 						<File Id="121077130" Language="SFX">
 							<ShortName>Victory\65bpm_4-4_Ps4_ celest.wav</ShortName>
-							<Path>SFX\Victory\65bpm_4-4_Ps4_ celest_D79FB2B7.wem</Path>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ celest_0BA09294.wem</Path>
 						</File>
 						<File Id="123896868" Language="SFX">
 							<ShortName>65bpm_4-4_Ps4_v2_.wav</ShortName>
-							<Path>SFX\65bpm_4-4_Ps4_v2__D79FB2B7.wem</Path>
+							<Path>SFX\65bpm_4-4_Ps4_v2__0BA09294.wem</Path>
 						</File>
 						<File Id="128466011" Language="SFX">
 							<ShortName>Victory\130bpm_4-4_Ps4_Bgs_ AudioTrack.wav</ShortName>
-							<Path>SFX\Victory\130bpm_4-4_Ps4_Bgs_ AudioTrack_D79FB2B7.wem</Path>
+							<Path>SFX\Victory\130bpm_4-4_Ps4_Bgs_ AudioTrack_0BA09294.wem</Path>
 						</File>
 						<File Id="139678865" Language="SFX">
 							<ShortName>Victory\65bpm_4-4_Ps4_ Drone.wav</ShortName>
-							<Path>SFX\Victory\65bpm_4-4_Ps4_ Drone_D79FB2B7.wem</Path>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ Drone_0BA09294.wem</Path>
 						</File>
 						<File Id="162999389" Language="SFX">
 							<ShortName>F-Explore\4-4_8b_Ps4- Viola-Long.wav</ShortName>
-							<Path>SFX\F-Explore\4-4_8b_Ps4- Viola-Long_D79FB2B7.wem</Path>
+							<Path>SFX\F-Explore\4-4_8b_Ps4- Viola-Long_0BA09294.wem</Path>
 						</File>
 						<File Id="175321091" Language="SFX">
 							<ShortName>F-Explore\4-4_8b_Ps4- Bell.wav</ShortName>
-							<Path>SFX\F-Explore\4-4_8b_Ps4- Bell_D79FB2B7.wem</Path>
+							<Path>SFX\F-Explore\4-4_8b_Ps4- Bell_0BA09294.wem</Path>
 						</File>
 						<File Id="210401186" Language="SFX">
 							<ShortName>Combat\130bpm_4-4_Ps4_Sticks.wav</ShortName>
-							<Path>SFX\Combat\130bpm_4-4_Ps4_Sticks_D79FB2B7.wem</Path>
+							<Path>SFX\Combat\130bpm_4-4_Ps4_Sticks_0BA09294.wem</Path>
 						</File>
 						<File Id="217656417" Language="SFX">
 							<ShortName>Combat\65bpm_4-4_Ps4_ Vio-Long.wav</ShortName>
-							<Path>SFX\Combat\65bpm_4-4_Ps4_ Vio-Long_D79FB2B7.wem</Path>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ Vio-Long_0BA09294.wem</Path>
 						</File>
 						<File Id="270625144" Language="SFX">
 							<ShortName>F-Combat\65bpm_4-4_Ps4_ Pad2.wav</ShortName>
-							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Pad2_D79FB2B7.wem</Path>
+							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Pad2_0BA09294.wem</Path>
 						</File>
 						<File Id="283145668" Language="SFX">
 							<ShortName>F-Explore\4-4_8b_Ps4- LowPadAmb.wav</ShortName>
-							<Path>SFX\F-Explore\4-4_8b_Ps4- LowPadAmb_D79FB2B7.wem</Path>
+							<Path>SFX\F-Explore\4-4_8b_Ps4- LowPadAmb_0BA09294.wem</Path>
 						</File>
 						<File Id="311776272" Language="SFX">
 							<ShortName>Victory\65bpm_4-4_Ps4_ Viola.wav</ShortName>
-							<Path>SFX\Victory\65bpm_4-4_Ps4_ Viola_D79FB2B7.wem</Path>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ Viola_0BA09294.wem</Path>
 						</File>
 						<File Id="327508240" Language="SFX">
 							<ShortName>BGs\130bpm_4-4_Ps4_Sticks EreieNightMAbience.wav</ShortName>
-							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks EreieNightMAbience_D79FB2B7.wem</Path>
+							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks EreieNightMAbience_0BA09294.wem</Path>
 						</File>
 						<File Id="355700024" Language="SFX">
 							<ShortName>Victory\65bpm_4-4_Ps4_ Applause.wav</ShortName>
-							<Path>SFX\Victory\65bpm_4-4_Ps4_ Applause_D79FB2B7.wem</Path>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ Applause_0BA09294.wem</Path>
 						</File>
 						<File Id="399734064" Language="SFX">
 							<ShortName>Victory\65bpm_4-4_Ps4_ Boss.wav</ShortName>
-							<Path>SFX\Victory\65bpm_4-4_Ps4_ Boss_D79FB2B7.wem</Path>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ Boss_0BA09294.wem</Path>
 						</File>
 						<File Id="451603062" Language="SFX">
 							<ShortName>Victory\65bpm_4-4_Ps4_ AudioTrack-1.wav</ShortName>
-							<Path>SFX\Victory\65bpm_4-4_Ps4_ AudioTrack-1_D79FB2B7.wem</Path>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ AudioTrack-1_0BA09294.wem</Path>
 						</File>
 						<File Id="480230374" Language="SFX">
 							<ShortName>F-Explore\4-4_8b_Ps4- Pad2.wav</ShortName>
-							<Path>SFX\F-Explore\4-4_8b_Ps4- Pad2_D79FB2B7.wem</Path>
+							<Path>SFX\F-Explore\4-4_8b_Ps4- Pad2_0BA09294.wem</Path>
 						</File>
 						<File Id="487988959" Language="SFX">
 							<ShortName>NoCombat\65bpm_4-4_Ps4_ Sub-Lon.wav</ShortName>
-							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ Sub-Lon_D79FB2B7.wem</Path>
+							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ Sub-Lon_0BA09294.wem</Path>
 						</File>
 						<File Id="514480090" Language="SFX">
 							<ShortName>Combat\65bpm_4-4_Ps4_ Gp-Sticks.wav</ShortName>
-							<Path>SFX\Combat\65bpm_4-4_Ps4_ Gp-Sticks_D79FB2B7.wem</Path>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ Gp-Sticks_0BA09294.wem</Path>
 						</File>
 						<File Id="534454176" Language="SFX">
 							<ShortName>F-Explore\4-4_8b_Ps4- Vio-Long.wav</ShortName>
-							<Path>SFX\F-Explore\4-4_8b_Ps4- Vio-Long_D79FB2B7.wem</Path>
+							<Path>SFX\F-Explore\4-4_8b_Ps4- Vio-Long_0BA09294.wem</Path>
 						</File>
 						<File Id="550532329" Language="SFX">
 							<ShortName>Combat\130bpm_4-4_Ps4_.wav</ShortName>
-							<Path>SFX\Combat\130bpm_4-4_Ps4__D79FB2B7.wem</Path>
+							<Path>SFX\Combat\130bpm_4-4_Ps4__0BA09294.wem</Path>
 						</File>
 						<File Id="581991665" Language="SFX">
 							<ShortName>F-Combat\65bpm_4-4_Ps4_ Cel-st.wav</ShortName>
-							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Cel-st_D79FB2B7.wem</Path>
+							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Cel-st_0BA09294.wem</Path>
 						</File>
 						<File Id="584927690" Language="SFX">
 							<ShortName>Combat\65bpm_4-4_Ps4_ Viola-Long.wav</ShortName>
-							<Path>SFX\Combat\65bpm_4-4_Ps4_ Viola-Long_D79FB2B7.wem</Path>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ Viola-Long_0BA09294.wem</Path>
 						</File>
 						<File Id="596365406" Language="SFX">
 							<ShortName>Combat\130bpm_4-4_Ps4_Snare.wav</ShortName>
-							<Path>SFX\Combat\130bpm_4-4_Ps4_Snare_D79FB2B7.wem</Path>
+							<Path>SFX\Combat\130bpm_4-4_Ps4_Snare_0BA09294.wem</Path>
 						</File>
 						<File Id="681178562" Language="SFX">
 							<ShortName>NoCombat\65bpm_4-4_Ps4_ knock.wav</ShortName>
-							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ knock_D79FB2B7.wem</Path>
+							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ knock_0BA09294.wem</Path>
 						</File>
 						<File Id="681854251" Language="SFX">
 							<ShortName>Combat\65bpm_4-4_Ps4_v2_.wav</ShortName>
-							<Path>SFX\Combat\65bpm_4-4_Ps4_v2__D79FB2B7.wem</Path>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_v2__0BA09294.wem</Path>
 						</File>
 						<File Id="801459080" Language="SFX">
 							<ShortName>Combat\65bpm_4-4_Ps4_ LowPadAmb.wav</ShortName>
-							<Path>SFX\Combat\65bpm_4-4_Ps4_ LowPadAmb_D79FB2B7.wem</Path>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ LowPadAmb_0BA09294.wem</Path>
 						</File>
 						<File Id="802222803" Language="SFX">
 							<ShortName>NoCombat\65bpm_4-4_Ps4_ Pad1.wav</ShortName>
-							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ Pad1_D79FB2B7.wem</Path>
+							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ Pad1_0BA09294.wem</Path>
 						</File>
 						<File Id="810246091" Language="SFX">
 							<ShortName>BGs\130bpm_4-4_Ps4_Sticks drips.wav</ShortName>
-							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks drips_D79FB2B7.wem</Path>
+							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks drips_0BA09294.wem</Path>
 						</File>
 						<File Id="827525508" Language="SFX">
 							<ShortName>NoCombat\65bpm_4-4_Ps4_ AudioTrack.wav</ShortName>
-							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ AudioTrack_D79FB2B7.wem</Path>
+							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ AudioTrack_0BA09294.wem</Path>
 						</File>
 						<File Id="845324472" Language="SFX">
 							<ShortName>Combat\65bpm_4-4_Ps4_ CreapyClockClick.wav</ShortName>
-							<Path>SFX\Combat\65bpm_4-4_Ps4_ CreapyClockClick_D79FB2B7.wem</Path>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ CreapyClockClick_0BA09294.wem</Path>
 						</File>
 						<File Id="847243194" Language="SFX">
 							<ShortName>BGs\130bpm_4-4_Ps4_Sticks ambienceTexture.wav</ShortName>
-							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks ambienceTexture_D79FB2B7.wem</Path>
+							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks ambienceTexture_0BA09294.wem</Path>
 						</File>
 						<File Id="862860614" Language="SFX">
 							<ShortName>Victory\65bpm_4-4_Ps4_ Celi.wav</ShortName>
-							<Path>SFX\Victory\65bpm_4-4_Ps4_ Celi_D79FB2B7.wem</Path>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ Celi_0BA09294.wem</Path>
 						</File>
 						<File Id="881304614" Language="SFX">
 							<ShortName>Combat\65bpm_4-4_Ps4_ Pad2.wav</ShortName>
-							<Path>SFX\Combat\65bpm_4-4_Ps4_ Pad2_D79FB2B7.wem</Path>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ Pad2_0BA09294.wem</Path>
 						</File>
 						<File Id="886441951" Language="SFX">
 							<ShortName>F-Explore\4-4_8b_Ps4- CEe-Long.wav</ShortName>
-							<Path>SFX\F-Explore\4-4_8b_Ps4- CEe-Long_D79FB2B7.wem</Path>
+							<Path>SFX\F-Explore\4-4_8b_Ps4- CEe-Long_0BA09294.wem</Path>
 						</File>
 						<File Id="888269260" Language="SFX">
 							<ShortName>F-Combat\65bpm_4-4_Ps4_ LowPadAmb.wav</ShortName>
-							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ LowPadAmb_D79FB2B7.wem</Path>
+							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ LowPadAmb_0BA09294.wem</Path>
 						</File>
 						<File Id="931307899" Language="SFX">
 							<ShortName>Victory\65bpm_4-4_Ps4_ AudioTrack.wav</ShortName>
-							<Path>SFX\Victory\65bpm_4-4_Ps4_ AudioTrack_D79FB2B7.wem</Path>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ AudioTrack_0BA09294.wem</Path>
 						</File>
 						<File Id="949806943" Language="SFX">
 							<ShortName>Combat\65bpm_4-4_Ps4_ Cel-st.wav</ShortName>
-							<Path>SFX\Combat\65bpm_4-4_Ps4_ Cel-st_D79FB2B7.wem</Path>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ Cel-st_0BA09294.wem</Path>
 						</File>
 						<File Id="973271221" Language="SFX">
 							<ShortName>F-Explore\4-4_8b_Ps4- Sub-Lon.wav</ShortName>
-							<Path>SFX\F-Explore\4-4_8b_Ps4- Sub-Lon_D79FB2B7.wem</Path>
+							<Path>SFX\F-Explore\4-4_8b_Ps4- Sub-Lon_0BA09294.wem</Path>
 						</File>
 						<File Id="976498806" Language="SFX">
 							<ShortName>Combat\65bpm_4-4_Ps4_ Sub.wav</ShortName>
-							<Path>SFX\Combat\65bpm_4-4_Ps4_ Sub_D79FB2B7.wem</Path>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ Sub_0BA09294.wem</Path>
 						</File>
 						<File Id="1042133295" Language="SFX">
 							<ShortName>39-75 Heartbeat Heart Beating,Normal Speed.wav</ShortName>
-							<Path>SFX\39-75 Heartbeat Heart Beating,Normal Speed_10C4C929.wem</Path>
+							<Path>SFX\39-75 Heartbeat Heart Beating,Normal Speed_8529A94A.wem</Path>
 						</File>
 						<File Id="1050276216" Language="SFX">
 							<ShortName>BGs\130bpm_4-4_Ps4_Sticks flowignWater.wav</ShortName>
-							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks flowignWater_D79FB2B7.wem</Path>
+							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks flowignWater_0BA09294.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
@@ -998,7 +998,7 @@
 					<IncludedMemoryFiles>
 						<File Id="67455737" Language="SFX">
 							<ShortName>Obj_Chest_Open.wav</ShortName>
-							<Path>SFX\Obj_Chest_Open_10C4C929.wem</Path>
+							<Path>SFX\Obj_Chest_Open_43EADB1D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1006,7 +1006,7 @@
 					<IncludedMemoryFiles>
 						<File Id="797369053" Language="SFX">
 							<ShortName>Obj_Door_Close.wav</ShortName>
-							<Path>SFX\Obj_Door_Close_E972EEC4.wem</Path>
+							<Path>SFX\Obj_Door_Close_D1F22008.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1014,7 +1014,7 @@
 					<IncludedMemoryFiles>
 						<File Id="135208727" Language="SFX">
 							<ShortName>Obj_Door_Open.wav</ShortName>
-							<Path>SFX\Obj_Door_Open_2B93303A.wem</Path>
+							<Path>SFX\Obj_Door_Open_1AE921F6.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1022,7 +1022,7 @@
 					<IncludedMemoryFiles>
 						<File Id="588486327" Language="SFX">
 							<ShortName>Plyr_Float-002.wav</ShortName>
-							<Path>SFX\Plyr_Float-002_D79FB2B7.wem</Path>
+							<Path>SFX\Plyr_Float-002_3D85C53B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<DefaultSwitchValue>{7D7C1003-C942-4065-A5A5-2112D6726F73}</DefaultSwitchValue>
@@ -1076,17 +1076,17 @@
 				</Event>
 				<Event Id="2754623237" Name="Play_Plyr_Atk_Bsc_Lte" ObjectPath="\Events\Player\Play_Plyr_Atk_Bsc_Lte" GUID="{A456D08B-DFDD-401A-8695-659310B36C6B}" MaxAttenuation="1." DurationType="OneShot" DurationMin="0.128011" DurationMax="0.240623">
 					<IncludedMemoryFiles>
-						<File Id="22250190" Language="SFX">
+						<File Id="92797597" Language="SFX">
 							<ShortName>Plyr_Basic_Atk_Lte.wav</ShortName>
-							<Path>SFX\Plyr_Basic_Atk_Lte_ADFC620C.wem</Path>
+							<Path>SFX\Plyr_Basic_Atk_Lte_DF1B54E0.wem</Path>
 						</File>
-						<File Id="51339316" Language="SFX">
+						<File Id="565232896" Language="SFX">
 							<ShortName>Plyr_Basic_Atk_Lte.wav</ShortName>
-							<Path>SFX\Plyr_Basic_Atk_Lte_5EBCC2A2.wem</Path>
+							<Path>SFX\Plyr_Basic_Atk_Lte_5BE5FACD.wem</Path>
 						</File>
-						<File Id="993976044" Language="SFX">
+						<File Id="716797004" Language="SFX">
 							<ShortName>Plyr_Basic_Atk_Lte.wav</ShortName>
-							<Path>SFX\Plyr_Basic_Atk_Lte_16BB7069.wem</Path>
+							<Path>SFX\Plyr_Basic_Atk_Lte_257C7FEE.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1094,19 +1094,19 @@
 					<IncludedMemoryFiles>
 						<File Id="418670362" Language="SFX">
 							<ShortName>Plyr_Atk_Chrg_Loop.wav</ShortName>
-							<Path>SFX\Plyr_Atk_Chrg_Loop_0AE0954C.wem</Path>
+							<Path>SFX\Plyr_Atk_Chrg_Loop_87078B93.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="843314701" Name="Play_Plyr_Atk_Chrg_Release" ObjectPath="\Events\Player\Play_Plyr_Atk_Chrg_Release" GUID="{D03624E3-DB5F-453D-A646-B0F059049B60}" DurationType="OneShot" DurationMin="0.880478" DurationMax="1.248408">
 					<IncludedMemoryFiles>
-						<File Id="778632297" Language="SFX">
+						<File Id="235153420" Language="SFX">
 							<ShortName>Plyr_Atk_Bsc_Chrg_Rls.wav</ShortName>
-							<Path>SFX\Plyr_Atk_Bsc_Chrg_Rls_9FB83B63.wem</Path>
+							<Path>SFX\Plyr_Atk_Bsc_Chrg_Rls_0011541F.wem</Path>
 						</File>
-						<File Id="864348206" Language="SFX">
+						<File Id="618117112" Language="SFX">
 							<ShortName>Plyr_Atk_Bsc_Chrg_Rls.wav</ShortName>
-							<Path>SFX\Plyr_Atk_Bsc_Chrg_Rls_32380459.wem</Path>
+							<Path>SFX\Plyr_Atk_Bsc_Chrg_Rls_8250E6DD.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1114,7 +1114,7 @@
 					<IncludedMemoryFiles>
 						<File Id="337015043" Language="SFX">
 							<ShortName>Plyr_Atk_Bsc_Chrg_Wu-002.wav</ShortName>
-							<Path>SFX\Plyr_Atk_Bsc_Chrg_Wu-002_FC6A842E.wem</Path>
+							<Path>SFX\Plyr_Atk_Bsc_Chrg_Wu-002_E0842C50.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<ActionPostEvent>
@@ -1123,9 +1123,9 @@
 				</Event>
 				<Event Id="2464356432" Name="Play_Plyr_Defeated" ObjectPath="\Events\Player\Play_Plyr_Defeated" GUID="{D6787C34-FDFE-4C01-994F-1A8F11950CC0}" DurationType="OneShot" DurationMin="2.576396" DurationMax="2.576396">
 					<IncludedMemoryFiles>
-						<File Id="1060646666" Language="SFX">
+						<File Id="640887539" Language="SFX">
 							<ShortName>Plyr_Defeated.wav</ShortName>
-							<Path>SFX\Plyr_Defeated_10C4C929.wem</Path>
+							<Path>SFX\Plyr_Defeated_43EADB1D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1133,7 +1133,7 @@
 					<IncludedMemoryFiles>
 						<File Id="986324939" Language="SFX">
 							<ShortName>Ply_Elcty_Wtr.wav</ShortName>
-							<Path>SFX\Ply_Elcty_Wtr_0642619C.wem</Path>
+							<Path>SFX\Ply_Elcty_Wtr_16923610.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1141,7 +1141,7 @@
 					<IncludedMemoryFiles>
 						<File Id="263841797" Language="SFX">
 							<ShortName>Ply_Po_Fire_w_Wtr.wav</ShortName>
-							<Path>SFX\Ply_Po_Fire_w_Wtr_2C44037F.wem</Path>
+							<Path>SFX\Ply_Po_Fire_w_Wtr_EC7B4F43.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1149,59 +1149,59 @@
 					<IncludedMemoryFiles>
 						<File Id="5331889" Language="SFX">
 							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
-							<Path>SFX\Player_Rec_Gen_Dmg-001_1C439978.wem</Path>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_B169316C.wem</Path>
 						</File>
 						<File Id="56535823" Language="SFX">
 							<ShortName>Player_Rec_Gen_Dmg-002.wav</ShortName>
-							<Path>SFX\Player_Rec_Gen_Dmg-002_795BD4D6.wem</Path>
+							<Path>SFX\Player_Rec_Gen_Dmg-002_BF908ACA.wem</Path>
 						</File>
 						<File Id="277559386" Language="SFX">
 							<ShortName>Player_Rec_Gen_Dmg-002.wav</ShortName>
-							<Path>SFX\Player_Rec_Gen_Dmg-002_318299AC.wem</Path>
+							<Path>SFX\Player_Rec_Gen_Dmg-002_09467B50.wem</Path>
 						</File>
 						<File Id="426562327" Language="SFX">
 							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
-							<Path>SFX\Player_Rec_Gen_Dmg-001_28E94DE4.wem</Path>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_2D50FDD0.wem</Path>
 						</File>
 						<File Id="539548908" Language="SFX">
 							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
-							<Path>SFX\Player_Rec_Gen_Dmg-001_5FDDF5C0.wem</Path>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_EA9E229C.wem</Path>
 						</File>
 						<File Id="740964786" Language="SFX">
 							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
-							<Path>SFX\Player_Rec_Gen_Dmg-001_53AD8215.wem</Path>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_98F54A31.wem</Path>
 						</File>
 						<File Id="764711581" Language="SFX">
 							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
-							<Path>SFX\Player_Rec_Gen_Dmg-001_0E133F46.wem</Path>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_2B389C0A.wem</Path>
 						</File>
 						<File Id="823697669" Language="SFX">
 							<ShortName>Player_Rec_Gen_Dmg-002.wav</ShortName>
-							<Path>SFX\Player_Rec_Gen_Dmg-002_DB3FDE4D.wem</Path>
+							<Path>SFX\Player_Rec_Gen_Dmg-002_9BC97CB1.wem</Path>
 						</File>
 						<File Id="835773160" Language="SFX">
 							<ShortName>Player_Rec_Gen_Dmg-002.wav</ShortName>
-							<Path>SFX\Player_Rec_Gen_Dmg-002_38C9F518.wem</Path>
+							<Path>SFX\Player_Rec_Gen_Dmg-002_59D3A6FC.wem</Path>
 						</File>
 						<File Id="882544845" Language="SFX">
 							<ShortName>Player_Rec_Gen_Dmg-002.wav</ShortName>
-							<Path>SFX\Player_Rec_Gen_Dmg-002_78BCD085.wem</Path>
+							<Path>SFX\Player_Rec_Gen_Dmg-002_793DCDC1.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="149588724" Name="Play_Plyr_Recv_Fire_Dmg" ObjectPath="\Events\Player\Play_Plyr_Recv_Fire_Dmg" GUID="{F8AAC09E-88A2-47B9-AD06-1AA94BB532C4}" DurationType="OneShot" DurationMin="0.638117" DurationMax="0.718759">
 					<IncludedMemoryFiles>
-						<File Id="22582029" Language="SFX">
+						<File Id="13663009" Language="SFX">
 							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
-							<Path>SFX\Plyr_Tk_Fire_Dmg_EEDC246E.wem</Path>
+							<Path>SFX\Plyr_Tk_Fire_Dmg_D14E8152.wem</Path>
 						</File>
-						<File Id="369104491" Language="SFX">
+						<File Id="218049251" Language="SFX">
 							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
-							<Path>SFX\Plyr_Tk_Fire_Dmg_B21521BE.wem</Path>
+							<Path>SFX\Plyr_Tk_Fire_Dmg_0DEF7053.wem</Path>
 						</File>
-						<File Id="928839707" Language="SFX">
+						<File Id="279433949" Language="SFX">
 							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
-							<Path>SFX\Plyr_Tk_Fire_Dmg_77B97DE7.wem</Path>
+							<Path>SFX\Plyr_Tk_Fire_Dmg_11B6ECF2.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1209,7 +1209,7 @@
 					<IncludedMemoryFiles>
 						<File Id="749598058" Language="SFX">
 							<ShortName>15-06 Fire,Fireplace Wood Burning In Fireplace.wav</ShortName>
-							<Path>SFX\15-06 Fire,Fireplace Wood Burning In Fireplace_D79FB2B7.wem</Path>
+							<Path>SFX\15-06 Fire,Fireplace Wood Burning In Fireplace_3D85C53B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1217,7 +1217,7 @@
 					<IncludedMemoryFiles>
 						<File Id="710380146" Language="SFX">
 							<ShortName>Gem_Recharge_Woosh.wav</ShortName>
-							<Path>SFX\Gem_Recharge_Woosh_10C4C929.wem</Path>
+							<Path>SFX\Gem_Recharge_Woosh_43EADB1D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1225,7 +1225,7 @@
 					<IncludedMemoryFiles>
 						<File Id="25896015" Language="SFX">
 							<ShortName>UI_MenuSelect.wav</ShortName>
-							<Path>SFX\UI_MenuSelect_10C4C929.wem</Path>
+							<Path>SFX\UI_MenuSelect_8529A94A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1233,7 +1233,7 @@
 					<IncludedMemoryFiles>
 						<File Id="709527559" Language="SFX">
 							<ShortName>UI_RollOver.wav</ShortName>
-							<Path>SFX\UI_RollOver_10C4C929.wem</Path>
+							<Path>SFX\UI_RollOver_8529A94A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
