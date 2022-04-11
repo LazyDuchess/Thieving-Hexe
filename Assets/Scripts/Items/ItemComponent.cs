@@ -62,7 +62,17 @@ public class ItemComponent : InteractableComponent
         var playerActor = actor.GetComponent<PlayerController>();
         if (playerActor)
         {
-            playerActor.inventory.AddItem(this);
+            var prevAmount = this.amount;
+            var result = playerActor.inventory.AddItem(this);
+            if (result.remainingAmount == prevAmount)
+            {
+                UINotification.instance.Show(itemName + ": I couldn't fit it in my inventory.", 3f);
+            }
+            else
+            {
+                if (result.remainingAmount > 0)
+                    UINotification.instance.Show(itemName + ": I couldn't fit all of it in my inventory.", 3f);
+            }
         }
     }
 
@@ -110,7 +120,7 @@ public class ItemComponent : InteractableComponent
             coolDownS = 0f;
     }
 
-    public virtual void Start()
+    public virtual void Awake()
     {
         if (holdObject != null)
             holdObject.SetActive(false);
@@ -118,6 +128,7 @@ public class ItemComponent : InteractableComponent
 
     public virtual void ToInventory(Inventory inventory)
     {
+        this.transform.parent = null;
         this.inventory = inventory;
         if (holdObject != null)
             holdObject.SetActive(false);

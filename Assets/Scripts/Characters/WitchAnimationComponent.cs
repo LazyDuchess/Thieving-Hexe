@@ -69,6 +69,12 @@ public class WitchAnimationComponent : MonoBehaviour
         animator.SetTrigger("Onehanded");
     }
 
+    public void long_Draw()
+    {
+        animator.ResetTrigger("Cancel");
+        animator.SetTrigger("Long");
+    }
+
     public void Unarmed()
     {
         animator.SetLayerWeight(1, 0f);

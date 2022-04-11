@@ -131,7 +131,7 @@ MonoBehaviour:
   speedMult: 1.5
   speedBuff: 0.5
   duration: 1.5
-  speedDuration: 5
+  speedDuration: 6
   speedDegradeMultiply: 0.2
 --- !u!114 &7086604341804319049
 MonoBehaviour:

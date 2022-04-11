@@ -26,6 +26,9 @@ public class UIUseTooltip : MonoBehaviour
                 case InteractionType.Open:
                     useText.text = "E: Open";
                     break;
+                case InteractionType.Torch:
+                    useText.text = "E: Take Torch";
+                    break;
             }
         }
         else

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameCamera : MonoBehaviour
 {
+    public GameObject crosshair;
     private Camera camera;
     public float height = 5f;
     public float distance = 5f;
@@ -14,8 +15,11 @@ public class GameCamera : MonoBehaviour
 
     private Vector3 currentVelocityOffset = Vector3.zero;
 
+    bool cursorBefore = false;
+
     void Start()
     {
+        Cursor.visible = false;
         camera = GetComponent<Camera>();
     }
 
@@ -58,20 +62,36 @@ public class GameCamera : MonoBehaviour
     //Translate mouse coords to player aim
     void ProcessAimInput()
     {
-        //Invalid target - no player controller. todo - lerp back to zero?
-        if (!GameController.instance.playerController)
+        if (PauseController.paused)
             return;
-        if (!GameController.instance.controlEnabled)
+        //Invalid target - no player controller. todo - lerp back to zero? - No don't do.
+        if (!GameController.instance.playerController || !GameController.instance.controlEnabled)
+        {
+            if (!cursorBefore)
+            {
+                Cursor.visible = true;
+                cursorBefore = true;
+            }
+            crosshair.SetActive(false);
             return;
+        }
+        if (cursorBefore)
+        {
+            Cursor.visible = false;
+            cursorBefore = false;
+        }
         aimLocation = InputUtils.GetMouse();
         Ray ray = camera.ScreenPointToRay(InputUtils.GetMouseScreen());
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, GameController.GetGroundMask()))
         {
             GameController.instance.playerController.SetAim(hit.point);
+            crosshair.SetActive(true);
+            crosshair.transform.position = hit.point;
         }
         else
         {
+            crosshair.SetActive(false);
             var floorDistance = ray.origin.y - GameController.instance.player.transform.position.y;
             GameController.instance.playerController.SetAim(ray.origin + (ray.direction * floorDistance));
         }

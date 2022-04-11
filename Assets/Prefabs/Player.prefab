@@ -156,7 +156,7 @@ MonoBehaviour:
   deacceleration: 15
   flinchDuration: 0.25
   moveDuringFlinch: 1
-  flinchTagging: 0.4
+  flinchTagging: 0.5
   movementVector: {x: 0, y: 0, z: 0}
   backwards: 0
   currentInteractable: {fileID: 0}

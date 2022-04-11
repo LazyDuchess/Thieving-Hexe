@@ -7,6 +7,8 @@ public class InputController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PauseController.paused)
+            return;
         //Invalid target - no player controller. todo - lerp back to zero?
         if (!GameController.instance.playerController)
             return;

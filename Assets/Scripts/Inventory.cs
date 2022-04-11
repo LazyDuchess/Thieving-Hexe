@@ -218,6 +218,8 @@ public class Inventory
             if (amountRemaining > 0 && firstEmpty != -1)
             {
                 InternalAddItem(item);
+                result.success = true;
+                result.remainingAmount = 0;
             }
         }
         return result;

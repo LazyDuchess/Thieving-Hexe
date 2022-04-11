@@ -19,7 +19,7 @@ public class SkellyAnimationComponent : MonoBehaviour
         //ye
     }
 
-    public void Melee()
+    public void Attack()
     {
         if (!skelly.IsAlive())
             return;

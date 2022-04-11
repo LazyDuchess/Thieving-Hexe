@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3842170256849437868}
   - component: {fileID: 6611012523442111505}
   - component: {fileID: 7870511419841722577}
+  - component: {fileID: 1074221232385534881}
   m_Layer: 0
   m_Name: tree_medium
   m_TagString: Untagged
@@ -84,6 +85,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1074221232385534881
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654714897427386300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4239432554993347707, guid: dfc944822e8a863418f884fbfad6b8a6, type: 3}
 --- !u!1 &2532358622323034920
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +110,7 @@ GameObject:
   - component: {fileID: 5823129834437016384}
   - component: {fileID: 3978341558701462400}
   - component: {fileID: 1196090534314917596}
+  - component: {fileID: 2877824119538342141}
   m_Layer: 0
   m_Name: tree_tall
   m_TagString: Untagged
@@ -168,6 +184,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2877824119538342141
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532358622323034920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8862029377377273872, guid: dfc944822e8a863418f884fbfad6b8a6, type: 3}
 --- !u!1 &4674910517321748693
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +471,7 @@ GameObject:
   - component: {fileID: 7856090101187759485}
   - component: {fileID: 7936743243091876294}
   - component: {fileID: 4308068844104180043}
+  - component: {fileID: 6791987613946191718}
   m_Layer: 0
   m_Name: Mushroom_small
   m_TagString: Untagged
@@ -514,6 +545,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6791987613946191718
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7142191457762698674}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 255227548706891130, guid: dfc944822e8a863418f884fbfad6b8a6, type: 3}
 --- !u!1001 &175097622738488647
 PrefabInstance:
   m_ObjectHideFlags: 0

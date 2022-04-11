@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionType: 2
-  interactionRadius: 2
+  interactionRadius: 2.5
   fragment: {fileID: 5078216515210235672}
 --- !u!65 &2605242461557723277
 BoxCollider:

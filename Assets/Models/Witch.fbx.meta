@@ -72,6 +72,12 @@ ModelImporter:
   - first:
       74: -87083429046308561
     second: metarig|drink_potion
+  - first:
+      74: -1682326381526974190
+    second: metarig|hold_long
+  - first:
+      74: 138898808804996683
+    second: metarig|swing_long
   externalObjects:
   - first:
       type: UnityEngine:Material
