@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameEventsController
 {
     public delegate void GameEvent();
+    public delegate void DamageEvent(Damage damage);
 
     //When you lose by dying or running out of time.
     public static GameEvent gameOverEvent;
@@ -13,7 +14,7 @@ public class GameEventsController
     public static GameEvent levelPassEvent;
 
     //When the player gets damaged.
-    public static GameEvent playerDamageEvent;
+    public static DamageEvent playerDamageEvent;
 
     //When you reach the end of the dungeon and collect the fragment and have to make a run for it.
     public static GameEvent collectFragmentEvent;
@@ -72,7 +73,7 @@ public class GameEventsController
     public static void PlayerDamage(Damage dmg)
     {
         if (playerDamageEvent != null)
-            playerDamageEvent.Invoke();
+            playerDamageEvent.Invoke(dmg);
     }
 
     public static void CollectFragment()
