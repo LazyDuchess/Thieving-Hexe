@@ -1,0 +1,237 @@
+Event	ID	Name			Wwise Object Path	Notes
+	149588724	Play_Plyr_Recv_Fire_Dmg			\Player\Play_Plyr_Recv_Fire_Dmg	
+	210028557	Play_CauldronBubbles			\Objects\Play_CauldronBubbles	
+	279773806	Play_Enem_Defeated			\Enemies\Play_Enem_Defeated	
+	288321370	Play_Crystal_Empty			\Items\Play_Crystal_Empty	
+	429735360	Play_Crystal_Small_Use			\Items\Play_Crystal_Small_Use	
+	432265666	Play_Enem_Skelle_FS_Material			\Enemies\Play_Enem_Skelle_FS_Material	
+	675557581	Play_Obj_Door_Close			\Objects\Play_Obj_Door_Close	
+	784653928	Play_GuardBlurb			\NPC\Play_GuardBlurb	
+	843314701	Play_Plyr_Atk_Chrg_Release			\Player\Play_Plyr_Atk_Chrg_Release	
+	856894529	Play_Plyr_Elcty_Wtr			\Player\Play_Plyr_Elcty_Wtr	
+	873733766	Play_Itm_Pu_Potion			\Items\Play_Itm_Pu_Potion	
+	924170866	Play_Enem_Recv_Fire_Dmg			\Enemies\Play_Enem_Recv_Fire_Dmg	
+	1064632258	Play_Enem_Rec_Gen_Dmg_Hit			\Enemies\Play_Enem_Rec_Gen_Dmg_Hit	
+	1152667966	Play_Crystal__Pickup			\Items\Play_Crystal__Pickup	
+	1263063560	Play_Crystal_Large_Use			\Items\Play_Crystal_Large_Use	
+	1417455751	Play_Obj_Door_Open			\Objects\Play_Obj_Door_Open	
+	1999625262	Play_UI_MenuSelect			\UI\Play_UI_MenuSelect	
+	2003385513	Play_Itm_Drink_Potion			\Items\Play_Itm_Drink_Potion	
+	2025845440	Play_Torch			\Objects\Play_Torch	
+	2027687623	Play_Enem_Skel_FS_Material			\Enemies\Play_Enem_Skel_FS_Material	
+	2157278666	Play_Enem_Atk_Bsc_Charged			\Enemies\Play_Enem_Atk_Bsc_Charged	
+	2251837801	Stop_PlayerFSMaterial			\Player\Stop_PlayerFSMaterial	
+	2258692236	Play_Itm_Pu_Key			\Items\Play_Itm_Pu_Key	
+	2464356432	Play_Plyr_Defeated			\Player\Play_Plyr_Defeated	
+	2613753308	Play_Plyr_Atk_Chrg_Loop			\Player\Play_Plyr_Atk_Chrg_Loop	
+	2634303667	Play_Enem_Atk_Bsc_Lte			\Enemies\Play_Enem_Atk_Bsc_Lte	
+	2731356750	Play_Plyr_Atk_Chrg_Wu			\Player\Play_Plyr_Atk_Chrg_Wu	
+	2754623237	Play_Plyr_Atk_Bsc_Lte			\Player\Play_Plyr_Atk_Bsc_Lte	
+	2930802274	Play_Plyr_Po_Fire_w_Wtr			\Player\Play_Plyr_Po_Fire_w_Wtr	
+	2932040671	Play_Music			\Music\Play_Music	
+	3332044750	Play_Enem_Skelle_Defeat			\Enemies\Play_Enem_Skelle_Defeat	
+	3383738331	Play_PlayerFSMaterial			\Player\Play_PlayerFSMaterial	
+	3674195162	Play_Plyr_Rec_Gen_Dmg			\Player\Play_Plyr_Rec_Gen_Dmg	
+	3897903487	Play_Enem_Min_On_Fire			\Enemies\Play_Enem_Min_On_Fire	
+	4000411161	Play_Campfire			\Objects\Play_Campfire	
+	4038800916	Play_UI_RollOver			\UI\Play_UI_RollOver	
+	4040184904	Play_Firegem_flight			\Default Work Unit\Play_Firegem_flight	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1834394558	Surface			\Default Work Unit\Surface	
+	2418394769	CrystalType			\Default Work Unit\CrystalType	
+	2680486766	EnemRunWalk			\Default Work Unit\EnemRunWalk	
+	3176616166	PlayerRunWalk			\Default Work Unit\PlayerRunWalk	
+
+Switch	ID	Name	Switch Group			Notes
+	2195636714	Dirt	Surface			
+	3135525842	Cobble	Surface			
+	4248645337	Grass	Surface			
+	2654748154	Water	CrystalType			
+	2678880713	Fire	CrystalType			
+	2917121896	Electricity	CrystalType			
+	4294388576	Generic	CrystalType			
+	2293070800	EnmSkWalk	EnemRunWalk			
+	3672549870	EnmSkRun	EnemRunWalk			
+	712161704	Run	PlayerRunWalk			
+	2108779966	Walk	PlayerRunWalk			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	89505537	Gameplay			\Default Work Unit\Gameplay	
+	1995189622	Enviro			\Music\Enviro	
+
+State	ID	Name	State Group			Notes
+	579523862	Explore	Gameplay			
+	748895195	None	Gameplay			
+	1560169506	Boss	Gameplay			
+	1593864692	Defeat	Gameplay			
+	2607556080	Menu	Gameplay			
+	2716678721	Victory	Gameplay			
+	2764240573	Combat	Gameplay			
+	129146593	Castle	Enviro			
+	491961918	Forest	Enviro			
+	748895195	None	Enviro			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	151362964	PlayerHealth			\Default Work Unit\PlayerHealth	
+	1493153371	PlayerSpeed			\Default Work Unit\PlayerSpeed	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1866712635	High_Freq_Cut_1	Wwise Parametric EQ			
+	2653529179	Three_Voices	Wwise Harmonizer			
+	2995775460	Room_Small	Wwise RoomVerb			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	812650	NPC_Guard_Vox_06	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\NPC_Guard_Vox_A0EEAFDD.wem		\Actor-Mixer Hierarchy\Dialogue\GuardBlurb\NPC_Guard_Vox_06		67648
+	5331889	Player_Rec_Gen_Dmg-001_03	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_Rec_Gen_Dmg-001_1C439978.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Rec_Gen_Dmg_Vox\Player_Rec_Gen_Dmg-001_03		56198
+	11340700	65bpm_4-4_Ps4_ AudioTrack-1	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\NoCombat\65bpm_4-4_Ps4_ AudioTrack-1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Explore\NoCombat\65bpm_4-4_Ps4_ AudioTrack-1		8507144
+	15309980	130bpm_4-4_Ps4_Sticks Wind	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\BGs\130bpm_4-4_Ps4_Sticks Wind_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\130bpm_4-4_Ps4_Sticks Wind		22685604
+	17036018	130bpm_4-4_Ps4_Bgs_ AudioTrack-1	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Victory\130bpm_4-4_Ps4_Bgs_ AudioTrack-1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Victory\130bpm_4-4_Ps4_Bgs_ AudioTrack-1		14178528
+	21641071	NPC_Guard_Vox_03	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\NPC_Guard_Vox_D80282C2.wem		\Actor-Mixer Hierarchy\Dialogue\GuardBlurb\NPC_Guard_Vox_03		139328
+	22250190	Plyr_Basic_Atk_Lte_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Plyr_Basic_Atk_Lte_ADFC620C.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Atk_Bsc_Lte\Plyr_Basic_Atk_Lte_02		13466
+	22582029	Plyr_Tk_Fire_Dmg	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Plyr_Tk_Fire_Dmg_EEDC246E.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Recv_Fire_Dmg\Plyr_Tk_Fire_Dmg		69066
+	25896015	UI_MenuSelect	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\UI_MenuSelect_10C4C929.wem		\Actor-Mixer Hierarchy\UI\UI_MenuSelect		787264
+	39288903	Footstep_Tile_Running_03	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_03_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_03		60156
+	51339316	Plyr_Basic_Atk_Lte	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Plyr_Basic_Atk_Lte_5EBCC2A2.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Atk_Bsc_Lte\Plyr_Basic_Atk_Lte		21246
+	52669161	65bpm_4-4_Ps4_ Vio	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Victory\65bpm_4-4_Ps4_ Vio_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Victory\65bpm_4-4_Ps4_ Vio		5671452
+	53224605	65bpm_4-4_Ps4_ AudioTrack	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\65bpm_4-4_Ps4_ AudioTrack_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\65bpm_4-4_Ps4_ AudioTrack		8507144
+	56535823	Player_Rec_Gen_Dmg-002_03	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_Rec_Gen_Dmg-002_795BD4D6.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Rec_Gen_Dmg_Hit\Player_Rec_Gen_Dmg-002_03		25500
+	64890644	Itm_Crys_Empty	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Crys_Empty_D1B8BB5B.wem		\Actor-Mixer Hierarchy\Items\Crystal_Empty\Itm_Crys_Empty		46140
+	69203506	65bpm_4-4_Ps4_ Bell	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\F-Combat\65bpm_4-4_Ps4_ Bell_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Forest_Combat\F-Combat\65bpm_4-4_Ps4_ Bell		8507144
+	72064895	Enem_Skelle_Defeated	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Enem_Skelle_Defeated_25C2B3EF.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skelle_Defeat\Enem_Skelle_Defeated		187616
+	86142725	Itm_Pu_Crys_Fire	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Pu_Crys_Fire_2B0F0A4A.wem		\Actor-Mixer Hierarchy\Items\Crystal__Pickup\Crystal_Fire\Itm_Pu_Crys_Fire		396240
+	90553840	65bpm_4-4_Ps4_ Sub	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\F-Combat\65bpm_4-4_Ps4_ Sub_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Forest_Combat\F-Combat\65bpm_4-4_Ps4_ Sub		8507144
+	93197845	65bpm_4-4_Ps4_ Pad1	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\65bpm_4-4_Ps4_ Pad1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\65bpm_4-4_Ps4_ Pad1		8507144
+	99629851	65bpm_4-4_Ps4_ Gp-Sticks	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\F-Combat\65bpm_4-4_Ps4_ Gp-Sticks_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Forest_Combat\F-Combat\65bpm_4-4_Ps4_ Gp-Sticks		8507144
+	101270542	Footstep_Grass_Walking_05	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_05_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_05		86696
+	107189339	Enem_Skelle_FS_Sweetner	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\LittelWitch_Enemies_3518BBB6.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skelle_FS_Sweetner\Enem_Skelle_FS_Sweetner		18002
+	120264666	Footstep_Grass_Walking_03	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_03_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_03		92772
+	121077130	65bpm_4-4_Ps4_ celest	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Victory\65bpm_4-4_Ps4_ celest_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Victory\65bpm_4-4_Ps4_ celest		5671452
+	121166745	Footstep_Tile_Walking_04	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_04_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_04		127336
+	122015717	Enem_Skelle_Defeated_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Enem_Skelle_Defeated_0A9E722D.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skelle_Defeat\Enem_Skelle_Defeated_01		191990
+	123896868	65bpm_4-4_Ps4_v2_	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\65bpm_4-4_Ps4_v2__D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Defeat_65bpm_4-4_Ps4_v2_\65bpm_4-4_Ps4_v2_		8507144
+	128466011	130bpm_4-4_Ps4_Bgs_ AudioTrack	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Victory\130bpm_4-4_Ps4_Bgs_ AudioTrack_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Victory\130bpm_4-4_Ps4_Bgs_ AudioTrack		14178528
+	135208727	Obj_Door_Open	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Obj_Door_Open_2B93303A.wem		\Actor-Mixer Hierarchy\Object\Obj_Door_Open		472148
+	139678865	65bpm_4-4_Ps4_ Drone	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Victory\65bpm_4-4_Ps4_ Drone_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Victory\65bpm_4-4_Ps4_ Drone		5671452
+	156571477	NPC_Guard_Vox_05	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\NPC_Guard_Vox_A9AE8946.wem		\Actor-Mixer Hierarchy\Dialogue\GuardBlurb\NPC_Guard_Vox_05		43072
+	162196080	Itum_Pu_Crys_Elec	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itum_Pu_Crys_Elec_B7200A8E.wem		\Actor-Mixer Hierarchy\Items\Crystal__Pickup\Crystal_Electric\Itum_Pu_Crys_Elec		177760
+	162999389	4-4_8b_Ps4- Viola-Long	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\F-Explore\4-4_8b_Ps4- Viola-Long_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Forest_Explore\F-Explore\4-4_8b_Ps4- Viola-Long		8507144
+	166957269	Itm_Pu_Crys_Fire_03	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Pu_Crys_Fire_6700A14B.wem		\Actor-Mixer Hierarchy\Items\Crystal__Pickup\Crystal_Fire\Itm_Pu_Crys_Fire_03		406228
+	175321091	4-4_8b_Ps4- Bell	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\F-Explore\4-4_8b_Ps4- Bell_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Forest_Explore\F-Explore\4-4_8b_Ps4- Bell		8507144
+	179448580	Footstep_Tile_Running_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_01_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_01		56836
+	181428061	Plyr_Atk_Bsc_Chrg_Wu	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Plyr_Atk_Bsc_Chrg_Wu_E3D2A571.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Atk_Bsc_Charged\Plyr_Atk_Bsc_Chrg_Wu		242120
+	204275985	Enem_Skelle_Defeated_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Enem_Skelle_Defeated_6ACC40E1.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skelle_Defeat\Enem_Skelle_Defeated_02		198004
+	210401186	130bpm_4-4_Ps4_Sticks	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\130bpm_4-4_Ps4_Sticks_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\130bpm_4-4_Ps4_Sticks		11342836
+	217656417	65bpm_4-4_Ps4_ Vio-Long	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\65bpm_4-4_Ps4_ Vio-Long_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\65bpm_4-4_Ps4_ Vio-Long		8507144
+	243050784	Itm_Pu_Potion_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Pu_Potion_858A92E3.wem		\Actor-Mixer Hierarchy\Items\Itm_Pu_Potion\Itm_Pu_Potion_01		109220
+	244450833	Campfire	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\15-12 Fire,Campfire Small Campfire Crackling,Hissing,Popping_6EBC5331.wem		\Actor-Mixer Hierarchy\Object\Campfire		16099824
+	263841797	Plyr_Po_Fire_w_Wtr	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Ply_Po_Fire_w_Wtr_2C44037F.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Po_Fire_w_Wtr		408356
+	270625144	65bpm_4-4_Ps4_ Pad2	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\F-Combat\65bpm_4-4_Ps4_ Pad2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Forest_Combat\F-Combat\65bpm_4-4_Ps4_ Pad2		8507144
+	277559386	Player_Rec_Gen_Dmg-002_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_Rec_Gen_Dmg-002_318299AC.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Rec_Gen_Dmg_Hit\Player_Rec_Gen_Dmg-002_01		21990
+	282168526	Footstep_Tile_Running_05	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_05_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_05		66052
+	283145668	4-4_8b_Ps4- LowPadAmb	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\F-Explore\4-4_8b_Ps4- LowPadAmb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Forest_Explore\F-Explore\4-4_8b_Ps4- LowPadAmb		8507144
+	288223943	Footstep_Tile_Walking_06	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_06_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_06		97812
+	304636653	Itm_Pu_Crys_Fire_04	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Pu_Crys_Fire_41AFFC4A.wem		\Actor-Mixer Hierarchy\Items\Crystal__Pickup\Crystal_Fire\Itm_Pu_Crys_Fire_04		396240
+	311776272	65bpm_4-4_Ps4_ Viola	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Victory\65bpm_4-4_Ps4_ Viola_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Victory\65bpm_4-4_Ps4_ Viola		5671452
+	327508240	130bpm_4-4_Ps4_Sticks EreieNightMAbience	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\BGs\130bpm_4-4_Ps4_Sticks EreieNightMAbience_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\130bpm_4-4_Ps4_Sticks EreieNightMAbience		22685604
+	328377498	NPC_Guard_Vox_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\NPC_Guard_Vox_B2FFB6C5.wem		\Actor-Mixer Hierarchy\Dialogue\GuardBlurb\NPC_Guard_Vox_02		106560
+	337015043	Plyr_Atk_Chrg_Wu	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Plyr_Atk_Bsc_Chrg_Wu-002_698E9CAC.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Chrg_Atk\Plyr_Atk_Chrg_Wu		168276
+	343030236	Itm_Crys_Sml_Use	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Crys_Sml_Use_A4CDDF3F.wem		\Actor-Mixer Hierarchy\Items\Crystal_Small_Use\Itm_Crys_Sml_Use		80498
+	353426455	Footstep_Tile_Running_06	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_06_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_06		62552
+	354642032	Firegem_flight	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Fire\Firegem_flight_D79FB2B7.wem		\Actor-Mixer Hierarchy\Player\Spells\Fire\Firegem_flight		768064
+	355700024	65bpm_4-4_Ps4_ Applause	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Victory\65bpm_4-4_Ps4_ Applause_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Victory\65bpm_4-4_Ps4_ Applause		5671452
+	369104491	Plyr_Tk_Fire_Dmg_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Plyr_Tk_Fire_Dmg_B21521BE.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Recv_Fire_Dmg\Plyr_Tk_Fire_Dmg_01		62670
+	388109844	Itm_Pu_Crys_Fire_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Pu_Crys_Fire_F91F0A84.wem		\Actor-Mixer Hierarchy\Items\Crystal__Pickup\Crystal_Fire\Itm_Pu_Crys_Fire_01		419546
+	399734064	65bpm_4-4_Ps4_ Boss	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Victory\65bpm_4-4_Ps4_ Boss_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Victory\65bpm_4-4_Ps4_ Boss		5671452
+	404218679	Footstep_Tile_Running_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_02_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_02		55268
+	408779655	Itm_Drink_Potion	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Drink_Potion_10C4C929.wem		\Actor-Mixer Hierarchy\Items\Itm_Drink_Potion		758398
+	414767398	NPC_Guard_Vox_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\NPC_Guard_Vox_0784FC35.wem		\Actor-Mixer Hierarchy\Dialogue\GuardBlurb\NPC_Guard_Vox_01		45120
+	418670362	Plyr_Atk_Chrg_Loop	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Plyr_Atk_Chrg_Loop_40D2A907.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Chrg_Atk\Plyr_Atk_Chrg_Loop		115094
+	426562327	Player_Rec_Gen_Dmg-001	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_Rec_Gen_Dmg-001_28E94DE4.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Rec_Gen_Dmg_Vox\Player_Rec_Gen_Dmg-001		43040
+	428034819	Itm_Crys_Large_Use_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Crys_Large_Use_A2F771B2.wem		\Actor-Mixer Hierarchy\Items\Crystal_Large_Use\Itm_Crys_Large_Use_01		127094
+	448803947	Itm_Pu_Crys_Gen	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Pu_Crys_Gen_E3661695.wem		\Actor-Mixer Hierarchy\Items\Crystal__Pickup\Crystal_Generic\Itm_Pu_Crys_Gen		308044
+	451603062	65bpm_4-4_Ps4_ AudioTrack-1	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Victory\65bpm_4-4_Ps4_ AudioTrack-1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Victory\65bpm_4-4_Ps4_ AudioTrack-1		5671452
+	456019608	Footstep_Grass_Walking_04	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_04_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_04		93752
+	458361069	Footstep_Grass_Running_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_02_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_02		83928
+	480230374	4-4_8b_Ps4- Pad2	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\F-Explore\4-4_8b_Ps4- Pad2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Forest_Explore\F-Explore\4-4_8b_Ps4- Pad2		8507144
+	480301423	NPC_Guard_Vox	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\NPC_Guard_Vox_92ED325B.wem		\Actor-Mixer Hierarchy\Dialogue\GuardBlurb\NPC_Guard_Vox		47168
+	487988959	65bpm_4-4_Ps4_ Sub-Lon	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\NoCombat\65bpm_4-4_Ps4_ Sub-Lon_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Explore\NoCombat\65bpm_4-4_Ps4_ Sub-Lon		8507144
+	500492691	Itm_Pu_Crys_Gen_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Pu_Crys_Gen_5D61E728.wem		\Actor-Mixer Hierarchy\Items\Crystal__Pickup\Crystal_Generic\Itm_Pu_Crys_Gen_02		224186
+	501265382	Footstep_Grass_Walking_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_01_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_01		88436
+	514191403	Footstep_Grass_Walking_06	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_06_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_06		85132
+	514480090	65bpm_4-4_Ps4_ Gp-Sticks	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\65bpm_4-4_Ps4_ Gp-Sticks_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\65bpm_4-4_Ps4_ Gp-Sticks		8507144
+	520401883	Footstep_Tile_Running_04	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_04_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_04		63104
+	529069888	Itm_Crys_Sml_Use_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Crys_Sml_Use_A74C2117.wem		\Actor-Mixer Hierarchy\Items\Crystal_Small_Use\Itm_Crys_Sml_Use_01		70444
+	534454176	4-4_8b_Ps4- Vio-Long	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\F-Explore\4-4_8b_Ps4- Vio-Long_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Forest_Explore\F-Explore\4-4_8b_Ps4- Vio-Long		8507144
+	539548908	Player_Rec_Gen_Dmg-001_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_Rec_Gen_Dmg-001_5FDDF5C0.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Rec_Gen_Dmg_Vox\Player_Rec_Gen_Dmg-001_01		32516
+	544043385	Itm_Pu_Crys_Gen_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Pu_Crys_Gen_6777DDCC.wem		\Actor-Mixer Hierarchy\Items\Crystal__Pickup\Crystal_Generic\Itm_Pu_Crys_Gen_01		306518
+	550253140	Footstep_Tile_Walking_03	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_03_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_03		116824
+	550532329	130bpm_4-4_Ps4_	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\130bpm_4-4_Ps4__D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\130bpm_4-4_Ps4_		9575132
+	561474046	Footstep_Grass_Running_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_01_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_01		88436
+	573754509	Enem_Min_On_Fire	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Enem_Min_On_Fire_541090AF.wem		\Actor-Mixer Hierarchy\Enemies\Enem_Min_On_Fire\Enem_Min_On_Fire		396752
+	581991665	65bpm_4-4_Ps4_ Cel-st	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\F-Combat\65bpm_4-4_Ps4_ Cel-st_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Forest_Combat\F-Combat\65bpm_4-4_Ps4_ Cel-st		8507144
+	584927690	65bpm_4-4_Ps4_ Viola-Long	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\65bpm_4-4_Ps4_ Viola-Long_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\65bpm_4-4_Ps4_ Viola-Long		8507144
+	588486327	Plyr_Float	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Plyr_Float-002_D79FB2B7.wem		\Actor-Mixer Hierarchy\Player\Player\PlayerFSMaterial\Grass\Plyr_Float		1418482
+	596365406	130bpm_4-4_Ps4_Snare	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\130bpm_4-4_Ps4_Snare_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\130bpm_4-4_Ps4_Snare		6380372
+	607506639	FS_Rock_Walk	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Rock\FS_Rock_Walk_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Rock\FS_Rock_Walk		443710
+	617394203	Footstep_Grass_Running_03	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_03_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_03		92772
+	621582871	Itm_Pu_Crys_Fire_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Pu_Crys_Fire_0A984858.wem		\Actor-Mixer Hierarchy\Items\Crystal__Pickup\Crystal_Fire\Itm_Pu_Crys_Fire_02		409556
+	644832395	Enem_Skelle_Pain_03	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Enem_Skelle_Pain_B72FBF0C.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Rec_Gen_Dmg_Hit\Enem_Skelle_Pain_03		18686
+	674862323	Itm_Pu_Potion	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Pu_Potion_3D6845D6.wem		\Actor-Mixer Hierarchy\Items\Itm_Pu_Potion\Itm_Pu_Potion		119374
+	681178562	65bpm_4-4_Ps4_ knock	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\NoCombat\65bpm_4-4_Ps4_ knock_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Explore\NoCombat\65bpm_4-4_Ps4_ knock		8507144
+	681854251	65bpm_4-4_Ps4_v2_	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\65bpm_4-4_Ps4_v2__D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\65bpm_4-4_Ps4_v2_		8507144
+	683474123	Enem_Skelle_Pain_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Enem_Skelle_Pain_71673651.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Rec_Gen_Dmg_Hit\Enem_Skelle_Pain_02		22196
+	692839569	Itm_Crys_Sml_Use_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Crys_Sml_Use_70C67D92.wem		\Actor-Mixer Hierarchy\Items\Crystal_Small_Use\Itm_Crys_Sml_Use_02		67798
+	692896475	Itm_Pu_Key	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Pu_Key_10C4C929.wem		\Actor-Mixer Hierarchy\Items\Itm_Pu_Key		173540
+	709527559	UI_RollOver	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\UI_RollOver_10C4C929.wem		\Actor-Mixer Hierarchy\UI\UI_RollOver		177776
+	710380146	Gem_Recharge_Woosh	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Gem_Recharge_Woosh_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Player\Gem_Recharge_Woosh		42530
+	711835135	Itum_Pu_Crys_Elec_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itum_Pu_Crys_Elec_122CA581.wem		\Actor-Mixer Hierarchy\Items\Crystal__Pickup\Crystal_Electric\Itum_Pu_Crys_Elec_02		156436
+	713164584	FS_Rock_Run	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Rock\FS_Rock_Run_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Rock\FS_Rock_Run		625942
+	724859944	NPC_Guard_Vox_07	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\NPC_Guard_Vox_8162FBCF.wem		\Actor-Mixer Hierarchy\Dialogue\GuardBlurb\NPC_Guard_Vox_07		38976
+	740964786	Player_Rec_Gen_Dmg-001_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_Rec_Gen_Dmg-001_53AD8215.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Rec_Gen_Dmg_Vox\Player_Rec_Gen_Dmg-001_02		40410
+	746897624	Footstep_Grass_Running_06	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_06_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_06		85132
+	749598058	Torch	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\15-06 Fire,Fireplace Wood Burning In Fireplace_D79FB2B7.wem		\Actor-Mixer Hierarchy\Object\Torch		16569904
+	754377464	CauldronBubbles	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\10-40 Bubbles In Water_D79FB2B7.wem		\Actor-Mixer Hierarchy\Object\CauldronBubbles		11101504
+	758117669	Footstep_Tile_Walking_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_02_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_02		113800
+	764711581	Player_Rec_Gen_Dmg-001_04	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_Rec_Gen_Dmg-001_0E133F46.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Rec_Gen_Dmg_Vox\Player_Rec_Gen_Dmg-001_04		50056
+	778632297	Plyr_Atk_Bsc_Chrg_Rls	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Plyr_Atk_Bsc_Chrg_Rls_9FB83B63.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Atk_Bsc_Charged\Bsc_Atk_Chrg_Release\Plyr_Atk_Bsc_Chrg_Rls		214846
+	797369053	Obj_Door_Close	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Obj_Door_Close_E972EEC4.wem		\Actor-Mixer Hierarchy\Object\Obj_Door_Close		474104
+	801459080	65bpm_4-4_Ps4_ LowPadAmb	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\65bpm_4-4_Ps4_ LowPadAmb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\65bpm_4-4_Ps4_ LowPadAmb		8507144
+	802222803	65bpm_4-4_Ps4_ Pad1	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\NoCombat\65bpm_4-4_Ps4_ Pad1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Explore\NoCombat\65bpm_4-4_Ps4_ Pad1		8507144
+	810246091	130bpm_4-4_Ps4_Sticks drips	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\BGs\130bpm_4-4_Ps4_Sticks drips_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\130bpm_4-4_Ps4_Sticks drips		17014220
+	813758161	Itm_Pu_Crys_Water	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Pu_Crys_Water_136A1B94.wem		\Actor-Mixer Hierarchy\Items\Crystal__Pickup\Crystal_Water\Itm_Pu_Crys_Water		312674
+	823697669	Player_Rec_Gen_Dmg-002_04	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_Rec_Gen_Dmg-002_DB3FDE4D.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Rec_Gen_Dmg_Hit\Player_Rec_Gen_Dmg-002_04		25500
+	827525508	65bpm_4-4_Ps4_ AudioTrack	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\NoCombat\65bpm_4-4_Ps4_ AudioTrack_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Explore\NoCombat\65bpm_4-4_Ps4_ AudioTrack		8507144
+	828532229	Footstep_Grass_Walking_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_02_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_02		83928
+	835773160	Player_Rec_Gen_Dmg-002	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_Rec_Gen_Dmg-002_38C9F518.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Rec_Gen_Dmg_Hit\Player_Rec_Gen_Dmg-002		20236
+	845324472	65bpm_4-4_Ps4_ CreapyClockClick	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\65bpm_4-4_Ps4_ CreapyClockClick_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\65bpm_4-4_Ps4_ CreapyClockClick		8507144
+	847243194	130bpm_4-4_Ps4_Sticks ambienceTexture	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\BGs\130bpm_4-4_Ps4_Sticks ambienceTexture_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\130bpm_4-4_Ps4_Sticks ambienceTexture		17014220
+	850542848	Itm_Crys_Large_Use_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Crys_Large_Use_2E96E038.wem		\Actor-Mixer Hierarchy\Items\Crystal_Large_Use\Itm_Crys_Large_Use_02		123592
+	862860614	65bpm_4-4_Ps4_ Celi	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Victory\65bpm_4-4_Ps4_ Celi_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Victory\65bpm_4-4_Ps4_ Celi		5671452
+	864348206	Plyr_Atk_Bsc_Chrg_Rls_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Plyr_Atk_Bsc_Chrg_Rls_32380459.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Atk_Bsc_Charged\Bsc_Atk_Chrg_Release\Plyr_Atk_Bsc_Chrg_Rls_01		151546
+	881304614	65bpm_4-4_Ps4_ Pad2	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\65bpm_4-4_Ps4_ Pad2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\65bpm_4-4_Ps4_ Pad2		8507144
+	882544845	Player_Rec_Gen_Dmg-002_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_Rec_Gen_Dmg-002_78BCD085.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Rec_Gen_Dmg_Hit\Player_Rec_Gen_Dmg-002_02		25500
+	884774889	Itm_Pu_Potion_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Pu_Potion_B552CB1A.wem		\Actor-Mixer Hierarchy\Items\Itm_Pu_Potion\Itm_Pu_Potion_02		119374
+	886441951	4-4_8b_Ps4- CEe-Long	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\F-Explore\4-4_8b_Ps4- CEe-Long_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Forest_Explore\F-Explore\4-4_8b_Ps4- CEe-Long		8507144
+	888269260	65bpm_4-4_Ps4_ LowPadAmb	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\F-Combat\65bpm_4-4_Ps4_ LowPadAmb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Forest_Combat\F-Combat\65bpm_4-4_Ps4_ LowPadAmb		8507144
+	891458326	Enem_Skelle_Pain	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Enem_Skelle_Pain_CE96C0B7.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Rec_Gen_Dmg_Hit\Enem_Skelle_Pain		21890
+	917759569	Footstep_Grass_Running_04	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_04_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_04		93752
+	923691520	Footstep_Tile_Walking_05	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_05_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_05		113100
+	924503617	Enem_Skelle_Pain_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Enem_Skelle_Pain_07D2E8CF.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Rec_Gen_Dmg_Hit\Enem_Skelle_Pain_01		19754
+	928839707	Plyr_Tk_Fire_Dmg_02	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Plyr_Tk_Fire_Dmg_77B97DE7.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Recv_Fire_Dmg\Plyr_Tk_Fire_Dmg_02		61322
+	930689824	Itum_Pu_Crys_Elec_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itum_Pu_Crys_Elec_5FA7D0CA.wem		\Actor-Mixer Hierarchy\Items\Crystal__Pickup\Crystal_Electric\Itum_Pu_Crys_Elec_01		168622
+	931307899	65bpm_4-4_Ps4_ AudioTrack	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Victory\65bpm_4-4_Ps4_ AudioTrack_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Victory\65bpm_4-4_Ps4_ AudioTrack		5671452
+	946146255	Enem_Min_On_Fire_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Enem_Min_On_Fire_1E960CC8.wem		\Actor-Mixer Hierarchy\Enemies\Enem_Min_On_Fire\Enem_Min_On_Fire_01		379336
+	947289431	Footstep_Grass_Running_05	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_05_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_05		86696
+	949806943	65bpm_4-4_Ps4_ Cel-st	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\65bpm_4-4_Ps4_ Cel-st_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\65bpm_4-4_Ps4_ Cel-st		8507144
+	973271221	4-4_8b_Ps4- Sub-Lon	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\F-Explore\4-4_8b_Ps4- Sub-Lon_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Forest_Explore\F-Explore\4-4_8b_Ps4- Sub-Lon		8507144
+	976498806	65bpm_4-4_Ps4_ Sub	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\65bpm_4-4_Ps4_ Sub_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\65bpm_4-4_Ps4_ Sub		8507144
+	986324939	Plyr_Elcty_Wtr	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Ply_Elcty_Wtr_0642619C.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Elcty_Wtr		280894
+	993976044	Plyr_Basic_Atk_Lte_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Plyr_Basic_Atk_Lte_16BB7069.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Atk_Bsc_Lte\Plyr_Basic_Atk_Lte_01		19776
+	998794094	Footstep_Tile_Walking_01	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_01_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skel_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_01		114684
+	1025613972	NPC_Guard_Vox_04	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\NPC_Guard_Vox_109909AC.wem		\Actor-Mixer Hierarchy\Dialogue\GuardBlurb\NPC_Guard_Vox_04		43072
+	1042133295	Plyr_Heartbeat	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\39-75 Heartbeat Heart Beating,Normal Speed_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Heartbeat		11818864
+	1050276216	130bpm_4-4_Ps4_Sticks flowignWater	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\BGs\130bpm_4-4_Ps4_Sticks flowignWater_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\130bpm_4-4_Ps4_Sticks flowignWater		17014220
+	1060646666	Enem_Defeated	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Plyr_Defeated_10C4C929.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Defeated		247398
+	1066099078	Itm_Crys_Large_Use	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Crys_Large_Use_18A7DFA9.wem		\Actor-Mixer Hierarchy\Items\Crystal_Large_Use\Itm_Crys_Large_Use		133226
+

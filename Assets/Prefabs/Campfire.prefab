@@ -5480,7 +5480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3560061576207306993}
   - component: {fileID: 9069491374598491696}
-  - component: {fileID: -5731183530169182617}
+  - component: {fileID: 1009768812812471101}
   m_Layer: 0
   m_Name: Campfire
   m_TagString: Untagged
@@ -5533,7 +5533,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &-5731183530169182617
+--- !u!114 &1009768812812471101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
