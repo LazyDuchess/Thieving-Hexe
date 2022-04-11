@@ -292,6 +292,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76ab6eb9b6cb8734db8d9d40f9b09c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playChestOpen:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8bdd67e8115af03439f646acc36ded9b, type: 2}
 --- !u!1 &5233219443239718264
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="3474675788">
+		<SoundBank Id="1355168291" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="2870412981">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -25,12 +25,12 @@
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Music\MusicVolume" GUID="{3B5D930E-120D-4327-ACC5-06C6CC062D61}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" GUID="{260B875F-9049-4241-A5A3-C565028FD8CB}" Language="SFX" Hash="3767873273">
+		<SoundBank Id="3161908922" GUID="{260B875F-9049-4241-A5A3-C565028FD8CB}" Language="SFX" Hash="1963949196">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="4000411161" Name="Play_Campfire" ObjectPath="\Events\Objects\Play_Campfire" GUID="{75139B88-F3D8-4E83-8356-3EA1B89364E6}" MaxAttenuation="2." DurationType="Infinite">
+				<Event Id="4000411161" Name="Play_Campfire" ObjectPath="\Events\Objects\Play_Campfire" GUID="{75139B88-F3D8-4E83-8356-3EA1B89364E6}" MaxAttenuation="5." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="244450833" Language="SFX">
 							<ShortName>15-12 Fire,Campfire Small Campfire Crackling,Hissing,Popping.wav</ShortName>
@@ -178,7 +178,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2157278666" Name="Play_Enem_Atk_Bsc_Charged" ObjectPath="\Events\Enemies\Play_Enem_Atk_Bsc_Charged" GUID="{63C93724-7D44-4385-82F9-2DF1B2735CBF}" MaxAttenuation="100." DurationType="OneShot" DurationMin="3.401892" DurationMax="3.769821">
+				<Event Id="2157278666" Name="Play_Enem_Atk_Bsc_Charged" ObjectPath="\Events\Enemies\Play_Enem_Atk_Bsc_Charged" GUID="{63C93724-7D44-4385-82F9-2DF1B2735CBF}" MaxAttenuation="1." DurationType="OneShot" DurationMin="3.401892" DurationMax="3.769821">
 					<IncludedMemoryFiles>
 						<File Id="181428061" Language="SFX">
 							<ShortName>Plyr_Atk_Bsc_Chrg_Wu.wav</ShortName>
@@ -194,7 +194,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2634303667" Name="Play_Enem_Atk_Bsc_Lte" ObjectPath="\Events\Enemies\Play_Enem_Atk_Bsc_Lte" GUID="{E6EDFB4F-CADA-4D4A-BAD3-2105535774E1}" MaxAttenuation="100." DurationType="OneShot" DurationMin="0.212642" DurationMax="0.515374">
+				<Event Id="2634303667" Name="Play_Enem_Atk_Bsc_Lte" ObjectPath="\Events\Enemies\Play_Enem_Atk_Bsc_Lte" GUID="{E6EDFB4F-CADA-4D4A-BAD3-2105535774E1}" MaxAttenuation="1." DurationType="OneShot" DurationMin="0.212642" DurationMax="0.515374">
 					<IncludedMemoryFiles>
 						<File Id="256394371" Language="SFX">
 							<ShortName>melee attack 3.wav</ShortName>
@@ -590,7 +590,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4040184904" Name="Play_Firegem_flight" ObjectPath="\Events\Default Work Unit\Play_Firegem_flight" GUID="{3A1CA2A3-6954-4467-B7CF-7A5DC14CD00C}" MaxAttenuation="100." DurationType="Infinite">
+				<Event Id="4040184904" Name="Play_Firegem_Flight" ObjectPath="\Events\Spells\Play_Firegem_Flight" GUID="{3A1CA2A3-6954-4467-B7CF-7A5DC14CD00C}" MaxAttenuation="1." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="354642032" Language="SFX">
 							<ShortName>Fire\Firegem_flight.wav</ShortName>
@@ -994,6 +994,14 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="2452991926" Name="Play_Obj_Chest_Open" ObjectPath="\Events\Objects\Play_Obj_Chest_Open" GUID="{EBE9C84A-B4C5-47D9-B1E3-CD0A634F5737}" DurationType="OneShot" DurationMin="2.614375" DurationMax="2.614375">
+					<IncludedMemoryFiles>
+						<File Id="67455737" Language="SFX">
+							<ShortName>Obj_Chest_Open.wav</ShortName>
+							<Path>SFX\Obj_Chest_Open_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="675557581" Name="Play_Obj_Door_Close" ObjectPath="\Events\Objects\Play_Obj_Door_Close" GUID="{0EB6F4DC-B789-4556-8799-94B3A1074DAD}" DurationType="OneShot" DurationMin="4.937933" DurationMax="4.937933">
 					<IncludedMemoryFiles>
 						<File Id="797369053" Language="SFX">
@@ -1066,7 +1074,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="2754623237" Name="Play_Plyr_Atk_Bsc_Lte" ObjectPath="\Events\Player\Play_Plyr_Atk_Bsc_Lte" GUID="{A456D08B-DFDD-401A-8695-659310B36C6B}" DurationType="OneShot" DurationMin="0.542354" DurationMax="0.542354">
+				<Event Id="2754623237" Name="Play_Plyr_Atk_Bsc_Lte" ObjectPath="\Events\Player\Play_Plyr_Atk_Bsc_Lte" GUID="{A456D08B-DFDD-401A-8695-659310B36C6B}" MaxAttenuation="1." DurationType="OneShot" DurationMin="0.128011" DurationMax="0.240623">
 					<IncludedMemoryFiles>
 						<File Id="22250190" Language="SFX">
 							<ShortName>Plyr_Basic_Atk_Lte.wav</ShortName>
@@ -1075,10 +1083,6 @@
 						<File Id="51339316" Language="SFX">
 							<ShortName>Plyr_Basic_Atk_Lte.wav</ShortName>
 							<Path>SFX\Plyr_Basic_Atk_Lte_5EBCC2A2.wem</Path>
-						</File>
-						<File Id="710380146" Language="SFX">
-							<ShortName>Gem_Recharge_Woosh.wav</ShortName>
-							<Path>SFX\Gem_Recharge_Woosh_10C4C929.wem</Path>
 						</File>
 						<File Id="993976044" Language="SFX">
 							<ShortName>Plyr_Basic_Atk_Lte.wav</ShortName>
@@ -1201,11 +1205,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2025845440" Name="Play_Torch" ObjectPath="\Events\Objects\Play_Torch" GUID="{3707B048-EDF0-4E4D-8C5D-55A4C56D80F8}" MaxAttenuation="1." DurationType="Infinite">
+				<Event Id="2025845440" Name="Play_Torch" ObjectPath="\Events\Objects\Play_Torch" GUID="{3707B048-EDF0-4E4D-8C5D-55A4C56D80F8}" MaxAttenuation="3." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="749598058" Language="SFX">
 							<ShortName>15-06 Fire,Fireplace Wood Burning In Fireplace.wav</ShortName>
 							<Path>SFX\15-06 Fire,Fireplace Wood Burning In Fireplace_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="78131764" Name="Play_Torch_Wave" ObjectPath="\Events\Player\Play_Torch_Wave" GUID="{8BC4171F-0351-47BA-B505-5A74670D1148}" DurationType="OneShot" DurationMin="0.542354" DurationMax="0.542354">
+					<IncludedMemoryFiles>
+						<File Id="710380146" Language="SFX">
+							<ShortName>Gem_Recharge_Woosh.wav</ShortName>
+							<Path>SFX\Gem_Recharge_Woosh_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -1225,6 +1237,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="781874286" Name="Stop_Firegem_Flight" ObjectPath="\Events\Spells\Stop_Firegem_Flight" GUID="{048162CD-E5CE-4CC1-881A-709CFBC809CF}" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2251837801" Name="Stop_PlayerFSMaterial" ObjectPath="\Events\Player\Stop_PlayerFSMaterial" GUID="{59CD016D-5D52-47B7-BA29-C9354F8B81C0}" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<GameParameters>

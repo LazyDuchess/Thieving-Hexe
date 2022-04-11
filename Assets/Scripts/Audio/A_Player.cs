@@ -26,9 +26,8 @@ public class A_Player : MonoBehaviour
     //Things to be accessed by anyone
 
     PlayerController pController;//get player public class
-    Rigidbody rb;
+  
 
-   
 
     //Things to be acecessed by only this script
     #region Private Variables
@@ -51,19 +50,23 @@ public class A_Player : MonoBehaviour
     [SerializeField] private AK.Wwise.Event pTakeDmgFire;
     // [SerializeField] private AK.Wwise.Event pTakeDmgElec;
     [SerializeField] private AK.Wwise.Event pDefeated;
+    [SerializeField] private AK.Wwise.Event pTorchWave;
 
-   
+
 
     #endregion
 
     public void Start()
     {
-        rb = GetComponentInParent<Rigidbody>();
+ 
         pController = GetComponentInParent<PlayerController>();
         GameEventsController.playerChargedAttackStartEvent += PlayChargeAttackStart;
         GameEventsController.playerChargedAttackEndEvent += PlayChargeAttackCast;
         GameEventsController.playerAttackEvent += PlayBasicAttack;
-        
+        GameEventsController.playerDamageEvent += PlayTakeDamage;
+        GameEventsController.gameOverEvent += PlayPlayerDeath;
+        GameEventsController.playerMeleeAttackEvent += PlayTorchWave;
+
         pFootStep.Post(gameObject); //start the float sound and use the RTPC to choose the volume of it
     }
 
@@ -71,13 +74,18 @@ public class A_Player : MonoBehaviour
     {
         //get and set player health RTPC
         float lastHp = pController.hp;
-        if(pController.hp != lastHp)
-        AkSoundEngine.SetRTPCValue("PlayerHealth",lastHp);
+        if (pController.hp != lastHp)
+            AkSoundEngine.SetRTPCValue("PlayerHealth", lastHp);
 
-        AkSoundEngine.SetRTPCValue("PlayerSpeed", GameEventsController.getPlayerSpeed());   
+        AkSoundEngine.SetRTPCValue("PlayerSpeed", GameEventsController.getPlayerSpeed());
     }
 
 
+/*    void PlayPotionPu()
+    {
+        if(pController.Interact)   
+    }
+*/
 
     void PlayBasicAttack()
     {
@@ -95,23 +103,24 @@ public class A_Player : MonoBehaviour
         pChrgAttackRelease.Post(gameObject);
     }
 
-
-
-    ///////////////Begin Animation Functions////////////////
-
-
     public void PlayPlayerDeath()
     {
         pDefeated.Post(gameObject);
     }
 
-    public void PlayTakeDamage()
+    public void PlayTakeDamage(Damage dmg)
     {
-
-        pTakeDmgGeneric.Post(gameObject);
+        if (dmg.damageType == DamageType.Constant)//take fire damage
+            pTakeDmgFire.Post(gameObject);
+        else
+            pTakeDmgGeneric.Post(gameObject);
     }
 
-    //////////END animation Functions////////////
+    public void PlayTorchWave()
+    {
+        pTorchWave.Post(gameObject);
+    }
+  
 
 
 

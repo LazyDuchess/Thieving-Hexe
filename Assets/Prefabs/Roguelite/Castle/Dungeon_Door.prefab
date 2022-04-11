@@ -133,7 +133,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e119593b947854b9e94728226a991f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorComponent: {fileID: 8520219546177411929}
+  playDoorOpen:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d27276916eaaa5c418686a83cce8c878, type: 2}
+  playDoorClose:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b07eae8e9f4e324bb6004a975f05edb, type: 2}
 --- !u!1001 &4575750744720145072
 PrefabInstance:
   m_ObjectHideFlags: 0

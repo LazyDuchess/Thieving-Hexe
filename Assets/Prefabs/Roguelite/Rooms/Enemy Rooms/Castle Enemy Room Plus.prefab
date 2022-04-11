@@ -6085,10 +6085,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5948341863790965515}
     m_Modifications:
-    - target: {fileID: 4939910705523870736, guid: 6622f7397aa83b347b9961197e8db886, type: 3}
-      propertyPath: data.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5865611630201199396, guid: 6622f7397aa83b347b9961197e8db886, type: 3}
       propertyPath: m_Name
       value: ReverbCastle

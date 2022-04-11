@@ -2,21 +2,23 @@ using UnityEngine;
 
 public class A_Door_OC : MonoBehaviour
 {
-    GameObject door;
+
+    [SerializeField] AK.Wwise.Event playDoorOpen;
+    [SerializeField] AK.Wwise.Event playDoorClose;
 
     public void Start()
     {
-        door = GetComponent<GameObject>();
+  
         GameEventsController.roomsOpenEvent += PlayOpenDoor;
         GameEventsController.roomsCloseEvent += PlayCloseDoor;
     }
 
      void PlayOpenDoor()
     {
-            AkSoundEngine.PostEvent("Obj_Door_Open", door);
+            playDoorOpen.Post(gameObject);
     }
      void PlayCloseDoor()
     {
-        AkSoundEngine.PostEvent("Obj_Door_Close", door);
+        playDoorClose.Post(gameObject);
     }
 }

@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: de69e0a8c0121f4897456ddb2dd8d19e
     GuidInternal: 
-    m_lastTime: -8585519544062038549
+    m_lastTime: -8585519493037325310
     List:
     - name: Ambience
       guid: 1f53f233bdaf274fb877b13d6c1016e3
@@ -455,6 +455,26 @@ MonoBehaviour:
         ObjectType: 2
         guid: fd44aa1bc3b2a34aa743f1e049895606
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Player
+    - name: PlyrBasicAttackLevel
+      guid: 8a250398c389304db8a96e56eab34a84
+      id: 2140747460
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: de69e0a8c0121f4897456ddb2dd8d19e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Player
+        ObjectType: 2
+        guid: fd44aa1bc3b2a34aa743f1e049895606
+      - ElementName: PlyrBasicAttackLevel
+        ObjectType: 2
+        guid: 8a250398c389304db8a96e56eab34a84
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Player\PlyrBasicAttackLevel
     - name: ReverbCastle
       guid: bc4c951c26501c4285931ff3ad90f8db
       id: 3128068529
@@ -604,7 +624,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 7eba4d089b921a46bb11fb91fae60011
     GuidInternal: 
-    m_lastTime: -8585519601091642441
+    m_lastTime: -8585519470439815594
     List:
     - name: Main
       guid: 5f870b2649904142a5a3c565028fd8cb
@@ -632,11 +652,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 411de6e562825d44b1e38d90e3d2c241
     GuidInternal: 
-    m_lastTime: -8585519601091716835
+    m_lastTime: -8585519470440177659
     List:
-    - name: Play_Firegem_flight
-      guid: a3a21c3a54696744b7cf7a5dc14cd00c
-      id: 4040184904
+    - name: Play_Obj_Chest_Open
+      guid: 4ac8e9ebc5b4d947b1e3cd0a634f5737
+      id: 2452991926
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -644,13 +664,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 411de6e562825d44b1e38d90e3d2c241
-      - ElementName: Play_Firegem_flight
+      - ElementName: Play_Obj_Chest_Open
         ObjectType: 3
-        guid: a3a21c3a54696744b7cf7a5dc14cd00c
-      Path: Events\Default Work Unit\Play_Firegem_flight
-      maxAttenuation: 100
-      maxDuration: -1
-      minDuration: -1
+        guid: 4ac8e9ebc5b4d947b1e3cd0a634f5737
+      Path: Events\Default Work Unit\Play_Obj_Chest_Open
+      maxAttenuation: 0
+      maxDuration: 2.614375
+      minDuration: 2.614375
   - PhysicalPath: Events\Enemies.wwu
     PathAndIcons:
     - ElementName: Events
@@ -678,7 +698,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2437c963447d854382f92df1b2735cbf
       Path: Events\Enemies\Play_Enem_Atk_Bsc_Charged
-      maxAttenuation: 100
+      maxAttenuation: 1
       maxDuration: 3.769821
       minDuration: 3.401892
     - name: Play_Enem_Atk_Bsc_Lte
@@ -695,7 +715,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 4ffbede6daca4a4dbad32105535774e1
       Path: Events\Enemies\Play_Enem_Atk_Bsc_Lte
-      maxAttenuation: 100
+      maxAttenuation: 1
       maxDuration: 0.515374
       minDuration: 0.212642
     - name: Play_Enem_Defeated
@@ -1036,7 +1056,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 889b1375d8f3834e83563ea1b89364e6
       Path: Events\Objects\Play_Campfire
-      maxAttenuation: 2
+      maxAttenuation: 5
       maxDuration: -1
       minDuration: -1
     - name: Play_CauldronBubbles
@@ -1104,7 +1124,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 48b00737f0ed4d4e8c5d55a4c56d80f8
       Path: Events\Objects\Play_Torch
-      maxAttenuation: 1
+      maxAttenuation: 3
       maxDuration: -1
       minDuration: -1
   - PhysicalPath: Events\Player.wwu
@@ -1118,7 +1138,7 @@ MonoBehaviour:
     ParentPath: Events\Player
     guid: a1c883d787be134cb580a86c2d3b3ae6
     GuidInternal: 
-    m_lastTime: -8585519596169592001
+    m_lastTime: -8585519470440514954
     List:
     - name: Play_PlayerFSMaterial
       guid: 32a955972ea0b1488ecd56738c3fee41
@@ -1151,9 +1171,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8bd056a4dddf1a408695659310b36c6b
       Path: Events\Player\Play_Plyr_Atk_Bsc_Lte
-      maxAttenuation: 0
-      maxDuration: 0.542354
-      minDuration: 0.542354
+      maxAttenuation: 1
+      maxDuration: 0.240623
+      minDuration: 0.128011
     - name: Play_Plyr_Atk_Chrg_Loop
       guid: 41b97604069eab4a9462a7d203fe0b7d
       id: 2613753308
@@ -1290,6 +1310,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.718759
       minDuration: 0.638117
+    - name: Play_Torch_Wave
+      guid: 1f17c48b5103ba47b5055a74670d1148
+      id: 78131764
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: a1c883d787be134cb580a86c2d3b3ae6
+      - ElementName: Play_Torch_Wave
+        ObjectType: 3
+        guid: 1f17c48b5103ba47b5055a74670d1148
+      Path: Events\Player\Play_Torch_Wave
+      maxAttenuation: 0
+      maxDuration: 0.542354
+      minDuration: 0.542354
     - name: Stop_PlayerFSMaterial
       guid: 6d01cd59525db747ba29c9354f8b81c0
       id: 2251837801
@@ -1304,6 +1341,53 @@ MonoBehaviour:
         ObjectType: 3
         guid: 6d01cd59525db747ba29c9354f8b81c0
       Path: Events\Player\Stop_PlayerFSMaterial
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - PhysicalPath: Events\Spells.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Spells
+      ObjectType: 12
+      guid: 4ecfa958b8553b4eb818aa6ac2034e8e
+    ParentPath: Events\Spells
+    guid: 4ecfa958b8553b4eb818aa6ac2034e8e
+    GuidInternal: 
+    m_lastTime: -8585519504831223914
+    List:
+    - name: Play_Firegem_Flight
+      guid: a3a21c3a54696744b7cf7a5dc14cd00c
+      id: 4040184904
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Spells
+        ObjectType: 12
+        guid: 4ecfa958b8553b4eb818aa6ac2034e8e
+      - ElementName: Play_Firegem_Flight
+        ObjectType: 3
+        guid: a3a21c3a54696744b7cf7a5dc14cd00c
+      Path: Events\Spells\Play_Firegem_Flight
+      maxAttenuation: 1
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Firegem_Flight
+      guid: cd628104cee5c14c881a709cfbc809cf
+      id: 781874286
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Spells
+        ObjectType: 12
+        guid: 4ecfa958b8553b4eb818aa6ac2034e8e
+      - ElementName: Stop_Firegem_Flight
+        ObjectType: 3
+        guid: cd628104cee5c14c881a709cfbc809cf
+      Path: Events\Spells\Stop_Firegem_Flight
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2021,8 +2105,8 @@ MonoBehaviour:
     m_lastTime: -8585533485103830915
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0100000002000000030000000400000005000000060000001f00000031000000330000003400000035000000360000003700000038000000390000003a0000003c0000003d0000006a00000088000000
-  AutoSyncSelection: 0
+  ExpandedWaapiItemIds: 01000000020000000300000004000000050000000600000008000000120000001e0000001f0000002400000031000000330000003400000035000000360000003700000038000000390000003a0000003c0000003d00000053000000550000006a00000088000000
+  AutoSyncSelection: 1
   autoPopulateEnabled: 1
   currentDataSource: 0
   CurrentPluginConfig: 

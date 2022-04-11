@@ -5480,7 +5480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3560061576207306993}
   - component: {fileID: 9069491374598491696}
-  - component: {fileID: 1009768812812471101}
+  - component: {fileID: 63021258373193017}
   m_Layer: 0
   m_Name: Campfire
   m_TagString: Untagged
@@ -5533,7 +5533,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &1009768812812471101
+--- !u!114 &63021258373193017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5542,7 +5542,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4191779816160807499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42ba80c7f8012a84481d07480c64a358, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fa1a21e22b7c96498106f041aaf23e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   triggerList: f7e1664c
@@ -5562,8 +5562,3 @@ MonoBehaviour:
   eventIdInternal: 0
   valueGuidInternal: 
   m_callbackDataInternal: {fileID: 0}
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0
-  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
-  LargeModePositions: []
-  multiPositionArray: []

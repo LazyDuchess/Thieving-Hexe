@@ -42,6 +42,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	1764819763	Platforms			\Default Work Unit\Master Audio Bus\Objects\Platforms	
 	1931646578	Campfire			\Default Work Unit\Master Audio Bus\Objects\Campfire	
 	2038898903	MusicRTPC			\Default Work Unit\Master Audio Bus\MusicRTPC	
+	2140747460	PlyrBasicAttackLevel			\Default Work Unit\Master Audio Bus\Player\PlyrBasicAttackLevel	
 	2151963051	Items			\Default Work Unit\Master Audio Bus\Items	
 	2242381963	Enemies			\Default Work Unit\Master Audio Bus\Enemies	
 	2294392292	Enem_FS			\Default Work Unit\Master Audio Bus\Enemies\Enem_FS	

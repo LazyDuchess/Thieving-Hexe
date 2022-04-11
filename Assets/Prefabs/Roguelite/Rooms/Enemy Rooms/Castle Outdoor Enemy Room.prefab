@@ -7929,10 +7929,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4674910517321748692}
     m_Modifications:
-    - target: {fileID: 4939910705523870736, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
-      propertyPath: data.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5865611630201199396, guid: 760de09ca0c00c14ebd7546bf65b3075, type: 3}
       propertyPath: m_Name
       value: ReverbCastleOutdoors

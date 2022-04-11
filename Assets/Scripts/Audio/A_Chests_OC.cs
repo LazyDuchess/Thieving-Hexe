@@ -5,17 +5,19 @@ using UnityEngine;
 public class A_Chests_OC : MonoBehaviour
 {
     GameObject chestObject;
+    [SerializeField] AK.Wwise.Event playChestOpen;
+
 
     public void Start()
     {
         chestObject = GetComponent<GameObject>();  
         GameEventsController.openChestEvent += PlayOpenChest;
-        //GameEventsController.openCloseEvent += PlayClosChest;
+     
     }
 
     public void PlayOpenChest()
     {
-        AkSoundEngine.PostEvent("Obj_Door_Open", chestObject);
+        playChestOpen.Post(gameObject);
     }
 }
 

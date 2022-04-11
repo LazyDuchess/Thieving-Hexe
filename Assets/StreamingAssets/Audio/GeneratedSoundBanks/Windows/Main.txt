@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	78131764	Play_Torch_Wave			\Player\Play_Torch_Wave	
 	149588724	Play_Plyr_Recv_Fire_Dmg			\Player\Play_Plyr_Recv_Fire_Dmg	
 	210028557	Play_CauldronBubbles			\Objects\Play_CauldronBubbles	
 	279773806	Play_Enem_Defeated			\Enemies\Play_Enem_Defeated	
@@ -6,6 +7,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	429735360	Play_Crystal_Small_Use			\Items\Play_Crystal_Small_Use	
 	432265666	Play_Enem_Skelle_FS_Material			\Enemies\Play_Enem_Skelle_FS_Material	
 	675557581	Play_Obj_Door_Close			\Objects\Play_Obj_Door_Close	
+	781874286	Stop_Firegem_Flight			\Spells\Stop_Firegem_Flight	
 	784653928	Play_GuardBlurb			\NPC\Play_GuardBlurb	
 	843314701	Play_Plyr_Atk_Chrg_Release			\Player\Play_Plyr_Atk_Chrg_Release	
 	856894529	Play_Plyr_Elcty_Wtr			\Player\Play_Plyr_Elcty_Wtr	
@@ -22,6 +24,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2157278666	Play_Enem_Atk_Bsc_Charged			\Enemies\Play_Enem_Atk_Bsc_Charged	
 	2251837801	Stop_PlayerFSMaterial			\Player\Stop_PlayerFSMaterial	
 	2258692236	Play_Itm_Pu_Key			\Items\Play_Itm_Pu_Key	
+	2452991926	Play_Obj_Chest_Open			\Objects\Play_Obj_Chest_Open	
 	2464356432	Play_Plyr_Defeated			\Player\Play_Plyr_Defeated	
 	2613753308	Play_Plyr_Atk_Chrg_Loop			\Player\Play_Plyr_Atk_Chrg_Loop	
 	2634303667	Play_Enem_Atk_Bsc_Lte			\Enemies\Play_Enem_Atk_Bsc_Lte	
@@ -35,7 +38,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3897903487	Play_Enem_Min_On_Fire			\Enemies\Play_Enem_Min_On_Fire	
 	4000411161	Play_Campfire			\Objects\Play_Campfire	
 	4038800916	Play_UI_RollOver			\UI\Play_UI_RollOver	
-	4040184904	Play_Firegem_flight			\Default Work Unit\Play_Firegem_flight	
+	4040184904	Play_Firegem_Flight			\Spells\Play_Firegem_Flight	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1834394558	Surface			\Default Work Unit\Surface	
@@ -97,6 +100,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	53224605	65bpm_4-4_Ps4_ AudioTrack	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Combat\65bpm_4-4_Ps4_ AudioTrack_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Castle_Combat\Combat\65bpm_4-4_Ps4_ AudioTrack		8507144
 	56535823	Player_Rec_Gen_Dmg-002_03	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Player_Rec_Gen_Dmg-002_795BD4D6.wem		\Actor-Mixer Hierarchy\Player\Player\Plyr_Rec_Gen_Dmg_Hit\Player_Rec_Gen_Dmg-002_03		25500
 	64890644	Itm_Crys_Empty	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Crys_Empty_D1B8BB5B.wem		\Actor-Mixer Hierarchy\Items\Crystal_Empty\Itm_Crys_Empty		46140
+	67455737	Obj_Chest_Open	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Obj_Chest_Open_10C4C929.wem		\Actor-Mixer Hierarchy\Object\Obj_Chest_Open		251044
 	69203506	65bpm_4-4_Ps4_ Bell	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\F-Combat\65bpm_4-4_Ps4_ Bell_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Forest_Combat\F-Combat\65bpm_4-4_Ps4_ Bell		8507144
 	72064895	Enem_Skelle_Defeated	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Enem_Skelle_Defeated_25C2B3EF.wem		\Actor-Mixer Hierarchy\Enemies\Skelle\Enem_Skelle_Defeat\Enem_Skelle_Defeated		187616
 	86142725	Itm_Pu_Crys_Fire	D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\SFX\Itm_Pu_Crys_Fire_2B0F0A4A.wem		\Actor-Mixer Hierarchy\Items\Crystal__Pickup\Crystal_Fire\Itm_Pu_Crys_Fire		396240

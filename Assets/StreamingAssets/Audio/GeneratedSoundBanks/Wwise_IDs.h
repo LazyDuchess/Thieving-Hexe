@@ -34,6 +34,7 @@ namespace AK
         static const AkUniqueID PLAY_ITM_PU_KEY = 2258692236U;
         static const AkUniqueID PLAY_ITM_PU_POTION = 873733766U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
+        static const AkUniqueID PLAY_OBJ_CHEST_OPEN = 2452991926U;
         static const AkUniqueID PLAY_OBJ_DOOR_CLOSE = 675557581U;
         static const AkUniqueID PLAY_OBJ_DOOR_OPEN = 1417455751U;
         static const AkUniqueID PLAY_PLAYERFSMATERIAL = 3383738331U;
@@ -47,8 +48,10 @@ namespace AK
         static const AkUniqueID PLAY_PLYR_REC_GEN_DMG = 3674195162U;
         static const AkUniqueID PLAY_PLYR_RECV_FIRE_DMG = 149588724U;
         static const AkUniqueID PLAY_TORCH = 2025845440U;
+        static const AkUniqueID PLAY_TORCH_WAVE = 78131764U;
         static const AkUniqueID PLAY_UI_MENUSELECT = 1999625262U;
         static const AkUniqueID PLAY_UI_ROLLOVER = 4038800916U;
+        static const AkUniqueID STOP_FIREGEM_FLIGHT = 781874286U;
         static const AkUniqueID STOP_PLAYERFSMATERIAL = 2251837801U;
     } // namespace EVENTS
 
@@ -184,6 +187,7 @@ namespace AK
         static const AkUniqueID OBJECTS = 1695690031U;
         static const AkUniqueID PLATFORMS = 1764819763U;
         static const AkUniqueID PLAYER = 1069431850U;
+        static const AkUniqueID PLYRBASICATTACKLEVEL = 2140747460U;
         static const AkUniqueID REVERBS = 3545700988U;
         static const AkUniqueID UI = 1551306167U;
         static const AkUniqueID VICTORY = 2716678721U;
