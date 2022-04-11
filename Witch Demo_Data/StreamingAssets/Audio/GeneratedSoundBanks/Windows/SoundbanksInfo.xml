@@ -1,0 +1,1281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\</ProjectRoot>
+		<SourceFilesRoot>D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\LooseLeafTea\_GameAudio\2022 Game Jams\BnW-LittleWitch\WwiseProject\BnW-LittleWitch\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="3021412759">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="865895389" Name="ReverbCastleHallway" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\ReverbCastleHallway" GUID="{847B36BA-4930-4FE6-A72C-57F8179C0018}"/>
+				<AuxBus Id="2493188974" Name="ReverbForest" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\ReverbForest" GUID="{92ABD452-AA5F-47BD-B749-CB3E37C386EC}"/>
+				<AuxBus Id="2895998378" Name="ReverbCastleOutdoors" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\ReverbCastleOutdoors" GUID="{5108ABF6-77E7-43A9-B775-18998FC5E27D}"/>
+				<AuxBus Id="3128068529" Name="ReverbCastle" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\ReverbCastle" GUID="{1C954CBC-5026-421C-8593-1FF3AD90F8DB}"/>
+			</IncludedAuxBusses>
+			<GameParameters>
+				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Music\MusicVolume" GUID="{3B5D930E-120D-4327-ACC5-06C6CC062D61}"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="3161908922" GUID="{260B875F-9049-4241-A5A3-C565028FD8CB}" Language="SFX" Hash="2292101508">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4000411161" Name="Play_Campfire" ObjectPath="\Events\Objects\Play_Campfire" GUID="{75139B88-F3D8-4E83-8356-3EA1B89364E6}" MaxAttenuation="2." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="244450833" Language="SFX">
+							<ShortName>15-12 Fire,Campfire Small Campfire Crackling,Hissing,Popping.wav</ShortName>
+							<Path>SFX\15-12 Fire,Campfire Small Campfire Crackling,Hissing,Popping_6EBC5331.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="210028557" Name="Play_CauldronBubbles" ObjectPath="\Events\Objects\Play_CauldronBubbles" GUID="{5553E6CB-C39C-415A-ABF5-FC4F348137DB}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="754377464" Language="SFX">
+							<ShortName>10-40 Bubbles In Water.wav</ShortName>
+							<Path>SFX\10-40 Bubbles In Water_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1152667966" Name="Play_Crystal__Pickup" ObjectPath="\Events\Items\Play_Crystal__Pickup" GUID="{6DF4D95E-3CCE-4D2C-935F-4770786B0ABD}" MaxAttenuation="35." DurationType="OneShot" DurationMin="1.628889" DurationMax="4.369598">
+					<IncludedMemoryFiles>
+						<File Id="86142725" Language="SFX">
+							<ShortName>Itm_Pu_Crys_Fire.wav</ShortName>
+							<Path>SFX\Itm_Pu_Crys_Fire_2B0F0A4A.wem</Path>
+						</File>
+						<File Id="162196080" Language="SFX">
+							<ShortName>Itum_Pu_Crys_Elec.wav</ShortName>
+							<Path>SFX\Itum_Pu_Crys_Elec_B7200A8E.wem</Path>
+						</File>
+						<File Id="166957269" Language="SFX">
+							<ShortName>Itm_Pu_Crys_Fire.wav</ShortName>
+							<Path>SFX\Itm_Pu_Crys_Fire_6700A14B.wem</Path>
+						</File>
+						<File Id="304636653" Language="SFX">
+							<ShortName>Itm_Pu_Crys_Fire.wav</ShortName>
+							<Path>SFX\Itm_Pu_Crys_Fire_41AFFC4A.wem</Path>
+						</File>
+						<File Id="388109844" Language="SFX">
+							<ShortName>Itm_Pu_Crys_Fire.wav</ShortName>
+							<Path>SFX\Itm_Pu_Crys_Fire_F91F0A84.wem</Path>
+						</File>
+						<File Id="448803947" Language="SFX">
+							<ShortName>Itm_Pu_Crys_Gen.wav</ShortName>
+							<Path>SFX\Itm_Pu_Crys_Gen_E3661695.wem</Path>
+						</File>
+						<File Id="500492691" Language="SFX">
+							<ShortName>Itm_Pu_Crys_Gen.wav</ShortName>
+							<Path>SFX\Itm_Pu_Crys_Gen_5D61E728.wem</Path>
+						</File>
+						<File Id="544043385" Language="SFX">
+							<ShortName>Itm_Pu_Crys_Gen.wav</ShortName>
+							<Path>SFX\Itm_Pu_Crys_Gen_6777DDCC.wem</Path>
+						</File>
+						<File Id="621582871" Language="SFX">
+							<ShortName>Itm_Pu_Crys_Fire.wav</ShortName>
+							<Path>SFX\Itm_Pu_Crys_Fire_0A984858.wem</Path>
+						</File>
+						<File Id="711835135" Language="SFX">
+							<ShortName>Itum_Pu_Crys_Elec.wav</ShortName>
+							<Path>SFX\Itum_Pu_Crys_Elec_122CA581.wem</Path>
+						</File>
+						<File Id="813758161" Language="SFX">
+							<ShortName>Itm_Pu_Crys_Water.wav</ShortName>
+							<Path>SFX\Itm_Pu_Crys_Water_136A1B94.wem</Path>
+						</File>
+						<File Id="930689824" Language="SFX">
+							<ShortName>Itum_Pu_Crys_Elec.wav</ShortName>
+							<Path>SFX\Itum_Pu_Crys_Elec_5FA7D0CA.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{8D582048-E57F-438E-A959-9B4EA2C862B8}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{8D582048-E57F-438E-A959-9B4EA2C862B8}">
+							<Media>
+								<File Id="448803947"/>
+								<File Id="500492691"/>
+								<File Id="544043385"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{C3677D5F-4FF8-4018-9184-908D9C65313A}">
+							<Media>
+								<File Id="448803947"/>
+								<File Id="500492691"/>
+								<File Id="544043385"/>
+								<File Id="813758161"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{157170C2-8C12-4413-9097-1084031BBE32}">
+							<Media>
+								<File Id="162196080"/>
+								<File Id="448803947"/>
+								<File Id="500492691"/>
+								<File Id="544043385"/>
+								<File Id="711835135"/>
+								<File Id="930689824"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{42EA02E0-E584-4B21-8D17-188D3F8178E3}">
+							<Media>
+								<File Id="86142725"/>
+								<File Id="166957269"/>
+								<File Id="304636653"/>
+								<File Id="388109844"/>
+								<File Id="448803947"/>
+								<File Id="500492691"/>
+								<File Id="544043385"/>
+								<File Id="621582871"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="288321370" Name="Play_Crystal_Empty" ObjectPath="\Events\Items\Play_Crystal_Empty" GUID="{DCB5F79E-4AFE-4FDD-99C6-44F1DAB9B6C8}" DurationType="OneShot" DurationMin="0.427583" DurationMax="0.53872">
+					<IncludedMemoryFiles>
+						<File Id="64890644" Language="SFX">
+							<ShortName>Itm_Crys_Empty.wav</ShortName>
+							<Path>SFX\Itm_Crys_Empty_D1B8BB5B.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1263063560" Name="Play_Crystal_Large_Use" ObjectPath="\Events\Items\Play_Crystal_Large_Use" GUID="{BF10040B-57C9-4753-9FA6-23A9B3C256BD}" DurationType="OneShot" DurationMin="1.214512" DurationMax="1.469597">
+					<IncludedMemoryFiles>
+						<File Id="428034819" Language="SFX">
+							<ShortName>Itm_Crys_Large_Use.wav</ShortName>
+							<Path>SFX\Itm_Crys_Large_Use_A2F771B2.wem</Path>
+						</File>
+						<File Id="850542848" Language="SFX">
+							<ShortName>Itm_Crys_Large_Use.wav</ShortName>
+							<Path>SFX\Itm_Crys_Large_Use_2E96E038.wem</Path>
+						</File>
+						<File Id="1066099078" Language="SFX">
+							<ShortName>Itm_Crys_Large_Use.wav</ShortName>
+							<Path>SFX\Itm_Crys_Large_Use_18A7DFA9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="429735360" Name="Play_Crystal_Small_Use" ObjectPath="\Events\Items\Play_Crystal_Small_Use" GUID="{B708018A-3709-4E8B-B5BC-DBE58757DC52}" DurationType="OneShot" DurationMin="0.665966" DurationMax="0.887682">
+					<IncludedMemoryFiles>
+						<File Id="343030236" Language="SFX">
+							<ShortName>Itm_Crys_Sml_Use.wav</ShortName>
+							<Path>SFX\Itm_Crys_Sml_Use_A4CDDF3F.wem</Path>
+						</File>
+						<File Id="529069888" Language="SFX">
+							<ShortName>Itm_Crys_Sml_Use.wav</ShortName>
+							<Path>SFX\Itm_Crys_Sml_Use_A74C2117.wem</Path>
+						</File>
+						<File Id="692839569" Language="SFX">
+							<ShortName>Itm_Crys_Sml_Use.wav</ShortName>
+							<Path>SFX\Itm_Crys_Sml_Use_70C67D92.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2157278666" Name="Play_Enem_Atk_Bsc_Charged" ObjectPath="\Events\Enemies\Play_Enem_Atk_Bsc_Charged" GUID="{63C93724-7D44-4385-82F9-2DF1B2735CBF}" MaxAttenuation="100." DurationType="OneShot" DurationMin="3.401892" DurationMax="3.769821">
+					<IncludedMemoryFiles>
+						<File Id="181428061" Language="SFX">
+							<ShortName>Plyr_Atk_Bsc_Chrg_Wu.wav</ShortName>
+							<Path>SFX\Plyr_Atk_Bsc_Chrg_Wu_E3D2A571.wem</Path>
+						</File>
+						<File Id="778632297" Language="SFX">
+							<ShortName>Plyr_Atk_Bsc_Chrg_Rls.wav</ShortName>
+							<Path>SFX\Plyr_Atk_Bsc_Chrg_Rls_9FB83B63.wem</Path>
+						</File>
+						<File Id="864348206" Language="SFX">
+							<ShortName>Plyr_Atk_Bsc_Chrg_Rls.wav</ShortName>
+							<Path>SFX\Plyr_Atk_Bsc_Chrg_Rls_32380459.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2634303667" Name="Play_Enem_Atk_Bsc_Lte" ObjectPath="\Events\Enemies\Play_Enem_Atk_Bsc_Lte" GUID="{E6EDFB4F-CADA-4D4A-BAD3-2105535774E1}" MaxAttenuation="100." DurationType="OneShot" DurationMin="0.131762" DurationMax="0.240623">
+					<IncludedMemoryFiles>
+						<File Id="22250190" Language="SFX">
+							<ShortName>Plyr_Basic_Atk_Lte.wav</ShortName>
+							<Path>SFX\Plyr_Basic_Atk_Lte_ADFC620C.wem</Path>
+						</File>
+						<File Id="51339316" Language="SFX">
+							<ShortName>Plyr_Basic_Atk_Lte.wav</ShortName>
+							<Path>SFX\Plyr_Basic_Atk_Lte_5EBCC2A2.wem</Path>
+						</File>
+						<File Id="993976044" Language="SFX">
+							<ShortName>Plyr_Basic_Atk_Lte.wav</ShortName>
+							<Path>SFX\Plyr_Basic_Atk_Lte_16BB7069.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="279773806" Name="Play_Enem_Defeated" ObjectPath="\Events\Enemies\Play_Enem_Defeated" GUID="{58747FC8-D51A-44AE-A181-D11C819A0349}" DurationType="OneShot" DurationMin="2.576396" DurationMax="2.576396">
+					<IncludedMemoryFiles>
+						<File Id="1060646666" Language="SFX">
+							<ShortName>Plyr_Defeated.wav</ShortName>
+							<Path>SFX\Plyr_Defeated_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3897903487" Name="Play_Enem_Min_On_Fire" ObjectPath="\Events\Enemies\Play_Enem_Min_On_Fire" GUID="{D03FD14D-E3F6-4F41-8FE5-44DD343BB907}" DurationType="OneShot" DurationMin="3.95075" DurationMax="4.132163">
+					<IncludedMemoryFiles>
+						<File Id="573754509" Language="SFX">
+							<ShortName>Enem_Min_On_Fire.wav</ShortName>
+							<Path>SFX\Enem_Min_On_Fire_541090AF.wem</Path>
+						</File>
+						<File Id="946146255" Language="SFX">
+							<ShortName>Enem_Min_On_Fire.wav</ShortName>
+							<Path>SFX\Enem_Min_On_Fire_1E960CC8.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1064632258" Name="Play_Enem_Rec_Gen_Dmg_Hit" ObjectPath="\Events\Enemies\Play_Enem_Rec_Gen_Dmg_Hit" GUID="{8C09158A-3C2F-4B87-A170-F47982D50C02}" DurationType="OneShot" DurationMin="0.183089" DurationMax="0.251412">
+					<IncludedMemoryFiles>
+						<File Id="644832395" Language="SFX">
+							<ShortName>Enem_Skelle_Pain.wav</ShortName>
+							<Path>SFX\Enem_Skelle_Pain_B72FBF0C.wem</Path>
+						</File>
+						<File Id="683474123" Language="SFX">
+							<ShortName>Enem_Skelle_Pain.wav</ShortName>
+							<Path>SFX\Enem_Skelle_Pain_71673651.wem</Path>
+						</File>
+						<File Id="891458326" Language="SFX">
+							<ShortName>Enem_Skelle_Pain.wav</ShortName>
+							<Path>SFX\Enem_Skelle_Pain_CE96C0B7.wem</Path>
+						</File>
+						<File Id="924503617" Language="SFX">
+							<ShortName>Enem_Skelle_Pain.wav</ShortName>
+							<Path>SFX\Enem_Skelle_Pain_07D2E8CF.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="924170866" Name="Play_Enem_Recv_Fire_Dmg" ObjectPath="\Events\Enemies\Play_Enem_Recv_Fire_Dmg" GUID="{E65AC086-8549-4CE8-AF77-D6999D2B3E59}" DurationType="OneShot" DurationMin="0.638117" DurationMax="0.718759">
+					<IncludedMemoryFiles>
+						<File Id="22582029" Language="SFX">
+							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
+							<Path>SFX\Plyr_Tk_Fire_Dmg_EEDC246E.wem</Path>
+						</File>
+						<File Id="369104491" Language="SFX">
+							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
+							<Path>SFX\Plyr_Tk_Fire_Dmg_B21521BE.wem</Path>
+						</File>
+						<File Id="644832395" Language="SFX">
+							<ShortName>Enem_Skelle_Pain.wav</ShortName>
+							<Path>SFX\Enem_Skelle_Pain_B72FBF0C.wem</Path>
+						</File>
+						<File Id="683474123" Language="SFX">
+							<ShortName>Enem_Skelle_Pain.wav</ShortName>
+							<Path>SFX\Enem_Skelle_Pain_71673651.wem</Path>
+						</File>
+						<File Id="891458326" Language="SFX">
+							<ShortName>Enem_Skelle_Pain.wav</ShortName>
+							<Path>SFX\Enem_Skelle_Pain_CE96C0B7.wem</Path>
+						</File>
+						<File Id="924503617" Language="SFX">
+							<ShortName>Enem_Skelle_Pain.wav</ShortName>
+							<Path>SFX\Enem_Skelle_Pain_07D2E8CF.wem</Path>
+						</File>
+						<File Id="928839707" Language="SFX">
+							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
+							<Path>SFX\Plyr_Tk_Fire_Dmg_77B97DE7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2027687623" Name="Play_Enem_Skel_FS_Material" ObjectPath="\Events\Enemies\Play_Enem_Skel_FS_Material" GUID="{0FE3823D-1316-481C-A8CD-1DF15F2637A2}" DurationType="OneShot" DurationMin="0.312948" DurationMax="7.096122">
+					<IncludedMemoryFiles>
+						<File Id="39288903" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_03.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_03_10C4C929.wem</Path>
+						</File>
+						<File Id="101270542" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_05.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_05_10C4C929.wem</Path>
+						</File>
+						<File Id="107189339" Language="SFX">
+							<ShortName>LittelWitch_Enemies.wav</ShortName>
+							<Path>SFX\LittelWitch_Enemies_3518BBB6.wem</Path>
+						</File>
+						<File Id="120264666" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_03.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_03_10C4C929.wem</Path>
+						</File>
+						<File Id="121166745" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_04.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_04_10C4C929.wem</Path>
+						</File>
+						<File Id="179448580" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_01.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_01_10C4C929.wem</Path>
+						</File>
+						<File Id="282168526" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_05.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_05_10C4C929.wem</Path>
+						</File>
+						<File Id="288223943" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_06.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_06_10C4C929.wem</Path>
+						</File>
+						<File Id="353426455" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_06.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_06_10C4C929.wem</Path>
+						</File>
+						<File Id="404218679" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_02.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_02_10C4C929.wem</Path>
+						</File>
+						<File Id="456019608" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_04.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_04_10C4C929.wem</Path>
+						</File>
+						<File Id="458361069" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_02.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_02_10C4C929.wem</Path>
+						</File>
+						<File Id="501265382" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_01.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_01_10C4C929.wem</Path>
+						</File>
+						<File Id="514191403" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_06.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_06_10C4C929.wem</Path>
+						</File>
+						<File Id="520401883" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_04.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_04_10C4C929.wem</Path>
+						</File>
+						<File Id="550253140" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_03.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_03_10C4C929.wem</Path>
+						</File>
+						<File Id="561474046" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_01.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_01_10C4C929.wem</Path>
+						</File>
+						<File Id="607506639" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Rock\FS_Rock_Walk.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Rock\FS_Rock_Walk_10C4C929.wem</Path>
+						</File>
+						<File Id="617394203" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_03.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_03_10C4C929.wem</Path>
+						</File>
+						<File Id="713164584" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Rock\FS_Rock_Run.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Rock\FS_Rock_Run_10C4C929.wem</Path>
+						</File>
+						<File Id="746897624" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_06.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_06_10C4C929.wem</Path>
+						</File>
+						<File Id="758117669" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_02.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_02_10C4C929.wem</Path>
+						</File>
+						<File Id="828532229" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_02.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_02_10C4C929.wem</Path>
+						</File>
+						<File Id="917759569" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_04.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_04_10C4C929.wem</Path>
+						</File>
+						<File Id="923691520" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_05.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_05_10C4C929.wem</Path>
+						</File>
+						<File Id="947289431" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_05.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_05_10C4C929.wem</Path>
+						</File>
+						<File Id="998794094" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_01.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{5F3DD7CE-DC74-41C8-AC32-2BCCF21F5C3A}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{7D7C1003-C942-4065-A5A5-2112D6726F73}">
+							<DefaultSwitchValue>{C1EA44B5-10E1-4608-BDDE-5C63E9FCCF80}</DefaultSwitchValue>
+							<Children>
+								<SwitchContainer SwitchValue="{C1EA44B5-10E1-4608-BDDE-5C63E9FCCF80}">
+									<Media>
+										<File Id="458361069"/>
+										<File Id="561474046"/>
+										<File Id="617394203"/>
+										<File Id="746897624"/>
+										<File Id="917759569"/>
+										<File Id="947289431"/>
+									</Media>
+								</SwitchContainer>
+								<SwitchContainer SwitchValue="{B9AAA6B7-5AFF-4E65-A85D-234973755F21}">
+									<Media>
+										<File Id="101270542"/>
+										<File Id="120264666"/>
+										<File Id="456019608"/>
+										<File Id="501265382"/>
+										<File Id="514191403"/>
+										<File Id="828532229"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{5F3DD7CE-DC74-41C8-AC32-2BCCF21F5C3A}">
+							<DefaultSwitchValue>{C1EA44B5-10E1-4608-BDDE-5C63E9FCCF80}</DefaultSwitchValue>
+							<Children>
+								<SwitchContainer SwitchValue="{C1EA44B5-10E1-4608-BDDE-5C63E9FCCF80}">
+									<Media>
+										<File Id="713164584"/>
+									</Media>
+								</SwitchContainer>
+								<SwitchContainer SwitchValue="{B9AAA6B7-5AFF-4E65-A85D-234973755F21}">
+									<Media>
+										<File Id="607506639"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{F1F3F8DC-4AC8-4866-A6E0-536073DE1645}">
+							<DefaultSwitchValue>{C1EA44B5-10E1-4608-BDDE-5C63E9FCCF80}</DefaultSwitchValue>
+							<Children>
+								<SwitchContainer SwitchValue="{C1EA44B5-10E1-4608-BDDE-5C63E9FCCF80}">
+									<Media>
+										<File Id="39288903"/>
+										<File Id="179448580"/>
+										<File Id="282168526"/>
+										<File Id="353426455"/>
+										<File Id="404218679"/>
+										<File Id="520401883"/>
+									</Media>
+								</SwitchContainer>
+								<SwitchContainer SwitchValue="{B9AAA6B7-5AFF-4E65-A85D-234973755F21}">
+									<Media>
+										<File Id="121166745"/>
+										<File Id="288223943"/>
+										<File Id="550253140"/>
+										<File Id="758117669"/>
+										<File Id="923691520"/>
+										<File Id="998794094"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3332044750" Name="Play_Enem_Skelle_Defeat" ObjectPath="\Events\Enemies\Play_Enem_Skelle_Defeat" GUID="{D0DB3622-A566-44BE-B3A6-67DA4DDF476A}" DurationType="OneShot" DurationMin="1.953649" DurationMax="2.122287">
+					<IncludedMemoryFiles>
+						<File Id="72064895" Language="SFX">
+							<ShortName>Enem_Skelle_Defeated.wav</ShortName>
+							<Path>SFX\Enem_Skelle_Defeated_25C2B3EF.wem</Path>
+						</File>
+						<File Id="122015717" Language="SFX">
+							<ShortName>Enem_Skelle_Defeated.wav</ShortName>
+							<Path>SFX\Enem_Skelle_Defeated_0A9E722D.wem</Path>
+						</File>
+						<File Id="204275985" Language="SFX">
+							<ShortName>Enem_Skelle_Defeated.wav</ShortName>
+							<Path>SFX\Enem_Skelle_Defeated_6ACC40E1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="432265666" Name="Play_Enem_Skelle_FS_Material" ObjectPath="\Events\Enemies\Play_Enem_Skelle_FS_Material" GUID="{EC3D7CCE-AA9E-4D06-8647-8ACC7BE380A1}" DurationType="OneShot" DurationMin="0.312948" DurationMax="7.096122">
+					<IncludedMemoryFiles>
+						<File Id="39288903" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_03.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_03_10C4C929.wem</Path>
+						</File>
+						<File Id="101270542" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_05.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_05_10C4C929.wem</Path>
+						</File>
+						<File Id="120264666" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_03.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_03_10C4C929.wem</Path>
+						</File>
+						<File Id="121166745" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_04.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_04_10C4C929.wem</Path>
+						</File>
+						<File Id="179448580" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_01.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_01_10C4C929.wem</Path>
+						</File>
+						<File Id="282168526" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_05.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_05_10C4C929.wem</Path>
+						</File>
+						<File Id="288223943" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_06.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_06_10C4C929.wem</Path>
+						</File>
+						<File Id="353426455" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_06.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_06_10C4C929.wem</Path>
+						</File>
+						<File Id="404218679" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_02.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_02_10C4C929.wem</Path>
+						</File>
+						<File Id="456019608" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_04.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_04_10C4C929.wem</Path>
+						</File>
+						<File Id="458361069" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_02.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_02_10C4C929.wem</Path>
+						</File>
+						<File Id="501265382" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_01.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_01_10C4C929.wem</Path>
+						</File>
+						<File Id="514191403" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_06.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_06_10C4C929.wem</Path>
+						</File>
+						<File Id="520401883" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_04.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Running\Footstep_Tile_Running_04_10C4C929.wem</Path>
+						</File>
+						<File Id="550253140" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_03.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_03_10C4C929.wem</Path>
+						</File>
+						<File Id="561474046" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_01.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_01_10C4C929.wem</Path>
+						</File>
+						<File Id="607506639" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Rock\FS_Rock_Walk.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Rock\FS_Rock_Walk_10C4C929.wem</Path>
+						</File>
+						<File Id="617394203" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_03.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_03_10C4C929.wem</Path>
+						</File>
+						<File Id="713164584" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Rock\FS_Rock_Run.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Rock\FS_Rock_Run_10C4C929.wem</Path>
+						</File>
+						<File Id="746897624" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_06.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_06_10C4C929.wem</Path>
+						</File>
+						<File Id="758117669" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_02.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_02_10C4C929.wem</Path>
+						</File>
+						<File Id="828532229" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_02.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Walking\Footstep_Grass_Walking_02_10C4C929.wem</Path>
+						</File>
+						<File Id="917759569" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_04.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_04_10C4C929.wem</Path>
+						</File>
+						<File Id="923691520" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_05.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_05_10C4C929.wem</Path>
+						</File>
+						<File Id="947289431" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_05.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Grass\FS_Grass_Running\Footstep_Grass_Running_05_10C4C929.wem</Path>
+						</File>
+						<File Id="998794094" Language="SFX">
+							<ShortName>Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_01.wav</ShortName>
+							<Path>SFX\Player_FS_Material\Player_FS_Tile\FS_Tile_Walking\Footstep_Tile_Walking_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4040184904" Name="Play_Firegem_flight" ObjectPath="\Events\Default Work Unit\Play_Firegem_flight" GUID="{3A1CA2A3-6954-4467-B7CF-7A5DC14CD00C}" MaxAttenuation="100." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="354642032" Language="SFX">
+							<ShortName>Fire\Firegem_flight.wav</ShortName>
+							<Path>SFX\Fire\Firegem_flight_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="784653928" Name="Play_GuardBlurb" ObjectPath="\Events\NPC\Play_GuardBlurb" GUID="{7D77B9FE-D715-4396-8C9B-17E4E26E6177}" MaxAttenuation="35." DurationType="OneShot" DurationMin="0.338956" DurationMax="1.41325">
+					<IncludedMemoryFiles>
+						<File Id="812650" Language="SFX">
+							<ShortName>NPC_Guard_Vox.wav</ShortName>
+							<Path>SFX\NPC_Guard_Vox_A0EEAFDD.wem</Path>
+						</File>
+						<File Id="21641071" Language="SFX">
+							<ShortName>NPC_Guard_Vox.wav</ShortName>
+							<Path>SFX\NPC_Guard_Vox_D80282C2.wem</Path>
+						</File>
+						<File Id="156571477" Language="SFX">
+							<ShortName>NPC_Guard_Vox.wav</ShortName>
+							<Path>SFX\NPC_Guard_Vox_A9AE8946.wem</Path>
+						</File>
+						<File Id="328377498" Language="SFX">
+							<ShortName>NPC_Guard_Vox.wav</ShortName>
+							<Path>SFX\NPC_Guard_Vox_B2FFB6C5.wem</Path>
+						</File>
+						<File Id="414767398" Language="SFX">
+							<ShortName>NPC_Guard_Vox.wav</ShortName>
+							<Path>SFX\NPC_Guard_Vox_0784FC35.wem</Path>
+						</File>
+						<File Id="480301423" Language="SFX">
+							<ShortName>NPC_Guard_Vox.wav</ShortName>
+							<Path>SFX\NPC_Guard_Vox_92ED325B.wem</Path>
+						</File>
+						<File Id="724859944" Language="SFX">
+							<ShortName>NPC_Guard_Vox.wav</ShortName>
+							<Path>SFX\NPC_Guard_Vox_8162FBCF.wem</Path>
+						</File>
+						<File Id="1025613972" Language="SFX">
+							<ShortName>NPC_Guard_Vox.wav</ShortName>
+							<Path>SFX\NPC_Guard_Vox_109909AC.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2003385513" Name="Play_Itm_Drink_Potion" ObjectPath="\Events\Items\Play_Itm_Drink_Potion" GUID="{C126DF57-BAC1-4B65-A396-0269938F19D8}" DurationType="OneShot" DurationMin="7.674434" DurationMax="8.13078">
+					<IncludedMemoryFiles>
+						<File Id="408779655" Language="SFX">
+							<ShortName>Itm_Drink_Potion.wav</ShortName>
+							<Path>SFX\Itm_Drink_Potion_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2258692236" Name="Play_Itm_Pu_Key" ObjectPath="\Events\Items\Play_Itm_Pu_Key" GUID="{F6C634A8-2B24-4626-BEAE-A9DD63800092}" DurationType="OneShot" DurationMin="1.70562" DurationMax="1.809131">
+					<IncludedMemoryFiles>
+						<File Id="692896475" Language="SFX">
+							<ShortName>Itm_Pu_Key.wav</ShortName>
+							<Path>SFX\Itm_Pu_Key_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="873733766" Name="Play_Itm_Pu_Potion" ObjectPath="\Events\Items\Play_Itm_Pu_Potion" GUID="{7A2E54CB-1365-43A8-9BC3-9B907E17427C}" DurationType="OneShot" DurationMin="1.137043" DurationMax="1.242815">
+					<IncludedMemoryFiles>
+						<File Id="243050784" Language="SFX">
+							<ShortName>Itm_Pu_Potion.wav</ShortName>
+							<Path>SFX\Itm_Pu_Potion_858A92E3.wem</Path>
+						</File>
+						<File Id="674862323" Language="SFX">
+							<ShortName>Itm_Pu_Potion.wav</ShortName>
+							<Path>SFX\Itm_Pu_Potion_3D6845D6.wem</Path>
+						</File>
+						<File Id="884774889" Language="SFX">
+							<ShortName>Itm_Pu_Potion.wav</ShortName>
+							<Path>SFX\Itm_Pu_Potion_B552CB1A.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Music\Play_Music" GUID="{15C1CAC8-DB6A-4160-AA63-4D9BE4E15C78}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="11340700" Language="SFX">
+							<ShortName>NoCombat\65bpm_4-4_Ps4_ AudioTrack-1.wav</ShortName>
+							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ AudioTrack-1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="15309980" Language="SFX">
+							<ShortName>BGs\130bpm_4-4_Ps4_Sticks Wind.wav</ShortName>
+							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks Wind_D79FB2B7.wem</Path>
+						</File>
+						<File Id="17036018" Language="SFX">
+							<ShortName>Victory\130bpm_4-4_Ps4_Bgs_ AudioTrack-1.wav</ShortName>
+							<Path>SFX\Victory\130bpm_4-4_Ps4_Bgs_ AudioTrack-1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="52669161" Language="SFX">
+							<ShortName>Victory\65bpm_4-4_Ps4_ Vio.wav</ShortName>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ Vio_D79FB2B7.wem</Path>
+						</File>
+						<File Id="53224605" Language="SFX">
+							<ShortName>Combat\65bpm_4-4_Ps4_ AudioTrack.wav</ShortName>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ AudioTrack_D79FB2B7.wem</Path>
+						</File>
+						<File Id="69203506" Language="SFX">
+							<ShortName>F-Combat\65bpm_4-4_Ps4_ Bell.wav</ShortName>
+							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Bell_D79FB2B7.wem</Path>
+						</File>
+						<File Id="90553840" Language="SFX">
+							<ShortName>F-Combat\65bpm_4-4_Ps4_ Sub.wav</ShortName>
+							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Sub_D79FB2B7.wem</Path>
+						</File>
+						<File Id="93197845" Language="SFX">
+							<ShortName>Combat\65bpm_4-4_Ps4_ Pad1.wav</ShortName>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ Pad1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="99629851" Language="SFX">
+							<ShortName>F-Combat\65bpm_4-4_Ps4_ Gp-Sticks.wav</ShortName>
+							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Gp-Sticks_D79FB2B7.wem</Path>
+						</File>
+						<File Id="121077130" Language="SFX">
+							<ShortName>Victory\65bpm_4-4_Ps4_ celest.wav</ShortName>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ celest_D79FB2B7.wem</Path>
+						</File>
+						<File Id="123896868" Language="SFX">
+							<ShortName>65bpm_4-4_Ps4_v2_.wav</ShortName>
+							<Path>SFX\65bpm_4-4_Ps4_v2__D79FB2B7.wem</Path>
+						</File>
+						<File Id="128466011" Language="SFX">
+							<ShortName>Victory\130bpm_4-4_Ps4_Bgs_ AudioTrack.wav</ShortName>
+							<Path>SFX\Victory\130bpm_4-4_Ps4_Bgs_ AudioTrack_D79FB2B7.wem</Path>
+						</File>
+						<File Id="139678865" Language="SFX">
+							<ShortName>Victory\65bpm_4-4_Ps4_ Drone.wav</ShortName>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ Drone_D79FB2B7.wem</Path>
+						</File>
+						<File Id="162999389" Language="SFX">
+							<ShortName>F-Explore\4-4_8b_Ps4- Viola-Long.wav</ShortName>
+							<Path>SFX\F-Explore\4-4_8b_Ps4- Viola-Long_D79FB2B7.wem</Path>
+						</File>
+						<File Id="175321091" Language="SFX">
+							<ShortName>F-Explore\4-4_8b_Ps4- Bell.wav</ShortName>
+							<Path>SFX\F-Explore\4-4_8b_Ps4- Bell_D79FB2B7.wem</Path>
+						</File>
+						<File Id="210401186" Language="SFX">
+							<ShortName>Combat\130bpm_4-4_Ps4_Sticks.wav</ShortName>
+							<Path>SFX\Combat\130bpm_4-4_Ps4_Sticks_D79FB2B7.wem</Path>
+						</File>
+						<File Id="217656417" Language="SFX">
+							<ShortName>Combat\65bpm_4-4_Ps4_ Vio-Long.wav</ShortName>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ Vio-Long_D79FB2B7.wem</Path>
+						</File>
+						<File Id="270625144" Language="SFX">
+							<ShortName>F-Combat\65bpm_4-4_Ps4_ Pad2.wav</ShortName>
+							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Pad2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="283145668" Language="SFX">
+							<ShortName>F-Explore\4-4_8b_Ps4- LowPadAmb.wav</ShortName>
+							<Path>SFX\F-Explore\4-4_8b_Ps4- LowPadAmb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="311776272" Language="SFX">
+							<ShortName>Victory\65bpm_4-4_Ps4_ Viola.wav</ShortName>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ Viola_D79FB2B7.wem</Path>
+						</File>
+						<File Id="327508240" Language="SFX">
+							<ShortName>BGs\130bpm_4-4_Ps4_Sticks EreieNightMAbience.wav</ShortName>
+							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks EreieNightMAbience_D79FB2B7.wem</Path>
+						</File>
+						<File Id="355700024" Language="SFX">
+							<ShortName>Victory\65bpm_4-4_Ps4_ Applause.wav</ShortName>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ Applause_D79FB2B7.wem</Path>
+						</File>
+						<File Id="399734064" Language="SFX">
+							<ShortName>Victory\65bpm_4-4_Ps4_ Boss.wav</ShortName>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ Boss_D79FB2B7.wem</Path>
+						</File>
+						<File Id="451603062" Language="SFX">
+							<ShortName>Victory\65bpm_4-4_Ps4_ AudioTrack-1.wav</ShortName>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ AudioTrack-1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="480230374" Language="SFX">
+							<ShortName>F-Explore\4-4_8b_Ps4- Pad2.wav</ShortName>
+							<Path>SFX\F-Explore\4-4_8b_Ps4- Pad2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="487988959" Language="SFX">
+							<ShortName>NoCombat\65bpm_4-4_Ps4_ Sub-Lon.wav</ShortName>
+							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ Sub-Lon_D79FB2B7.wem</Path>
+						</File>
+						<File Id="514480090" Language="SFX">
+							<ShortName>Combat\65bpm_4-4_Ps4_ Gp-Sticks.wav</ShortName>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ Gp-Sticks_D79FB2B7.wem</Path>
+						</File>
+						<File Id="534454176" Language="SFX">
+							<ShortName>F-Explore\4-4_8b_Ps4- Vio-Long.wav</ShortName>
+							<Path>SFX\F-Explore\4-4_8b_Ps4- Vio-Long_D79FB2B7.wem</Path>
+						</File>
+						<File Id="550532329" Language="SFX">
+							<ShortName>Combat\130bpm_4-4_Ps4_.wav</ShortName>
+							<Path>SFX\Combat\130bpm_4-4_Ps4__D79FB2B7.wem</Path>
+						</File>
+						<File Id="581991665" Language="SFX">
+							<ShortName>F-Combat\65bpm_4-4_Ps4_ Cel-st.wav</ShortName>
+							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ Cel-st_D79FB2B7.wem</Path>
+						</File>
+						<File Id="584927690" Language="SFX">
+							<ShortName>Combat\65bpm_4-4_Ps4_ Viola-Long.wav</ShortName>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ Viola-Long_D79FB2B7.wem</Path>
+						</File>
+						<File Id="596365406" Language="SFX">
+							<ShortName>Combat\130bpm_4-4_Ps4_Snare.wav</ShortName>
+							<Path>SFX\Combat\130bpm_4-4_Ps4_Snare_D79FB2B7.wem</Path>
+						</File>
+						<File Id="681178562" Language="SFX">
+							<ShortName>NoCombat\65bpm_4-4_Ps4_ knock.wav</ShortName>
+							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ knock_D79FB2B7.wem</Path>
+						</File>
+						<File Id="681854251" Language="SFX">
+							<ShortName>Combat\65bpm_4-4_Ps4_v2_.wav</ShortName>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_v2__D79FB2B7.wem</Path>
+						</File>
+						<File Id="801459080" Language="SFX">
+							<ShortName>Combat\65bpm_4-4_Ps4_ LowPadAmb.wav</ShortName>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ LowPadAmb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="802222803" Language="SFX">
+							<ShortName>NoCombat\65bpm_4-4_Ps4_ Pad1.wav</ShortName>
+							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ Pad1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="810246091" Language="SFX">
+							<ShortName>BGs\130bpm_4-4_Ps4_Sticks drips.wav</ShortName>
+							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks drips_D79FB2B7.wem</Path>
+						</File>
+						<File Id="827525508" Language="SFX">
+							<ShortName>NoCombat\65bpm_4-4_Ps4_ AudioTrack.wav</ShortName>
+							<Path>SFX\NoCombat\65bpm_4-4_Ps4_ AudioTrack_D79FB2B7.wem</Path>
+						</File>
+						<File Id="845324472" Language="SFX">
+							<ShortName>Combat\65bpm_4-4_Ps4_ CreapyClockClick.wav</ShortName>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ CreapyClockClick_D79FB2B7.wem</Path>
+						</File>
+						<File Id="847243194" Language="SFX">
+							<ShortName>BGs\130bpm_4-4_Ps4_Sticks ambienceTexture.wav</ShortName>
+							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks ambienceTexture_D79FB2B7.wem</Path>
+						</File>
+						<File Id="862860614" Language="SFX">
+							<ShortName>Victory\65bpm_4-4_Ps4_ Celi.wav</ShortName>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ Celi_D79FB2B7.wem</Path>
+						</File>
+						<File Id="881304614" Language="SFX">
+							<ShortName>Combat\65bpm_4-4_Ps4_ Pad2.wav</ShortName>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ Pad2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="886441951" Language="SFX">
+							<ShortName>F-Explore\4-4_8b_Ps4- CEe-Long.wav</ShortName>
+							<Path>SFX\F-Explore\4-4_8b_Ps4- CEe-Long_D79FB2B7.wem</Path>
+						</File>
+						<File Id="888269260" Language="SFX">
+							<ShortName>F-Combat\65bpm_4-4_Ps4_ LowPadAmb.wav</ShortName>
+							<Path>SFX\F-Combat\65bpm_4-4_Ps4_ LowPadAmb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="931307899" Language="SFX">
+							<ShortName>Victory\65bpm_4-4_Ps4_ AudioTrack.wav</ShortName>
+							<Path>SFX\Victory\65bpm_4-4_Ps4_ AudioTrack_D79FB2B7.wem</Path>
+						</File>
+						<File Id="949806943" Language="SFX">
+							<ShortName>Combat\65bpm_4-4_Ps4_ Cel-st.wav</ShortName>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ Cel-st_D79FB2B7.wem</Path>
+						</File>
+						<File Id="973271221" Language="SFX">
+							<ShortName>F-Explore\4-4_8b_Ps4- Sub-Lon.wav</ShortName>
+							<Path>SFX\F-Explore\4-4_8b_Ps4- Sub-Lon_D79FB2B7.wem</Path>
+						</File>
+						<File Id="976498806" Language="SFX">
+							<ShortName>Combat\65bpm_4-4_Ps4_ Sub.wav</ShortName>
+							<Path>SFX\Combat\65bpm_4-4_Ps4_ Sub_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1042133295" Language="SFX">
+							<ShortName>39-75 Heartbeat Heart Beating,Normal Speed.wav</ShortName>
+							<Path>SFX\39-75 Heartbeat Heart Beating,Normal Speed_10C4C929.wem</Path>
+						</File>
+						<File Id="1050276216" Language="SFX">
+							<ShortName>BGs\130bpm_4-4_Ps4_Sticks flowignWater.wav</ShortName>
+							<Path>SFX\BGs\130bpm_4-4_Ps4_Sticks flowignWater_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{E10503CC-347D-4E53-8564-6A8056FF8600}">
+							<Children>
+								<SwitchContainer SwitchValue="{42540D7C-CC5C-497D-9847-1D813A5A4BED}">
+									<Media>
+										<File Id="53224605"/>
+										<File Id="93197845"/>
+										<File Id="210401186"/>
+										<File Id="217656417"/>
+										<File Id="514480090"/>
+										<File Id="550532329"/>
+										<File Id="584927690"/>
+										<File Id="596365406"/>
+										<File Id="681854251"/>
+										<File Id="801459080"/>
+										<File Id="845324472"/>
+										<File Id="881304614"/>
+										<File Id="949806943"/>
+										<File Id="976498806"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E10503CC-347D-4E53-8564-6A8056FF8600}">
+							<Children>
+								<SwitchContainer SwitchValue="{639FB7D4-3D5D-4D7B-A7D3-E0D28A4D7EFA}">
+									<Media>
+										<File Id="11340700"/>
+										<File Id="487988959"/>
+										<File Id="681178562"/>
+										<File Id="802222803"/>
+										<File Id="827525508"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{447B098A-E0CF-4100-AA58-971D3F8A3579}">
+							<Children>
+								<SwitchContainer SwitchValue="{04542103-0AE7-426C-91CF-71F1BBCAF2D4}">
+									<Media>
+										<File Id="162999389"/>
+										<File Id="175321091"/>
+										<File Id="283145668"/>
+										<File Id="480230374"/>
+										<File Id="534454176"/>
+										<File Id="886441951"/>
+										<File Id="973271221"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{447B098A-E0CF-4100-AA58-971D3F8A3579}">
+							<Children>
+								<SwitchContainer SwitchValue="{EE98F352-B29E-40AE-A8CA-051F2244F6F5}">
+									<Media>
+										<File Id="162999389"/>
+										<File Id="175321091"/>
+										<File Id="283145668"/>
+										<File Id="480230374"/>
+										<File Id="534454176"/>
+										<File Id="886441951"/>
+										<File Id="973271221"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{CD8F3DFB-7CB8-4B51-9DE6-271EB2881D24}">
+							<Children>
+								<SwitchContainer SwitchValue="{B5041E69-6A90-4D9C-9A7F-2271E69367A5}">
+									<Media>
+										<File Id="123896868"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{CD8F3DFB-7CB8-4B51-9DE6-271EB2881D24}">
+							<Children>
+								<SwitchContainer SwitchValue="{2B415CBB-9792-48EC-BEDB-5C2C80F5D485}">
+									<Media>
+										<File Id="17036018"/>
+										<File Id="52669161"/>
+										<File Id="121077130"/>
+										<File Id="128466011"/>
+										<File Id="139678865"/>
+										<File Id="311776272"/>
+										<File Id="355700024"/>
+										<File Id="399734064"/>
+										<File Id="451603062"/>
+										<File Id="862860614"/>
+										<File Id="931307899"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{017F1A21-2560-461A-9911-DAF7FC185A93}">
+							<Children>
+								<SwitchContainer SwitchValue="{42540D7C-CC5C-497D-9847-1D813A5A4BED}">
+									<Media>
+										<File Id="69203506"/>
+										<File Id="90553840"/>
+										<File Id="99629851"/>
+										<File Id="270625144"/>
+										<File Id="581991665"/>
+										<File Id="888269260"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{017F1A21-2560-461A-9911-DAF7FC185A93}">
+							<Children>
+								<SwitchContainer SwitchValue="{639FB7D4-3D5D-4D7B-A7D3-E0D28A4D7EFA}">
+									<Media>
+										<File Id="162999389"/>
+										<File Id="175321091"/>
+										<File Id="283145668"/>
+										<File Id="480230374"/>
+										<File Id="534454176"/>
+										<File Id="886441951"/>
+										<File Id="973271221"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="675557581" Name="Play_Obj_Door_Close" ObjectPath="\Events\Objects\Play_Obj_Door_Close" GUID="{0EB6F4DC-B789-4556-8799-94B3A1074DAD}" DurationType="OneShot" DurationMin="4.937933" DurationMax="4.937933">
+					<IncludedMemoryFiles>
+						<File Id="797369053" Language="SFX">
+							<ShortName>Obj_Door_Close.wav</ShortName>
+							<Path>SFX\Obj_Door_Close_E972EEC4.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1417455751" Name="Play_Obj_Door_Open" ObjectPath="\Events\Objects\Play_Obj_Door_Open" GUID="{F6D5A124-3302-4A0C-B596-705222DB1A84}" DurationType="OneShot" DurationMin="4.917543" DurationMax="4.917543">
+					<IncludedMemoryFiles>
+						<File Id="135208727" Language="SFX">
+							<ShortName>Obj_Door_Open.wav</ShortName>
+							<Path>SFX\Obj_Door_Open_2B93303A.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3383738331" Name="Play_PlayerFSMaterial" ObjectPath="\Events\Player\Play_PlayerFSMaterial" GUID="{9755A932-A02E-48B1-8ECD-56738C3FEE41}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="588486327" Language="SFX">
+							<ShortName>Plyr_Float-002.wav</ShortName>
+							<Path>SFX\Plyr_Float-002_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{7D7C1003-C942-4065-A5A5-2112D6726F73}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{7D7C1003-C942-4065-A5A5-2112D6726F73}">
+							<DefaultSwitchValue>{5BF608E9-8B01-4B83-A2DC-6393B964B3F2}</DefaultSwitchValue>
+							<Children>
+								<SwitchContainer SwitchValue="{97D8B1E0-F3D7-4EC7-9034-6EE9933A0BE8}">
+									<Media>
+										<File Id="588486327"/>
+									</Media>
+								</SwitchContainer>
+								<SwitchContainer SwitchValue="{5BF608E9-8B01-4B83-A2DC-6393B964B3F2}">
+									<Media>
+										<File Id="588486327"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{5F3DD7CE-DC74-41C8-AC32-2BCCF21F5C3A}">
+							<DefaultSwitchValue>{5BF608E9-8B01-4B83-A2DC-6393B964B3F2}</DefaultSwitchValue>
+							<Children>
+								<SwitchContainer SwitchValue="{97D8B1E0-F3D7-4EC7-9034-6EE9933A0BE8}">
+									<Media>
+										<File Id="588486327"/>
+									</Media>
+								</SwitchContainer>
+								<SwitchContainer SwitchValue="{5BF608E9-8B01-4B83-A2DC-6393B964B3F2}">
+									<Media>
+										<File Id="588486327"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{F1F3F8DC-4AC8-4866-A6E0-536073DE1645}">
+							<DefaultSwitchValue>{5BF608E9-8B01-4B83-A2DC-6393B964B3F2}</DefaultSwitchValue>
+							<Children>
+								<SwitchContainer SwitchValue="{97D8B1E0-F3D7-4EC7-9034-6EE9933A0BE8}">
+									<Media>
+										<File Id="588486327"/>
+									</Media>
+								</SwitchContainer>
+								<SwitchContainer SwitchValue="{5BF608E9-8B01-4B83-A2DC-6393B964B3F2}">
+									<Media>
+										<File Id="588486327"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2754623237" Name="Play_Plyr_Atk_Bsc_Lte" ObjectPath="\Events\Player\Play_Plyr_Atk_Bsc_Lte" GUID="{A456D08B-DFDD-401A-8695-659310B36C6B}" DurationType="OneShot" DurationMin="0.542354" DurationMax="0.542354">
+					<IncludedMemoryFiles>
+						<File Id="22250190" Language="SFX">
+							<ShortName>Plyr_Basic_Atk_Lte.wav</ShortName>
+							<Path>SFX\Plyr_Basic_Atk_Lte_ADFC620C.wem</Path>
+						</File>
+						<File Id="51339316" Language="SFX">
+							<ShortName>Plyr_Basic_Atk_Lte.wav</ShortName>
+							<Path>SFX\Plyr_Basic_Atk_Lte_5EBCC2A2.wem</Path>
+						</File>
+						<File Id="710380146" Language="SFX">
+							<ShortName>Gem_Recharge_Woosh.wav</ShortName>
+							<Path>SFX\Gem_Recharge_Woosh_10C4C929.wem</Path>
+						</File>
+						<File Id="993976044" Language="SFX">
+							<ShortName>Plyr_Basic_Atk_Lte.wav</ShortName>
+							<Path>SFX\Plyr_Basic_Atk_Lte_16BB7069.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2613753308" Name="Play_Plyr_Atk_Chrg_Loop" ObjectPath="\Events\Player\Play_Plyr_Atk_Chrg_Loop" GUID="{0476B941-9E06-4AAB-9462-A7D203FE0B7D}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="418670362" Language="SFX">
+							<ShortName>Plyr_Atk_Chrg_Loop.wav</ShortName>
+							<Path>SFX\Plyr_Atk_Chrg_Loop_40D2A907.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="843314701" Name="Play_Plyr_Atk_Chrg_Release" ObjectPath="\Events\Player\Play_Plyr_Atk_Chrg_Release" GUID="{D03624E3-DB5F-453D-A646-B0F059049B60}" DurationType="OneShot" DurationMin="0.880478" DurationMax="1.248408">
+					<IncludedMemoryFiles>
+						<File Id="778632297" Language="SFX">
+							<ShortName>Plyr_Atk_Bsc_Chrg_Rls.wav</ShortName>
+							<Path>SFX\Plyr_Atk_Bsc_Chrg_Rls_9FB83B63.wem</Path>
+						</File>
+						<File Id="864348206" Language="SFX">
+							<ShortName>Plyr_Atk_Bsc_Chrg_Rls.wav</ShortName>
+							<Path>SFX\Plyr_Atk_Bsc_Chrg_Rls_32380459.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2731356750" Name="Play_Plyr_Atk_Chrg_Wu" ObjectPath="\Events\Player\Play_Plyr_Atk_Chrg_Wu" GUID="{6637288F-2320-4866-9E69-AE649D6F6C43}" DurationType="OneShot" DurationMin="1.752209" DurationMax="1.752209">
+					<IncludedMemoryFiles>
+						<File Id="337015043" Language="SFX">
+							<ShortName>Plyr_Atk_Bsc_Chrg_Wu-002.wav</ShortName>
+							<Path>SFX\Plyr_Atk_Bsc_Chrg_Wu-002_698E9CAC.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="2613753308" Name="Play_Plyr_Atk_Chrg_Loop" ObjectPath="\Events\Player\Play_Plyr_Atk_Chrg_Loop" GUID="{0476B941-9E06-4AAB-9462-A7D203FE0B7D}"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="2464356432" Name="Play_Plyr_Defeated" ObjectPath="\Events\Player\Play_Plyr_Defeated" GUID="{D6787C34-FDFE-4C01-994F-1A8F11950CC0}" DurationType="OneShot" DurationMin="2.576396" DurationMax="2.576396">
+					<IncludedMemoryFiles>
+						<File Id="1060646666" Language="SFX">
+							<ShortName>Plyr_Defeated.wav</ShortName>
+							<Path>SFX\Plyr_Defeated_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="856894529" Name="Play_Plyr_Elcty_Wtr" ObjectPath="\Events\Player\Play_Plyr_Elcty_Wtr" GUID="{6CEDA104-3D82-433B-8A06-7BB4EEB2A196}" MaxAttenuation="35." DurationType="OneShot" DurationMin="2.761135" DurationMax="3.09927">
+					<IncludedMemoryFiles>
+						<File Id="986324939" Language="SFX">
+							<ShortName>Ply_Elcty_Wtr.wav</ShortName>
+							<Path>SFX\Ply_Elcty_Wtr_0642619C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2930802274" Name="Play_Plyr_Po_Fire_w_Wtr" ObjectPath="\Events\Player\Play_Plyr_Po_Fire_w_Wtr" GUID="{221292DE-AF72-49F4-B337-623EE5823C9F}" MaxAttenuation="35." DurationType="OneShot" DurationMin="4.014344" DurationMax="4.505949">
+					<IncludedMemoryFiles>
+						<File Id="263841797" Language="SFX">
+							<ShortName>Ply_Po_Fire_w_Wtr.wav</ShortName>
+							<Path>SFX\Ply_Po_Fire_w_Wtr_2C44037F.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3674195162" Name="Play_Plyr_Rec_Gen_Dmg" ObjectPath="\Events\Player\Play_Plyr_Rec_Gen_Dmg" GUID="{4F3259F5-60C4-430F-B585-21F662FD9525}" DurationType="OneShot" DurationMin="0.271421" DurationMax="0.542421">
+					<IncludedMemoryFiles>
+						<File Id="5331889" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_1C439978.wem</Path>
+						</File>
+						<File Id="56535823" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-002.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-002_795BD4D6.wem</Path>
+						</File>
+						<File Id="277559386" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-002.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-002_318299AC.wem</Path>
+						</File>
+						<File Id="426562327" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_28E94DE4.wem</Path>
+						</File>
+						<File Id="539548908" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_5FDDF5C0.wem</Path>
+						</File>
+						<File Id="740964786" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_53AD8215.wem</Path>
+						</File>
+						<File Id="764711581" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-001.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-001_0E133F46.wem</Path>
+						</File>
+						<File Id="823697669" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-002.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-002_DB3FDE4D.wem</Path>
+						</File>
+						<File Id="835773160" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-002.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-002_38C9F518.wem</Path>
+						</File>
+						<File Id="882544845" Language="SFX">
+							<ShortName>Player_Rec_Gen_Dmg-002.wav</ShortName>
+							<Path>SFX\Player_Rec_Gen_Dmg-002_78BCD085.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="149588724" Name="Play_Plyr_Recv_Fire_Dmg" ObjectPath="\Events\Player\Play_Plyr_Recv_Fire_Dmg" GUID="{F8AAC09E-88A2-47B9-AD06-1AA94BB532C4}" DurationType="OneShot" DurationMin="0.638117" DurationMax="0.718759">
+					<IncludedMemoryFiles>
+						<File Id="22582029" Language="SFX">
+							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
+							<Path>SFX\Plyr_Tk_Fire_Dmg_EEDC246E.wem</Path>
+						</File>
+						<File Id="369104491" Language="SFX">
+							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
+							<Path>SFX\Plyr_Tk_Fire_Dmg_B21521BE.wem</Path>
+						</File>
+						<File Id="928839707" Language="SFX">
+							<ShortName>Plyr_Tk_Fire_Dmg.wav</ShortName>
+							<Path>SFX\Plyr_Tk_Fire_Dmg_77B97DE7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2025845440" Name="Play_Torch" ObjectPath="\Events\Objects\Play_Torch" GUID="{3707B048-EDF0-4E4D-8C5D-55A4C56D80F8}" MaxAttenuation="1." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="749598058" Language="SFX">
+							<ShortName>15-06 Fire,Fireplace Wood Burning In Fireplace.wav</ShortName>
+							<Path>SFX\15-06 Fire,Fireplace Wood Burning In Fireplace_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1999625262" Name="Play_UI_MenuSelect" ObjectPath="\Events\UI\Play_UI_MenuSelect" GUID="{A4FC1DD7-7EE0-41F4-AE9A-324E556A6338}" DurationType="OneShot" DurationMin="4.1" DurationMax="4.1">
+					<IncludedMemoryFiles>
+						<File Id="25896015" Language="SFX">
+							<ShortName>UI_MenuSelect.wav</ShortName>
+							<Path>SFX\UI_MenuSelect_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4038800916" Name="Play_UI_RollOver" ObjectPath="\Events\UI\Play_UI_RollOver" GUID="{00D2D92D-5F80-4E2A-9023-7D47CEC8B36C}" DurationType="OneShot" DurationMin="0.925583" DurationMax="0.925583">
+					<IncludedMemoryFiles>
+						<File Id="709527559" Language="SFX">
+							<ShortName>UI_RollOver.wav</ShortName>
+							<Path>SFX\UI_RollOver_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2251837801" Name="Stop_PlayerFSMaterial" ObjectPath="\Events\Player\Stop_PlayerFSMaterial" GUID="{59CD016D-5D52-47B7-BA29-C9354F8B81C0}" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="151362964" Name="PlayerHealth" ObjectPath="\Game Parameters\Default Work Unit\PlayerHealth" GUID="{AA4E1372-A552-44FF-8619-4498D31808AF}"/>
+				<GameParameter Id="1493153371" Name="PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\PlayerSpeed" GUID="{E7FC6A48-973E-445C-9EF4-AA7903D51070}"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="89505537" Name="Gameplay" ObjectPath="\States\Default Work Unit\Gameplay" GUID="{EE98F352-B29E-40AE-A8CA-051F2244F6F5}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Gameplay\None" GUID="{04542103-0AE7-426C-91CF-71F1BBCAF2D4}"/>
+						<State Id="2764240573" Name="Combat" ObjectPath="\States\Default Work Unit\Gameplay\Combat" GUID="{42540D7C-CC5C-497D-9847-1D813A5A4BED}"/>
+						<State Id="579523862" Name="Explore" ObjectPath="\States\Default Work Unit\Gameplay\Explore" GUID="{639FB7D4-3D5D-4D7B-A7D3-E0D28A4D7EFA}"/>
+						<State Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Gameplay\Menu" GUID="{D507F586-E5FF-4585-A888-A4C06D381FF8}"/>
+						<State Id="1560169506" Name="Boss" ObjectPath="\States\Default Work Unit\Gameplay\Boss" GUID="{40A73DD9-66D1-43E6-8078-CE0BA3822097}"/>
+						<State Id="1593864692" Name="Defeat" ObjectPath="\States\Default Work Unit\Gameplay\Defeat" GUID="{B5041E69-6A90-4D9C-9A7F-2271E69367A5}"/>
+						<State Id="2716678721" Name="Victory" ObjectPath="\States\Default Work Unit\Gameplay\Victory" GUID="{2B415CBB-9792-48EC-BEDB-5C2C80F5D485}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1995189622" Name="Enviro" ObjectPath="\States\Music\Enviro" GUID="{CD8F3DFB-7CB8-4B51-9DE6-271EB2881D24}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Music\Enviro\None" GUID="{447B098A-E0CF-4100-AA58-971D3F8A3579}"/>
+						<State Id="129146593" Name="Castle" ObjectPath="\States\Music\Enviro\Castle" GUID="{E10503CC-347D-4E53-8564-6A8056FF8600}"/>
+						<State Id="491961918" Name="Forest" ObjectPath="\States\Music\Enviro\Forest" GUID="{017F1A21-2560-461A-9911-DAF7FC185A93}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="1834394558" Name="Surface" ObjectPath="\Switches\Default Work Unit\Surface" GUID="{E8026C35-CD20-46FB-B2E9-F0465E44754C}">
+					<Switches>
+						<Switch Id="2195636714" Name="Dirt" ObjectPath="\Switches\Default Work Unit\Surface\Dirt" GUID="{5F3DD7CE-DC74-41C8-AC32-2BCCF21F5C3A}"/>
+						<Switch Id="3135525842" Name="Cobble" ObjectPath="\Switches\Default Work Unit\Surface\Cobble" GUID="{F1F3F8DC-4AC8-4866-A6E0-536073DE1645}"/>
+						<Switch Id="4248645337" Name="Grass" ObjectPath="\Switches\Default Work Unit\Surface\Grass" GUID="{7D7C1003-C942-4065-A5A5-2112D6726F73}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2418394769" Name="CrystalType" ObjectPath="\Switches\Default Work Unit\CrystalType" GUID="{C4B911C8-AFC2-455C-82EC-1306FDA9BEC9}">
+					<Switches>
+						<Switch Id="2917121896" Name="Electricity" ObjectPath="\Switches\Default Work Unit\CrystalType\Electricity" GUID="{157170C2-8C12-4413-9097-1084031BBE32}"/>
+						<Switch Id="2678880713" Name="Fire" ObjectPath="\Switches\Default Work Unit\CrystalType\Fire" GUID="{42EA02E0-E584-4B21-8D17-188D3F8178E3}"/>
+						<Switch Id="2654748154" Name="Water" ObjectPath="\Switches\Default Work Unit\CrystalType\Water" GUID="{C3677D5F-4FF8-4018-9184-908D9C65313A}"/>
+						<Switch Id="4294388576" Name="Generic" ObjectPath="\Switches\Default Work Unit\CrystalType\Generic" GUID="{8D582048-E57F-438E-A959-9B4EA2C862B8}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2680486766" Name="EnemRunWalk" ObjectPath="\Switches\Default Work Unit\EnemRunWalk" GUID="{6A165570-BFF2-4889-A466-519F41694EF3}">
+					<Switches>
+						<Switch Id="3672549870" Name="EnmSkRun" ObjectPath="\Switches\Default Work Unit\EnemRunWalk\EnmSkRun" GUID="{C1EA44B5-10E1-4608-BDDE-5C63E9FCCF80}"/>
+						<Switch Id="2293070800" Name="EnmSkWalk" ObjectPath="\Switches\Default Work Unit\EnemRunWalk\EnmSkWalk" GUID="{B9AAA6B7-5AFF-4E65-A85D-234973755F21}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3176616166" Name="PlayerRunWalk" ObjectPath="\Switches\Default Work Unit\PlayerRunWalk" GUID="{8901526D-7A29-4044-99EE-9420258D57EB}">
+					<Switches>
+						<Switch Id="712161704" Name="Run" ObjectPath="\Switches\Default Work Unit\PlayerRunWalk\Run" GUID="{5BF608E9-8B01-4B83-A2DC-6393B964B3F2}"/>
+						<Switch Id="2108779966" Name="Walk" ObjectPath="\Switches\Default Work Unit\PlayerRunWalk\Walk" GUID="{97D8B1E0-F3D7-4EC7-9034-6EE9933A0BE8}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
