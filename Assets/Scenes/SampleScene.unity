@@ -5190,12 +5190,14 @@ MonoBehaviour:
     - {fileID: 6629094895469493231, guid: 97b0371c028a87945ba0c56065733dbd, type: 3}
     - {fileID: 5948341863790965516, guid: 5135003422b68144c9472e291d9fac7b, type: 3}
     - {fileID: 4674910517321748693, guid: 478d1ef756d2ae04f927cd55a3d5bf85, type: 3}
+    - {fileID: 6237253569070626523, guid: 1aa80214e9db9844bb7c17e68920360c, type: 3}
     connectorRooms:
     - {fileID: 792023760365555704, guid: 867832b34cf30b9498b3889c85d34377, type: 3}
     - {fileID: 3247027393958201592, guid: bad7281db92efc848b945b7070447e3b, type: 3}
     - {fileID: 6780716049081667171, guid: f88450eb4684e3c47bd5507862cdb6c6, type: 3}
     - {fileID: 1146388840281082487, guid: 909209d5503bbe146abed9056a95b185, type: 3}
     - {fileID: 8034298164814953875, guid: c5ae07ae049e55444ba4742301afaddb, type: 3}
+    - {fileID: 2059797865244351516, guid: 57816c858311cd14d926eea5603e928c, type: 3}
     lootRooms:
     - {fileID: 8535469674974946045, guid: 5353c3a429fe94f44903d736bb5b1165, type: 3}
     endRooms:
@@ -5667,6 +5669,10 @@ PrefabInstance:
       propertyPath: pDrinkPotion.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 4569bc4fd12323443a0341de0b3a610e, type: 2}
+    - target: {fileID: 1637178530321377553, guid: 292c0da200d644c459d108f54c29a920, type: 3}
+      propertyPath: god
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1637178530321377554, guid: 292c0da200d644c459d108f54c29a920, type: 3}
       propertyPath: m_RootOrder
       value: 1

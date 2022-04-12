@@ -31,8 +31,10 @@ public class GameController : MonoBehaviour
 
     private static bool cachedCharacters = false;
     private static bool cachedItems = false;
+    private static bool cachedInteractables = false;
     private static CharacterComponent[] charactersThisFrame;
     private static ItemComponent[] allItems;
+    private static InteractableComponent[] allInteractables;
 
     private static LayerMask groundMask;
 
@@ -41,6 +43,11 @@ public class GameController : MonoBehaviour
         return instance.audioHacks;
     }
 
+    private static void cacheInteractables()
+    {
+        allInteractables = FindObjectsOfType<InteractableComponent>();
+        cachedInteractables = true;
+    }
 
     private static void cacheCharacters()
     {
@@ -64,6 +71,11 @@ public class GameController : MonoBehaviour
         cachedItems = false;
     }
 
+    public static void dirtyInteractables()
+    {
+        cachedInteractables = false;
+    }
+
     public static ItemComponent[] GetItems()
     {
         if (!cachedItems)
@@ -76,6 +88,13 @@ public class GameController : MonoBehaviour
         if (!cachedCharacters)
             cacheCharacters();
         return charactersThisFrame;
+    }
+
+    public static InteractableComponent[] GetInteractables()
+    {
+        if (!cachedInteractables)
+            cacheInteractables();
+        return allInteractables;
     }
 
     public void CompleteDungeon()

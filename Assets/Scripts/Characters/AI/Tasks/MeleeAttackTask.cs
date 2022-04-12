@@ -61,6 +61,14 @@ public class MeleeAttackTask : Task
             currentReactionTime -= Time.deltaTime;
             if (currentReactionTime <= 0f)
             {
+                if (RouteTo(target.transform.position, minDistance, target.gameObject))
+                {
+                    if (!owner.ActionBusy())
+                    {
+                        owner.QueueAction(meleeAttackAction);
+                    }
+                }
+                /*
                 var dist = Vector3.Distance(owner.transform.position, target.transform.position);
                 var heading = (owner.transform.position - target.transform.position).normalized;
                 if (dist > minDistance)
@@ -75,7 +83,7 @@ public class MeleeAttackTask : Task
                     }
                     owner.movementVector = Vector3.zero;
                     owner.SetRotation(Quaternion.LookRotation(-heading).eulerAngles.y);
-                }
+                }*/
                 return true;
             }
             else

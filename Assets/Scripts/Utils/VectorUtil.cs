@@ -20,7 +20,7 @@ public static class VectorUtil
         rayDistance -= off * 2f;
         //Ray ray = new Ray(rayOrigin, rayHeading);
 #if UNITY_EDITOR
-        Debug.DrawLine(rayOrigin, rayOrigin + (rayDistance * rayHeading), Color.red, 10f);
+        //Debug.DrawLine(rayOrigin, rayOrigin + (rayDistance * rayHeading), Color.red, 10f);
 #endif
         var returnRay = new RayInfo();
         returnRay.origin = rayOrigin;

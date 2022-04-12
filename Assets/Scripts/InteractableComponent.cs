@@ -9,6 +9,15 @@ public abstract class InteractableComponent : MonoBehaviour
     public InteractionType interactionType = InteractionType.PickUp;
     public float interactionRadius = 1.5f;
 
+    public virtual void Awake()
+    {
+        GameController.dirtyInteractables();
+    }
+
+    public virtual void OnDestroy()
+    {
+        GameController.dirtyInteractables();
+    }
     public abstract void Interact(CharacterComponent actor);
 
     public virtual bool Test(CharacterComponent actor)

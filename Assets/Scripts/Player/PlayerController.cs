@@ -101,7 +101,8 @@ public class PlayerController : CharacterComponent
             return;
         InteractableComponent lastInteractable = null;
         var lastDistance = 0f;
-        var allInteractables = FindObjectsOfType<InteractableComponent>();
+        var allInteractables = GameController.GetInteractables();
+       // var allInteractables = FindObjectsOfType<InteractableComponent>();
         foreach(var element in allInteractables)
         {
             if (element.Interactable())

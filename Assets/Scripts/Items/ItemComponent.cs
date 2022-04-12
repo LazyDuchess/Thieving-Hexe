@@ -134,16 +134,18 @@ public class ItemComponent : InteractableComponent
             coolDownS = 0f;
     }
 
-    public virtual void Awake()
+    public override void Awake()
     {
+        base.Awake();
         GameController.dirtyItems();
         transform.parent = null;
         if (holdObject != null)
             holdObject.SetActive(false);
     }
 
-    public virtual void OnDestroy()
+    public override void OnDestroy()
     {
+        base.OnDestroy();
         GameController.dirtyItems();
     }
 

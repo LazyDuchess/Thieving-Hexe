@@ -32,8 +32,9 @@ public class DoorComponent : InteractableComponent
         doorAnimationObject.transform.position = Vector3.Lerp(fromPos, targetPos, doorLerp * Time.deltaTime);
     }
 
-    private void Awake()
+    public override void Awake()
     {
+        base.Awake();
         VerifyDoor();
     }
 
