@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public bool audioHacks = true;
+
     public bool controlEnabled = true;
 
     public GameGlobals gameGlobals = new GameGlobals();
@@ -26,6 +28,74 @@ public class GameController : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject levelCompleteScreen;
     public GameObject gameplayScreen;
+
+    private static bool cachedCharacters = false;
+    private static bool cachedItems = false;
+    private static bool cachedInteractables = false;
+    private static CharacterComponent[] charactersThisFrame;
+    private static ItemComponent[] allItems;
+    private static InteractableComponent[] allInteractables;
+
+    private static LayerMask groundMask;
+
+    public static bool GetAudioHacks()
+    {
+        return instance.audioHacks;
+    }
+
+    private static void cacheInteractables()
+    {
+        allInteractables = FindObjectsOfType<InteractableComponent>();
+        cachedInteractables = true;
+    }
+
+    private static void cacheCharacters()
+    {
+        charactersThisFrame = FindObjectsOfType<CharacterComponent>();
+        cachedCharacters = true;
+    }
+
+    private static void cacheItems()
+    {
+        allItems = FindObjectsOfType<ItemComponent>();
+        cachedItems = true;
+    }
+
+    public static void dirtyCharacters()
+    {
+        cachedCharacters = false;
+    }
+
+    public static void dirtyItems()
+    {
+        cachedItems = false;
+    }
+
+    public static void dirtyInteractables()
+    {
+        cachedInteractables = false;
+    }
+
+    public static ItemComponent[] GetItems()
+    {
+        if (!cachedItems)
+            cacheItems();
+        return allItems;
+    }
+
+    public static CharacterComponent[] GetCharacters()
+    {
+        if (!cachedCharacters)
+            cacheCharacters();
+        return charactersThisFrame;
+    }
+
+    public static InteractableComponent[] GetInteractables()
+    {
+        if (!cachedInteractables)
+            cacheInteractables();
+        return allInteractables;
+    }
 
     public void CompleteDungeon()
     {
@@ -77,6 +147,7 @@ public class GameController : MonoBehaviour
     public void Restart()
     {
         PauseController.Unpause();
+        GameEventsController.preRestartEvent();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -92,15 +163,17 @@ public class GameController : MonoBehaviour
         playerController = player.GetComponent<PlayerController>();
         playerController.deathEvent += PlayerDeathEv;
         playerController.damageEvent += GameEventsController.PlayerDamage;
+        groundMask = LayerMask.GetMask("Ground");
     }
 
     public void PlayerDeathEv(Damage dmg)
     {
         GameOver();
+        GameEventsController.PlayerDeath(dmg);
     }
 
     public static LayerMask GetGroundMask()
     {
-        return LayerMask.GetMask("Ground");
+        return groundMask;
     }
 }

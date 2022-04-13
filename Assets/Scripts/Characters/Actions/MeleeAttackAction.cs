@@ -35,7 +35,7 @@ public class MeleeAttackAction : Action
     public override void Event(int id)
     {
         base.Event(id);
-        var hits = HitUtils.Hit(owner.GetTeam(), owner.transform.position + (owner.GetRotation() * Vector3.forward * distance) + (owner.height * Vector3.up), radius);
+        var hits = HitUtils.Hit(owner, owner.transform.position + (owner.GetRotation() * Vector3.forward * distance) + (owner.height * Vector3.up), radius);
         foreach (var element in hits)
         {
             element.entity.TakeDamage(new Damage()

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1637178529201758553}
   - component: {fileID: 1637178529201758552}
+  - component: {fileID: 946746788832304003}
   m_Layer: 7
   m_Name: Mesh
   m_TagString: Untagged
@@ -52,6 +53,50 @@ MonoBehaviour:
   lookAtHead: {fileID: 3548059653814221864}
   hand: {fileID: 567531698797760572}
   dashParticles: {fileID: 9125466694005209053}
+--- !u!114 &946746788832304003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637178529201758554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa210fec1fc97445a10d81a8b42d672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pFootStep:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fa0ffa204c3d79a4fb552087468abbbb, type: 2}
+  pStopFootStep:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 69387ec3dd8cf4d429a46a54b37969d6, type: 2}
+  pLteAttack:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b3d47c1b27b09b04e9ddebec893451ac, type: 2}
+  pChrgAttackStartLoop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 98c45a00796df1647a6c5dcc95dcaca2, type: 2}
+  pChrgAttackRelease:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 83087f257eb4ced4db2b4c7cda9ae136, type: 2}
+  pTakeDmgGeneric:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 78ab148beb59fd54a8601b74bf83ce28, type: 2}
+  pTakeDmgFire:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0ffd5e0fdecab2c4db153531f790aec3, type: 2}
+  pDefeated:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fd1a6236cda68734d8e02511faf0ddd1, type: 2}
 --- !u!1 &1637178530321377557
 GameObject:
   m_ObjectHideFlags: 0
@@ -5320,6 +5365,50 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8439988302764466105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907561290455060378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa210fec1fc97445a10d81a8b42d672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pFootStep:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: dcf7dcc76c1ee6a439d635e14a7c2bfb, type: 2}
+  pStopFootStep:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bf22fd07f06602a499ae7bcaae7bebd7, type: 2}
+  pLteAttack:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b3d47c1b27b09b04e9ddebec893451ac, type: 2}
+  pChrgAttackStartLoop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 98c45a00796df1647a6c5dcc95dcaca2, type: 2}
+  pChrgAttackRelease:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 83087f257eb4ced4db2b4c7cda9ae136, type: 2}
+  pTakeDmgGeneric:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 78ab148beb59fd54a8601b74bf83ce28, type: 2}
+  pTakeDmgFire:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0ffd5e0fdecab2c4db153531f790aec3, type: 2}
+  pDefeated:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fd1a6236cda68734d8e02511faf0ddd1, type: 2}
 --- !u!1 &3548059653814221864 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6375601435363717405, guid: 0bb59e9d2cdcf9a44aceae5dfc6de393, type: 3}

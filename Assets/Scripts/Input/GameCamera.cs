@@ -17,6 +17,13 @@ public class GameCamera : MonoBehaviour
 
     bool cursorBefore = false;
 
+    public static GameCamera instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
         Cursor.visible = false;

@@ -134,10 +134,19 @@ public class ItemComponent : InteractableComponent
             coolDownS = 0f;
     }
 
-    public virtual void Awake()
+    public override void Awake()
     {
+        base.Awake();
+        GameController.dirtyItems();
+        transform.parent = DungeonController.instance.level.transform;
         if (holdObject != null)
             holdObject.SetActive(false);
+    }
+
+    public override void OnDestroy()
+    {
+        base.OnDestroy();
+        GameController.dirtyItems();
     }
 
     public virtual void ToInventory(Inventory inventory)
@@ -186,6 +195,7 @@ public class ItemComponent : InteractableComponent
 
     public virtual void Drop()
     {
+        transform.SetParent(DungeonController.instance.level.transform);
         if (holdObject != null)
             holdObject.SetActive(false);
         if (dropObject != null)

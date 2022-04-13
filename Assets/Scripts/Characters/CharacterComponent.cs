@@ -75,8 +75,14 @@ public class CharacterComponent : HealthController
         effects.Clear();
     }
 
+    protected virtual void OnDestroy()
+    {
+        GameController.dirtyCharacters();
+    }
+
     protected virtual void Awake()
     {
+        GameController.dirtyCharacters();
         currentDashTime = dashTime;
         var rot = transform.rotation;
         transform.rotation = Quaternion.identity;
@@ -183,7 +189,7 @@ public class CharacterComponent : HealthController
             if (!currentAction.lookAt)
                 actionAllows = false;
         }
-        var ents = FindObjectsOfType<CharacterComponent>();
+        var ents = GameController.GetCharacters();
         CharacterComponent lastEnt = null;
         var lastDistance = 0f;
         if (actionAllows)
@@ -192,7 +198,7 @@ public class CharacterComponent : HealthController
             {
                 var heading = (element.transform.position - transform.position).normalized;
                 var headDot = Vector3.Dot(mesh.transform.forward, heading);
-                if (headDot >= 0.2f)
+                if (headDot >= 0.2f && element.IsAlive())
                 {
                     var distance = Vector3.Distance(transform.position, element.transform.position);
                     if (!lastEnt)

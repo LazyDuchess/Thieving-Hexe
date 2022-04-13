@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7679348250383711744}
   m_Layer: 10
   m_Name: Particle System (1)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 4181143009503994088}
   m_Layer: 10
   m_Name: Hold
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4857,7 +4857,7 @@ GameObject:
   - component: {fileID: 524416760598929485}
   m_Layer: 10
   m_Name: Point Light (5)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4968,7 +4968,7 @@ GameObject:
   - component: {fileID: 7529138520467288553}
   m_Layer: 10
   m_Name: Point Light (4)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5077,7 +5077,7 @@ GameObject:
   - component: {fileID: 5581448560005453786}
   m_Layer: 10
   m_Name: Actual_Torch
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5090,7 +5090,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3256754715876258102}
   m_LocalRotation: {x: -0.6495198, y: -0, z: -0, w: 0.76034474}
-  m_LocalPosition: {x: 0.008, y: -2.41, z: 0.334}
+  m_LocalPosition: {x: 0.008, y: -3.00006, z: 0.334}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5115,7 +5115,7 @@ GameObject:
   - component: {fileID: 3149188649543337311}
   m_Layer: 10
   m_Name: Dungeon_Torch_ActualTorch
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5199,7 +5199,7 @@ GameObject:
   - component: {fileID: 3912553433254973333}
   m_Layer: 10
   m_Name: Point Light (5)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5310,7 +5310,7 @@ GameObject:
   - component: {fileID: 3912553434123898884}
   m_Layer: 10
   m_Name: Particle System (1)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10122,7 +10122,7 @@ GameObject:
   - component: {fileID: 3912553434276100373}
   m_Layer: 10
   m_Name: Point Light (3)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10233,7 +10233,7 @@ GameObject:
   - component: {fileID: 3912553434357373901}
   m_Layer: 10
   m_Name: Point Light (4)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10344,7 +10344,7 @@ GameObject:
   - component: {fileID: 6681398569216535712}
   m_Layer: 10
   m_Name: Point Light (3)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10453,7 +10453,7 @@ GameObject:
   - component: {fileID: 6130088458558986259}
   m_Layer: 10
   m_Name: Actual_Torch (1)
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10491,7 +10491,7 @@ GameObject:
   - component: {fileID: 7014084697488396133}
   m_Layer: 10
   m_Name: Drop
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10554,7 +10554,7 @@ GameObject:
   - component: {fileID: 4181658033974387781}
   m_Layer: 10
   m_Name: Dungeon_Torch_ActualTorch
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10635,9 +10635,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5638911511046128012}
   - component: {fileID: 7621775506842012602}
+  - component: {fileID: -1326124170691232159}
+  - component: {fileID: 2166073548592161949}
   m_Layer: 10
   m_Name: Torch Item
-  m_TagString: Untagged
+  m_TagString: NonBlocking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10671,6 +10673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95bdea00335c4af46aebe10858c38b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionOrigin: {fileID: 3420713811733455778}
   interactionType: 1
   interactionRadius: 1.5
   animation: long
@@ -10685,6 +10688,7 @@ MonoBehaviour:
   holdObject: {fileID: 2249850355473875509}
   dropObject: {fileID: 5873728693833309949}
   owner: {fileID: 0}
+  itemType: 2
   holdTime: 0
   primaryFireMode: 1
   secondaryFireMode: 0
@@ -10692,7 +10696,58 @@ MonoBehaviour:
   speedBuff: 0.7
   damage: 20
   duration: 0.6
-  radius: 1.5
-  distance: 0.7
+  radius: 1.7
+  distance: 0.9
   pushForce: 10
   delay: 0.07
+--- !u!114 &-1326124170691232159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8673964815790409125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1511a1f81df8bf2418da59934f1d3555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &2166073548592161949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8673964815790409125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa1a21e22b7c96498106f041aaf23e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4cd87577fc6655644a1d264965cb6846, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}

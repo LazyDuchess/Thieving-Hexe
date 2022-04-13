@@ -99,13 +99,15 @@ public class PlayerController : CharacterComponent
         currentInteractable = null;
         if (!IsAlive())
             return;
-        var allInteractables = FindObjectsOfType<InteractableComponent>();
+        InteractableComponent lastInteractable = null;
+        var lastDistance = 0f;
+        var allInteractables = GameController.GetInteractables();
+       // var allInteractables = FindObjectsOfType<InteractableComponent>();
         foreach(var element in allInteractables)
         {
             if (element.Interactable())
             {
-                if (element.Test(this))
-                {
+                
                     var overlaps = Physics.OverlapSphere(element.triggerPosition(), element.interactionRadius);
                     foreach (var element2 in overlaps)
                     {
@@ -114,14 +116,29 @@ public class PlayerController : CharacterComponent
                         {
                             if (me == this)
                             {
-                                currentInteractable = element;
-                                return;
+                            if (element.Test(this))
+                            {
+                                var dist = Vector3.Distance(transform.position, element.triggerPosition());
+                                if(lastInteractable == null)
+                                {
+                                    lastInteractable = element;
+                                    lastDistance = dist;
+                                }
+                                else
+                                {
+                                    if (dist < lastDistance)
+                                    {
+                                        lastInteractable = element;
+                                        lastDistance = dist;
+                                    }
+                                }
+                            }
                             }
                         }
                     }
-                }
             }
         }
+        currentInteractable = lastInteractable;
     }
 
     // Start is called before the first frame update

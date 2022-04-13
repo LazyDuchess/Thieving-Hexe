@@ -4920,6 +4920,7 @@ GameObject:
   - component: {fileID: 8834279249987030111}
   - component: {fileID: 922262368310975310}
   - component: {fileID: 66946931299217223}
+  - component: {fileID: 1721162394699534216}
   m_Layer: 8
   m_Name: Wand Projectile
   m_TagString: Untagged
@@ -5019,9 +5020,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8b36cfb7d478045baf2954943cf346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLife: 10
   damage: 10
   owner: {fileID: 0}
   vector: {x: 0, y: 0, z: 0}
+  pushForce: 3
 --- !u!54 &66946931299217223
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5038,3 +5041,15 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &1721162394699534216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6119730668319842903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0802d15c4e7e0164dab5267970c0cbef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

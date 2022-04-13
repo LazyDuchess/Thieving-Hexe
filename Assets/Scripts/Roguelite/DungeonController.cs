@@ -26,6 +26,7 @@ public class DungeonPiece
     public int myParentDoor = -1;
     public List<DungeonPiece> children = new List<DungeonPiece>();
     public DungeonLevel level;
+    public GameObject instance;
 
     public DoorComponent[] getDoors()
     {
@@ -92,10 +93,11 @@ public class DungeonPiece
         return result;
     }
 
-    public List<GameObject> instantiate(GameObject previous, Transform parent)
+    public List<GameObject> instantiate(GameObject previous, Transform parent, bool instant = true)
     {
         var placedList = new List<GameObject>();
         var placedPrefab = GameObject.Instantiate(prefab, positionStart, Quaternion.identity);
+        instance = placedPrefab;
         if (parent != null)
             placedPrefab.transform.parent = parent;
         var placedRoom = placedPrefab.GetComponent<RoomComponent>();
@@ -109,7 +111,7 @@ public class DungeonPiece
                 if (element.id == myParentDoor)
                 {
                     element.empty = false;
-                    element.OpenDoor();
+                    element.OpenDoor(instant);
                 }
             }
         }
@@ -121,7 +123,7 @@ public class DungeonPiece
                 if (element.id == parentDoor)
                 {
                     element.empty = false;
-                    element.OpenDoor();
+                    element.OpenDoor(instant);
                 }
             }
         }
@@ -204,11 +206,15 @@ public class DungeonLevel
             var elementBounds = new Bounds(center, size);
             if (bounds1.Intersects(elementBounds))
             {
+#if UNITY_EDITOR
                 DrawBox(bounds1.center, Quaternion.identity, bounds1.size, Color.red);
+#endif
                 return false;
             }
         }
+#if UNITY_EDITOR
         DrawBox(bounds1.center, Quaternion.identity, bounds1.size, Color.green);
+#endif
         return true;
     }
 
@@ -312,7 +318,7 @@ public class DungeonController : MonoBehaviour
 
     public bool AnyAliveEnemies()
     {
-        var chars = FindObjectsOfType<CharacterComponent>();
+        var chars = GameController.GetCharacters();
         foreach(var element in chars)
         {
             if (element.GetTeam() != GameController.instance.playerController.GetTeam() && element.IsAlive())
@@ -399,9 +405,9 @@ public class DungeonController : MonoBehaviour
     //Dead ends, loot rooms.
     public DungeonPiece Recurse(DungeonPiece piece, DoorComponent onDoor = null)
     {
-        var recursionSize = Random.Range(1, 5);
+        var recursionSize = Random.Range(1, 4);
         var endInLootRoom = false;
-        var endInLotRoomChance = Random.Range(0, 3);
+        var endInLotRoomChance = Random.Range(0, 2);
         if (endInLotRoomChance == 0)
             endInLootRoom = true;
         var currentPiece = piece;
@@ -488,7 +494,7 @@ public class DungeonController : MonoBehaviour
     public void CleanUpAll()
     {
         Destroy(level);
-        var enemys = FindObjectsOfType<CharacterController>();
+        var enemys = GameController.GetCharacters();
         foreach(var element in enemys)
         {
             if (element != GameController.instance.playerController)
@@ -548,10 +554,14 @@ public class DungeonController : MonoBehaviour
         var recursivable = new List<DungeonPiece>();
 
         var i = 0;
+#if UNITY_EDITOR
         Debug.Log("Generating level of size " + linearLevelSize.ToString());
+#endif
         while(i < linearLevelSize)
         {
+#if UNITY_EDITOR
             Debug.Log("Working on piece " + i.ToString());
+#endif
             var currentDoors = currentPiece.getDoors();
             var potentialDoors = new List<DoorComponent>();
             foreach(var element in currentDoors)
@@ -577,7 +587,9 @@ public class DungeonController : MonoBehaviour
                 toPlaceConnectors.Remove(i);
                 i = i - 1;
                 databaseNextPieces = database.connectorRooms;
+#if UNITY_EDITOR
                 Debug.Log("Placing a connector.");
+#endif
             }
             foreach(var element in databaseNextPieces)
             {
@@ -634,17 +646,23 @@ public class DungeonController : MonoBehaviour
                     }*/
                     recursivable.Add(newCurrentPiece);
                     currentPiece = newCurrentPiece;
+#if UNITY_EDITOR
                     Debug.Log("Placed piece " + i.ToString());
+#endif
                 }
                 else
                 {
+#if UNITY_EDITOR
                     Debug.Log("Couldn't place piece " + i.ToString());
+#endif
                     i = i - 1;
                 }
             }
             else
             {
+#if UNITY_EDITOR
                 Debug.Log("Couldn't place piece " + i.ToString());
+#endif
             }
             i = i + 1;
         }
@@ -663,7 +681,9 @@ public class DungeonController : MonoBehaviour
                     if (recurseChance == 0)
                     {
                         Recurse(element);
+#if UNITY_EDITOR
                         Debug.Log("Recursing!");
+#endif
                     }
                 }
             }

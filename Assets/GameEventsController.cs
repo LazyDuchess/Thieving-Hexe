@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class GameEventsController
 {
     public delegate void GameEvent();
     public delegate void DamageEvent(Damage damage);
+
 
     //When you lose by dying or running out of time.
     public static GameEvent gameOverEvent;
@@ -69,6 +66,18 @@ public class GameEventsController
 
     //Drinking potion
     public static GameEvent potionDrinkEvent;
+
+    //Restart
+    public static GameEvent preRestartEvent;
+
+    //Player Death
+    public static DamageEvent playerDeathEvent;
+
+    public static void PreRestart()
+    {
+        if (preRestartEvent != null)
+            preRestartEvent.Invoke();
+    }
 
     public static void GameOver()
     {
@@ -194,6 +203,12 @@ public class GameEventsController
     {
         if (potionDrinkEvent != null)
             potionDrinkEvent.Invoke();
+    }
+
+    public static void PlayerDeath(Damage dmg)
+    {
+        if (playerDeathEvent != null)
+            playerDeathEvent.Invoke(dmg);
     }
 
     public static float getPlayerSpeed()

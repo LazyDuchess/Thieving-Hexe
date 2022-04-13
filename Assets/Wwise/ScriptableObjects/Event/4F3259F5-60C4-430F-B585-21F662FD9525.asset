@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3bb7634968e10a4caca79cc10a6dbea, type: 3}
+  m_Name: 4F3259F5-60C4-430F-B585-21F662FD9525
+  m_EditorClassIdentifier: 
+  objectName: Play_Plyr_Rec_Gen_Dmg
+  id: 3674195162
+  guid: 4F3259F5-60C4-430F-B585-21F662FD9525

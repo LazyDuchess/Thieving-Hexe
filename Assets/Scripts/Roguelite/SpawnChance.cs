@@ -9,6 +9,6 @@ public class SpawnChance : MonoBehaviour
     {
         var chanc = Random.Range(0, spawnChance);
         if (chanc != 0)
-            gameObject.SetActive(false);
+            Destroy(gameObject);
     }
 }

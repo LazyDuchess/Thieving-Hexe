@@ -8,8 +8,10 @@ public class HitEntry
 }
 public static class HitUtils
 {
-    public static List<HitEntry> Hit(int team, Vector3 position, float radius)
+    public static List<HitEntry> Hit(CharacterComponent owner, Vector3 position, float radius)
     {
+        var team = owner.GetTeam();
+        
         var hits = Physics.OverlapSphere(position, radius);
         if (GameController.instance.hitBoxDebug)
         {
@@ -19,19 +21,37 @@ public static class HitUtils
         var hitList = new List<HitEntry>();
         foreach(var element in hits)
         {
-            var healthComp = element.GetComponent<HealthController>();
-            if (healthComp)
+            var checkRay = VectorUtil.MakeRay(owner.transform.position, element.transform.position, 0.1f);
+            var ray = new Ray(checkRay.origin, checkRay.heading);
+            var testRay = Physics.RaycastAll(ray, checkRay.distance);
+            var notValid = true;
+            foreach (var elementRay in testRay)
             {
-                var entry = new HitEntry();
-                entry.entity = healthComp;
-                if (team == -1 || healthComp.GetTeam() == -1)
+                notValid = false;
+                var allTest = new List<HealthController>(elementRay.collider.GetComponents<HealthController>());
+                allTest.AddRange(elementRay.collider.GetComponentsInChildren<HealthController>());
+                allTest.AddRange(elementRay.collider.GetComponentsInParent<HealthController>());
+                if (allTest.Count > 0)
+                    notValid = true;
+                if (elementRay.collider.CompareTag("NonBlocking"))
+                    notValid = true;
+            }
+            if (notValid)
+            {
+                var healthComp = element.GetComponent<HealthController>();
+                if (healthComp)
                 {
-                    hitList.Add(entry);
-                }
-                else
-                {
-                    if (team != healthComp.GetTeam())
+                    var entry = new HitEntry();
+                    entry.entity = healthComp;
+                    if (team == -1 || healthComp.GetTeam() == -1)
+                    {
                         hitList.Add(entry);
+                    }
+                    else
+                    {
+                        if (team != healthComp.GetTeam())
+                            hitList.Add(entry);
+                    }
                 }
             }
         }
