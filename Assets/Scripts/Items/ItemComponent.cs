@@ -138,7 +138,7 @@ public class ItemComponent : InteractableComponent
     {
         base.Awake();
         GameController.dirtyItems();
-        transform.parent = null;
+        transform.parent = DungeonController.instance.level.transform;
         if (holdObject != null)
             holdObject.SetActive(false);
     }
@@ -195,6 +195,7 @@ public class ItemComponent : InteractableComponent
 
     public virtual void Drop()
     {
+        transform.SetParent(DungeonController.instance.level.transform);
         if (holdObject != null)
             holdObject.SetActive(false);
         if (dropObject != null)

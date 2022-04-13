@@ -2153,7 +2153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceMax: 50
-  itemFreezeDistance: 20
+  itemFreezeDistance: 50
   characterFreezeDistance: 50
 --- !u!1 &991891889
 GameObject:
