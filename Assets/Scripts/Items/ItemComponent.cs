@@ -138,9 +138,15 @@ public class ItemComponent : InteractableComponent
     {
         base.Awake();
         GameController.dirtyItems();
-        transform.parent = DungeonController.instance.level.transform;
+        transform.parent = null;
         if (holdObject != null)
             holdObject.SetActive(false);
+    }
+
+    private void Start()
+    {
+        if (owner == null)
+            transform.parent = DungeonController.instance.level.transform;
     }
 
     public override void OnDestroy()

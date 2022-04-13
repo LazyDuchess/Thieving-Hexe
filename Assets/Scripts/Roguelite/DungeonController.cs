@@ -291,11 +291,11 @@ public class DungeonController : MonoBehaviour
     public bool lastOutdoor = true;
     public bool inDangerPrev = false;
 
-
+    /*
     private void Awake()
     {
-        instance = this;
-    }
+        
+    }*/
 
     public void SetWayOut()
     {
@@ -305,8 +305,9 @@ public class DungeonController : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        instance = this;
         GenerateLevel(GenerateSettingsByLevel(0));
     }
 
