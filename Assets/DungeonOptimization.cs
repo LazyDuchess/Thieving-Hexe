@@ -36,22 +36,18 @@ public class DungeonOptimization : MonoBehaviour
         var chars = GameController.GetCharacters();
         foreach(var element in chars)
         {
-            if (element != GameController.instance.playerController)
-            {
                 var toPos = new Vector3(element.transform.position.x, 0f, element.transform.position.z);
                 var dist = Vector3.Distance(camPos, toPos);
-                if (dist >= characterFreezeDistance && element.gameObject.activeSelf)
+                if (dist >= characterFreezeDistance && !element.culled)
                 {
-                    element.gameObject.SetActive(false);
+                    element.Optimize();
                     dirty = true;
                 }
-                if (dist < characterFreezeDistance && !element.gameObject.activeSelf)
+                if (dist < characterFreezeDistance && element.culled)
                 {
-                    element.gameObject.SetActive(true);
+                    element.Unoptimize();
                     dirty = true;
                 }
-
-            }
         }
         if (dirty)
             GameController.dirtyCharacters();

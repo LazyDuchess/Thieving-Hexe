@@ -51,7 +51,10 @@ public class Projectile : MonoBehaviour
                 otherHP.TakeDamage(dam);
             }
             else
-                dontDel = true;
+            {
+                if (otherHP == owner)
+                    dontDel = true;
+            }
         }
         if (!dontDel)
         {

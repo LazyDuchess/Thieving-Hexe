@@ -18,9 +18,12 @@ public class UIInventorySlot : MonoBehaviour
     void Start()
     {
         UpdateSlot();
+        /*
         GameController.instance.playerController.inventory.onSwitchItem += UpdateSlot;
         GameController.instance.playerController.inventory.onAddItem += UpdateSlot;
-        GameController.instance.playerController.inventory.onDropItem += UpdateSlot;
+        GameController.instance.playerController.inventory.onDropItem += UpdateSlot;*/
+        GameController.instance.OnInventorySwitchEvent += UpdateSlot;
+        GameController.instance.OnInventoryUpdateEvent += UpdateSlot;
     }
 
     void UpdateSlot()

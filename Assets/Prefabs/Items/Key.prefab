@@ -66,6 +66,7 @@ MonoBehaviour:
   holdTime: 0
   primaryFireMode: 0
   secondaryFireMode: 0
+  noHoldAnimation: 1
 --- !u!114 &3425295180869928743
 MonoBehaviour:
   m_ObjectHideFlags: 0

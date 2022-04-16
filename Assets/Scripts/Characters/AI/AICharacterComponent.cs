@@ -24,7 +24,7 @@ public class AICharacterComponent : CharacterComponent
     {
         base.Update();
         movementVector = Vector3.zero;
-        if (IsAlive() && GameController.instance.aiEnabled)
+        if (IsAlive() && GameController.instance.aiEnabled && !culled)
         {
             foreach(var element in tasks)
             {

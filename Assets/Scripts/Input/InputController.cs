@@ -12,13 +12,21 @@ public class InputController : MonoBehaviour
         //Invalid target - no player controller. todo - lerp back to zero?
         if (!GameController.instance.playerController)
             return;
-        if (!GameController.instance.controlEnabled)
+        if (!GameController.instance.controlEnabled || GameController.GetBusy())
         {
             GameController.instance.playerController.movementVector = Vector3.zero;
             return;
         }
-        
-        GameController.instance.playerController.movementVector = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        if (!GameController.instance.firstPerson)
+            GameController.instance.playerController.movementVector = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        else
+        {
+            var frontHeading = FPSCamera.instance.GetRotation() * Vector3.forward;
+            var rightHeading = FPSCamera.instance.GetRotation() * Vector3.right;
+            GameController.instance.playerController.movementVector = Vector3.zero;
+            GameController.instance.playerController.movementVector -= Input.GetAxisRaw("Vertical") * frontHeading;
+            GameController.instance.playerController.movementVector -= Input.GetAxisRaw("Horizontal") * rightHeading;
+        }
         if (GameController.instance.playerController.CanUseInventory())
         {
             var scroll = Input.GetAxisRaw("Mouse ScrollWheel");

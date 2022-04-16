@@ -30,6 +30,8 @@ public class ItemComponent : InteractableComponent
     public FireMode primaryFireMode = FireMode.Single;
     public FireMode secondaryFireMode = FireMode.Single;
 
+    public bool noHoldAnimation = false;
+
     public virtual void Primary() {
         holding = true;
     }
@@ -172,7 +174,10 @@ public class ItemComponent : InteractableComponent
             holdObject.SetActive(true);
         if (dropObject != null)
             dropObject.SetActive(false);
-        owner.SendEvent("Hold");
+        if (noHoldAnimation == false)
+            owner.SendEvent("Hold");
+        else
+            owner.SendEvent("Hold_Unarmed");
         owner.SendEvent(animation + "_Draw");
         holding = false;
         holdTime = 0f;

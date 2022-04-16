@@ -144,11 +144,13 @@ public class PlayerController : CharacterComponent
     // Start is called before the first frame update
     protected override void Start()
     {
-        
         base.Start();
         DummyAim();
         inventory.onSwitchItem += Inventory_Draw;
         inventory.onAddItemEx += Inventory_Add;
+        var defItems = GameObject.FindObjectsOfType<DefaultItem>();
+        foreach (var item in defItems)
+            item.Trigger(inventory);
     }
 
     public void UseCurrentInventory()

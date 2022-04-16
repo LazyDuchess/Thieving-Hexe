@@ -8,6 +8,8 @@ public class DefaultItem : MonoBehaviour
     public ItemComponent item;
     private void Start()
     {
+        item.gameObject.SetActive(false);
+        /*
         var inventory = GameController.instance.playerController.inventory;
             if (singleton)
             {
@@ -17,6 +19,22 @@ public class DefaultItem : MonoBehaviour
                 }
             }
             else
-                inventory.AddItem(item);
+                inventory.AddItem(item);*/
+    }
+
+    public void Trigger(Inventory inventory)
+    {
+        var gnewItem = Instantiate(item.gameObject);
+        gnewItem.SetActive(true);
+        var newItem = gnewItem.GetComponent<ItemComponent>();
+        if (singleton)
+        {
+            if (!inventory.HasItem(newItem))
+            {
+                inventory.AddItem(newItem);
+            }
+        }
+        else
+            inventory.AddItem(newItem);
     }
 }

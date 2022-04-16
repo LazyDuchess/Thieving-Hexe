@@ -12,6 +12,7 @@ public class GameCamera : MonoBehaviour
     private Vector3 aimLocation = Vector3.zero;
     public float velocityOffset = 0.5f;
     public float velocityOffsetLerp = 5f;
+    public GameObject xRay;
 
     private Vector3 currentVelocityOffset = Vector3.zero;
 
@@ -72,7 +73,7 @@ public class GameCamera : MonoBehaviour
         if (PauseController.paused)
             return;
         //Invalid target - no player controller. todo - lerp back to zero? - No don't do.
-        if (!GameController.instance.playerController || !GameController.instance.controlEnabled)
+        if (!GameController.instance.playerController || !GameController.instance.controlEnabled || GameController.GetBusy())
         {
             if (!cursorBefore)
             {

@@ -9,7 +9,8 @@ public class UIPickUpNameComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameController.instance.playerController.inventory.onSwitchItem += Show;
+        //GameController.instance.playerController.inventory.onSwitchItem += Show;
+        GameController.instance.OnInventorySwitchEvent += Show;
     }
 
     public void Show()

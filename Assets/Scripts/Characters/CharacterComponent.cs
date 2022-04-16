@@ -55,6 +55,10 @@ public class CharacterComponent : HealthController
     List<MonoBehaviour> subscribedEntities = new List<MonoBehaviour>();
     List<CharacterEffect> effects = new List<CharacterEffect>();
 
+    private RigidbodyConstraints oldConsrtaints;
+
+    public bool culled = false;
+
     public bool hasEffectWithID(string id)
     {
         foreach(var element in effects)
@@ -78,6 +82,20 @@ public class CharacterComponent : HealthController
     protected virtual void OnDestroy()
     {
         GameController.dirtyCharacters();
+    }
+
+    public void Optimize()
+    {
+        if (!culled)
+            oldConsrtaints = rigidBody.constraints;
+        rigidBody.constraints = RigidbodyConstraints.FreezeAll;
+        culled = true;
+    }
+
+    public void Unoptimize()
+    {
+        rigidBody.constraints = oldConsrtaints;
+        culled = false;
     }
 
     protected virtual void Awake()

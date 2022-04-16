@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public bool firstPerson = false;
+
     public bool audioHacks = true;
 
     public bool controlEnabled = true;
@@ -21,6 +23,10 @@ public class GameController : MonoBehaviour
     public static GameController instance;
     public GameObject hitBoxDebugPrefab;
     public bool hitBoxDebug = false;
+
+    public GameObject playerPrefab;
+
+    [HideInInspector]
     public GameObject player;
     [HideInInspector]
     public PlayerController playerController;
@@ -37,6 +43,61 @@ public class GameController : MonoBehaviour
     private static InteractableComponent[] allInteractables;
 
     private static LayerMask groundMask;
+
+    private int busyAmount = 0;
+
+    public delegate void GameEvent();
+
+    public GameEvent OnInventorySwitchEvent;
+    public GameEvent OnInventoryUpdateEvent;
+
+    public void OnInvSwitch()
+    {
+        if (OnInventorySwitchEvent != null)
+            OnInventorySwitchEvent.Invoke();
+    }
+
+    public void OnInvUpdate()
+    {
+        if (OnInventoryUpdateEvent != null)
+            OnInventoryUpdateEvent.Invoke();
+    }
+
+    public static bool GetBusy()
+    {
+        if (instance.busyAmount > 0)
+            return true;
+        return false;
+    }
+
+    public static void PushBusy()
+    {
+        instance.busyAmount += 1;
+    }
+
+    public static void PopBusy()
+    {
+        instance.busyAmount -= 1;
+    }
+
+    public void SetPlayer(PlayerController player)
+    {
+        if (playerController)
+        {
+            playerController.deathEvent -= PlayerDeathEv;
+            playerController.damageEvent -= GameEventsController.PlayerDamage;
+            playerController.inventory.onDropItem -= OnInvUpdate;
+            playerController.inventory.onSwitchItem -= OnInvSwitch;
+            playerController.inventory.onAddItem -= OnInvUpdate;
+        }
+        this.player = player.gameObject;
+        this.playerController = player;
+        playerController.deathEvent += PlayerDeathEv;
+        playerController.damageEvent += GameEventsController.PlayerDamage;
+        playerController.inventory.onDropItem += OnInvUpdate;
+        playerController.inventory.onSwitchItem += OnInvSwitch;
+        playerController.inventory.onAddItem += OnInvUpdate;
+    }
 
     public static bool GetAudioHacks()
     {
@@ -158,11 +219,15 @@ public class GameController : MonoBehaviour
             Destroy(this.gameObject);
             return;
         }
+        player = Instantiate(playerPrefab);
+        player.name = "Player";
         //DontDestroyOnLoad(this.gameObject);
         instance = this;
+        SetPlayer(player.GetComponent<PlayerController>());
+        /*
         playerController = player.GetComponent<PlayerController>();
         playerController.deathEvent += PlayerDeathEv;
-        playerController.damageEvent += GameEventsController.PlayerDamage;
+        playerController.damageEvent += GameEventsController.PlayerDamage;*/
         groundMask = LayerMask.GetMask("Ground");
     }
 

@@ -9,7 +9,8 @@ public class UIDropTooltip : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameController.instance.playerController.inventory.onSwitchItem += UpdateTooltip;
+        //GameController.instance.playerController.inventory.onSwitchItem += UpdateTooltip;
+        GameController.instance.OnInventorySwitchEvent += UpdateTooltip;
         UpdateTooltip();
     }
 

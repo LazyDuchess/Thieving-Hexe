@@ -11,7 +11,7 @@ public class WitchAnimationComponent : MonoBehaviour
     public GameObject hand;
     public ParticleSystem dashParticles;
 
-    private void Start()
+    private void Awake()
     {
         player.damageEvent += Flinch;
         player.deathEvent += Death;
@@ -89,6 +89,15 @@ public class WitchAnimationComponent : MonoBehaviour
         player.holding.holdObject.transform.localPosition = Vector3.zero;
     }
 
+    public void Hold_Unarmed()
+    {
+        animator.SetBool("Charging", false);
+        animator.SetLayerWeight(1, 0f);
+        player.holding.holdObject.transform.SetParent(hand.transform);
+        player.holding.holdObject.transform.localRotation = Quaternion.identity;
+        player.holding.holdObject.transform.localPosition = Vector3.zero;
+    }
+
     public void Death(Damage damage)
     {
         animator.SetLayerWeight(1, 0f);
@@ -115,11 +124,21 @@ public class WitchAnimationComponent : MonoBehaviour
         if (!player.IsAlive())
             return;
 
-        var oldHeadRotation = lookAtHead.transform.rotation;
-        lookAtHead.transform.LookAt(player.lookAtTarget);
-        lookAtHead.transform.rotation = Quaternion.Slerp(oldHeadRotation, lookAtHead.transform.rotation, player.lookAtIntensity);
-        
         var aim = player.GetAim();
+
+        if (!GameController.instance.firstPerson)
+        {
+            var oldHeadRotation = lookAtHead.transform.rotation;
+            lookAtHead.transform.LookAt(player.lookAtTarget);
+            lookAtHead.transform.rotation = Quaternion.Slerp(oldHeadRotation, lookAtHead.transform.rotation, player.lookAtIntensity);
+        }
+        else
+        {
+            var targetHead = new Vector3(aim.x, lookAtHead.transform.position.y, aim.z);
+            lookAtHead.transform.LookAt(targetHead);
+        }
+        
+        
         var targetAim = new Vector3(aim.x, aimSpine.transform.position.y, aim.z);
         aimSpine.transform.LookAt(targetAim);
 
@@ -128,10 +147,12 @@ public class WitchAnimationComponent : MonoBehaviour
         if (movement.magnitude > Vector3.kEpsilon)
         {
             animator.SetBool("Moving", true);
+            var calculatedMovement = player.FlatVelocity().magnitude / player.maxSpeed;
             if (player.backwards)
-                animator.SetFloat("Movement", -1f);
+                animator.SetBool("Backwards", true);
             else
-                animator.SetFloat("Movement", 1f);
+                animator.SetBool("Backwards", false);
+            animator.SetFloat("Movement", calculatedMovement);
         }
         else
             animator.SetBool("Moving", false);

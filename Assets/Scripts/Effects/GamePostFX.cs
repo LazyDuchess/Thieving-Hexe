@@ -9,7 +9,7 @@ public class GamePostFX : MonoBehaviour
     public Camera XRayCamera;
     public int lastWidth;
     public int lastHeight;
-
+    public static GamePostFX instance;
     private void Awake()
     {
         charOverlayRT = new RenderTexture(Screen.width, Screen.height, 32);
@@ -18,6 +18,7 @@ public class GamePostFX : MonoBehaviour
         XRayCamera.targetTexture = charOverlayRT;
         XRayCamera.forceIntoRenderTexture = true;
         postFXMaterial.SetTexture("_Overlay", charOverlayRT);
+        instance = this;
     }
 
     private void Update()
