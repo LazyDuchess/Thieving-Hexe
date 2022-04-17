@@ -6,22 +6,30 @@ public class UIPlayerDashBar : MonoBehaviour
 {
     private UIBar bar;
     private float lastDash;
+    public bool playerTwo = false;
+
+    PlayerController getTargetPlayer()
+    {
+        if (playerTwo)
+            return GameController.instance.coopPlayer;
+        return GameController.instance.playerController;
+    }
     // Start is called before the first frame update
     void Start()
     {
         bar = GetComponent<UIBar>();
-        bar.maxValue = GameController.instance.playerController.dashTime;
+        bar.maxValue = getTargetPlayer().dashTime;
         bar.minValue = 0f;
-        bar.SetValue(GameController.instance.playerController.GetDashStamina());
-        lastDash = GameController.instance.playerController.GetDashStamina();
+        bar.SetValue(getTargetPlayer().GetDashStamina());
+        lastDash = getTargetPlayer().GetDashStamina();
     }
 
     private void Update()
     {
-        if (GameController.instance.playerController.GetDashStamina() != lastDash)
+        if (getTargetPlayer().GetDashStamina() != lastDash)
         {
-            bar.SetValue(GameController.instance.playerController.GetDashStamina());
-            lastDash = GameController.instance.playerController.GetDashStamina();
+            bar.SetValue(getTargetPlayer().GetDashStamina());
+            lastDash = getTargetPlayer().GetDashStamina();
         }
     }
 }

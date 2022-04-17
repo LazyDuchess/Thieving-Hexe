@@ -66,6 +66,8 @@ MonoBehaviour:
   holdTime: 0
   primaryFireMode: 1
   secondaryFireMode: 0
+  noHoldAnimation: 0
+  aimAssistTravelSpeed: 0.025
   projectilePrefab: {fileID: 6119730668319842903, guid: 8fde6b64cd4d8e04bab308bf0d8f318a, type: 3}
   velocity: 25
   offset: 0.5

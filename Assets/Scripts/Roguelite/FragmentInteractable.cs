@@ -18,5 +18,6 @@ public class FragmentInteractable : InteractableComponent
         DungeonController.instance.SetWayOut();
         GameEventsController.CollectFragment();
         UINotification.instance.Show("Now escape the way you came in!", 3f);
+        (actor as PlayerController).hasFragment = true;
     }
 }

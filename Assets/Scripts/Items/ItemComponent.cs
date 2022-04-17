@@ -32,6 +32,8 @@ public class ItemComponent : InteractableComponent
 
     public bool noHoldAnimation = false;
 
+    public float aimAssistTravelSpeed = 0f;
+
     public virtual void Primary() {
         holding = true;
     }

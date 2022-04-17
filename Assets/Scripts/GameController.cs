@@ -6,6 +6,15 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    [Header("Coop")]
+    public bool coopMode = false;
+
+    public GameObject coopPlayerPrefab;
+
+    public PlayerController coopPlayer;
+
+    public GameObject playerPrefab;
+
     public bool firstPerson = false;
 
     public bool audioHacks = true;
@@ -23,8 +32,6 @@ public class GameController : MonoBehaviour
     public static GameController instance;
     public GameObject hitBoxDebugPrefab;
     public bool hitBoxDebug = false;
-
-    public GameObject playerPrefab;
 
     [HideInInspector]
     public GameObject player;
@@ -51,6 +58,9 @@ public class GameController : MonoBehaviour
     public GameEvent OnInventorySwitchEvent;
     public GameEvent OnInventoryUpdateEvent;
 
+    public GameEvent OnInventorySwitchEventCoop;
+    public GameEvent OnInventoryUpdateEventCoop;
+
     public void OnInvSwitch()
     {
         if (OnInventorySwitchEvent != null)
@@ -61,6 +71,18 @@ public class GameController : MonoBehaviour
     {
         if (OnInventoryUpdateEvent != null)
             OnInventoryUpdateEvent.Invoke();
+    }
+
+    public void OnInvSwitchCoop()
+    {
+        if (OnInventorySwitchEventCoop != null)
+            OnInventorySwitchEventCoop.Invoke();
+    }
+
+    public void OnInvUpdateCoop()
+    {
+        if (OnInventoryUpdateEventCoop != null)
+            OnInventoryUpdateEventCoop.Invoke();
     }
 
     public static bool GetBusy()
@@ -80,24 +102,7 @@ public class GameController : MonoBehaviour
         instance.busyAmount -= 1;
     }
 
-    public void SetPlayer(PlayerController player)
-    {
-        if (playerController)
-        {
-            playerController.deathEvent -= PlayerDeathEv;
-            playerController.damageEvent -= GameEventsController.PlayerDamage;
-            playerController.inventory.onDropItem -= OnInvUpdate;
-            playerController.inventory.onSwitchItem -= OnInvSwitch;
-            playerController.inventory.onAddItem -= OnInvUpdate;
-        }
-        this.player = player.gameObject;
-        this.playerController = player;
-        playerController.deathEvent += PlayerDeathEv;
-        playerController.damageEvent += GameEventsController.PlayerDamage;
-        playerController.inventory.onDropItem += OnInvUpdate;
-        playerController.inventory.onSwitchItem += OnInvSwitch;
-        playerController.inventory.onAddItem += OnInvUpdate;
-    }
+    
 
     public static bool GetAudioHacks()
     {
@@ -212,6 +217,43 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void SetPlayer(PlayerController player)
+    {
+        if (playerController)
+        {
+            playerController.deathEvent -= PlayerDeathEv;
+            playerController.damageEvent -= GameEventsController.PlayerDamage;
+            playerController.inventory.onDropItem -= OnInvUpdate;
+            playerController.inventory.onSwitchItem -= OnInvSwitch;
+            playerController.inventory.onAddItem -= OnInvUpdate;
+        }
+        this.player = player.gameObject;
+        this.playerController = player;
+        playerController.deathEvent += PlayerDeathEv;
+        playerController.damageEvent += GameEventsController.PlayerDamage;
+        playerController.inventory.onDropItem += OnInvUpdate;
+        playerController.inventory.onSwitchItem += OnInvSwitch;
+        playerController.inventory.onAddItem += OnInvUpdate;
+    }
+
+    public void SetCoopPlayer(PlayerController player)
+    {
+        if (coopPlayer)
+        {
+            coopPlayer.deathEvent -= PlayerDeathEv;
+            coopPlayer.damageEvent -= GameEventsController.PlayerDamage;
+            coopPlayer.inventory.onDropItem -= OnInvUpdateCoop;
+            coopPlayer.inventory.onSwitchItem -= OnInvSwitchCoop;
+            coopPlayer.inventory.onAddItem -= OnInvUpdateCoop;
+        }
+        this.coopPlayer = player;
+        coopPlayer.deathEvent += PlayerDeathEv;
+        coopPlayer.damageEvent += GameEventsController.PlayerDamage;
+        coopPlayer.inventory.onDropItem += OnInvUpdateCoop;
+        coopPlayer.inventory.onSwitchItem += OnInvSwitchCoop;
+        coopPlayer.inventory.onAddItem += OnInvUpdateCoop;
+    }
+
     private void Awake()
     {
         if (instance)
@@ -221,14 +263,16 @@ public class GameController : MonoBehaviour
         }
         player = Instantiate(playerPrefab);
         player.name = "Player";
-        //DontDestroyOnLoad(this.gameObject);
         instance = this;
         SetPlayer(player.GetComponent<PlayerController>());
-        /*
-        playerController = player.GetComponent<PlayerController>();
-        playerController.deathEvent += PlayerDeathEv;
-        playerController.damageEvent += GameEventsController.PlayerDamage;*/
         groundMask = LayerMask.GetMask("Ground");
+
+        if (coopMode)
+        {
+            var player2 = Instantiate(coopPlayerPrefab);
+            player2.name = "Player2";
+            SetCoopPlayer(player2.GetComponent<PlayerController>());
+        }
     }
 
     public void PlayerDeathEv(Damage dmg)

@@ -13,17 +13,30 @@ public class UIInventorySlot : MonoBehaviour
     public GameObject selectedObject;
     public GameObject itemIconObject;
     public Image itemIcon;
-    
+
+    public bool playerTwo = false;
+
+    PlayerController getTargetPlayer()
+    {
+        if (playerTwo)
+            return GameController.instance.coopPlayer;
+        return GameController.instance.playerController;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         UpdateSlot();
-        /*
-        GameController.instance.playerController.inventory.onSwitchItem += UpdateSlot;
-        GameController.instance.playerController.inventory.onAddItem += UpdateSlot;
-        GameController.instance.playerController.inventory.onDropItem += UpdateSlot;*/
-        GameController.instance.OnInventorySwitchEvent += UpdateSlot;
-        GameController.instance.OnInventoryUpdateEvent += UpdateSlot;
+        if (!playerTwo)
+        {
+            GameController.instance.OnInventorySwitchEvent += UpdateSlot;
+            GameController.instance.OnInventoryUpdateEvent += UpdateSlot;
+        }
+        else
+        {
+            GameController.instance.OnInventorySwitchEventCoop += UpdateSlot;
+            GameController.instance.OnInventoryUpdateEventCoop += UpdateSlot;
+        }
     }
 
     void UpdateSlot()
@@ -33,7 +46,7 @@ public class UIInventorySlot : MonoBehaviour
         quantityObject.SetActive(false);
         selectedObject.SetActive(false);
         itemIconObject.SetActive(false);
-        var ite = GameController.instance.playerController.inventory.GetItemInSlot(slotID);
+        var ite = getTargetPlayer().inventory.GetItemInSlot(slotID);
         if (ite != null)
         {
             occupiedObject.SetActive(true);
@@ -52,7 +65,7 @@ public class UIInventorySlot : MonoBehaviour
         {
             emptyObject.SetActive(true);
         }
-        if (GameController.instance.playerController.inventory.currentSlot == slotID)
+        if (getTargetPlayer().inventory.currentSlot == slotID)
             selectedObject.SetActive(true);
     }
 }

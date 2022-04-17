@@ -6,13 +6,20 @@ using UnityEngine.UI;
 public class UIUseTooltip : MonoBehaviour
 {
     public Text useText;
+    public bool playerTwo = false;
+    PlayerController getTargetPlayer()
+    {
+        if (playerTwo)
+            return GameController.instance.coopPlayer;
+        return GameController.instance.playerController;
+    }
     // Update is called once per frame
     void Update()
     {
-        if (GameController.instance.playerController.currentInteractable != null)
+        if (getTargetPlayer().currentInteractable != null)
         {
             useText.color = Color.white;
-            switch(GameController.instance.playerController.currentInteractable.interactionType)
+            switch(getTargetPlayer().currentInteractable.interactionType)
             {
                 case InteractionType.Generic:
                     useText.text = "E: Use";

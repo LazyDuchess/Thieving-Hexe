@@ -354,49 +354,55 @@ public class DungeonController : MonoBehaviour
             if (dungeonState.timeLeft <= 0f)
                 GameController.instance.GameOver();
         }
-        var currentPiece = dungeonLevel.GetPieceAtPosition(GameController.instance.player.transform.position);
-        if (currentPiece != null)
+        List<DungeonPiece> currentPieces = new List<DungeonPiece>();
+        currentPieces.Add(dungeonLevel.GetPieceAtPosition(GameController.instance.player.transform.position));
+        if (GameController.instance.coopMode)
+            currentPieces.Add(dungeonLevel.GetPieceAtPosition(GameController.instance.coopPlayer.transform.position));
+        foreach(var currentPiece in currentPieces)
         {
-            var outdoo = currentPiece.prefab.GetComponent<RoomComponent>().outdoor;
-            if (lastOutdoor != outdoo)
+            if (currentPiece != null)
             {
-                lastOutdoor = outdoo;
-                if (lastOutdoor)
-                    GameEventsController.EnterOutdoorArea();
-                else
-                    GameEventsController.EnterIndoorArea();
-            }
-            foreach(var element in dungeonState.allRooms)
-            {
-                if (element.parentPiece == currentPiece)
+                var outdoo = currentPiece.prefab.GetComponent<RoomComponent>().outdoor;
+                if (lastOutdoor != outdoo)
                 {
-                    if (AnyAliveEnemies() && !dungeonState.wayOut)
-                    {
-                        if (inDangerPrev == false)
-                        {
-                            inDangerPrev = true;
-                            GameEventsController.RoomsClose();
-                        }
-                        element.CloseDoors();
-                    }
+                    lastOutdoor = outdoo;
+                    if (lastOutdoor)
+                        GameEventsController.EnterOutdoorArea();
                     else
+                        GameEventsController.EnterIndoorArea();
+                }
+                foreach (var element in dungeonState.allRooms)
+                {
+                    if (element.parentPiece == currentPiece)
                     {
-                        if (inDangerPrev == true)
+                        if (AnyAliveEnemies() && !dungeonState.wayOut && !GameController.instance.coopMode)
                         {
-                            inDangerPrev = false;
-                            GameEventsController.RoomsOpen();
+                            if (inDangerPrev == false)
+                            {
+                                inDangerPrev = true;
+                                GameEventsController.RoomsClose();
+                            }
+                            element.CloseDoors();
                         }
-                        element.OpenDoors();
-                    }
-                    if (!dungeonState.alreadyVisited.ContainsKey(currentPiece))
-                    {
-                        if (!dungeonState.wayOut)
-                            element.EnterRoom();
                         else
-                            element.EnterRoomWayOut();
-                        dungeonState.alreadyVisited[currentPiece] = true;
+                        {
+                            if (inDangerPrev == true)
+                            {
+                                inDangerPrev = false;
+                                GameEventsController.RoomsOpen();
+                            }
+                            element.OpenDoors();
+                        }
+                        if (!dungeonState.alreadyVisited.ContainsKey(currentPiece))
+                        {
+                            if (!dungeonState.wayOut)
+                                element.EnterRoom();
+                            else
+                                element.EnterRoomWayOut();
+                            dungeonState.alreadyVisited[currentPiece] = true;
+                        }
+                        break;
                     }
-                    break;
                 }
             }
                 
@@ -498,14 +504,14 @@ public class DungeonController : MonoBehaviour
         var enemys = GameController.GetCharacters();
         foreach(var element in enemys)
         {
-            if (element != GameController.instance.playerController)
-                Destroy(element);
+            if (element != GameController.instance.playerController && element != GameController.instance.coopPlayer)
+                Destroy(element.gameObject);
         }
         var pickups = FindObjectsOfType<ItemComponent>();
         foreach(var element in pickups)
         {
             if (element.owner == null)
-                Destroy(element);
+                Destroy(element.gameObject);
         }
     }
 
@@ -695,6 +701,8 @@ public class DungeonController : MonoBehaviour
         this.level = level.Instantiate();
         var spawns = this.level.GetComponentsInChildren<PlayerSpawn>();
         GameController.instance.player.transform.position = spawns[0].transform.position;
+        if (GameController.instance.coopMode)
+            GameController.instance.coopPlayer.transform.position = spawns[0].transform.position - (Vector3.right * 2f);
         dungeonState = new DungeonState();
         dungeonState.allRooms = this.level.GetComponentsInChildren<RoomComponent>();
         inDangerPrev = false;

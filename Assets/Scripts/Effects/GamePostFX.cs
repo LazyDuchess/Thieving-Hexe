@@ -10,25 +10,35 @@ public class GamePostFX : MonoBehaviour
     public int lastWidth;
     public int lastHeight;
     public static GamePostFX instance;
+    public bool splitScreen = false;
+    public bool unique = true;
     private void Awake()
     {
-        charOverlayRT = new RenderTexture(Screen.width, Screen.height, 32);
-        lastWidth = Screen.width;
+        var hei = Screen.height;
+        if (splitScreen)
+            hei /= 2;
+        charOverlayRT = new RenderTexture(Screen.width, hei, 32);
+        lastWidth = hei;
         lastHeight = Screen.height;
         XRayCamera.targetTexture = charOverlayRT;
         XRayCamera.forceIntoRenderTexture = true;
+        if (unique)
+            postFXMaterial = Instantiate(postFXMaterial);
         postFXMaterial.SetTexture("_Overlay", charOverlayRT);
         instance = this;
     }
 
     private void Update()
     {
-        if (Screen.width != lastWidth || Screen.height != lastHeight)
+        var hei = Screen.height;
+        if (splitScreen)
+            hei /= 2;
+        if (Screen.width != lastWidth || hei != lastHeight)
         {
             Destroy(charOverlayRT);
-            charOverlayRT = new RenderTexture(Screen.width, Screen.height, 32);
+            charOverlayRT = new RenderTexture(Screen.width, hei, 32);
             lastWidth = Screen.width;
-            lastHeight = Screen.height;
+            lastHeight = hei;
             XRayCamera.targetTexture = charOverlayRT;
             XRayCamera.forceIntoRenderTexture = true;
             postFXMaterial.SetTexture("_Overlay", charOverlayRT);

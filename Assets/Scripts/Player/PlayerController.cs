@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : CharacterComponent
 {
+    public bool hasFragment = false;
+
     ItemComponent drewItem;
     public Inventory inventory = new Inventory();
 

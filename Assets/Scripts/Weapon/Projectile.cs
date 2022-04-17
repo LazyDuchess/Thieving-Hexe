@@ -13,6 +13,7 @@ public class Projectile : MonoBehaviour
     public float pushForce = 3f;
     public delegate void OnHit();
     public OnHit onHitEvent;
+    public GameObject impactPrefab;
 
     private void Start()
     {
@@ -65,6 +66,9 @@ public class Projectile : MonoBehaviour
             Destroy(GetComponent<SphereCollider>());
             GetComponentInChildren<ParticleSystem>().Stop();
             Invoke("Delete", 10f);
+            var impactPart = Instantiate(impactPrefab);
+            impactPart.transform.position = transform.position;
+            impactPart.transform.rotation = Quaternion.LookRotation(other.contacts[0].normal, Vector3.up);
             if (onHitEvent != null)
                 onHitEvent.Invoke();
             //Destroy(gameObject);

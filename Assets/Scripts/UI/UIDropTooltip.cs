@@ -6,7 +6,14 @@ using UnityEngine.UI;
 public class UIDropTooltip : MonoBehaviour
 {
     public Text tooltip;
-    // Start is called before the first frame update
+    public bool playerTwo = false;
+
+    PlayerController getTargetPlayer()
+    {
+        if (playerTwo)
+            return GameController.instance.coopPlayer;
+        return GameController.instance.playerController;
+    }
     void Start()
     {
         //GameController.instance.playerController.inventory.onSwitchItem += UpdateTooltip;
@@ -16,7 +23,7 @@ public class UIDropTooltip : MonoBehaviour
 
     void UpdateTooltip()
     {
-        var cItem = GameController.instance.playerController.inventory.GetItemInSlot(GameController.instance.playerController.inventory.currentSlot);
+        var cItem = getTargetPlayer().inventory.GetItemInSlot(getTargetPlayer().inventory.currentSlot);
         if (cItem == null)
             tooltip.color = Color.clear;
         else
